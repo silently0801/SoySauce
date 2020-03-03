@@ -1,0 +1,172 @@
+$bg_color   : #EDEDED
+$colorBlack: #231714
+$colorOrange:  #C0362D 
+$colorDarkOrange: #8D362D
+
+@mixin FontStyle($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
+    font-size: $font-size
+    color: $font-color
+    font-weight: $font-weight
+    letter-spacing: $letter-spacing
+    line-height: $line-height
+@mixin backEndHover($top,$bottom)
+    content: " "
+    position: absolute
+    left: 8px
+    top: $top
+    bottom: $bottom
+    display: none
+    width: 6px
+    height: 6px
+    background-image: url("../img/hover.png")
+    background-size: cover
+
+a:hover
+    text-decoration: none
+body
+    border-top: 9px solid $colorOrange
+    font-family: 'Noto Serif TC'
+    height: 300vh
+    
+nav
+    padding-top: 110px 
+    color: $colorBlack
+    .logo
+        img
+    .backEnd
+        ul
+            li
+                a
+                    writing-mode: vertical-lr
+                    position: relative
+                    +FontStyle(14px,$colorBlack,900,7px)
+                    &::before
+                        +backEndHover(-10px,null)
+                    &::after
+                        +backEndHover(null,-7px)
+                    &:hover::before
+                        display: block
+                    &:hover::after
+                        display: block
+    .nav_btns
+        ul
+            li
+                margin: 0 18px
+                a
+                    +FontStyle(14px,$colorBlack,900,2px)
+                    &::after
+                        content: " "
+                        display: none
+                        width: 100%
+                        height: 3px
+                        margin-top: 10px
+                        background-color: $colorOrange
+                    &:hover
+                        +FontStyle(14px,$colorOrange,900,2px)    
+                    &:hover::after
+                        display: block
+    .menu_btn_Area
+        .menu_btn
+            width: 50px
+            height: 50px
+            fill: $colorOrange
+        .menu_bot_text
+            margin: 50px 0 40px
+            span
+                writing-mode: vertical-lr
+                +FontStyle(16px,$colorBlack,900,12px,16px)
+
+main
+    .row
+        .carousel
+            .carousel_top
+                z-index: 2
+                .swiper-container 
+                    width: 100%
+                    height: 1140px
+                    border-radius: 50%
+                    .swiper-wrapper
+                        .swiper-slide 
+                            background-color: #333
+                            text-align: center
+                            font-size: 18px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                .swiper-pagination
+                    display: flex
+                    flex-direction: column
+                    position: absolute
+                    top: 40px
+                    right: -3px
+                    z-index: 999
+                    .swiper-pagination-bullet 
+                        margin: 5px 0
+                        color: $colorBlack
+                        background: $colorBlack
+                        opacity: 1
+                    .swiper-pagination-bullet-active 
+                        color: $colorOrange
+                        background: $colorOrange
+            .carousel_mid
+                left: 0
+                top: 31.5%
+                height: 265px
+                width: 100%
+                background: linear-gradient($colorDarkOrange,$colorOrange)
+                z-index: 1
+            .carousel_bot
+                top: calc( 31.5% + 265px ) 
+                left: -10px
+                .textArea
+                    z-index: 4
+                    top: 8vh
+                    p
+                        text-align: center
+                    .jpText
+                        +FontStyle(42px,$colorBlack,600,7px)
+                    .twText
+                        +FontStyle(32px,$colorBlack,600,null)
+                    .enText
+                        +FontStyle(22px,$colorBlack,600,null)
+                .smallcircle
+                    width: calc( 100% + 20px )
+                    height: 515px
+                    z-index: 3  
+                    circle
+                        fill: #EDEDED
+                        stroke: $colorOrange
+                        stroke-width: 35px
+        .introduction
+            height: 868px
+            width: 100%
+            background-color: #333
+            margin: 264px 0 105px
+            .introduction_top
+                left: -500px
+                top: 0
+                .introduction_img
+                    height: 480px
+                    width: 100%
+                    background-color: $colorOrange
+            .introduction_left
+            .introduction_right
+            .introduction_bot
+                .introduction_img
+                    height: 480px
+                    width: 100%
+                    background-color: $colorOrange
+
+
+                
+
+
+    
+
+
+                
+
+                
+            
+            
+                
