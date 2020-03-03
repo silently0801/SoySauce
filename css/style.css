@@ -289,6 +289,8 @@ main .introduction .introduction_container .row .introduction_left span {
 main .soysauce .soysauce_container .row .soysauce_text_Area {
   height: 620px;
   border: 40px solid #C0362D;
+  padding-top: 345px;
+  margin-bottom: 170px;
 }
 
 main .soysauce .soysauce_container .row .soysauce_text_Area::before {
@@ -321,8 +323,24 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
           transform: translateX(-50%);
   font-size: 103px;
   color: #fff;
-  font-weight: 90;
+  font-weight: 900;
   letter-spacing: 40px;
   line-height: unset;
+}
+
+main .soysauce .soysauce_container .row .soysauce_text_Area p {
+  width: 503px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: unset;
+}
+
+main .facebook .facebook_container .row .facebook_news .post_img {
+  width: 540px;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
