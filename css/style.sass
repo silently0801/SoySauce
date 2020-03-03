@@ -38,12 +38,13 @@ nav
         top: 0
         left: 3%
         width: 94%
-        height: 100%
+        height: 500%
         z-index: -10
         background-color: $bg_color
     .container
         .row
             .logo
+
                 img
             .backEnd
                 ul
@@ -52,6 +53,7 @@ nav
                             writing-mode: vertical-lr
                             position: relative
                             +FontStyle(14px,$colorBlack,900,7px)
+                            margin: 0 3px
                             &::before
                                 +backEndHover(-10px,null)
                             &::after
@@ -83,10 +85,11 @@ nav
                     height: 50px
                     fill: $colorOrange
                 .menu_bot_text
-                    margin: 50px 0 40px
+                    margin: 52px 0 25px
                     span
                         writing-mode: vertical-lr
-                        +FontStyle(16px,$colorBlack,900,12px,16px)
+                        +FontStyle(14px,$colorBlack,900,12px,14px)
+                        margin-left: 10px
 
 main
     .carousel
@@ -95,7 +98,7 @@ main
             display: block
             position: absolute
             left: 0
-            top: 31.5%
+            top: 365px
             height: 265px
             width: 100%
             background: linear-gradient($colorDarkOrange,$colorOrange)
@@ -128,11 +131,11 @@ main
                             color: $colorOrange
                             background: $colorOrange
                 .carousel_bot
-                    top: calc( 31.5% + 265px ) 
+                    top: 630px
                     left: -10px
                     .textArea
                         z-index: 4
-                        top: 100px
+                        top: 120px
                         p
                             text-align: center
                         .jpText
@@ -143,40 +146,93 @@ main
                             +FontStyle(22px,$colorBlack,600,null)
                     .smallcircle
                         width: calc( 100% + 20px )
-                        height: 515px
+                        height: 533px
                         z-index: 3  
                         circle
                             fill: #EDEDED
                             stroke: $colorOrange
-                            stroke-width: 35px
+                            stroke-width: 30px
     .introduction
         height: 868px
         width: 100%
         background-color: #F7F7F7
-        margin: 264px 0 105px
+        margin: 264px 0 698px
         &::before
             content: " "
             display: block
-            background: $colorOrange
+            background: #333
             position: absolute
             left: 0
-            top: -400px
-            width: 1540px
+            top: -404px
+            width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
             z-index: 4
         &::after
             content: " "
             display: block
-            background: $colorOrange
+            background: #333
             position: absolute
             right: 0
-            width: 1200px
+            bottom: -230px
+            z-index: 4
+            width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
         .introduction_container
+            padding: 76px 0 0
+            &::before
+                content: " "
+                display: block
+                width: calc( (100% - 1140px) / 2 + 515px )
+                height: 868px
+                position: absolute
+                left: 0
+                top: 17px
+                z-index: 0
+                background: $colorOrange
             .row
                 .introduction_left
+                    span
+                        writing-mode: vertical-lr
+                        +FontStyle(123px,#fff,600,null)
                 .introduction_right
+                    p
+                .introduction_bot
+                    .introduction_bot_left
+                        p
+                    .introduction_bot_right
+                        span
+    .soysauce
+        .soysauce_container
+            .row
+                .soysauce_text_Area
+                    height: 620px
+                    border: 40px solid $colorOrange
+                    &::before
+                        content: " "
+                        display: block
+                        width: 920px
+                        height: 920px
+                        border-radius: 50%
+                        background: #999
+                        position: absolute
+                        top: -633px
+                        left: 50%
+                        transform: translateX(-50%)
+                    &::after
+                        content: "醬油。"
+                        display: block
+                        writing-mode: vertical-lr
+                        border-radius: 50%
+                        color: #fff
+                        position: absolute
+                        top: -200px
+                        left: 50%
+                        z-index: 5
+                        transform: translateX(-50%)
+                        +FontStyle(103px,#fff,90,40px)
+                        
 
+        
 
                 
 
