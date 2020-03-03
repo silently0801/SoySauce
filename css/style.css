@@ -13,7 +13,19 @@ nav {
   color: #231714;
 }
 
-nav .backEnd ul li a {
+nav::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 94%;
+  height: 100%;
+  z-index: -10;
+  background-color: #EDEDED;
+}
+
+nav .container .row .backEnd ul li a {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -25,7 +37,7 @@ nav .backEnd ul li a {
   line-height: unset;
 }
 
-nav .backEnd ul li a::before {
+nav .container .row .backEnd ul li a::before {
   content: " ";
   position: absolute;
   left: 8px;
@@ -37,7 +49,7 @@ nav .backEnd ul li a::before {
   background-size: cover;
 }
 
-nav .backEnd ul li a::after {
+nav .container .row .backEnd ul li a::after {
   content: " ";
   position: absolute;
   left: 8px;
@@ -49,19 +61,19 @@ nav .backEnd ul li a::after {
   background-size: cover;
 }
 
-nav .backEnd ul li a:hover::before {
+nav .container .row .backEnd ul li a:hover::before {
   display: block;
 }
 
-nav .backEnd ul li a:hover::after {
+nav .container .row .backEnd ul li a:hover::after {
   display: block;
 }
 
-nav .nav_btns ul li {
+nav .container .row .nav_btns ul li {
   margin: 0 18px;
 }
 
-nav .nav_btns ul li a {
+nav .container .row .nav_btns ul li a {
   font-size: 14px;
   color: #231714;
   font-weight: 900;
@@ -69,7 +81,7 @@ nav .nav_btns ul li a {
   line-height: unset;
 }
 
-nav .nav_btns ul li a::after {
+nav .container .row .nav_btns ul li a::after {
   content: " ";
   display: none;
   width: 100%;
@@ -78,7 +90,7 @@ nav .nav_btns ul li a::after {
   background-color: #C0362D;
 }
 
-nav .nav_btns ul li a:hover {
+nav .container .row .nav_btns ul li a:hover {
   font-size: 14px;
   color: #C0362D;
   font-weight: 900;
@@ -86,21 +98,21 @@ nav .nav_btns ul li a:hover {
   line-height: unset;
 }
 
-nav .nav_btns ul li a:hover::after {
+nav .container .row .nav_btns ul li a:hover::after {
   display: block;
 }
 
-nav .menu_btn_Area .menu_btn {
+nav .container .row .menu_btn_Area .menu_btn {
   width: 50px;
   height: 50px;
   fill: #C0362D;
 }
 
-nav .menu_btn_Area .menu_bot_text {
+nav .container .row .menu_btn_Area .menu_bot_text {
   margin: 50px 0 40px;
 }
 
-nav .menu_btn_Area .menu_bot_text span {
+nav .container .row .menu_btn_Area .menu_bot_text span {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -111,17 +123,29 @@ nav .menu_btn_Area .menu_bot_text span {
   line-height: 16px;
 }
 
-main .row .carousel .carousel_top {
+main .carousel::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 31.5%;
+  height: 265px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8D362D), to(#C0362D));
+  background: linear-gradient(#8D362D, #C0362D);
+  z-index: 1;
+}
+
+main .carousel .carousel_container .row .carousel_top {
   z-index: 2;
 }
 
-main .row .carousel .carousel_top .swiper-container {
-  width: 100%;
+main .carousel .carousel_container .row .carousel_top .swiper-container {
   height: 1140px;
   border-radius: 50%;
 }
 
-main .row .carousel .carousel_top .swiper-container .swiper-wrapper .swiper-slide {
+main .carousel .carousel_container .row .carousel_top .swiper-container .swiper-wrapper .swiper-slide {
   background-color: #333;
   text-align: center;
   font-size: 18px;
@@ -136,57 +160,39 @@ main .row .carousel .carousel_top .swiper-container .swiper-wrapper .swiper-slid
           align-items: center;
 }
 
-main .row .carousel .carousel_top .swiper-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
+main .carousel .carousel_container .row .carousel_top .swiper-pagination {
   top: 40px;
   right: -3px;
   z-index: 999;
 }
 
-main .row .carousel .carousel_top .swiper-pagination .swiper-pagination-bullet {
+main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper-pagination-bullet {
   margin: 5px 0;
   color: #231714;
   background: #231714;
   opacity: 1;
 }
 
-main .row .carousel .carousel_top .swiper-pagination .swiper-pagination-bullet-active {
+main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper-pagination-bullet-active {
   color: #C0362D;
   background: #C0362D;
 }
 
-main .row .carousel .carousel_mid {
-  left: 0;
-  top: 31.5%;
-  height: 265px;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8D362D), to(#C0362D));
-  background: linear-gradient(#8D362D, #C0362D);
-  z-index: 1;
-}
-
-main .row .carousel .carousel_bot {
+main .carousel .carousel_container .row .carousel_bot {
   top: calc( 31.5% + 265px);
   left: -10px;
 }
 
-main .row .carousel .carousel_bot .textArea {
+main .carousel .carousel_container .row .carousel_bot .textArea {
   z-index: 4;
-  top: 8vh;
+  top: 100px;
 }
 
-main .row .carousel .carousel_bot .textArea p {
+main .carousel .carousel_container .row .carousel_bot .textArea p {
   text-align: center;
 }
 
-main .row .carousel .carousel_bot .textArea .jpText {
+main .carousel .carousel_container .row .carousel_bot .textArea .jpText {
   font-size: 42px;
   color: #231714;
   font-weight: 600;
@@ -194,53 +200,58 @@ main .row .carousel .carousel_bot .textArea .jpText {
   line-height: unset;
 }
 
-main .row .carousel .carousel_bot .textArea .twText {
+main .carousel .carousel_container .row .carousel_bot .textArea .twText {
   font-size: 32px;
   color: #231714;
   font-weight: 600;
   line-height: unset;
 }
 
-main .row .carousel .carousel_bot .textArea .enText {
+main .carousel .carousel_container .row .carousel_bot .textArea .enText {
   font-size: 22px;
   color: #231714;
   font-weight: 600;
   line-height: unset;
 }
 
-main .row .carousel .carousel_bot .smallcircle {
+main .carousel .carousel_container .row .carousel_bot .smallcircle {
   width: calc( 100% + 20px);
   height: 515px;
   z-index: 3;
 }
 
-main .row .carousel .carousel_bot .smallcircle circle {
+main .carousel .carousel_container .row .carousel_bot .smallcircle circle {
   fill: #EDEDED;
   stroke: #C0362D;
   stroke-width: 35px;
 }
 
-main .row .introduction {
+main .introduction {
   height: 868px;
   width: 100%;
-  background-color: #333;
+  background-color: #F7F7F7;
   margin: 264px 0 105px;
 }
 
-main .row .introduction .introduction_top {
-  left: -500px;
-  top: 0;
+main .introduction::before {
+  content: " ";
+  display: block;
+  background: #C0362D;
+  position: absolute;
+  left: 0;
+  top: -400px;
+  width: 1540px;
+  height: 480px;
+  z-index: 4;
 }
 
-main .row .introduction .introduction_top .introduction_img {
+main .introduction::after {
+  content: " ";
+  display: block;
+  background: #C0362D;
+  position: absolute;
+  right: 0;
+  width: 1200px;
   height: 480px;
-  width: 100%;
-  background-color: #C0362D;
-}
-
-main .row .introduction .introduction_bot .introduction_img {
-  height: 480px;
-  width: 100%;
-  background-color: #C0362D;
 }
 /*# sourceMappingURL=style.css.map */
