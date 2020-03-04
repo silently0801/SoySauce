@@ -2,7 +2,6 @@ $bg_color: #EDEDED
 $colorBlack: #231714
 $colorOrange:  #C0362D 
 $colorDarkOrange: #8D362D
-$colorGrey: #808080
 
 @mixin FontStyle($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
     font-size: $font-size
@@ -39,7 +38,7 @@ nav
         top: 0
         left: 3%
         width: 94%
-        height: 700%
+        height: 500%
         z-index: -10
         background-color: $bg_color
     .container
@@ -150,20 +149,18 @@ main
                         height: 533px
                         z-index: 3  
                         circle
-                        fill: #EDEDED
-                        stroke: $colorOrange
-                        stroke-width: 30px
+                            fill: #EDEDED
+                            stroke: $colorOrange
+                            stroke-width: 30px
     .introduction
         height: 868px
         width: 100%
+        background-color: #F7F7F7
         margin: 264px 0 698px
         &::before
             content: " "
             display: block
-            background-image: url("../img/introduction_top.jpg")
-            box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
-            background-size: cover
-            background-position: center
+            background: #333
             position: absolute
             left: 0
             top: -404px
@@ -173,10 +170,7 @@ main
         &::after
             content: " "
             display: block
-            background-image: url("../img/introduction_bot.jpg")
-            box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
-            background-size: cover
-            background-position: center
+            background: #333
             position: absolute
             right: 0
             bottom: -230px
@@ -196,42 +190,17 @@ main
                 z-index: 0
                 background: $colorOrange
             .row
-                position: relative
                 .introduction_left
-                    flex: 1
                     span
                         writing-mode: vertical-lr
                         +FontStyle(123px,#fff,600,null)
                 .introduction_right
-                    padding-top: 215px
-                    flex: 0 0 580px
                     p
-                        &:nth-child(1)
-                            +FontStyle(18px,$colorBlack,900,4px)
-                            margin-bottom: 50px
-                        &:nth-child(2)
-                            +FontStyle(16px,$colorGrey,600,1px)
                 .introduction_bot
-                    position: absolute
-                    bottom: -550px
-                    right: -25px
-                    z-index: 10
                     .introduction_bot_left
-                        width: 460px
-                        height: auto
-                        position: relative
-                        top: 118px
-                        left: -400px
                         p
-                            &:nth-child(1)
-                                +FontStyle(18px,#fff,900,4px)
-                                margin-bottom: 50px
-                            &:nth-child(2)
-                                +FontStyle(16px,#fff,600,1px)
                     .introduction_bot_right
                         span
-                            writing-mode: vertical-lr
-                            +FontStyle(123px,#fff,900,20px)
     .soysauce
         .soysauce_container
             .row
@@ -245,11 +214,8 @@ main
                         display: block
                         width: 920px
                         height: 920px
-                        background-image: url("../img/soysauce.jpg")
-                        background-size: 178%
-                        background-repeat: no-repeat
-                        background-position: 47% 40%
                         border-radius: 50%
+                        background: #999
                         position: absolute
                         top: -633px
                         left: 50%
@@ -265,61 +231,22 @@ main
                         left: 50%
                         z-index: 5
                         transform: translateX(-50%)
-                        +FontStyle(123px,#fff,900,40px)
+                        +FontStyle(103px,#fff,900,40px)
                     p
                         width: 503px
                         text-align: center
                         margin-bottom: 30px
-                        &:nth-child(1)
-                            +FontStyle(16px,$colorBlack,600,2px)
-                        &:nth-child(2)
-                            +FontStyle(16px,$colorGrey,600,2px)
+                        +FontStyle(16px,#000,900,2px)
     .facebook
         .facebook_container
             .row
                 .facebook_header
-                    +FontStyle(32px,$colorBlack,600,2px)
-                    margin-bottom: 85px 
                 .facebook_btn
-                    position: absolute
-                    +FontStyle(18px,$colorBlack,600,2px)
-                    border: 1px solid $colorBlack
-                    top: 15px
-                    right: 20px
-                    padding: 2px 35px
                 .facebook_news
-                    margin-bottom: 75px 
                     .post_img
-                        flex: 0 0 540px
+                        width: 540px
                         height: 290px
                         background: #333
-                        overflow: hidden
-                        img
-                            width: 100%
-                            height: auto         
-                    .post_content
-                        flex: 1 1 auto
-                        padding: 0 60px
-                        position: relative
-                        .post_content_title
-                            +FontStyle(22px,$colorBlack,900,4px)
-                            margin-bottom: 15px
-                            &::before
-                                content: " "
-                                display: block
-                                background: $colorOrange
-                                position: absolute
-                                width: 120px
-                                height: 120px
-                                top: -20px
-                                left: -560px
-                                z-index: -1
-                        .post_content_time
-                            +FontStyle(16px,$colorGrey,900,2px)
-                            margin-bottom: 85px
-                        .post_content_text
-                            width: 100%
-                            +FontStyle(18px,$colorBlack,600,4px)
 
 
                         

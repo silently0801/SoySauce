@@ -21,7 +21,7 @@ nav::before {
   top: 0;
   left: 3%;
   width: 94%;
-  height: 700%;
+  height: 500%;
   z-index: -10;
   background-color: #EDEDED;
 }
@@ -221,6 +221,9 @@ main .carousel .carousel_container .row .carousel_bot .smallcircle {
   width: calc( 100% + 20px);
   height: 533px;
   z-index: 3;
+}
+
+main .carousel .carousel_container .row .carousel_bot .smallcircle circle {
   fill: #EDEDED;
   stroke: #C0362D;
   stroke-width: 30px;
@@ -229,17 +232,14 @@ main .carousel .carousel_container .row .carousel_bot .smallcircle {
 main .introduction {
   height: 868px;
   width: 100%;
+  background-color: #F7F7F7;
   margin: 264px 0 698px;
 }
 
 main .introduction::before {
   content: " ";
   display: block;
-  background-image: url("../img/introduction_top.jpg");
-  -webkit-box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-  background-size: cover;
-  background-position: center;
+  background: #333;
   position: absolute;
   left: 0;
   top: -404px;
@@ -251,11 +251,7 @@ main .introduction::before {
 main .introduction::after {
   content: " ";
   display: block;
-  background-image: url("../img/introduction_bot.jpg");
-  -webkit-box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-  background-size: cover;
-  background-position: center;
+  background: #333;
   position: absolute;
   right: 0;
   bottom: -230px;
@@ -280,16 +276,6 @@ main .introduction .introduction_container::before {
   background: #C0362D;
 }
 
-main .introduction .introduction_container .row {
-  position: relative;
-}
-
-main .introduction .introduction_container .row .introduction_left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 main .introduction .introduction_container .row .introduction_left span {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -297,73 +283,6 @@ main .introduction .introduction_container .row .introduction_left span {
   font-size: 123px;
   color: #fff;
   font-weight: 600;
-  line-height: unset;
-}
-
-main .introduction .introduction_container .row .introduction_right {
-  padding-top: 215px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 580px;
-          flex: 0 0 580px;
-}
-
-main .introduction .introduction_container .row .introduction_right p:nth-child(1) {
-  font-size: 18px;
-  color: #231714;
-  font-weight: 900;
-  letter-spacing: 4px;
-  line-height: unset;
-  margin-bottom: 50px;
-}
-
-main .introduction .introduction_container .row .introduction_right p:nth-child(2) {
-  font-size: 16px;
-  color: #808080;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: unset;
-}
-
-main .introduction .introduction_container .row .introduction_bot {
-  position: absolute;
-  bottom: -550px;
-  right: -25px;
-  z-index: 10;
-}
-
-main .introduction .introduction_container .row .introduction_bot .introduction_bot_left {
-  width: 460px;
-  height: auto;
-  position: relative;
-  top: 118px;
-  left: -400px;
-}
-
-main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(1) {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 900;
-  letter-spacing: 4px;
-  line-height: unset;
-  margin-bottom: 50px;
-}
-
-main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(2) {
-  font-size: 16px;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: unset;
-}
-
-main .introduction .introduction_container .row .introduction_bot .introduction_bot_right span {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  font-size: 123px;
-  color: #fff;
-  font-weight: 900;
-  letter-spacing: 20px;
   line-height: unset;
 }
 
@@ -379,11 +298,8 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::before {
   display: block;
   width: 920px;
   height: 920px;
-  background-image: url("../img/soysauce.jpg");
-  background-size: 178%;
-  background-repeat: no-repeat;
-  background-position: 47% 40%;
   border-radius: 50%;
+  background: #999;
   position: absolute;
   top: -633px;
   left: 50%;
@@ -405,7 +321,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
   z-index: 5;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  font-size: 123px;
+  font-size: 103px;
   color: #fff;
   font-weight: 900;
   letter-spacing: 40px;
@@ -416,108 +332,16 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p {
   width: 503px;
   text-align: center;
   margin-bottom: 30px;
-}
-
-main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
   font-size: 16px;
-  color: #231714;
-  font-weight: 600;
+  color: #000;
+  font-weight: 900;
   letter-spacing: 2px;
   line-height: unset;
-}
-
-main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(2) {
-  font-size: 16px;
-  color: #808080;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: unset;
-}
-
-main .facebook .facebook_container .row .facebook_header {
-  font-size: 32px;
-  color: #231714;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: unset;
-  margin-bottom: 85px;
-}
-
-main .facebook .facebook_container .row .facebook_btn {
-  position: absolute;
-  font-size: 18px;
-  color: #231714;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: unset;
-  border: 1px solid #231714;
-  top: 15px;
-  right: 20px;
-  padding: 2px 35px;
-}
-
-main .facebook .facebook_container .row .facebook_news {
-  margin-bottom: 75px;
 }
 
 main .facebook .facebook_container .row .facebook_news .post_img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 540px;
-          flex: 0 0 540px;
+  width: 540px;
   height: 290px;
   background: #333;
-  overflow: hidden;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_img img {
-  width: 100%;
-  height: auto;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  padding: 0 60px;
-  position: relative;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_title {
-  font-size: 22px;
-  color: #231714;
-  font-weight: 900;
-  letter-spacing: 4px;
-  line-height: unset;
-  margin-bottom: 15px;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_title::before {
-  content: " ";
-  display: block;
-  background: #C0362D;
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: -20px;
-  left: -560px;
-  z-index: -1;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
-  font-size: 16px;
-  color: #808080;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: unset;
-  margin-bottom: 85px;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_text {
-  width: 100%;
-  font-size: 18px;
-  color: #231714;
-  font-weight: 600;
-  letter-spacing: 4px;
-  line-height: unset;
 }
 /*# sourceMappingURL=style.css.map */
