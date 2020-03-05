@@ -353,7 +353,43 @@ main
                 bottom: -20px
                 right: 40px
                 background: #000
-                        
+footer
+    background: #1A1A1A
+    height: 161px
+    .footer_container
+        height: 100%
+        .row
+            padding: 40px 0 
+            height: 100%
+            .footer_logo
+                margin: 0 65px
+            .footer_information
+                flex: 0 0 351px
+                height: 66px
+                width: 351px
+                li
+                    display: flex
+                    margin-bottom: 10px
+                    .footer_information_header
+                        flex: 0 0 80px
+                        border-right: 1px solid #FFF
+                        margin-right: 10px  
+                        +FontStyle( 12px,#FFF,600,5px)
+                    .footer_information_text
+                        flex: 1 1 auto
+                        +FontStyle( 12px,#FFF,600,2px)
+            .copyright_Area
+                +FontStyle(14px,#FFF,600,2px)
+                flex: 1 1 auto
+                .copyright_top
+                    margin-bottom: 10px
+                .copyright_mid
+                    margin-bottom: 20px
+                .copyright_bot
+                    border: 1px solid #FFF
+                    width: 100%
+                       
+                                        
 
         
 
