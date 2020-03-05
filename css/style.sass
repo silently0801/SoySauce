@@ -21,7 +21,10 @@ $colorGrey: #808080
     height: 6px
     background-image: url("../img/hover.png")
     background-size: cover
-
+@mixin before_after_default($position:relative,$content:" ")
+    content: $content
+    display: block
+    position: $position
 a:hover
     text-decoration: none
 body
@@ -33,9 +36,7 @@ nav
     padding-top: 110px 
     color: $colorBlack
     &::before
-        content: " "
-        display: block
-        position: absolute
+        +before_after_default(absolute)
         top: 0
         left: 3%
         width: 94%
@@ -70,7 +71,7 @@ nav
                         a
                             +FontStyle(14px,$colorBlack,900,2px)
                             &::after
-                                content: " "
+                                +before_after_default()
                                 display: none
                                 width: 100%
                                 height: 3px
@@ -95,9 +96,7 @@ nav
 main
     .carousel
         &::before
-            content: " "
-            display: block
-            position: absolute
+            +before_after_default(absolute)
             left: 0
             top: 365px
             height: 265px
@@ -156,28 +155,24 @@ main
     .introduction
         height: 868px
         width: 100%
-        margin: 264px 0 698px
+        margin: 264px 0 710px
         &::before
-            content: " "
-            display: block
+            +before_after_default(absolute)
             background-image: url("../img/introduction_top.jpg")
             box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
             background-size: cover
             background-position: center
-            position: absolute
             left: 0
             top: -404px
             width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
             z-index: 4
         &::after
-            content: " "
-            display: block
+            +before_after_default(absolute)
             background-image: url("../img/introduction_bot.jpg")
             box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
             background-size: cover
             background-position: center
-            position: absolute
             right: 0
             bottom: -230px
             z-index: 4
@@ -186,11 +181,9 @@ main
         .introduction_container
             padding: 76px 0 0
             &::before
-                content: " "
-                display: block
+                +before_after_default(absolute)
                 width: calc( (100% - 1140px) / 2 + 515px )
                 height: 868px
-                position: absolute
                 left: 0
                 top: 17px
                 z-index: 0
@@ -234,15 +227,22 @@ main
                             +FontStyle(123px,#fff,900,20px)
     .soysauce
         .soysauce_container
+            &::after
+                +before_after_default(absolute)
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                height: 660px
+                width: 1180px
+                border: 40px solid $colorOrange
+                z-index: -1
             .row
                 .soysauce_text_Area
-                    height: 620px
-                    border: 40px solid $colorOrange
-                    padding-top: 345px
+                    padding-top: 385px
                     margin-bottom: 170px 
+                    height: 660px
                     &::before
-                        content: " "
-                        display: block
+                        +before_after_default(absolute)
                         width: 920px
                         height: 920px
                         background-image: url("../img/soysauce.jpg")
@@ -250,17 +250,14 @@ main
                         background-repeat: no-repeat
                         background-position: 47% 40%
                         border-radius: 50%
-                        position: absolute
-                        top: -633px
+                        top: -593px
                         left: 50%
                         transform: translateX(-50%)
                     &::after
-                        content: "醬油。"
-                        display: block
+                        +before_after_default(absolute,"醬油。")
                         writing-mode: vertical-lr
                         border-radius: 50%
                         color: #fff
-                        position: absolute
                         top: -200px
                         left: 50%
                         z-index: 5
@@ -271,7 +268,7 @@ main
                         text-align: center
                         margin-bottom: 30px
                         &:nth-child(1)
-                            +FontStyle(16px,$colorBlack,600,2px)
+                            +FontStyle(18px,$colorBlack,600,5px)
                         &:nth-child(2)
                             +FontStyle(16px,$colorGrey,600,2px)
     .facebook
@@ -279,7 +276,7 @@ main
             .row
                 position: relative
                 .facebook_header
-                    +FontStyle(32px,$colorBlack,600,2px)
+                    +FontStyle(32px,$colorBlack,600,5px)
                     margin-bottom: 85px 
                 .facebook_btn
                     position: absolute
@@ -287,7 +284,7 @@ main
                     border: 1px solid $colorBlack
                     top: 15px
                     right: 20px
-                    padding: 2px 35px
+                    padding: 5px 35px
                 .facebook_news
                     margin-bottom: 75px 
                     .post_img
@@ -306,10 +303,8 @@ main
                             +FontStyle(22px,$colorBlack,900,4px)
                             margin-bottom: 15px
                             &::before
-                                content: " "
-                                display: block
+                                +before_after_default(absolute)
                                 background: $colorOrange
-                                position: absolute
                                 width: 120px
                                 height: 120px
                                 top: -20px
@@ -320,9 +315,44 @@ main
                             margin-bottom: 85px
                         .post_content_text
                             width: 100%
+                            +FontStyle(18px,$colorBlack,600,6px)
+    .news_Area
+        margin-bottom: 110px 
+        .news_container
+            .row
+                .news_header
+                    flex: 0 0 400px
+                    margin-right: 10px
+                    .news_header_tw
+                        +FontStyle(32px,$colorBlack,600,10px)
+                    .news_header_en
+                        +FontStyle(95px,#979797,100,0px)
+                .news_list
+                    flex: 1 1 auto  
+                    height: auto
+                    &::after 
+                        +before_after_default(absolute,"More")
+                        +FontStyle(18px,$colorBlack,900,2px)
+                        right: -60px
+                        bottom: 30px
+                        border: 1px solid $colorBlack
+                        padding: 5px 10px
+
+                    li
+                        display: flex
+                        margin: 5px 0 35px 
+                        .news_time
+                            +FontStyle(18px,#4D4D4D,600,4px)
+                        .news_title
                             +FontStyle(18px,$colorBlack,600,4px)
-
-
+            hr
+                position: absolute
+                width: 1000px 
+                border: 0
+                height: 2px
+                bottom: -20px
+                right: 40px
+                background: #000
                         
 
         
