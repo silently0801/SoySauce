@@ -557,18 +557,20 @@ main .news_Area {
   margin-bottom: 110px;
 }
 
-main .news_Area .news_container::before {
+main .news_Area::before {
   content: " ";
   display: block;
   position: absolute;
   width: 107px;
   height: 107px;
-  right: -60px;
-  bottom: 30px;
+  left: 4%;
+  bottom: 80px;
   background-image: url("../img/FB_ICON.png");
+  background-size: 130%;
+  background-position: center;
 }
 
-main .news_Area .news_container::after {
+main .news_Area .news_container::before {
   content: "More";
   display: block;
   position: absolute;

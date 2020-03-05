@@ -325,15 +325,17 @@ main
                             +FontStyle(18px,$colorBlack,600,6px)
     .news_Area
         margin-bottom: 110px 
+        &::before
+            +before_after_default(absolute)
+            width: 107px
+            height: 107px
+            left: 4%
+            bottom: 80px
+            background-image: url("../img/FB_ICON.png") 
+            background-size: 130%
+            background-position: center
         .news_container
-            &::before
-                +before_after_default(absolute)
-                width: 107px
-                height: 107px
-                right: -60px
-                bottom: 30px
-                background-image: url("../img/FB_ICON.png") 
-            &::after 
+            &::before 
                 +before_after_default(absolute,"More")
                 +FontStyle(18px,$colorBlack,900,2px)
                 right: -60px
