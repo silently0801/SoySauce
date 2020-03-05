@@ -6,24 +6,11 @@ a:hover {
 body {
   border-top: 9px solid #C0362D;
   font-family: 'Noto Serif TC';
-  height: 300vh;
 }
 
 nav {
   padding-top: 110px;
   color: #231714;
-}
-
-nav::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 3%;
-  width: 94%;
-  height: 700%;
-  z-index: -10;
-  background-color: #EDEDED;
 }
 
 nav .container .row .backEnd ul li a {
@@ -241,8 +228,8 @@ main .introduction::before {
   background-image: url("../img/introduction_top.jpg");
   -webkit-box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-  background-size: cover;
-  background-position: center;
+  background-size: 110%;
+  background-position: 95% 33%;
   left: 0;
   top: -404px;
   width: calc( (100% -  1140px) / 2 + 1140px);
@@ -257,13 +244,26 @@ main .introduction::after {
   background-image: url("../img/introduction_bot.jpg");
   -webkit-box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4);
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: 95% 34%;
   right: 0;
   bottom: -230px;
-  z-index: 4;
   width: calc( (100% -  1140px) / 2 + 1140px);
   height: 480px;
+  z-index: 4;
+}
+
+main .introduction .mask {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: calc((100% - 1140px) / 2);
+  bottom: -230px;
+  width: 881px;
+  height: 480px;
+  z-index: 5;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0.5)), color-stop(50%, transparent));
+  background: linear-gradient(left, rgba(0, 0, 0, 0.5) 30%, transparent 50%);
 }
 
 main .introduction .introduction_container {
@@ -292,14 +292,26 @@ main .introduction .introduction_container .row .introduction_left {
           flex: 1;
 }
 
-main .introduction .introduction_container .row .introduction_left span {
+main .introduction .introduction_container .row .introduction_left div {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  font-size: 123px;
+  font-size: 96px;
   color: #fff;
   font-weight: 600;
+  letter-spacing: 20px;
   line-height: unset;
+  height: 500px;
+  position: relative;
+  right: -150px;
+}
+
+main .introduction .introduction_container .row .introduction_left div:nth-child(1) {
+  top: 50px;
+}
+
+main .introduction .introduction_container .row .introduction_left div:nth-child(2) {
+  top: 93px;
 }
 
 main .introduction .introduction_container .row .introduction_right {
@@ -328,7 +340,7 @@ main .introduction .introduction_container .row .introduction_right p:nth-child(
 
 main .introduction .introduction_container .row .introduction_bot {
   position: absolute;
-  bottom: -550px;
+  bottom: -503px;
   right: -25px;
   z-index: 10;
 }
@@ -337,7 +349,7 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   width: 460px;
   height: auto;
   position: relative;
-  top: 118px;
+  top: 88px;
   left: -400px;
 }
 
@@ -362,7 +374,7 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  font-size: 123px;
+  font-size: 96px;
   color: #fff;
   font-weight: 900;
   letter-spacing: 20px;
@@ -380,7 +392,7 @@ main .soysauce .soysauce_container::after {
   height: 660px;
   width: 1180px;
   border: 40px solid #C0362D;
-  z-index: -1;
+  z-index: -2;
 }
 
 main .soysauce .soysauce_container .row .soysauce_text_Area {
@@ -402,6 +414,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::before {
   border-radius: 50%;
   top: -593px;
   left: 50%;
+  z-index: -1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -501,16 +514,7 @@ main .facebook .facebook_container .row .facebook_news .post_content {
   position: relative;
 }
 
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_title {
-  font-size: 22px;
-  color: #231714;
-  font-weight: 900;
-  letter-spacing: 4px;
-  line-height: unset;
-  margin-bottom: 15px;
-}
-
-main .facebook .facebook_container .row .facebook_news .post_content .post_content_title::before {
+main .facebook .facebook_container .row .facebook_news .post_content::after {
   content: " ";
   display: block;
   position: absolute;
@@ -520,6 +524,15 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
   top: -20px;
   left: -560px;
   z-index: -1;
+}
+
+main .facebook .facebook_container .row .facebook_news .post_content .post_content_title {
+  font-size: 22px;
+  color: #231714;
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: unset;
+  margin-bottom: 15px;
 }
 
 main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
@@ -542,6 +555,32 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
 
 main .news_Area {
   margin-bottom: 110px;
+}
+
+main .news_Area .news_container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 107px;
+  height: 107px;
+  right: -60px;
+  bottom: 30px;
+  background-image: url("../img/FB_ICON.png");
+}
+
+main .news_Area .news_container::after {
+  content: "More";
+  display: block;
+  position: absolute;
+  font-size: 18px;
+  color: #231714;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: unset;
+  right: -60px;
+  bottom: 30px;
+  border: 1px solid #231714;
+  padding: 5px 10px;
 }
 
 main .news_Area .news_container .row .news_header {
@@ -572,21 +611,6 @@ main .news_Area .news_container .row .news_list {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: auto;
-}
-
-main .news_Area .news_container .row .news_list::after {
-  content: "More";
-  display: block;
-  position: absolute;
-  font-size: 18px;
-  color: #231714;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: unset;
-  right: -60px;
-  bottom: 30px;
-  border: 1px solid #231714;
-  padding: 5px 10px;
 }
 
 main .news_Area .news_container .row .news_list li {

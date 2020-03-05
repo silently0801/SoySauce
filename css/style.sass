@@ -30,19 +30,10 @@ a:hover
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
-    height: 300vh
-    
+
 nav
     padding-top: 110px 
     color: $colorBlack
-    &::before
-        +before_after_default(absolute)
-        top: 0
-        left: 3%
-        width: 94%
-        height: 700%
-        z-index: -10
-        background-color: $bg_color
     .container
         .row
             .logo
@@ -160,8 +151,8 @@ main
             +before_after_default(absolute)
             background-image: url("../img/introduction_top.jpg")
             box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
-            background-size: cover
-            background-position: center
+            background-size: 110%
+            background-position: 95% 33%
             left: 0
             top: -404px
             width: calc( (100% -  1140px) / 2 + 1140px)
@@ -171,13 +162,21 @@ main
             +before_after_default(absolute)
             background-image: url("../img/introduction_bot.jpg")
             box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.4)
-            background-size: cover
-            background-position: center
+            background-size: 100%
+            background-position: 95% 34%
             right: 0
             bottom: -230px
-            z-index: 4
             width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
+            z-index: 4
+        .mask
+            +before_after_default(absolute)
+            left: calc((100% - 1140px) / 2)
+            bottom: -230px
+            width: 881px
+            height: 480px
+            z-index: 5
+            background: linear-gradient(left, rgba(#000,.5) 30%, transparent 50%)
         .introduction_container
             padding: 76px 0 0
             &::before
@@ -192,9 +191,16 @@ main
                 position: relative
                 .introduction_left
                     flex: 1
-                    span
+                    div
                         writing-mode: vertical-lr
-                        +FontStyle(123px,#fff,600,null)
+                        +FontStyle(96px,#fff,600,20px)
+                        height: 500px
+                        position: relative
+                        right: -150px
+                        &:nth-child(1)
+                            top: 50px
+                        &:nth-child(2)
+                            top: 93px
                 .introduction_right
                     padding-top: 215px
                     flex: 0 0 580px
@@ -206,14 +212,14 @@ main
                             +FontStyle(16px,$colorGrey,600,1px)
                 .introduction_bot
                     position: absolute
-                    bottom: -550px
+                    bottom: -503px
                     right: -25px
                     z-index: 10
                     .introduction_bot_left
                         width: 460px
                         height: auto
                         position: relative
-                        top: 118px
+                        top: 88px
                         left: -400px
                         p
                             &:nth-child(1)
@@ -224,7 +230,7 @@ main
                     .introduction_bot_right
                         span
                             writing-mode: vertical-lr
-                            +FontStyle(123px,#fff,900,20px)
+                            +FontStyle(96px,#fff,900,20px)
     .soysauce
         .soysauce_container
             &::after
@@ -235,7 +241,7 @@ main
                 height: 660px
                 width: 1180px
                 border: 40px solid $colorOrange
-                z-index: -1
+                z-index: -2
             .row
                 .soysauce_text_Area
                     padding-top: 385px
@@ -252,6 +258,7 @@ main
                         border-radius: 50%
                         top: -593px
                         left: 50%
+                        z-index: -1
                         transform: translateX(-50%)
                     &::after
                         +before_after_default(absolute,"醬油。")
@@ -299,17 +306,17 @@ main
                         flex: 1 1 auto
                         padding: 0 60px
                         position: relative
+                        &::after
+                            +before_after_default(absolute)
+                            background: $colorOrange
+                            width: 120px
+                            height: 120px
+                            top: -20px
+                            left: -560px
+                            z-index: -1
                         .post_content_title
                             +FontStyle(22px,$colorBlack,900,4px)
                             margin-bottom: 15px
-                            &::before
-                                +before_after_default(absolute)
-                                background: $colorOrange
-                                width: 120px
-                                height: 120px
-                                top: -20px
-                                left: -560px
-                                z-index: -1
                         .post_content_time
                             +FontStyle(16px,$colorGrey,900,2px)
                             margin-bottom: 85px
@@ -319,6 +326,20 @@ main
     .news_Area
         margin-bottom: 110px 
         .news_container
+            &::before
+                +before_after_default(absolute)
+                width: 107px
+                height: 107px
+                right: -60px
+                bottom: 30px
+                background-image: url("../img/FB_ICON.png") 
+            &::after 
+                +before_after_default(absolute,"More")
+                +FontStyle(18px,$colorBlack,900,2px)
+                right: -60px
+                bottom: 30px
+                border: 1px solid $colorBlack
+                padding: 5px 10px
             .row
                 .news_header
                     flex: 0 0 400px
@@ -330,14 +351,6 @@ main
                 .news_list
                     flex: 1 1 auto  
                     height: auto
-                    &::after 
-                        +before_after_default(absolute,"More")
-                        +FontStyle(18px,$colorBlack,900,2px)
-                        right: -60px
-                        bottom: 30px
-                        border: 1px solid $colorBlack
-                        padding: 5px 10px
-
                     li
                         display: flex
                         margin: 5px 0 35px 
