@@ -15,7 +15,7 @@
 </head>
 
 <body class="m-0 p-0">
-
+    <div class="bg position-absolute"></div>
     <nav class="m-auto">
         <div class="container">
             <div class="row">
@@ -111,11 +111,11 @@
                     </div>
                     <div class="carousel_bot position-absolute w-100">
                         <div class="textArea position-absolute w-100">
-                            <p class="jpText">「一本の醤油、一生分の思い」</p>
-                            <p class="twText">「一瓶賀欸醬油，一世人欸情分。」</p>
-                            <p class="enText">“A bottle of soy sauce, a lifelong friendship.”</p>
+                            <p class="text_jp">「一本の醤油、一生分の思い」</p>
+                            <p class="text_tw">「一瓶賀欸醬油，一世人欸情分。」</p>
+                            <p class="text_en">“A bottle of soy sauce, a lifelong friendship.”</p>
                         </div>
-                        <svg class="smallcircle position-absolute" viewBox="0 0 1140 1140">
+                        <svg class="halfcircle position-absolute" viewBox="0 0 1140 1140">
                             <circle cx="570" cy="-105" r="1220" />
                         </svg>
                     </div>
@@ -272,23 +272,14 @@
                 clickable: true,
             },
         });
-
-        /*
-                                background-image: url("../img/soysauce.png")
-                        background-position: center
-                        background-repeat: no-repeat
-                        background-size: cover
-                        position: absolute
-                        overflow: hidden
-
-        */
-        // $(document).ready(() => {
-        //     let left = ($(window).width() - 1140) / 2 * -1;
-        //     let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;
-        //     $(".carousel_mid").css({ width: `${$(window).width()}` });
-        //     $(".carousel_mid").css({ left: `${left}px` });
-        //     $(".introduction_img").css({ width: `${introduction_img_width}` });
-        // });
+        $(document).ready(() => {
+            console.log($("body").height());
+            $(".bg").height($("body").height());
+            // let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;
+            // $(".carousel_mid").css({ width: `${$(window).width()}` });
+            // $(".carousel_mid").css({ left: `${left}px` });
+            // $(".introduction_img").css({ width: `${introduction_img_width}` });
+        });
         // $(window).resize(() => {
         //     let left = ($(window).width() - 1140) / 2 * -1;
         //     let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;

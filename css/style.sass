@@ -4,6 +4,12 @@ $colorOrange:  #C0362D
 $colorDarkOrange: #8D362D
 $colorGrey: #808080
 
+@mixin Font-Style($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
+    font-size: $font-size
+    color: $font-color
+    font-weight: $font-weight
+    letter-spacing: $letter-spacing
+    line-height: $line-height
 @mixin FontStyle($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
     font-size: $font-size
     color: $font-color
@@ -30,14 +36,18 @@ a:hover
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
-
+.bg
+    width: 96%
+    height: auto
+    left: 2%
+    z-index: -9999
+    background-color: $bg_color
 nav
     padding-top: 110px 
     color: $colorBlack
     .container
         .row
             .logo
-
                 img
             .backEnd
                 ul
@@ -108,7 +118,8 @@ main
                                 font-size: 18px
                                 display: flex
                                 justify-content: center
-                                align-items: center
+                                align-items: center 
+                                position: relative
                     .swiper-pagination 
                         top: 40px
                         right: -3px
@@ -129,20 +140,20 @@ main
                         top: 120px
                         p
                             text-align: center
-                        .jpText
+                        .text_jp
                             +FontStyle(42px,$colorBlack,600,7px)
-                        .twText
+                        .text_tw
                             +FontStyle(32px,$colorBlack,600,null)
-                        .enText
-                            +FontStyle(22px,$colorBlack,600,null)
-                    .smallcircle
+                        .text_en
+                            +FontStyle(22px,$colorGrey,600,null)
+                    .halfcircle
                         width: calc( 100% + 20px )
                         height: 533px
                         z-index: 3  
                         circle
-                        fill: #EDEDED
-                        stroke: $colorOrange
-                        stroke-width: 30px
+                            fill: #EDEDED
+                            stroke: $colorOrange
+                            stroke-width: 40px
     .introduction
         height: 868px
         width: 100%
@@ -197,6 +208,7 @@ main
                         height: 500px
                         position: relative
                         right: -150px
+                        text-shadow: -5px 5px 15px #000
                         &:nth-child(1)
                             top: 50px
                         &:nth-child(2)
@@ -208,6 +220,15 @@ main
                         &:nth-child(1)
                             +FontStyle(18px,$colorBlack,900,4px)
                             margin-bottom: 50px
+                            &::before
+                                +before_after_default(absolute)
+                                height: 109px
+                                width: 109px
+                                background-image: url("../img/introdution_icon.png")
+                                background-size: 120%
+                                background-position: 50% 50%
+                                top: 70px
+                                left: -10px
                         &:nth-child(2)
                             +FontStyle(16px,$colorGrey,600,1px)
                 .introduction_bot
@@ -231,6 +252,7 @@ main
                         span
                             writing-mode: vertical-lr
                             +FontStyle(96px,#fff,900,20px)
+                            text-shadow: -5px 5px 15px #000
     .soysauce
         .soysauce_container
             &::after
@@ -269,6 +291,7 @@ main
                         left: 50%
                         z-index: 5
                         transform: translateX(-50%)
+                        text-shadow: -5px 5px 15px #000
                         +FontStyle(123px,#fff,900,40px)
                     p
                         width: 503px
