@@ -16,9 +16,21 @@ body {
   background-color: #EDEDED;
 }
 
+@media (max-width: 1200px) {
+  .bg {
+    display: none;
+  }
+}
+
 nav {
   padding-top: 110px;
   color: #231714;
+}
+
+@media (max-width: 1200px) {
+  nav .container .row .backEnd {
+    display: none;
+  }
 }
 
 nav .container .row .backEnd ul li a {
@@ -66,6 +78,12 @@ nav .container .row .backEnd ul li a:hover::after {
   display: block;
 }
 
+@media (max-width: 1200px) {
+  nav .container .row .nav_btns {
+    display: none;
+  }
+}
+
 nav .container .row .nav_btns ul li {
   margin: 0 16px;
 }
@@ -109,6 +127,15 @@ nav .container .row .menu_btn_Area .menu_btn {
 
 nav .container .row .menu_btn_Area .menu_bot_text {
   margin: 52px 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  nav .container .row .menu_btn_Area .menu_bot_text {
+    display: none !important;
+  }
 }
 
 nav .container .row .menu_btn_Area .menu_bot_text span {
@@ -165,6 +192,12 @@ main .carousel .carousel_container .row .carousel_top .swiper-pagination {
   top: 40px;
   right: -3px;
   z-index: 999;
+}
+
+@media (max-width: 1200px) {
+  main .carousel .carousel_container .row .carousel_top .swiper-pagination {
+    display: none !important;
+  }
 }
 
 main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper-pagination-bullet {
@@ -396,11 +429,16 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   line-height: unset;
 }
 
+main .introduction .introduction_container .row .introduction_bot .introduction_bot_right {
+  position: relative;
+  top: 40px;
+}
+
 main .introduction .introduction_container .row .introduction_bot .introduction_bot_right span {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  font-size: 96px;
+  font-size: 123px;
   color: #fff;
   font-weight: 900;
   letter-spacing: 20px;
@@ -598,21 +636,6 @@ main .news_Area::before {
   background-position: center;
 }
 
-main .news_Area .news_container::before {
-  content: "More";
-  display: block;
-  position: absolute;
-  font-size: 18px;
-  color: #231714;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: unset;
-  right: -60px;
-  bottom: 30px;
-  border: 1px solid #231714;
-  padding: 5px 10px;
-}
-
 main .news_Area .news_container .row .news_header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 400px;
@@ -674,6 +697,15 @@ main .news_Area .news_container hr {
   bottom: -20px;
   right: 40px;
   background: #000;
+}
+
+main .bottom_img {
+  height: 960px;
+  overflow: hidden;
+}
+
+main .bottom_img img {
+  bottom: 5%;
 }
 
 footer {

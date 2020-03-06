@@ -30,18 +30,25 @@ $colorGrey: #808080
 @mixin before_after_default($position:relative,$content:" ")
     content: $content
     display: block
-    position: $position
+    position: $position.
+*
+    transition: 1s
+
 a:hover
     text-decoration: none
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
+
 .bg
     width: 96%
     height: auto
     left: 2%
     z-index: -9999
     background-color: $bg_color
+    @media ( max-width: 1200px )
+        display: none
+        transition: 1s ease-in-out
 nav
     padding-top: 110px 
     color: $colorBlack
@@ -50,6 +57,9 @@ nav
             .logo
                 img
             .backEnd
+                @media ( max-width: 1200px )
+                    display: none
+                    transition: 1s ease-in-out
                 ul
                     li
                         a
@@ -66,6 +76,9 @@ nav
                             &:hover::after
                                 display: block
             .nav_btns
+                @media ( max-width: 1200px )
+                    display: none
+                    transition: 1s ease-in-out
                 ul
                     li
                         margin: 0 16px
@@ -89,6 +102,10 @@ nav
                     fill: $colorOrange
                 .menu_bot_text
                     margin: 52px 0 25px
+                    display: flex
+                    @media ( max-width: 1200px )
+                        display: none !important
+                        transition: 1s ease-in-out
                     span
                         writing-mode: vertical-lr
                         +FontStyle(14px,$colorBlack,900,12px,14px)
@@ -110,6 +127,7 @@ main
                     z-index: 2
                     .swiper-container 
                         height: 1140px
+                        width: 100%
                         border-radius: 50%
                         .swiper-wrapper
                             .swiper-slide 
@@ -124,6 +142,8 @@ main
                         top: 40px
                         right: -3px
                         z-index: 999
+                        @media ( max-width: 1200px )
+                            display: none !important
                         .swiper-pagination-bullet 
                             margin: 5px 0
                             color: $colorBlack
@@ -249,9 +269,11 @@ main
                             &:nth-child(2)
                                 +FontStyle(16px,#fff,600,1px)
                     .introduction_bot_right
+                        position: relative
+                        top: 40px
                         span
                             writing-mode: vertical-lr
-                            +FontStyle(96px,#fff,900,20px)
+                            +FontStyle(123px,#fff,900,20px)
                             text-shadow: -5px 5px 15px #000
     .soysauce
         .soysauce_container
@@ -358,13 +380,13 @@ main
             background-size: 130%
             background-position: center
         .news_container
-            &::before 
-                +before_after_default(absolute,"More")
-                +FontStyle(18px,$colorBlack,900,2px)
-                right: -60px
-                bottom: 30px
-                border: 1px solid $colorBlack
-                padding: 5px 10px
+            // &::before 
+            //     +before_after_default(absolute,"More")
+            //     +FontStyle(18px,$colorBlack,900,2px)
+            //     right: -5%
+            //     bottom: 30px
+            //     border: 1px solid $colorBlack
+            //     padding: 5px 10px
             .row
                 .news_header
                     flex: 0 0 400px
@@ -391,6 +413,11 @@ main
                 bottom: -20px
                 right: 40px
                 background: #000
+    .bottom_img
+        height: 960px
+        overflow: hidden
+        img
+            bottom: 5%
 footer
     background: #1A1A1A
     height: 161px

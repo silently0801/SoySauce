@@ -94,7 +94,7 @@
             <div class="carousel_container container">
                 <div class="row position-relative">
                     <div class="carousel_top w-100 position-relative">
-                        <div class="swiper-container position-relative w-100">
+                        <div class="swiper-container position-relative">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">Slide 1</div>
                                 <div class="swiper-slide">Slide 2</div>
@@ -219,8 +219,8 @@
                 <hr>
             </div>
         </section>
-        <section class="bottom_img ">
-            <img class="img-fluid" src="./img/DSC_9239.jpg" alt="">
+        <section class="bottom_img w-100 position-relative">
+            <img class="img-fluid position-relative" src="./img/DSC_9239.jpg" alt="">
         </section>
     </main>
 
@@ -273,20 +273,18 @@
             },
         });
         $(document).ready(() => {
-            console.log($("body").height());
+            console.log($("html").width());
             $(".bg").height($("body").height());
             // let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;
             // $(".carousel_mid").css({ width: `${$(window).width()}` });
             // $(".carousel_mid").css({ left: `${left}px` });
             // $(".introduction_img").css({ width: `${introduction_img_width}` });
         });
-        // $(window).resize(() => {
-        //     let left = ($(window).width() - 1140) / 2 * -1;
-        //     let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;
-        //     $(".carousel_mid").css({ width: `${$(window).width()}` });
-        //     $(".carousel_mid").css({ left: `${left}px` });
-        //     $(".introduction_img").css({ width: `${introduction_img_width}` });
-        // });
+        $(window).resize(() => {
+            console.log($("body").width());
+            
+            $(".bg").height($("body").height());
+        });
 
     </script>
 </body>
