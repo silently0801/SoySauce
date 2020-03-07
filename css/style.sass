@@ -34,12 +34,11 @@ $colorGrey: #808080
 
 a:hover
     text-decoration: none
+html
+   
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
-    @media ( max-width: 1200px )
-        overflow: hidden
-
 .bg
     width: 96%
     height: auto
@@ -48,7 +47,6 @@ body
     background-color: $bg_color
     @media ( max-width: 1200px )
         display: none
-        transition: 1s ease-in-out
 nav
     padding-top: 110px 
     color: $colorBlack
@@ -127,13 +125,14 @@ nav
                         margin-left: 10px
 
 main
+    overflow: hidden
     .carousel
         &::before
             +before_after_default(absolute)
             left: 0
             top: 365px
             height: 265px
-            width: 100%
+            width: 100% 
             background: linear-gradient($colorDarkOrange,$colorOrange)
             z-index: 1
             @media ( max-width: 1200px )
@@ -142,14 +141,16 @@ main
             .row
                 .carousel_top
                     z-index: 2
+                    @media ( max-width: 1200px )
+                        overflow: hidden 
                     .swiper-container 
                         height: 1140px
                         width: 100%
                         border-radius: 50%
                         @media ( max-width: 1200px )
                             height: 120vw
-                            width: 120vw
-                            left: -10vw
+                            width: 134vw
+                            left: -17vw 
                         .swiper-wrapper
                             .swiper-slide 
                                 background-color: #333
@@ -176,9 +177,14 @@ main
                 .carousel_bot
                     top: 630px
                     left: -10px
+                    @media ( max-width: 1200px )
+                        top: 85vw
                     .textArea
                         z-index: 4
                         top: 120px
+                        @media ( max-width: 1200px )
+                            top: 17vw
+                            transform: translateY(-50%)
                         p
                             text-align: center
                         .text_jp
@@ -197,10 +203,23 @@ main
                             fill: #EDEDED
                             stroke: $colorOrange
                             stroke-width: 40px
+                    .rectangle
+                        display: none
+                        @media ( max-width: 1200px )
+                            display: block
+                            width: 100% 
+                            height: 35vw
+                            min-height: 113px
+                            background-color: #EDEDED
+                            z-index: 3
     .introduction
         height: 868px
         width: 100%
         margin: 264px 0 710px
+        @media ( max-width: 1200px )
+            margin: 62.5vw 0 calc( 900px + 45vw )
+            height: auto
+            background-color: $colorOrange
         &::before
             +before_after_default(absolute)
             background-image: url("../img/introduction_top.jpg")
@@ -212,6 +231,11 @@ main
             width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
             z-index: 4
+            @media ( max-width: 1200px )
+                top: -62.5vw
+                width: 100%
+                height: 62.5vw
+                min-height: 200px
         &::after
             +before_after_default(absolute)
             background-image: url("../img/introduction_bot.jpg")
@@ -223,6 +247,11 @@ main
             width: calc( (100% -  1140px) / 2 + 1140px)
             height: 480px
             z-index: 4
+            @media ( max-width: 1200px )
+                bottom: calc(-900px - 45vw)
+                height: calc(900px + 45vw)
+                width: 100%
+                background-size: cover
         .mask
             +before_after_default(absolute)
             left: calc((100% - 1140px) / 2)
@@ -231,8 +260,15 @@ main
             height: 480px
             z-index: 5
             background: linear-gradient(left, rgba(#000,.5) 30%, transparent 50%)
+            @media ( max-width: 1200px )
+                left: 0
+                bottom: calc(-900px - 45vw)
+                width: 100vw
+                background: linear-gradient(bottom, rgba(#000,.5) 30%, transparent 50%)
         .introduction_container
             padding: 76px 0 0
+            @media ( max-width: 1200px )
+                padding: 0
             &::before
                 +before_after_default(absolute)
                 width: calc( (100% - 1140px) / 2 + 515px )
@@ -241,10 +277,20 @@ main
                 top: 17px
                 z-index: 0
                 background: $colorOrange
+                @media ( max-width: 1200px )
+                    display: none
             .row
                 position: relative
+                @media ( max-width: 1200px )
+                    width: 100%
+                    margin: 0
                 .introduction_left
                     flex: 1
+                    position: relative
+                    @media ( max-width: 1200px )
+                        position: absolute
+                        top: -260px
+                        z-index: 4
                     div
                         writing-mode: vertical-lr
                         +FontStyle(96px,#fff,600,20px)
@@ -252,17 +298,29 @@ main
                         position: relative
                         right: -150px
                         text-shadow: -5px 5px 15px #000
+                        @media ( max-width: 1200px )
+                            right: 0px
                         &:nth-child(1)
                             top: 50px
+                            @media ( max-width: 1200px )
+                                top: 0
                         &:nth-child(2)
-                            top: 93px
+                            top: 93px  
+                            @media ( max-width: 1200px )
+                                top: 0               
                 .introduction_right
-                    padding-top: 215px
+                    padding: 215px 0 0
                     flex: 0 0 580px
+                    @media ( max-width: 1200px )
+                        padding: 215px 0
+                        margin: auto    
+                        width: 100%
                     p
                         &:nth-child(1)
-                            +FontStyle(18px,$colorBlack,900,4px)
+                            +FontStyle(18px,$colorBlack,600 ,4px)
                             margin-bottom: 50px
+                            @media ( max-width: 1200px )
+                                +FontStyle(18px,#FFF,600,4px)
                             &::before
                                 +before_after_default(absolute)
                                 height: 109px
@@ -272,33 +330,53 @@ main
                                 background-position: 50% 50%
                                 top: 70px
                                 left: -10px
+                                @media ( max-width: 1200px )
+                                    display: none
                         &:nth-child(2)
                             +FontStyle(16px,$colorGrey,600,1px)
+                            @media ( max-width: 1200px )
+                                +FontStyle(16px,#FFF,600,1px)
                 .introduction_bot
                     position: absolute
                     bottom: -503px
                     right: -25px
                     z-index: 10
+                    @media ( max-width: 1200px )
+                        flex-direction: column
+                        bottom: calc( -678px - 5vw )
+                        right: 50%
+                        width: 100%
+                        transform: translateX(+50%)
+                        align-items: center
                     .introduction_bot_left
                         width: 460px
                         height: auto
                         position: relative
                         top: 88px
                         left: -400px
+                        @media ( max-width: 1200px )
+                            order: 1
+                            top: 0px
+                            left: 0px
+                            width: 580px
                         p
                             &:nth-child(1)
-                                +FontStyle(18px,#fff,900,4px)
+                                +FontStyle(18px,#fff,600,4px)
                                 margin-bottom: 50px
                             &:nth-child(2)
                                 +FontStyle(16px,#fff,600,1px)
                     .introduction_bot_right
                         position: relative
                         top: 40px
+                        @media ( max-width: 1200px )
+                            top: 0px
                         span
                             writing-mode: vertical-lr
                             +FontStyle(123px,#fff,900,20px)
                             text-shadow: -5px 5px 15px #000
     .soysauce
+        @media ( max-width: 1200px )
+            background-color: $colorOrange
         .soysauce_container
             &::after
                 +before_after_default(absolute)
@@ -309,11 +387,15 @@ main
                 width: 1180px
                 border: 40px solid $colorOrange
                 z-index: -2
+                @media ( max-width: 1200px )
+                    display: none
             .row
                 .soysauce_text_Area
                     padding-top: 385px
                     margin-bottom: 170px 
                     height: 660px
+                    @media ( max-width: 1200px )
+                        padding-top: 65vw
                     &::before
                         +before_after_default(absolute)
                         width: 920px
@@ -325,8 +407,12 @@ main
                         border-radius: 50%
                         top: -593px
                         left: 50%
-                        z-index: -1
-                        transform: translateX(-50%)
+                        z-index: 5
+                        transform: translateX(-50%) scale(-1 , -1)
+                        @media ( max-width: 1200px )
+                            width: 110vw
+                            height: 110vw
+                            top: -55vw
                     &::after
                         +before_after_default(absolute,"醬油。")
                         writing-mode: vertical-lr
@@ -338,14 +424,21 @@ main
                         transform: translateX(-50%)
                         text-shadow: -5px 5px 15px #000
                         +FontStyle(123px,#fff,900,40px)
+                        @media ( max-width: 1200px )
+                            top: -15vw
+                            
                     p
                         width: 503px
                         text-align: center
                         margin-bottom: 30px
                         &:nth-child(1)
                             +FontStyle(18px,$colorBlack,600,5px)
+                            @media ( max-width: 1200px )
+                                +FontStyle(18px,#FFF,600,5px)
                         &:nth-child(2)
                             +FontStyle(16px,$colorGrey,600,2px)
+                            @media ( max-width: 1200px )
+                                +FontStyle(16px,#FFF,600,2px)
     .facebook
         .facebook_container
             .row

@@ -111,22 +111,23 @@
                     </div>
                     <div class="carousel_bot position-absolute w-100">
                         <div class="textArea position-absolute w-100">
-                            <p class="text_jp">「一本の醤油、一生分の思い」</p>
+                            <p class="text_jp d-sm-none d-md-block">「一本の醤油、一生分の思い」</p>
                             <p class="text_tw">「一瓶賀欸醬油，一世人欸情分。」</p>
                             <p class="text_en">“A bottle of soy sauce, a lifelong friendship.”</p>
                         </div>
-                        <svg class="halfcircle position-absolute" viewBox="0 0 1140 1140">
+                        <svg class="halfcircle position-relative" viewBox="0 0 1140 1140">
                             <circle cx="570" cy="-105" r="1220" />
                         </svg>
+                        <div class="rectangle position-relative"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="introduction w-100 position-relative">
+        <section class="introduction w-100 position-relative">
             <div class="mask"></div>
             <div class="introduction_container container">
                 <div class="row position-relative">
-                    <div class="introduction_left position-relative d-flex">
+                    <div class="introduction_left d-flex">
                         <div>老品牌，</div>
                         <div>新出發。</div>
                     </div>
@@ -138,7 +139,6 @@
                         </p>
                     </div>
                     <div class="introduction_bot d-flex">
-                        
                         <div class="introduction_bot_left">
                             <p>醬油達人嚴選台灣非基因改造黑豆、澳洲海鹽，和來自日本的菌麴，西螺在地技術培養，不變的私房手工，遵循古法釀造。</p>
                             <p>We carefully Selected Non- Genetically Modified (NGO) black bean, sea salt from
@@ -151,8 +151,8 @@
                     </div>
                 </div>
             </div>
-        </section> -->
-        <!-- <section class="soysauce w-100 position-relative">
+        </section>
+        <section class="soysauce w-100 position-relative">
             <div class="soysauce_container container">
                 <div class="row">
                     <div class="soysauce_text_Area w-100 position-relative d-flex flex-column align-items-center">
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- <section class="facebook">
             <div class="facebook_container container">
                 <div class="row justify-content-center">
@@ -274,9 +274,9 @@
             },
         });
         $(document).ready(() => {
-            console.log($("html").width());
+            console.log(document.body.offsetWidth );
             $(".bg").height($("body").height());
-            if($("body").width() <= 1200){
+            if(window.innerWidth  <= 1200){
                 document.querySelector(".carousel_container").classList.remove("container");
             }
             else
@@ -289,10 +289,10 @@
             // $(".introduction_img").css({ width: `${introduction_img_width}` });
         });
         $(window).resize(() => {
-            console.log($("body").width());
+            console.log(window.innerWidth);
             
             $(".bg").height($("body").height());
-            if($("body").width() <= 1200){
+            if(window.innerWidth  <= 1200){
                 document.querySelector(".carousel_container").classList.remove("container");
             }
             else
