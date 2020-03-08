@@ -77,9 +77,11 @@
                     </ul>
                 </div>
                 <div class="menu_btn_Area ml-auto d-flex flex-column align-items-end">
-                    <svg class="menu_btn" viewBox="0 0 50 50">
-                        <rect x="0" y="-20" width="70" height="70" rx="20" />
-                    </svg>
+                    <button class="menu_btn btn flex-column" tabindex="-1" aria-label="Mobile menu toggle">
+                        <span class="top_bar bar"></span>
+                        <span class="mid_bar bar"></span>
+                        <span class="bot_bar bar"></span>
+                    </button>
                     <div class="menu_bot_text d-flex">
                         <span class="mr-2">1940</span>
                         <span>YDSIN</span>
@@ -282,10 +284,6 @@
             {
                 document.querySelector(".carousel_container").classList.add("container");
             }
-            // let introduction_img_width = ($(window).width() - 1140) / 2 + 1140;
-            // $(".carousel_mid").css({ width: `${$(window).width()}` });
-            // $(".carousel_mid").css({ left: `${left}px` });
-            // $(".introduction_img").css({ width: `${introduction_img_width}` });
         });
         $(window).resize(() => {
             console.log(window.innerWidth);
@@ -299,7 +297,23 @@
                 document.querySelector(".carousel_container").classList.add("container");
             }
         });
+        /*btn_click*/
 
+        let menu_btn = document.querySelector(".menu_btn");
+        let top_bar  = document.querySelector(".top_bar");
+        let mid_bar  = document.querySelector(".mid_bar");
+        let bot_bar  = document.querySelector(".bot_bar");
+
+        function menuclick(e){
+            // $(".menu,main,footer").toggle();
+            if(window.innerWidth  <= 1200){
+                top_bar.classList.toggle("top_click");
+                mid_bar.classList.toggle("mid_click");
+                bot_bar.classList.toggle("bot_click");
+                menu_btn.classList.toggle("border_wihte")
+            }
+        }
+        menu_btn.addEventListener("click",menuclick);
     </script>
 </body>
 

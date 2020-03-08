@@ -31,6 +31,25 @@ $colorGrey: #808080
     content: $content
     display: block
     position: $position
+@mixin absolute($top:unset,$right:unset,$bottom:unset,$left:unset)
+    position: absolute
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
+
+.top_click
+    top: 24px !important
+    left: 12px !important
+    transform: rotate(-45deg) !important
+.mid_click
+    opacity: 0 !important
+.bot_click
+    top: 24px !important
+    left: 12px !important
+    transform: rotate(45deg) !important    
+.border_wihte
+    border-radius: 1px solid #FFF
 
 a:hover
     text-decoration: none
@@ -70,7 +89,6 @@ nav
             .backEnd
                 @media ( max-width: 1200px )
                     display: none
-                    transition: 1s ease-in-out
                 ul
                     li
                         a
@@ -89,7 +107,6 @@ nav
             .nav_btns
                 @media ( max-width: 1200px )
                     display: none
-                    transition: 1s ease-in-out
                 ul
                     li
                         margin: 0 16px
@@ -113,13 +130,32 @@ nav
                 .menu_btn
                     width: 50px
                     height: 50px
-                    fill: $colorOrange
+                    background-color: $colorOrange
+                    border-radius: 0 0 0 50%
+                    @media ( max-width: 1200px )
+                        display: flex
+                    .bar
+                        background-color: #FFF
+                        width: 26px
+                        height: 1px
+                        transition: 0.3s
+                        display: none
+                        @media ( max-width: 1200px )
+                            display: block
+                    .top_bar
+                        +absolute(17px ,null,null,12px)
+                        transform: rotate(0deg)
+                    .mid_bar
+                        +absolute(24px ,null,null,12px)
+                        opacity: 1
+                    .bot_bar
+                        +absolute(31px ,null,null,12px)
+                        transform: rotate(0deg)
                 .menu_bot_text
                     margin: 52px 0 25px
                     display: flex
                     @media ( max-width: 1200px )
                         display: none !important
-                        transition: 1s ease-in-out
                     span
                         writing-mode: vertical-lr
                         +FontStyle(14px,$colorBlack,900,12px,14px)

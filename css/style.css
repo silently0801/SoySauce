@@ -1,4 +1,26 @@
 @charset "UTF-8";
+.top_click {
+  top: 24px !important;
+  left: 12px !important;
+  -webkit-transform: rotate(-45deg) !important;
+          transform: rotate(-45deg) !important;
+}
+
+.mid_click {
+  opacity: 0 !important;
+}
+
+.bot_click {
+  top: 24px !important;
+  left: 12px !important;
+  -webkit-transform: rotate(45deg) !important;
+          transform: rotate(45deg) !important;
+}
+
+.border_wihte {
+  border-radius: 1px solid #FFF;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -55,8 +77,6 @@ nav {
 @media (max-width: 1200px) {
   nav .container .row .backEnd {
     display: none;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
   }
 }
 
@@ -108,8 +128,6 @@ nav .container .row .backEnd ul li a:hover::after {
 @media (max-width: 1200px) {
   nav .container .row .nav_btns {
     display: none;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
   }
 }
 
@@ -158,7 +176,54 @@ nav .container .row .nav_btns ul li a:hover::after {
 nav .container .row .menu_btn_Area .menu_btn {
   width: 50px;
   height: 50px;
-  fill: #C0362D;
+  background-color: #C0362D;
+  border-radius: 0 0 0 50%;
+}
+
+@media (max-width: 1200px) {
+  nav .container .row .menu_btn_Area .menu_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav .container .row .menu_btn_Area .menu_btn .bar {
+  background-color: #FFF;
+  width: 26px;
+  height: 1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  nav .container .row .menu_btn_Area .menu_btn .bar {
+    display: block;
+  }
+}
+
+nav .container .row .menu_btn_Area .menu_btn .top_bar {
+  position: absolute;
+  top: 17px;
+  left: 12px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+nav .container .row .menu_btn_Area .menu_btn .mid_bar {
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  opacity: 1;
+}
+
+nav .container .row .menu_btn_Area .menu_btn .bot_bar {
+  position: absolute;
+  top: 31px;
+  left: 12px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 nav .container .row .menu_btn_Area .menu_bot_text {
@@ -171,8 +236,6 @@ nav .container .row .menu_btn_Area .menu_bot_text {
 @media (max-width: 1200px) {
   nav .container .row .menu_btn_Area .menu_bot_text {
     display: none !important;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
   }
 }
 
