@@ -18,9 +18,9 @@
     <div class="bg position-absolute"></div>
     <nav class="m-auto">
         <div class="container">
-            <div class="row">
+            <div class="row d-flex">
                 <div class="logo">
-                    <img src="./img/logo.png" alt="">
+                    <img src="./img/icon-05.png" alt="">
                 </div>
                 <div class="backEnd m-2">
                     <ul class="list-unstyled d-flex m-0 p-0">
@@ -149,7 +149,6 @@
                         <div class="introduction_bot_right">
                             <span>嚴選。</span>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -165,11 +164,11 @@
                 </div>
             </div>
         </section>
-        <section class="facebook">
+        <!-- <section class="facebook">
             <div class="facebook_container container">
                 <div class="row justify-content-center">
                     <div class="facebook_header">臉書動態 | Facebook</div>
-                    <div class="facebook_btn">f前往我們的臉書</div>
+                    <div class="facebook_btn">前往我們的臉書</div>
                     <div class="facebook_news d-flex">
                         <div class="post_img">
                             <img src="./img/facebook01.jpg" alt="">
@@ -195,8 +194,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="news_Area position-relative">
+        </section> -->
+        <!-- <section class="news_Area position-relative">
             <div class="news_container container position-relative">
                 <div class="row position-relative">
                     <div class="news_header d-flex">
@@ -220,7 +219,7 @@
                 </div>
                 <hr>
             </div>
-        </section>
+        </section> -->
         <section class="bottom_img w-100 position-relative">
         </section>
     </main>
@@ -248,7 +247,7 @@
                 <div class="copyright_Area d-flex flex-column align-items-center">
                     <div class="copyright_top align-self-lg-end">Copyright © 201９ ydsin1940.</div>
                     <div class="copyright_mid align-self-lg-end">All rights reserved.</div>
-                    <div class="copyright_bot d-none"></div>
+                    <div class="copyright_bot d-none d-sm-block"></div>
                 </div>
             </div>
         </div>
@@ -277,7 +276,7 @@
         $(document).ready(() => {
             console.log(document.body.offsetWidth );
             $(".bg").height($("body").height());
-            if(window.innerWidth  <= 1200){
+            if(window.innerWidth  <= 767){
                 document.querySelector(".carousel_container").classList.remove("container");
             }
             else
@@ -289,7 +288,7 @@
             console.log(window.innerWidth);
             
             $(".bg").height($("body").height());
-            if(window.innerWidth  <= 1200){
+            if(window.innerWidth  <= 767){
                 document.querySelector(".carousel_container").classList.remove("container");
             }
             else
