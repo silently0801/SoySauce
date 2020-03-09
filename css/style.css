@@ -561,6 +561,7 @@ main .introduction .mask {
 
 @media (max-width: 1199px) {
   main .introduction .mask {
+    width: 100%;
     bottom: -480px;
     left: 0;
   }
@@ -837,6 +838,13 @@ main .introduction .introduction_container .row .introduction_bot {
   }
 }
 
+@media (max-width: 991px) {
+  main .introduction .introduction_container .row .introduction_bot {
+    bottom: -460px;
+    right: 0px;
+  }
+}
+
 @media (max-width: 767px) {
   main .introduction .introduction_container .row .introduction_bot {
     -webkit-box-orient: vertical;
@@ -874,6 +882,12 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
     top: 180px;
     left: unset;
     right: 130px;
+  }
+}
+
+@media (max-width: 991px) {
+  main .introduction .introduction_container .row .introduction_bot .introduction_bot_left {
+    width: 480px;
   }
 }
 

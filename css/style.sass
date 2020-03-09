@@ -315,6 +315,7 @@ main
             z-index: 5
             background: linear-gradient(left, rgba(#000,.5) 40%, transparent 60%)
             @media ( max-width: 1199px )
+                width: 100%
                 bottom: -480px
                 left: 0
             @media ( max-width: 767px )
@@ -426,6 +427,9 @@ main
                     @media ( max-width: 1199px )
                         bottom: -460px
                         right: 100px
+                    @media ( max-width: 991px )   
+                        bottom: -460px
+                        right: 0px                      
                     @media ( max-width: 767px )
                         flex-direction: column
                         bottom: calc( -678px - 5vw )
@@ -446,6 +450,8 @@ main
                             top: 180px
                             left: unset
                             right: 130px
+                        @media ( max-width: 991px )  
+                            width: 480px
                         @media ( max-width: 767px )  
                             order: 1
                             width: 540px
