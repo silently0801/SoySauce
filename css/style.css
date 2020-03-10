@@ -28,6 +28,8 @@ a:hover {
 body {
   border-top: 9px solid #C0362D;
   font-family: 'Noto Serif TC';
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .bg {
@@ -38,7 +40,7 @@ body {
   background-color: #EDEDED;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 539px) {
   .bg {
     display: none;
   }
@@ -236,18 +238,18 @@ main .carousel::before {
 
 @media (max-width: 767px) {
   main .carousel::before {
+    top: 65px;
+  }
+}
+
+@media (max-width: 540px) {
+  main .carousel::before {
     display: none;
   }
 }
 
 main .carousel .carousel_container .row .carousel_top {
   z-index: 2;
-}
-
-@media (max-width: 767px) {
-  main .carousel .carousel_container .row .carousel_top {
-    overflow: hidden;
-  }
 }
 
 main .carousel .carousel_container .row .carousel_top .swiper-container {
@@ -272,6 +274,13 @@ main .carousel .carousel_container .row .carousel_top .swiper-container {
 }
 
 @media (max-width: 767px) {
+  main .carousel .carousel_container .row .carousel_top .swiper-container {
+    width: 80%;
+    height: 432px;
+  }
+}
+
+@media (max-width: 540px) {
   main .carousel .carousel_container .row .carousel_top .swiper-container {
     top: unset;
     height: 120vw;
@@ -332,7 +341,7 @@ main .carousel .carousel_container .row .carousel_bot {
 
 @media (max-width: 767px) {
   main .carousel .carousel_container .row .carousel_bot {
-    top: 85vw;
+    top: 330px;
   }
 }
 
@@ -349,7 +358,7 @@ main .carousel .carousel_container .row .carousel_bot .textArea {
 
 @media (max-width: 767px) {
   main .carousel .carousel_container .row .carousel_bot .textArea {
-    top: 17vw;
+    top: 100px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
@@ -443,7 +452,7 @@ main .carousel .carousel_container .row .carousel_bot .rectangle {
   main .carousel .carousel_container .row .carousel_bot .rectangle {
     display: block;
     width: 100%;
-    height: 35vw;
+    height: 200px;
     min-height: 113px;
     background-color: #EDEDED;
     z-index: 3;
@@ -465,13 +474,13 @@ main .introduction {
 
 @media (max-width: 1199px) {
   main .introduction {
-    margin: 750px 0 700px;
+    margin: 750px 0 900px;
   }
 }
 
 @media (max-width: 767px) {
   main .introduction {
-    margin: 62.5vw 0 calc( 900px + 45vw);
+    margin: calc( 62.5vw + 98px) 0 calc( 900px + 45vw);
     background-color: #C0362D;
   }
 }
@@ -667,6 +676,9 @@ main .introduction .introduction_container .row .introduction_left {
 
 @media (max-width: 767px) {
   main .introduction .introduction_container .row .introduction_left {
+    position: absolute;
+    right: unset;
+    left: 30px;
     top: -170px;
   }
 }
@@ -756,6 +768,7 @@ main .introduction .introduction_container .row .introduction_right {
 
 @media (max-width: 767px) {
   main .introduction .introduction_container .row .introduction_right {
+    padding: 115px 0;
     -webkit-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
@@ -904,6 +917,8 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
         -ms-flex-order: 1;
             order: 1;
     width: 540px;
+    top: unset;
+    left: 0;
   }
 }
 
@@ -1058,9 +1073,10 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::before {
 
 @media (max-width: 767px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area::before {
-    width: 110vw;
+    width: 100vw;
     height: 110vw;
     top: -55vw;
+    z-index: 5;
   }
 }
 
@@ -1262,6 +1278,12 @@ main .facebook .facebook_container .row .facebook_btn {
   }
 }
 
+@media (max-width: 767px) {
+  main .facebook .facebook_container .row .facebook_btn {
+    bottom: 30px;
+  }
+}
+
 main .facebook .facebook_container .row .facebook_news {
   margin-bottom: 75px;
 }
@@ -1273,6 +1295,12 @@ main .facebook .facebook_container .row .facebook_news {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .facebook .facebook_container .row .facebook_news {
+    width: 100%;
   }
 }
 
@@ -1297,7 +1325,10 @@ main .facebook .facebook_container .row .facebook_news .post_img {
 
 @media (max-width: 767px) {
   main .facebook .facebook_container .row .facebook_news .post_img {
-    width: unset;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    width: 100%;
   }
 }
 
@@ -1324,6 +1355,7 @@ main .facebook .facebook_container .row .facebook_news .post_content {
 @media (max-width: 767px) {
   main .facebook .facebook_container .row .facebook_news .post_content {
     padding: 30px 60px;
+    width: 100%;
   }
 }
 

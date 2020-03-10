@@ -58,6 +58,8 @@ html
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
+    overflow-y: scroll
+    overflow-x: hidden
     
 .bg
     width: 96%
@@ -65,7 +67,7 @@ body
     left: 2%
     z-index: -9999
     background-color: $bg_color
-    @media ( max-width: 767px )
+    @media ( max-width: 539px )
         display: none
 nav
     padding-top: 110px 
@@ -159,13 +161,13 @@ main
                 top: 265px
                 height: 265px
             @media ( max-width: 767px )
+                top: 65px
+            @media ( max-width: 540px )
                 display: none
         .carousel_container
             .row
                 .carousel_top
                     z-index: 2
-                    @media ( max-width: 767px )
-                        overflow: hidden 
                     .swiper-container 
                         height: 1140px
                         width: 100%
@@ -178,6 +180,9 @@ main
                             width: 80%
                             height: 576px
                         @media ( max-width: 767px )
+                            width: 80%
+                            height: 432px
+                        @media ( max-width: 540px )
                             top: unset
                             height: 120vw
                             width: 134vw
@@ -210,14 +215,14 @@ main
                     @media ( max-width: 991px )
                         top: 450px
                     @media ( max-width: 767px )
-                        top: 85vw
+                        top: 330px
                     .textArea
                         z-index: 4
                         top: 120px
                         @media ( max-width: 1199px )
                             top: 140px
                         @media ( max-width: 767px )
-                            top: 17vw
+                            top: 100px
                             transform: translateY(-50%)
                         p
                             text-align: center
@@ -250,7 +255,7 @@ main
                         @media ( max-width: 767px )
                             display: block
                             width: 100% 
-                            height: 35vw
+                            height: 200px
                             min-height: 113px
                             background-color: #EDEDED
                             z-index: 3
@@ -262,9 +267,9 @@ main
             margin: 750px 0 900px
             height: auto
         @media ( max-width: 1199px )
-            margin: 750px 0 700px
+            margin: 750px 0 900px
         @media ( max-width: 767px )
-            margin: 62.5vw 0 calc( 900px + 45vw)
+            margin: calc( 62.5vw + 98px ) 0 calc( 900px + 45vw)
             background-color: $colorOrange
         @media ( max-width: 575px )
             margin: 62.5vw 0 calc( 900px + 25vw)
@@ -364,6 +369,9 @@ main
                         top: -50px
                         right: 100px
                     @media ( max-width: 767px )
+                        position: absolute
+                        right: unset
+                        left: 30px
                         top: -170px
                     div
                         writing-mode: vertical-lr
@@ -395,6 +403,7 @@ main
                         padding: 100px 0 0 50px
                         flex: 0 0 420px
                     @media ( max-width: 767px )
+                        padding: 115px 0
                         flex: unset
                     @media ( max-width: 575px )
                         margin: 0 22px
@@ -458,6 +467,9 @@ main
                         @media ( max-width: 767px )  
                             order: 1
                             width: 540px
+                            top: unset
+                            left: 0
+                            // transform: translateX(-50%)
                         @media ( max-width: 575px )
                             width: unset
                             margin: 0 22px
@@ -530,9 +542,10 @@ main
                             width: 80%
                             height: 576px
                         @media ( max-width: 767px )
-                            width: 110vw
+                            width: 100vw
                             height: 110vw
                             top: -55vw
+                            z-index: 5
                     &::after
                         +before_after_default(absolute,"醬油。")
                         writing-mode: vertical-lr
@@ -607,11 +620,15 @@ main
                         bottom: -20px
                         right: 50%
                         transform: translateX(+50%)
+                    @media ( max-width: 767px )
+                        bottom: 30px
                 .facebook_news
                     margin-bottom: 75px 
                     @media ( max-width: 1199px )
                         flex-direction: column
                         margin-bottom: 25px 
+                    @media ( max-width: 767px )
+                        width: 100% 
                     .post_img
                         flex: 0 0 540px
                         height: 290px
@@ -621,10 +638,11 @@ main
                             height: unset
                             width: 768px
                             margin: auto
-                        @media ( max-width: 767px )    
-                            width: unset                  
+                        @media ( max-width: 767px )  
+                            flex: unset
+                            width: 100%                 
                         img
-                            width: 100%
+                            width: 100% 
                             height: auto         
                     .post_content
                         flex: 1 1 auto
@@ -635,6 +653,7 @@ main
                             padding: 30px 0
                         @media ( max-width: 767px )
                             padding: 30px 60px
+                            width: 100%
                         &::after
                             +before_after_default(absolute)
                             background: $colorOrange
