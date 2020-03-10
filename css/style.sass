@@ -178,6 +178,7 @@ main
                             width: 80%
                             height: 576px
                         @media ( max-width: 767px )
+                            top: unset
                             height: 120vw
                             width: 134vw
                             left: -17vw 
@@ -260,6 +261,8 @@ main
         @media ( max-width: 1199px )
             margin: 750px 0 900px
             height: auto
+        @media ( max-width: 1199px )
+            margin: 750px 0 700px
         @media ( max-width: 767px )
             margin: 62.5vw 0 calc( 900px + 45vw)
             background-color: $colorOrange
@@ -523,6 +526,7 @@ main
                             width: 80%
                             height: 768px   
                         @media ( max-width: 991px )
+                            top: -393px
                             width: 80%
                             height: 576px
                         @media ( max-width: 767px )
@@ -542,8 +546,9 @@ main
                         +FontStyle(123px,#fff,600,30px)
                         @media ( max-width: 1199px )
                             top: -300px
-                        @media ( max-width: 767px )
-                            +FontStyle(96px,#fff,600,30px)
+                        @media ( max-width: 991px )
+                            +FontStyle(96px,#fff,600,20px)
+                            top: -170px
                         @media ( max-width: 575px )
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 450px )

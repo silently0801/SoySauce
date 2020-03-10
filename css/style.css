@@ -273,6 +273,7 @@ main .carousel .carousel_container .row .carousel_top .swiper-container {
 
 @media (max-width: 767px) {
   main .carousel .carousel_container .row .carousel_top .swiper-container {
+    top: unset;
     height: 120vw;
     width: 134vw;
     left: -17vw;
@@ -459,6 +460,12 @@ main .introduction {
   main .introduction {
     margin: 750px 0 900px;
     height: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  main .introduction {
+    margin: 750px 0 700px;
   }
 }
 
@@ -1043,6 +1050,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::before {
 
 @media (max-width: 991px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area::before {
+    top: -393px;
     width: 80%;
     height: 576px;
   }
@@ -1084,13 +1092,14 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area::after {
     font-size: 96px;
     color: #fff;
     font-weight: 600;
-    letter-spacing: 30px;
+    letter-spacing: 20px;
     line-height: unset;
+    top: -170px;
   }
 }
 
