@@ -53,36 +53,72 @@ $colorGrey: #808080
 
 a:hover
     text-decoration: none
+    
 body
     border-top: 9px solid $colorOrange
     font-family: 'Noto Serif TC'
     overflow-y: scroll
     overflow-x: hidden
-    @media ( max-width: 576px )
+    @media ( max-width: 575px )
         background-color: #ededed
+    
 .bg
     width: 96%
     height: auto
     left: 2%
     z-index: -9999
     background-color: $bg_color
-    @media ( max-width: 576px )
+    @media ( max-width: 575px )
         display: none
 nav
-    padding-top: 110px 
+    padding: 110px  0 0
     color: $colorBlack
+    @media ( max-width: 575px )
+        padding: 110px 0
+    @media ( max-width: 475px )
+        padding: 0
     .container
+        @media ( max-width: 575px )
+            width: 455px
+        @media ( max-width: 475px )
+            width: 100%
+            padding: 30px
         .row
+            justify-content: flex-end
+            @media ( max-width: 475px )
+                height: 179px
             .logo
+                @media ( max-width: 575px )
+                    margin: 0 5vw
+                @media ( max-width: 475px )
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-70%)
                 img
             .backEnd
+                @media ( max-width: 575px )
+                    margin: 0 8vw 0 0px !important
+                @media ( max-width: 475px )
+                    display: none
                 ul
+                    @media ( max-width: 575px )
+                        flex-wrap: wrap
+                        width: 60px
                     li
+                        @media ( max-width: 575px )
+                            width: 50%
+                        &:nth-child(1)
+                            @media ( max-width: 575px )
+                                order: 2
+                        &:nth-child(2)
+                            @media ( max-width: 575px )
+                                order: 3
                         a
                             writing-mode: vertical-lr
                             position: relative
                             +FontStyle(14px,$colorBlack,900,7px)
                             margin: 0 3px
+                            text-align: center
                             &::before
                                 +backEndHover(-10px,null)
                             &::after
@@ -90,7 +126,7 @@ nav
                             &:hover::before
                                 display: block
                             &:hover::after
-                                display: block
+                                display: block       
             .nav_btns
                 flex: 1 1 auto
                 @media ( max-width: 1023px )
@@ -116,6 +152,9 @@ nav
                                 &:nth-child(2)
                                     +FontStyle(12px,$colorBlack,900,2px)
             .menu_btn_Area
+                margin-left: auto 
+                @media ( max-width: 575px )
+                    margin-left: unset
                 .menu_btn
                     width: 50px
                     height: 50px
@@ -127,6 +166,8 @@ nav
                         height: 1px
                         transition: 0.3s
                         display: none
+                        @media ( max-width: 1023px )
+                            display: block
                     .top_bar
                         +absolute(17px ,null,null,12px)
                         transform: rotate(0deg)
@@ -139,12 +180,16 @@ nav
                 .menu_bot_text
                     margin: 52px 0 25px
                     display: flex
+                    @media ( max-width: 575px )
+                        display: none
                     span
                         writing-mode: vertical-lr
                         +FontStyle(14px,$colorBlack,900,12px,14px)
                         margin-left: 10px
 
 main
+    @media ( max-width: 575px )
+        overflow: hidden
     .carousel
         &::before
             +before_after_default(absolute)
@@ -161,7 +206,7 @@ main
                 height: 265px
             @media ( max-width: 767px )
                 top: 65px
-            @media ( max-width: 540px )
+            @media ( max-width: 575px )
                 display: none
         .carousel_container
             .row
@@ -181,11 +226,13 @@ main
                         @media ( max-width: 767px )
                             width: 80%
                             height: 432px
-                        @media ( max-width: 540px )
+                        @media ( max-width: 575px )
                             top: unset
-                            height: 120vw
+                            height: 134vw
                             width: 134vw
-                            left: -17vw 
+                            left: -17vw
+                        @media ( max-width: 539px )
+                            left: -14vw
                         .swiper-wrapper
                             .swiper-slide 
                                 background-color: #333
@@ -202,6 +249,8 @@ main
                         @media ( max-width: 767px )
                             display: none !important
                         .swiper-pagination-bullet 
+                            width: 5px
+                            height: 5px
                             margin: 5px 0
                             color: $colorBlack
                             background: $colorBlack
@@ -215,13 +264,17 @@ main
                         top: 450px
                     @media ( max-width: 767px )
                         top: 330px
+                    @media ( max-width: 575px )
+                        top: 85vw
                     .textArea
                         z-index: 4
                         top: 120px
                         @media ( max-width: 1199px )
                             top: 140px
                         @media ( max-width: 767px )
-                            top: 100px
+                            top: 50px
+                        @media ( max-width: 575px )
+                            top: 20vw
                             transform: translateY(-50%)
                         p
                             text-align: center
@@ -257,8 +310,9 @@ main
                             width: 100% 
                             height: 200px
                             min-height: 113px
-                            background-color: #EDEDED
+                            background-color: #ededed
                             z-index: 3
+
     .introduction
         height: 868px
         width: 100%
@@ -266,11 +320,13 @@ main
         @media ( max-width: 1300px )
             margin: 750px 0 900px
             height: auto
+        @media ( max-width: 991px )
+            margin: 750px 0 750px
         @media ( max-width: 767px )
             margin: calc( 62.5vw + 98px ) 0 calc( 900px + 45vw)
             background-color: $colorOrange
         @media ( max-width: 575px )
-            margin: calc( 62.5vw + 98px ) 0 calc( 900px + 25vw)
+            margin: calc( 47.5vw ) 0 calc( 900px + 25vw)
         &::before
             +before_after_default(absolute)
             background-image: url("../img/introduction_top.jpg")
@@ -371,6 +427,8 @@ main
                         right: unset
                         left: 30px
                         top: -170px
+                    @media ( max-width: 575px )
+                        top: -140px
                     div
                         writing-mode: vertical-lr
                         position: relative
@@ -384,6 +442,8 @@ main
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 767px )
                             +FontStyle(54px,#fff,600,20px)
+                        @media ( max-width: 575px )
+                            +FontStyle(42px,#fff,600,20px)
                         &:nth-child(1)
                             top: 50px
                             @media ( max-width: 767px )
@@ -453,7 +513,7 @@ main
                         width: 460px
                         height: auto
                         position: relative
-                        top: 88px
+                        top: 165px
                         left: -400px
                         @media ( max-width: 1300px )
                             width: 500px
@@ -533,7 +593,7 @@ main
                         z-index: 3
                         transform: translateX(-50%) scale(-1 , -1)
                         @media ( max-width: 1300px )
-                            width: 80%
+                            width: 768px  
                             height: 768px   
                         @media ( max-width: 991px )
                             top: -393px
@@ -541,6 +601,11 @@ main
                             height: 576px
                         @media ( max-width: 767px )
                             width: 100vw
+                            height: 110vw
+                            top: -55vw
+                            z-index: 5
+                        @media ( max-width: 575px )
+                            width: 110vw
                             height: 110vw
                             top: -55vw
                             z-index: 5
@@ -560,9 +625,11 @@ main
                         @media ( max-width: 991px )
                             +FontStyle(96px,#fff,600,20px)
                             top: -170px
+                        @media ( max-width: 767px )
+                            top: -5vw
                         @media ( max-width: 575px )
                             +FontStyle(72px,#fff,600,20px)
-                        @media ( max-width: 450px )
+                        @media ( max-width: 475px )
                             +FontStyle(53px,#fff,600,0px)
                             
                     p
@@ -589,8 +656,6 @@ main
                             @media ( max-width: 1300px )
                                 +FontStyle(16px,#FFF,600,2px)
     .facebook
-        @media ( max-width: 767px )
-            background-color: #ededed
         .facebook_container
             .row
                 position: relative
@@ -603,8 +668,8 @@ main
                         margin: 85px 0
                     @media ( max-width: 575px )
                         margin: 40px 0
-                    @media ( max-width: 450px )
-                        +FontStyle(2    2px,$colorBlack,900,5px)
+                    @media ( max-width: 475px )
+                        +FontStyle(22px,$colorBlack,900,5px)
                 .facebook_btn
                     position: absolute
                     +FontStyle(18px,$colorBlack,600,2px)
@@ -690,6 +755,10 @@ main
             padding: 50px 0 150px
             margin-bottom: 0
         .news_container
+            @media ( max-width: 1300px )
+                max-width: 768px
+            @media ( max-width: 767px )
+                max-width: 540px
             &::before 
                 +before_after_default(absolute,"More")
                 +FontStyle(18px,$colorBlack,900,2px)
@@ -704,7 +773,7 @@ main
             .row
                 @media ( max-width: 1300px )
                     flex-direction: column
-                    padding: 0 60px
+                    padding: 0 30px
                 @media ( max-width: 767px )
                     padding: 0 
                 @media ( max-width: 575px )
@@ -722,16 +791,14 @@ main
                         @media ( max-width: 1300px )
                             margin-right: 10px
                         @media ( max-width: 575px )
-                            +FontStyle(22px,$colorBlack,900,5px)
+                            +FontStyle(22px,$colorBlack,900,1px)
                             &::after
                                 +before_after_default(absolute)
                                 width: 40px
                                 height: 40px
                                 background-color: #4D4D4D
                                 top: -27px
-                                left: 170px
-                                @media ( max-width: 575px )
-                                    left: 130px
+                                left: 120px
                     .news_header_en
                         +FontStyle(95px,#979797,100,0px)
                         @media ( max-width: 1300px )

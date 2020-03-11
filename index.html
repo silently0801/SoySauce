@@ -18,7 +18,7 @@
     <div class="bg position-absolute"></div>
     <nav class="m-auto">
         <div class="container">
-            <div class="row d-flex">
+            <div class="row d-flex position-relative">
                 <div class="logo">
                     <img src="./img/icon-05.png" alt="">
                 </div>
@@ -76,13 +76,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="menu_btn_Area ml-auto d-flex flex-column align-items-end">
-                    <button class="menu_btn btn flex-column" tabindex="-1" aria-label="Mobile menu toggle">
+                <div class="menu_btn_Area d-flex flex-column align-items-end">
+                    <button class="menu_btn btn flex-column position-relative" tabindex="-1" aria-label="Mobile menu toggle">
                         <span class="top_bar bar"></span>
                         <span class="mid_bar bar"></span>
                         <span class="bot_bar bar"></span>
                     </button>
-                    <div class="menu_bot_text d-flex">
+                    <div class="menu_bot_text">
                         <span class="mr-2">1940</span>
                         <span>YDSIN</span>
                     </div>
@@ -305,7 +305,7 @@
 
         function menuclick(e){
             // $(".menu,main,footer").toggle();
-            if(window.innerWidth  <= 1200){
+            if(window.innerWidth  <= 1023){
                 top_bar.classList.toggle("top_click");
                 mid_bar.classList.toggle("mid_click");
                 bot_bar.classList.toggle("bot_click");
