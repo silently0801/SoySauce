@@ -68,7 +68,7 @@
                                 <span>Q&A</span>
                             </a>
                         </li>
-                        <li class="contact text-center mx-2">
+                        <li class="contact text-center">
                             <a class="d-flex flex-column" href="">
                                 <span>聯絡我們</span>
                                 <span>Contact Us</span>
@@ -298,22 +298,25 @@
             }
         });
         /*btn_click*/
-
+        let backEnd = document.querySelector(".backEnd");
+        let nav_btns = document.querySelector(".nav_btns");
         let menu_btn = document.querySelector(".menu_btn");
         let top_bar  = document.querySelector(".top_bar");
         let mid_bar  = document.querySelector(".mid_bar");
         let bot_bar  = document.querySelector(".bot_bar");
 
-        function menuclick(e){
+        function menu_click(e){
             // $(".menu,main,footer").toggle();
             if(window.innerWidth  <= 1023){
                 top_bar.classList.toggle("top_click");
                 mid_bar.classList.toggle("mid_click");
                 bot_bar.classList.toggle("bot_click");
-                menu_btn.classList.toggle("border_wihte")
+                menu_btn.classList.toggle("menu_btn_click")
+                nav_btns.classList.toggle("nav_btns_click");
+                backEnd.classList.toggle("nav_btns_click");
             }
         }
-        menu_btn.addEventListener("click",menuclick);
+        menu_btn.addEventListener("click",menu_click);
     </script>
 </body>
 

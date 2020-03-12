@@ -27,6 +27,12 @@ $colorGrey: #808080
     height: 6px
     background-image: url("../img/hover.png")
     background-size: cover
+    @media ( max-width: 475px )
+        left: $top
+        right: $bottom
+        top: 7px
+        bottom: unset
+
 @mixin before_after_default($position:relative,$content:" ")
     content: $content
     display: block
@@ -48,9 +54,12 @@ $colorGrey: #808080
     top: 24px !important
     left: 12px !important
     transform: rotate(45deg) !important    
-.border_wihte
-    border-radius: 1px solid #FFF
-
+.nav_btns_click
+    display: flex !important
+.menu_btn_click
+    border: 1px solid #FFF
+    z-index: 9999
+    
 a:hover
     text-decoration: none
     
@@ -99,41 +108,86 @@ nav
                 @media ( max-width: 575px )
                     margin: 0 8vw 0 0px !important
                 @media ( max-width: 475px )
-                    display: none
+                    position: fixed
+                    bottom: 30px
+                    left: 0
+                    z-index: 9999
+                    width: 100%
+                    padding: 0 30px
+                    text-align: center
+                    display: none  
                 ul
                     @media ( max-width: 575px )
                         flex-wrap: wrap
                         width: 60px
+                    @media ( max-width: 475px )
+                        flex-wrap: unset
+                        width: 100%
                     li
                         @media ( max-width: 575px )
                             width: 50%
+                        @media ( max-width: 475px )
+                            width: 0
+                            flex: 1
+                            height: auto
+                            border-right: 1px solid #FFF
+                            text-align: center
                         &:nth-child(1)
                             @media ( max-width: 575px )
-                                order: 2
+                                order: 2 
+                            @media ( max-width: 475px )                                  
+                                border-right: unset
                         &:nth-child(2)
                             @media ( max-width: 575px )
                                 order: 3
+                            @media ( max-width: 475px )
+                                order: unset
                         a
                             writing-mode: vertical-lr
                             position: relative
                             +FontStyle(14px,$colorBlack,900,7px)
                             margin: 0 3px
                             text-align: center
+                            @media ( max-width: 475px )
+                                writing-mode: horizontal-tb
+                                +FontStyle(14px,#FFF,400,1px)
                             &::before
                                 +backEndHover(-10px,null)
                             &::after
                                 +backEndHover(null,-7px)
                             &:hover::before
                                 display: block
+                                @media ( max-width: 475px )
+                                    display: none
                             &:hover::after
-                                display: block       
+                                display: block    
+                                @media ( max-width: 475px )
+                                    display: none   
             .nav_btns
                 flex: 1 1 auto
                 @media ( max-width: 1023px )
                     display: none
+                    position: fixed
+                    top: 0
+                    right: 0
+                    width: 50%
+                    height: 100%
+                    background: $colorOrange
+                    z-index: 9998
+                    padding: 100px 0
+                @media ( max-width: 475px )
+                    width: 100%
                 ul
                     justify-content: space-around
+                    @media ( max-width: 1023px )
+                        flex-direction: column 
+                        justify-content: center
+                        align-items: center
+                        height: 100%
+                        width: 100% 
                     li
+                        @media ( max-width: 1023px )
+                            flex: 1
                         a
                             &::after
                                 +before_after_default()
@@ -144,9 +198,17 @@ nav
                                 margin-top: 10px
                                 background-color: $colorOrange
                                 transition: 0.3s
+                                @media ( max-width: 1023px )
+                                    background-color: #FFF 
+                                    height: 1px
+                                    width: 120%
+                                    left: 50%
+                                    transform: translateX(-50%)
                             &:hover span
                                 color: $colorOrange !important
                                 transition: 0.3s
+                                @media ( max-width: 1023px )
+                                    color: #FFF !important
                             &:hover::after
                                 opacity: 1
                                 transition: 0.3s
@@ -154,8 +216,12 @@ nav
                                 transition: 0.3s
                                 &:nth-child(1)
                                     +FontStyle(14px,$colorBlack,900,2px)
+                                    @media ( max-width: 1023px )
+                                        +FontStyle(18px,#FFF,400,4px)
                                 &:nth-child(2)
                                     +FontStyle(12px,$colorBlack,900,2px)
+                                    @media ( max-width: 1023px )
+                                        +FontStyle(12px,#fff,400,1px)    
             .menu_btn_Area
                 margin-left: auto 
                 @media ( max-width: 575px )
