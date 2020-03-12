@@ -376,6 +376,7 @@ main .carousel::before {
 @media (max-width: 767px) {
   main .carousel::before {
     top: 65px;
+    height: 270px;
   }
 }
 
@@ -446,6 +447,8 @@ main .carousel .carousel_container .row .carousel_top .swiper-container .swiper-
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  background-size: cover;
+  background-repeat: norepeat;
 }
 
 main .carousel .carousel_container .row .carousel_top .swiper-pagination {
@@ -455,6 +458,20 @@ main .carousel .carousel_container .row .carousel_top .swiper-pagination {
 }
 
 @media (max-width: 767px) {
+  main .carousel .carousel_container .row .carousel_top .swiper-pagination {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    top: unset;
+    bottom: 110px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+
+@media (max-width: 575px) {
   main .carousel .carousel_container .row .carousel_top .swiper-pagination {
     display: none !important;
   }
@@ -467,6 +484,14 @@ main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper
   color: #231714;
   background: #231714;
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper-pagination-bullet {
+    color: #FFF;
+    background: #FFF;
+    margin: 0 5px;
+  }
 }
 
 main .carousel .carousel_container .row .carousel_top .swiper-pagination .swiper-pagination-bullet-active {
@@ -612,8 +637,13 @@ main .carousel .carousel_container .row .carousel_bot .rectangle {
     width: 100%;
     height: 200px;
     min-height: 113px;
-    background-color: #ededed;
     z-index: 3;
+  }
+}
+
+@media (max-width: 575px) {
+  main .carousel .carousel_container .row .carousel_bot .rectangle {
+    background-color: #ededed;
   }
 }
 
@@ -1630,6 +1660,12 @@ main .news_Area {
   main .news_Area {
     padding: 50px 0 150px;
     margin: 100px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  main .news_Area {
+    margin: 0;
   }
 }
 
