@@ -137,16 +137,21 @@ nav
                         a
                             &::after
                                 +before_after_default()
-                                display: none
+                                display: block
+                                opacity: 0
                                 width: 100%
                                 height: 3px
                                 margin-top: 10px
                                 background-color: $colorOrange
-                            &:hover
-                                +FontStyle(14px,$colorOrange,900,2px)    
+                                transition: 0.3s
+                            &:hover span
+                                color: $colorOrange !important
+                                transition: 0.3s
                             &:hover::after
-                                display: block
+                                opacity: 1
+                                transition: 0.3s
                             span
+                                transition: 0.3s
                                 &:nth-child(1)
                                     +FontStyle(14px,$colorBlack,900,2px)
                                 &:nth-child(2)
@@ -486,9 +491,9 @@ main
                                 @media ( max-width: 767px )
                                     display: none
                         &:nth-child(2)
-                            +FontStyle(16px,$colorGrey,600,1px)
+                            +FontStyle(16px,$colorGrey,400,1px)
                             @media ( max-width: 767px )
-                                +FontStyle(16px,#FFF,600,1px)
+                                +FontStyle(16px,#FFF,400,1px)
                 .introduction_bot
                     position: absolute
                     bottom: -503px
@@ -536,7 +541,7 @@ main
                                 +FontStyle(18px,#fff,600,4px)
                                 margin-bottom: 50px
                             &:nth-child(2)
-                                +FontStyle(16px,#fff,600,1px)
+                                +FontStyle(16px,#fff,400,1px)
                     .introduction_bot_right
                         position: relative
                         top: 40px
@@ -583,15 +588,15 @@ main
                         +before_after_default(absolute)
                         width: 920px
                         height: 920px
-                        background-image: url("../img/soysauce.jpg")
-                        background-size: 178%
+                        background-image: url("../img/soysauce.png")
+                        background-size: cover
                         background-repeat: no-repeat
-                        background-position: 47% 40%
+                        background-position: center
                         border-radius: 50%
                         top: -593px
                         left: 50%
                         z-index: 3
-                        transform: translateX(-50%) scale(-1 , -1)
+                        transform: translateX(-50%) 
                         @media ( max-width: 1300px )
                             width: 768px  
                             height: 768px   
@@ -602,9 +607,11 @@ main
                         @media ( max-width: 767px )
                             width: 100vw
                             height: 110vw
+                            border-radius: unset
                             top: -55vw
                             z-index: 5
                         @media ( max-width: 575px )
+                            border-radius: 50%
                             width: 110vw
                             height: 110vw
                             top: -55vw
@@ -633,7 +640,7 @@ main
                             +FontStyle(53px,#fff,600,0px)
                             
                     p
-                        width: 503px
+                        width: 575px
                         text-align: center
                         margin-bottom: 30px
                         br
@@ -652,9 +659,9 @@ main
                             @media ( max-width: 1300px )
                                 +FontStyle(18px,#FFF,600,5px)
                         &:nth-child(2)
-                            +FontStyle(16px,$colorGrey,600,2px)
+                            +FontStyle(16px,$colorGrey,400,2px)
                             @media ( max-width: 1300px )
-                                +FontStyle(16px,#FFF,600,2px)
+                                +FontStyle(16px,#FFF,400,2px)
     .facebook
         .facebook_container
             .row
@@ -674,7 +681,7 @@ main
                     position: absolute
                     +FontStyle(18px,$colorBlack,600,2px)
                     border: 1px solid $colorBlack
-                    top: 15px
+                    top: 3px
                     right: 20px
                     padding: 5px 35px
                     white-space: nowrap
@@ -744,16 +751,16 @@ main
                                 margin-bottom: 30px
                         .post_content_text
                             width: 100%
-                            +FontStyle(18px,$colorBlack,600,6px)
+                            +FontStyle(18px,#4d4d4d,600,4px)
                             display: -webkit-box
                             -webkit-line-clamp: 4
                             -webkit-box-orient: vertical
                             overflow: hidden
     .news_Area
-        margin-bottom: 110px 
+        margin: 100px 0 110px 
         @media ( max-width: 1300px )
             padding: 50px 0 150px
-            margin-bottom: 0
+            margin: 100px 0 0
         .news_container
             @media ( max-width: 1300px )
                 max-width: 768px
@@ -767,9 +774,15 @@ main
                 border: 1px solid $colorBlack
                 padding: 5px 10px
                 @media ( max-width: 1314px )
+                    padding: 5px 100px
                     bottom: -80px
+                    right: 39px
+                @media ( max-width: 1300px )
+                    right: 30px
+                @media ( max-width: 767px )
                     right: 50%
                     transform: translateX(+50%)
+                    padding: 5px 10px
             .row
                 @media ( max-width: 1300px )
                     flex-direction: column
@@ -792,13 +805,6 @@ main
                             margin-right: 10px
                         @media ( max-width: 575px )
                             +FontStyle(22px,$colorBlack,900,1px)
-                            &::after
-                                +before_after_default(absolute)
-                                width: 40px
-                                height: 40px
-                                background-color: #4D4D4D
-                                top: -27px
-                                left: 120px
                     .news_header_en
                         +FontStyle(95px,#979797,100,0px)
                         @media ( max-width: 1300px )
@@ -825,17 +831,21 @@ main
                             white-space: nowrap
                             overflow: hidden
                             text-overflow: ellipsis
-            hr
-                position: absolute
-                width: 1000px 
-                height: 2px
-                bottom: -20px
-                right: 40px
-                background: #000
-                @media ( max-width: 1300px )
-                    width: 100%
-                    right: 50%
-                    transform: translateX(+50%)
+                hr
+                    position: absolute
+                    width: 910px 
+                    height: 2px
+                    bottom: -20px   
+                    right: 40px
+                    background: #000
+                    @media ( max-width: 1300px )
+                        width: calc( 100% - 60px )
+                        right: 50%
+                        transform: translateX(+50%)
+                    @media ( max-width: 767px )
+                        width: 100%
+                    @media ( max-width: 575px )
+                        width: calc( 100% - 120px)
     .bottom_img
         height: 50vw
         overflow: hidden
@@ -880,17 +890,18 @@ footer
                         flex: 1 1 auto
                         +FontStyle( 12px,#FFF,600,2px)
             .copyright_Area
-                +FontStyle(14px,#FFF,600,2px)
+                +FontStyle(12px,#FFF,600,2px)
                 flex: 1 1 auto
                 @media ( max-width: 991px )
                     flex: unset
                 .copyright_top
                     margin-bottom: 10px
                 .copyright_mid
-                    margin-bottom: 20px
+                    margin-bottom: 30px
                 .copyright_bot
                     border: 1px solid #FFF
                     width: 100%
+                    max-width: 490px
                        
                                         
 
