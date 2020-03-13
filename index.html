@@ -113,7 +113,7 @@
                     </div>
                     <div class="carousel_bot position-absolute w-100">
                         <div class="textArea position-absolute w-100">
-                            <p class="text_jp d-none d-md-block">「一本の醤油、一生分の思い」</p>
+                            <p class="text_jp">「一本の醤油、一生分の思い」</p>
                             <p class="text_tw">「一瓶賀欸醬油，一世人欸情分。」</p>
                             <p class="text_en">“A bottle of soy sauce, a lifelong friendship.”</p>
                         </div>
@@ -298,6 +298,7 @@
             }
         });
         /*btn_click*/
+        let html = document.querySelector("html");
         let backEnd = document.querySelector(".backEnd");
         let nav_btns = document.querySelector(".nav_btns");
         let menu_btn = document.querySelector(".menu_btn");
@@ -307,13 +308,15 @@
 
         function menu_click(e){
             // $(".menu,main,footer").toggle();
-            if(window.innerWidth  <= 1023){
+            if(window.innerWidth  <= 1090){
+                html.classList.toggle("hidden");
                 top_bar.classList.toggle("top_click");
                 mid_bar.classList.toggle("mid_click");
                 bot_bar.classList.toggle("bot_click");
                 menu_btn.classList.toggle("menu_btn_click")
                 nav_btns.classList.toggle("nav_btns_click");
                 backEnd.classList.toggle("nav_btns_click");
+
             }
         }
         menu_btn.addEventListener("click",menu_click);
