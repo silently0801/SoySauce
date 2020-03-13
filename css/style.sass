@@ -87,6 +87,10 @@ nav
     @media ( max-width: 475px )
         padding: 0
     .container
+        @media ( max-width: 1090px )
+            max-width: 720px
+        @media ( max-width: 767px )
+            max-width: 540px
         @media ( max-width: 575px )
             width: 455px
         @media ( max-width: 475px )
@@ -165,7 +169,7 @@ nav
                                     display: none   
             .nav_btns
                 flex: 1 1 auto
-                @media ( max-width: 1023px )
+                @media ( max-width: 1090px )
                     display: none
                     position: fixed
                     top: 0
@@ -174,19 +178,20 @@ nav
                     height: 100%
                     background: $colorOrange
                     z-index: 9998
-                    padding: 100px 0
-                @media ( max-width: 475px )
+                    padding: 200px 0
+                @media ( max-width: 767px )
+                    padding: 140px 0
                     width: 100%
                 ul
                     justify-content: space-around
-                    @media ( max-width: 1023px )
+                    @media ( max-width: 1090px )
                         flex-direction: column 
                         justify-content: center
                         align-items: center
                         height: 100%
                         width: 100% 
                     li
-                        @media ( max-width: 1023px )
+                        @media ( max-width: 1090px )
                             flex: 1
                         a
                             &::after
@@ -198,7 +203,7 @@ nav
                                 margin-top: 10px
                                 background-color: $colorOrange
                                 transition: 0.3s
-                                @media ( max-width: 1023px )
+                                @media ( max-width: 1090px )
                                     background-color: #FFF 
                                     height: 1px
                                     width: 120%
@@ -207,7 +212,7 @@ nav
                             &:hover span
                                 color: $colorOrange !important
                                 transition: 0.3s
-                                @media ( max-width: 1023px )
+                                @media ( max-width: 1090px )
                                     color: #FFF !important
                             &:hover::after
                                 opacity: 1
@@ -237,7 +242,7 @@ nav
                         height: 1px
                         transition: 0.3s
                         display: none
-                        @media ( max-width: 1023px )
+                        @media ( max-width: 1090px )
                             display: block
                     .top_bar
                         +absolute(17px ,null,null,12px)
@@ -272,7 +277,7 @@ main
             z-index: 1
             @media ( max-width: 1199px )
                 height: 300px
-            @media ( max-width: 991px )
+            @media ( max-width: 1090px )
                 top: 265px
                 height: 265px
             @media ( max-width: 767px )
@@ -281,6 +286,10 @@ main
             @media ( max-width: 575px )
                 display: none
         .carousel_container
+            @media ( max-width: 1090px )
+                max-width: 720px
+            @media ( max-width: 767px )
+                max-width: 540px
             .row
                 .carousel_top
                     z-index: 2
@@ -292,7 +301,7 @@ main
                             width: 80%
                             height: 768px   
                             top: -130px
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1090px )
                             width: 80%
                             height: 576px
                         @media ( max-width: 767px )
@@ -344,7 +353,7 @@ main
                             background: $colorOrange
                 .carousel_bot
                     top: 630px
-                    @media ( max-width: 991px )
+                    @media ( max-width: 1090px )
                         top: 450px
                     @media ( max-width: 767px )
                         top: 330px
@@ -405,7 +414,7 @@ main
         @media ( max-width: 1300px )
             margin: 750px 0 900px
             height: auto
-        @media ( max-width: 991px )
+        @media ( max-width: 1090px )
             margin: 750px 0 750px
         @media ( max-width: 767px )
             margin: calc( 62.5vw + 98px ) 0 calc( 900px + 45vw)
@@ -475,9 +484,11 @@ main
                 bottom: calc(-900px - 25vw)
         .introduction_container
             padding: 76px 0 0
-            @media ( max-width: 991px )
+            @media ( max-width: 1090px )
                 padding: 38px 0 0
+                max-width: 720px        
             @media ( max-width: 767px )
+                max-width: 540px
                 padding: 0
             &::before
                 +before_after_default(absolute)
@@ -504,7 +515,7 @@ main
                         top: -100px
                         right: 50px
                         z-index: 4
-                    @media ( max-width: 991px )
+                    @media ( max-width: 1090px )
                         top: -50px
                         right: 100px
                     @media ( max-width: 767px )
@@ -523,7 +534,7 @@ main
                         +FontStyle(96px,#fff,600,20px)
                         @media ( max-width: 767px )
                             right: 0px
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1023px )
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 767px )
                             +FontStyle(54px,#fff,600,20px)
@@ -542,7 +553,7 @@ main
                     flex: 0 0 580px
                     @media ( max-width: 1300px )
                         padding: 100px 0 0 100px
-                    @media ( max-width: 991px )
+                    @media ( max-width: 1090px )
                         padding: 100px 0 0 50px
                         flex: 0 0 420px
                     @media ( max-width: 767px )
@@ -582,7 +593,7 @@ main
                     @media ( max-width: 1300px )
                         bottom: -460px
                         right: 100px
-                    @media ( max-width: 991px )   
+                    @media ( max-width: 1090px )   
                         bottom: -460px
                         right: 0px                      
                     @media ( max-width: 767px )
@@ -605,7 +616,7 @@ main
                             top: 180px
                             left: unset
                             right: 130px
-                        @media ( max-width: 991px )  
+                        @media ( max-width: 1090px )  
                             width: 480px
                         @media ( max-width: 767px )  
                             order: 1
@@ -639,6 +650,10 @@ main
         @media ( max-width: 767px )
             background-color: $colorOrange
         .soysauce_container
+            @media ( max-width: 1090px )
+                max-width: 720px 
+            @media ( max-width: 767px )
+                max-width: 540px  
             &::after
                 +before_after_default(absolute)
                 top: 0
@@ -680,7 +695,7 @@ main
                         @media ( max-width: 1300px )
                             width: 768px  
                             height: 768px   
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1090px )
                             top: -393px
                             width: 80%
                             height: 576px
@@ -709,7 +724,7 @@ main
                         +FontStyle(123px,#fff,600,30px)
                         @media ( max-width: 1300px )
                             top: -300px
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1023px )
                             +FontStyle(96px,#fff,600,20px)
                             top: -170px
                         @media ( max-width: 767px )
@@ -744,6 +759,10 @@ main
                                 +FontStyle(16px,#FFF,400,2px)
     .facebook
         .facebook_container
+            @media ( max-width: 1090px )
+                max-width: 720px  
+            @media ( max-width: 767px )
+                max-width: 540px
             .row
                 position: relative
                 @media ( max-width: 767px )
@@ -777,7 +796,7 @@ main
                     @media ( max-width: 1300px )
                         flex-direction: column
                         margin-bottom: 25px 
-                    @media ( max-width: 991px )
+                    @media ( max-width: 1090px )
                         width: 100% 
                     .post_img
                         flex: 0 0 540px
@@ -788,7 +807,7 @@ main
                             height: unset
                             width: 768px
                             margin: auto
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1090px )
                             width: 100% 
                         @media ( max-width: 767px )  
                             flex: unset               
@@ -802,7 +821,7 @@ main
                         @media ( max-width: 1300px )
                             width: 768px
                             padding: 30px 0
-                        @media ( max-width: 991px )
+                        @media ( max-width: 1090px )
                             width: 100% 
                         @media ( max-width: 767px )
                             padding: 30px 0
@@ -974,7 +993,7 @@ footer
             .copyright_Area
                 +FontStyle(12px,#FFF,600,2px)
                 flex: 1 1 auto
-                @media ( max-width: 991px )
+                @media ( max-width: 1023px )
                     flex: unset
                 .copyright_top
                     margin-bottom: 10px
