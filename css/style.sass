@@ -120,7 +120,7 @@ nav
                     left: 0
                     z-index: 9999
                     width: 100%
-                    padding: 0 30px
+                    padding: 0 20px
                     text-align: center
                     display: none  
                 ul
@@ -134,16 +134,21 @@ nav
                         @media ( max-width: 610px )
                             width: 50%
                         @media ( max-width: 475px )
-                            width: 0
                             flex: 1
-                            height: auto
-                            border-right: 1px solid #FFF
                             text-align: center
+                            position: relative
+                            &::after
+                                +before_after_default(absolute,"|")
+                                +FontStyle(14px,#FFF,400,1px)
+                                right: 0
+                                top: 50%
+                                transform: translateY(-40%)
                         &:nth-child(1)
                             @media ( max-width: 610px )
                                 order: 2 
                             @media ( max-width: 475px )                                  
-                                border-right: unset
+                                &::after
+                                    display: none
                         &:nth-child(2)
                             @media ( max-width: 610px )
                                 order: 3
@@ -545,7 +550,7 @@ main
                         +FontStyle(96px,#fff,600,20px)
                         @media ( max-width: 820px )
                             right: 0px
-                        @media ( max-width: 1023px )
+                        @media ( max-width: 1090px )
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 820px )
                             +FontStyle(54px,#fff,600,20px)
@@ -737,11 +742,11 @@ main
                         +FontStyle(123px,#fff,600,30px)
                         @media ( max-width: 1300px )
                             top: -300px
-                        @media ( max-width: 1023px )
+                        @media ( max-width: 1090px )
                             +FontStyle(96px,#fff,600,20px)
                             top: -170px
                         @media ( max-width: 820px )
-                            top: -5vw
+                            top: -8vw
                         @media ( max-width: 610px )
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 475px )
