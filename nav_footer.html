@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap&subset=chinese-traditional"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/nav_footer.css">
+</head>
+<body>
+    <nav class="m-auto">
+        <div class="container">
+            <div class="row d-flex position-relative">
+                <div class="logo">
+                    <img src="./img/icon-05.png" alt="">
+                </div>
+                <div class="backEnd m-2">
+                    <ul class="list-unstyled d-flex m-0 p-0">
+                        <li class="orderSearch"><a href="">訂單查詢</a></li>
+                        <li class="shoppingCart"><a href="">購物車</a></li>
+                        <li class="login"><a href="">登入</a></li>
+                        <li class="signup"><a href="">註冊</a></li>
+                    </ul>
+                </div>
+                <div class="nav_btns">
+                    <ul class="list-unstyled mt-1 mx-3 p-0 d-flex">
+                        <li class="story text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>品牌故事</span>
+                                <span>Our Story</span>
+                            </a>
+                        </li>
+                        <li class="sauce text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>製醬工藝</span>
+                                <span>Soy Sauce</span>
+                            </a>
+                        </li>
+                        <li class="products text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>系列介紹</span>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="shopping text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>前往購買</span>
+                                <span>Shopping</span>
+                            </a>
+                        </li>
+                        <li class="news text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>職人手札</span>
+                                <span>News</span>
+                            </a>
+                        </li>
+                        <li class="QA text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>常見問題</span>
+                                <span>Q&A</span>
+                            </a>
+                        </li>
+                        <li class="contact text-center">
+                            <a class="d-flex flex-column" href="">
+                                <span>聯絡我們</span>
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_btn_Area d-flex flex-column align-items-end">
+                    <button class="menu_btn btn flex-column position-relative" tabindex="-1"
+                        aria-label="Mobile menu toggle">
+                        <span class="top_bar bar"></span>
+                        <span class="mid_bar bar"></span>
+                        <span class="bot_bar bar"></span>
+                    </button>
+                    <div class="menu_bot_text">
+                        <span class="mr-2">1940</span>
+                        <span>YDSIN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <footer>
+        <div class="footer_container container w-100">
+            <div class="row w-100 d-flex flex-lg-row flex-column justify-content-center align-items-center">
+                <div class="footer_logo">
+                    <img src="./img/footer_logo.png" alt="">
+                </div>
+                <ul class="footer_information list-unstyled d-flex d-lg-block flex-column align-items-center">
+                    <li>
+                        <div class="footer_information_header">開放時間</div>
+                        <div class="footer_information_text">每日早上9點至下午6點</div>
+                    </li>
+                    <li>
+                        <div class="footer_information_header">電　　話</div>
+                        <div class="footer_information_text">05-5868272</div>
+                    </li>
+                    <li>
+                        <div class="footer_information_header">地　　址</div>
+                        <div class="footer_information_text">雲林縣西螺鎮安定里安定路171-11</div>
+                    </li>
+                </ul>
+                <div class="copyright_Area d-flex flex-column align-items-center">
+                    <div class="copyright_top align-self-lg-end">Copyright © 201９ ydsin1940.</div>
+                    <div class="copyright_mid align-self-lg-end">All rights reserved.</div>
+                    <div class="copyright_bot d-none d-sm-block align-self-end"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <script>
+        /*btn_click*/
+        let html = document.querySelector("html");
+        let backEnd = document.querySelector(".backEnd");
+        let nav_btns = document.querySelector(".nav_btns");
+        let menu_btn = document.querySelector(".menu_btn");
+        let top_bar = document.querySelector(".top_bar");
+        let mid_bar = document.querySelector(".mid_bar");
+        let bot_bar = document.querySelector(".bot_bar");
+
+        function menu_click(e) {
+            // $(".menu,main,footer").toggle();
+            if (window.innerWidth <= 1090) {
+                html.classList.toggle("hidden");
+                top_bar.classList.toggle("top_click");
+                mid_bar.classList.toggle("mid_click");
+                bot_bar.classList.toggle("bot_click");
+                menu_btn.classList.toggle("menu_btn_click")
+                nav_btns.classList.toggle("nav_btns_click");
+                backEnd.classList.toggle("nav_btns_click");
+            }
+        }
+        menu_btn.addEventListener("click", menu_click);
+    </script>
+</body>
+
+</html>

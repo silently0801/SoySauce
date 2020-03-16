@@ -1,48 +1,4 @@
-$bg_color: #EDEDED
-$colorBlack: #231714
-$colorOrange:  #C0362D 
-$colorDarkOrange: #8D362D
-$colorGrey: #808080
-
-@mixin Font-Style($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
-    font-size: $font-size
-    color: $font-color
-    font-weight: $font-weight
-    letter-spacing: $letter-spacing
-    line-height: $line-height
-@mixin FontStyle($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
-    font-size: $font-size
-    color: $font-color
-    font-weight: $font-weight
-    letter-spacing: $letter-spacing
-    line-height: $line-height
-@mixin backEndHover($top,$bottom)
-    content: " "
-    position: absolute
-    left: 8px
-    top: $top
-    bottom: $bottom
-    display: none
-    width: 6px
-    height: 6px
-    background-image: url("../img/hover.png")
-    background-size: cover
-    @media ( max-width: 475px )
-        left: $top
-        right: $bottom
-        top: 7px
-        bottom: unset
-
-@mixin before_after_default($position:relative,$content:" ")
-    content: $content
-    display: block
-    position: $position
-@mixin absolute($top:unset,$right:unset,$bottom:unset,$left:unset)
-    position: absolute
-    top: $top
-    right: $right
-    bottom: $bottom
-    left: $left
+@import "_function.sass"
 
 .top_click
     top: 24px !important
