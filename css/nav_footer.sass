@@ -20,12 +20,8 @@ a:hover
     text-decoration: none    
 
 nav
-    padding: 110px  0 0
+    border-top: 9px solid $colorOrange 
     color: $colorBlack
-    @media ( max-width: 610px )
-        padding: 110px 0
-    @media ( max-width: 475px )
-        padding: 0
     .container
         @media ( max-width: 1240px )
             max-width: 960px
@@ -43,103 +39,13 @@ nav
             @media ( max-width: 475px )
                 height: 179px
             .logo
-                @media ( max-width: 610px )
-                    margin: 0 5vw
-                @media ( max-width: 475px )
-                    position: absolute
-                    left: 50%
-                    transform: translateX(-70%)
-                img
-            .backEnd
-                @media ( max-width: 610px )
-                    margin: 0 8vw 0 0px !important
-                @media ( max-width: 475px )
-                    position: fixed
-                    bottom: 30px
-                    left: 0
-                    z-index: 9999
-                    width: 100%
-                    padding: 0 20px
-                    text-align: center
-                    display: none  
-                ul
-                    @media ( max-width: 610px )
-                        flex-wrap: wrap
-                        width: 60px
-                    @media ( max-width: 475px )
-                        flex-wrap: unset
-                        width: 100%
-                    li
-                        @media ( max-width: 610px )
-                            width: 50%
-                        @media ( max-width: 475px )
-                            flex: 1
-                            text-align: center
-                            position: relative
-                            &::after
-                                +before_after_default(absolute,"|")
-                                +FontStyle(14px,#FFF,400,1px)
-                                right: 0
-                                top: 50%
-                                transform: translateY(-40%)
-                        &:nth-child(1)
-                            @media ( max-width: 610px )
-                                order: 2 
-                            @media ( max-width: 475px )                                  
-                                &::after
-                                    display: none
-                        &:nth-child(2)
-                            @media ( max-width: 610px )
-                                order: 3
-                            @media ( max-width: 475px )
-                                order: unset
-                        a
-                            writing-mode: vertical-lr
-                            position: relative
-                            +FontStyle(14px,$colorBlack,900,7px)
-                            margin: 0 3px
-                            text-align: center
-                            @media ( max-width: 475px )
-                                writing-mode: horizontal-tb
-                                +FontStyle(14px,#FFF,400,1px)
-                            &::before
-                                +backEndHover(-10px,null)
-                            &::after
-                                +backEndHover(null,-7px)
-                            &:hover::before
-                                display: block
-                                @media ( max-width: 475px )
-                                    display: none
-                            &:hover::after
-                                display: block    
-                                @media ( max-width: 475px )
-                                    display: none   
+                margin: 50px 0
             .nav_btns
-                flex: 1 1 auto
-                @media ( max-width: 1090px )
-                    display: none
-                    position: fixed
-                    top: 0
-                    right: 0
-                    width: 50%
-                    height: 100%
-                    background: $colorOrange
-                    z-index: 9998
-                    padding: 200px 0
                 @media ( max-width: 820px )
-                    padding: 140px 0
-                    width: 100%
+                    display: none
                 ul
                     justify-content: space-around
-                    @media ( max-width: 1090px )
-                        flex-direction: column 
-                        justify-content: center
-                        align-items: center
-                        height: 100%
-                        width: 100% 
                     li
-                        @media ( max-width: 1090px )
-                            flex: 1
                         a
                             &::after
                                 +before_after_default()
@@ -150,32 +56,38 @@ nav
                                 margin-top: 10px
                                 background-color: $colorOrange
                                 transition: 0.3s
-                                @media ( max-width: 1090px )
-                                    background-color: #FFF 
-                                    height: 1px
-                                    width: 120%
-                                    left: 50%
-                                    transform: translateX(-50%)
                             &:hover span
                                 color: $colorOrange !important
                                 transition: 0.3s
-                                @media ( max-width: 1090px )
-                                    color: #FFF !important
                             &:hover::after
                                 opacity: 1
                                 transition: 0.3s
                             span
                                 transition: 0.3s
                                 &:nth-child(1)
-                                    +FontStyle(14px,$colorBlack,900,2px)
-                                    @media ( max-width: 1090px )
-                                        +FontStyle(18px,#FFF,400,4px)
+                                    +FontStyle(18px,$colorBlack,600,2px)
                                 &:nth-child(2)
-                                    +FontStyle(12px,$colorBlack,900,2px)
-                                    @media ( max-width: 1090px )
-                                        +FontStyle(12px,#fff,400,1px)    
-            .menu_btn_Area
+                                    +FontStyle(12px,$colorBlack,600,2px)    
+            .menu_Area
                 margin-left: auto 
+                position: fixed
+                top: 50px
+                right: calc( (100% - 1140px) / 2 - 5% ) 
+                @media ( max-width: 1400px )
+                    right: calc( (100% - 1140px) / 2 - 2% ) 
+                @media ( max-width: 1240px )
+                    right: calc( (100% - 960px) / 2 - 5% ) 
+                @media ( max-width: 1090px )
+                    right: calc( (100% - 720px) / 2 - 5% ) 
+                @media ( max-width: 820px )
+                    right: calc( (100% - 540px) / 2 - 5% ) 
+                @media ( max-width: 610px )
+                    right: calc( (100% - 455px) / 2 - 5% ) 
+                @media ( max-width: 475px )
+                    right: 5%
+                    width: 100%
+                    padding: 30px
+                
                 @media ( max-width: 610px )
                     margin-left: unset
                 .menu_btn
@@ -188,9 +100,7 @@ nav
                         width: 26px
                         height: 1px
                         transition: 0.3s
-                        display: none
-                        @media ( max-width: 1090px )
-                            display: block
+                        display: block
                     .top_bar
                         +absolute(17px ,null,null,12px)
                         transform: rotate(0deg)
@@ -200,16 +110,70 @@ nav
                     .bot_bar
                         +absolute(31px ,null,null,12px)
                         transform: rotate(0deg)
-                .menu_bot_text
-                    margin: 52px 0 25px
-                    display: flex
+                .menu_btn_inner
+                    position: absolute
+                    height: 100vh
+                    width: 50vw
+                    background: $colorOrange
+                    top: -50px
+                    right: calc(((100% - 1140px) / 2 - 5%) ) 
+                    @media ( max-width: 1400px )
+                        right: calc(((100% - 1140px) / 2 - 2% ) * -1 ) 
+                    @media ( max-width: 1240px )
+                        right: calc(((100% - 960px) / 2 - 5% ) * -1) 
+                    @media ( max-width: 1090px )
+                        right: calc(((100% - 720px) / 2 - 5% ) * -1) 
+                    @media ( max-width: 820px )
+                        right: calc(((100% - 540px) / 2 - 5% ) * -1) 
                     @media ( max-width: 610px )
-                        display: none
-                    span
-                        writing-mode: vertical-lr
-                        +FontStyle(14px,$colorBlack,900,12px,14px)
-                        margin-left: 10px  
-    
+                        right: calc(((100% - 455px) / 2 - 5% ) * -1) 
+                    @media ( max-width: 475px )
+                        right: 5%
+                    ul
+                        flex-direction: column 
+                        justify-content: center
+                        align-items: center
+                        position: relative
+                        height: 100%
+                        width: 100% 
+                        z-index: 999
+                        li
+                            flex: 1
+                            a
+                                &::after
+                                +before_after_default()
+                                display: block
+                                opacity: 0
+                                width: 120%
+                                height: 1px
+                                margin-top: 10px
+                                background-color: #FFF 
+                                transition: 0.3s
+                                left: 50%
+                                transform: translateX(-50%)
+                                &:hover span
+                                    color: #FFF !important
+                                    transition: 0.3s
+                                &:hover::after
+                                    opacity: 1
+                                    transition: 0.3s         
+                                span
+                                    &:nth-child(1)
+                                        +FontStyle(18px,#FFF,400,2px)
+                                    &:nth-child(2)
+                                        +FontStyle(12px,#FFF,400,1px) 
+                .menu_backEnd
+                    width: 50px
+                    ul
+                        li
+                            a
+                                margin-left: 10px
+                                writing-mode: vertical-lr
+                                +FontStyle(14px,$colorBlack,900,7px,1)
+main
+    height: 200vh
+    width: 100%
+    background-color: #333
 footer
     background: #1A1A1A
     height: 161px
