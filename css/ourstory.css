@@ -84,7 +84,7 @@ main .start .start_container .row .start_content .tw_content p {
   font-size: 18px;
   color: #000;
   font-weight: 400;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   line-height: 1;
 }
 
@@ -96,7 +96,7 @@ main .start .start_container .row .start_content .en_content p {
   font-size: 16px;
   color: #000;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 1;
 }
 
