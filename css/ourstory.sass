@@ -1,21 +1,21 @@
 @import "_function.sass"
 main
+    &::before
+        +before_after_default(absolute)
+        background-image: url("../img/01-OurStory/DSC_9239.jpg")
+        background-size: cover
+        background-position: 50% 63%
+        top: 0
+        left: 0
+        width: 100%
+        height: 1080px
+        z-index: -5
     .header
-        &::before
-            +before_after_default(absolute)
-            background-image: url("../img/01-OurStory/DSC_9239.jpg")
-            background-size: cover
-            background-position: 50% 63%
-            top: 0
-            left: 0
-            width: 100%
-            height: 1080px
-            z-index: -5
         .header_container
             &::after
                 +before_after_default(absolute)
                 left: 0
-                bottom: -200px
+                bottom: -110px
                 width: 100%
                 height: 370px
                 background: linear-gradient(bottom, rgba(#FFF,1) 20%, transparent 80%)
@@ -40,8 +40,9 @@ main
                 .start_content
                     padding: 40px 200px 50px 35px 
                     h3
-                        +FontStyle(26px,#000,400,1px,1)
+                        +FontStyle(26px,#000,700,1px,1)
                     hr
+                        border-top: 1px solid rgba(0,0,0,1)
                     .tw_content
                         margin-bottom: 70px
                         p

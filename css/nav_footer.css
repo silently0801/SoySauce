@@ -1,6 +1,5 @@
-@charset "UTF-8";
 body {
-  font-family: 'Noto Serif TC' , "細明體";
+  font-family: 'Noto Serif TC';
 }
 
 .top_click {
@@ -153,6 +152,7 @@ nav .container .row .menu_Area {
   position: fixed;
   top: 50px;
   right: calc( (100% - 1140px) / 2 - 5%);
+  z-index: 99;
 }
 
 @media (max-width: 1400px) {
