@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  font-family: 'Noto Serif TC' , "細明體";
+}
+
 .top_click {
   top: 24px !important;
   left: 12px !important;
@@ -38,7 +42,6 @@ a:hover {
 
 body {
   border-top: 9px solid #C0362D;
-  font-family: 'Noto Serif TC';
   overflow-y: scroll;
   overflow-x: hidden;
 }
