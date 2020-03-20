@@ -26,7 +26,7 @@ main
                     .header_icon
                         img
                     .header_tw
-                        +FontStyle(32px,#FFF,400,10px)
+                        +FontStyle(32px,#FFF,600,10px)
                     .header_en
                         +FontStyle(25px,#FFF,400,7px)
     .start
@@ -52,12 +52,14 @@ main
                                 
                     .en_content
                         p
-                            +FontStyle(16px,#000,400,1px,1)
+                            +FontStyle(16px,#979797,400,1px,1)
                             &:nth-child(1)
                                 margin-bottom: 40px
     .grow
-        .grow_container
+        margin-bottom: 50px
+        .grow_container             
             .row
+                flex-wrap: nowrap
                 .grow_img
                     width: 50vw
                     img
@@ -67,9 +69,64 @@ main
                     width: 50vw
                     .grow_header
                         h3
+                            +FontStyle(32px,#000,600,1px,1)
+                            margin-bottom: 25px
                         h4
+                            +FontStyle(18px,#000,400,1px,1)
                     .tw_content
+                        margin: 80px 0
                         p
+                            +FontStyle(18px,#000,400,3px,34px)
                     .en_content
                         p
-    
+                            +FontStyle(16px,#979797,400,1px,28px)
+                            &:nth-child(1)
+                                margin-bottom: 40px
+    .continue
+        margin-bottom: 93px
+        .continue_banner
+            margin-bottom: 80px
+            .banner_img
+                width: 1440px 
+                height: 520px
+                background-size: cover
+                background-position: 50% 58%
+        .continue_container
+            .row
+                .continue_header
+                    margin-bottom: 36px
+                    h3
+                        +FontStyle(32px,#000,600,1px,1)
+                    h4
+                        +FontStyle(18px,#000,600,1px,32px)
+                .tw_content
+                    margin-bottom: 75px
+                    p
+                        +FontStyle(18px,#000,400,3px,34px)
+                .en_content                                
+                    p
+                        +FontStyle(16px,#979797,400,2px,28px)
+                        &:nth-child(1)
+                                margin-bottom: 40px
+    .focus
+        margin: 200px 0
+        .focus_img
+            width: 870px
+            height: 712px
+        .focus_container
+            .row
+                .foucs_right
+                    width: 50%
+                    .focus_header
+                        margin-bottom: 36px
+                        h3
+                            +FontStyle(32px,#000,600,1px,1)
+                        h4
+                            +FontStyle(18px,#000,600,1px,32px)
+                    .tw_content
+                        margin-bottom: 75px
+                        p
+                            +FontStyle(18px,#000,400,3px,34px)
+                    .en_content
+                        p
+                            +FontStyle(16px,#979797,400,1px,28px)

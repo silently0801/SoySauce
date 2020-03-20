@@ -36,7 +36,7 @@ main .header .header_container .row {
 main .header .header_container .row .header_content .header_tw {
   font-size: 32px;
   color: #FFF;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 10px;
   line-height: unset;
 }
@@ -94,7 +94,7 @@ main .start .start_container .row .start_content .tw_content p:nth-child(1) {
 
 main .start .start_container .row .start_content .en_content p {
   font-size: 16px;
-  color: #000;
+  color: #979797;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1;
@@ -102,6 +102,15 @@ main .start .start_container .row .start_content .en_content p {
 
 main .start .start_container .row .start_content .en_content p:nth-child(1) {
   margin-bottom: 40px;
+}
+
+main .grow {
+  margin-bottom: 50px;
+}
+
+main .grow .grow_container .row {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 main .grow .grow_container .row .grow_img {
@@ -115,5 +124,158 @@ main .grow .grow_container .row .grow_img img {
 
 main .grow .grow_container .row .grow_content {
   width: 50vw;
+}
+
+main .grow .grow_container .row .grow_content .grow_header h3 {
+  font-size: 32px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+main .grow .grow_container .row .grow_content .grow_header h4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+main .grow .grow_container .row .grow_content .tw_content {
+  margin: 80px 0;
+}
+
+main .grow .grow_container .row .grow_content .tw_content p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+}
+
+main .grow .grow_container .row .grow_content .en_content p {
+  font-size: 16px;
+  color: #979797;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+
+main .grow .grow_container .row .grow_content .en_content p:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+main .continue {
+  margin-bottom: 93px;
+}
+
+main .continue .continue_banner {
+  margin-bottom: 80px;
+}
+
+main .continue .continue_banner .banner_img {
+  width: 1440px;
+  height: 520px;
+  background-size: cover;
+  background-position: 50% 58%;
+}
+
+main .continue .continue_container .row .continue_header {
+  margin-bottom: 36px;
+}
+
+main .continue .continue_container .row .continue_header h3 {
+  font-size: 32px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+main .continue .continue_container .row .continue_header h4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+
+main .continue .continue_container .row .tw_content {
+  margin-bottom: 75px;
+}
+
+main .continue .continue_container .row .tw_content p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+}
+
+main .continue .continue_container .row .en_content p {
+  font-size: 16px;
+  color: #979797;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+
+main .continue .continue_container .row .en_content p:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+main .focus {
+  margin: 200px 0;
+}
+
+main .focus .focus_img {
+  width: 870px;
+  height: 712px;
+}
+
+main .focus .focus_container .row .foucs_right {
+  width: 50%;
+}
+
+main .focus .focus_container .row .foucs_right .focus_header {
+  margin-bottom: 36px;
+}
+
+main .focus .focus_container .row .foucs_right .focus_header h3 {
+  font-size: 32px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+main .focus .focus_container .row .foucs_right .focus_header h4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+
+main .focus .focus_container .row .foucs_right .tw_content {
+  margin-bottom: 75px;
+}
+
+main .focus .focus_container .row .foucs_right .tw_content p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+}
+
+main .focus .focus_container .row .foucs_right .en_content p {
+  font-size: 16px;
+  color: #979797;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 28px;
 }
 /*# sourceMappingURL=ourstory.css.map */
