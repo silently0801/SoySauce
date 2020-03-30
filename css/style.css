@@ -240,6 +240,7 @@ nav .container .row .backEnd ul li a {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
+  white-space: nowrap;
   position: relative;
   font-size: 14px;
   color: #231714;
@@ -536,6 +537,7 @@ nav .container .row .menu_btn_Area .menu_bot_text span {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
+  white-space: nowrap;
   font-size: 14px;
   color: #231714;
   font-weight: 900;
@@ -1123,6 +1125,7 @@ main .introduction .introduction_container .row .introduction_left div {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
+  white-space: nowrap;
   position: relative;
   height: 500px;
   right: -150px;
@@ -1567,6 +1570,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
+  white-space: nowrap;
   border-radius: 50%;
   color: #fff;
   top: -200px;
