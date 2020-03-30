@@ -1407,6 +1407,7 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
+  white-space: nowrap;
   font-size: 123px;
   color: #fff;
   font-weight: 600;
