@@ -1395,6 +1395,7 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
 main .introduction .introduction_container .row .introduction_bot .introduction_bot_right {
   position: relative;
   top: 40px;
+  white-space: nowrap;
 }
 
 @media (max-width: 820px) {
