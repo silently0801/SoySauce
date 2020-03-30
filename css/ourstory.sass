@@ -1,4 +1,31 @@
 @import "_function.sass"
+nav
+    .container
+        .row
+            .logo
+                
+            .nav_btns
+                ul
+                    li
+                        a
+                            &::after
+                                +before_after_default()
+                                background-color: $colorOrange
+                            &:hover span
+                                color: $colorOrange !important
+                            span
+                                &:nth-child(1)
+                                    +FontStyle(18px,#FFF,600,2px)
+                                &:nth-child(2)
+                                    +FontStyle(12px,#FFF,600,2px)    
+            .menu_Area
+                .menu_backEnd
+                    ul
+                        li
+                            a
+                                +FontStyle(14px,#FFF,900,7px,1)
+            hr
+                background: #FFF
 main
     &::before
         +before_after_default(absolute)
