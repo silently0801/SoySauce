@@ -189,6 +189,7 @@ nav .container .row {
             flex: 1;
     text-align: center;
     position: relative;
+    white-space: nowrap;
   }
   nav .container .row .backEnd ul li::after {
     content: "|";
@@ -1089,6 +1090,7 @@ main .introduction .introduction_container .row .introduction_left {
       -ms-flex: 1;
           flex: 1;
   position: relative;
+  white-space: nowrap;
 }
 
 @media (max-width: 1300px) {
@@ -1485,6 +1487,10 @@ main .soysauce .soysauce_container::after {
   main .soysauce .soysauce_container::after {
     display: none;
   }
+}
+
+main .soysauce .soysauce_container .row {
+  white-space: nowrap;
 }
 
 main .soysauce .soysauce_container .row .soysauce_text_Area {

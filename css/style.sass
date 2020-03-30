@@ -92,6 +92,7 @@ nav
                             flex: 1
                             text-align: center
                             position: relative
+                            white-space: nowrap
                             &::after
                                 +before_after_default(absolute,"|")
                                 +FontStyle(14px,#FFF,400,1px)
@@ -484,6 +485,7 @@ main
                 .introduction_left
                     flex: 1
                     position: relative
+                    white-space: nowrap
                     @media ( max-width: 1300px )
                         top: -100px
                         right: 50px
@@ -645,6 +647,7 @@ main
                 @media ( max-width: 1300px )
                     display: none
             .row
+                white-space: nowrap
                 .soysauce_text_Area
                     padding-top: 385px
                     margin-bottom: 170px 
