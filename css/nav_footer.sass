@@ -18,7 +18,12 @@
     overflow: hidden
 a:hover
     text-decoration: none    
-
+.container
+    @media ( max-width: 1279px )
+        max-width: 620px !important 
+    @media ( max-width: 767px )
+        max-width: 100% !important
+        padding: 0 5%
 nav
     border-top: 9px solid $colorOrange 
     color: $colorBlack
@@ -163,49 +168,83 @@ nav
 footer
     background: #1A1A1A
     height: 161px
-    @media ( max-width: 991px )
+    @media ( max-width: 1279px )
         height: auto
     .footer_container
         height: 100%
         .row
             padding: 40px 0 
             height: 100%
-            @media ( max-width: 991px )
-                margin: 0
+            @media ( max-width: 767px )
+                flex-direction: column
             .footer_logo
                 margin: 0 65px
-                @media ( max-width: 991px )
-                    margin: 0 0 30px
-            .footer_information
-                flex: 0 0 351px
-                height: 66px
-                width: 351px
-                @media ( max-width: 991px )
-                    flex: unset
-                    margin: 0 0 30px 
-                    width: 100%
-                li
-                    display: flex
-                    margin-bottom: 10px
-                    white-space: nowrap
-                    .footer_information_header
-                        flex: 0 0 80px
-                        border-right: 1px solid #FFF
-                        margin-right: 10px  
-                        +FontStyle( 12px,#FFF,600,5px)
-                    .footer_information_text
-                        flex: 1 1 auto
-                        +FontStyle( 12px,#FFF,600,2px)
-            .copyright_Area
-                +FontStyle(12px,#FFF,600,2px)
+                @media ( max-width: 767px )
+                    margin: 0 0 40px
+            .footer_content
                 flex: 1 1 auto
-                @media ( max-width: 1023px )
-                    flex: unset
-                .copyright_top
-                    margin-bottom: 10px
-                .copyright_mid
-                    margin-bottom: 30px
-                .copyright_bot
-                    border: 1px solid #FFF
-                    width: 100%
-                    max-width: 490px
+                display: flex
+                @media ( max-width: 1279px )
+                    flex-direction: column
+                .footer_information
+                    flex: 0 0 351px
+                    height: 66px
+                    width: 351px
+                    @media ( max-width: 1279px )
+                        flex: unset
+                    li
+                        display: flex
+                        margin-bottom: 10px
+                        white-space: nowrap
+                        @media ( max-width: 767px )
+                            justify-content: center
+                        .footer_information_header
+                            flex: 0 0 80px
+                            border-right: 1px solid #FFF
+                            margin-right: 10px  
+                            +FontStyle( 12px,#FFF,600,5px)
+                            @media ( max-width: 767px )
+                                display: none
+                        .footer_information_header2
+                            flex: 0 0 80px
+                            border-right: 1px solid #FFF
+                            margin-right: 10px 
+                            +FontStyle( 12px,#FFF,600,5px)
+                            text-align: end
+                            display: none
+                            @media ( max-width: 767px )
+                                display: block
+                        .footer_information_text
+                            flex: 1 1 auto
+                            +FontStyle( 12px,#FFF,600,2px)
+                            @media ( max-width: 767px )
+                                flex: unset
+                .copyright_Area
+                    +FontStyle(12px,#FFF,600,2px)
+                    flex: 1 1 auto
+                    flex-direction: column
+                    align-items: flex-end
+                    @media ( max-width: 1279px )
+                        flex: unset
+                        padding: 50px 0 0
+                    @media ( max-width: 767px )
+                        align-items: center
+                    .copyright_top
+                        margin-bottom: 10px
+                        @media ( max-width: 1279px )
+                            align-self: start
+                        @media ( max-width: 767px )
+                            align-self: unset
+                    .copyright_mid
+                        margin-bottom: 30px
+                        @media ( max-width: 1279px )
+                            align-self: start
+                        @media ( max-width: 767px )
+                            align-self: unset
+                    .copyright_bot
+                        border: 1px solid #FFF
+                        width: 100%
+                        max-width: 490px
+                        display: block
+                        @media ( max-width: 1279px )
+                            display: none

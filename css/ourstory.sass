@@ -58,19 +58,27 @@ main
                         +FontStyle(25px,#FFF,400,7px)
     .start
         .start_container
-            @media ( max-width: 576px )
-                padding: 0
             .row
                 .start_banner
+                    width: 100%
+                    text-align: center
                     img
+                        width: 100%
                     h2
                         +absolute(null,null,-5px,35px)
-                        +FontStyle(50px,#FFF,600,15px,1)
+                        +FontStyle(63px,#FFF,600,15px,1)
+                        @media ( max-width: 1440px )
+                            +absolute(null,null,-5px,120px)
+                        @media ( max-width: 1279px )
+                            +FontStyle(42px,#FFF,600,15px,1)
+                            +absolute(null,null,-5px,120px)
                 .start_content
                     padding: 40px 200px 50px 35px 
-                    @media ( max-width: 991px )
+                    @media ( max-width: 1441px ) 
+                        padding: 40px 120px 50px
+                    @media ( max-width: 1279px )
                         padding: 40px 0 50px 0
-                    @media ( max-width: 576px )
+                    @media ( max-width: 767px )
                         padding: 50px 15px
                     h3
                         +FontStyle(26px,#000,700,1px,1)
@@ -90,30 +98,33 @@ main
                                 margin-bottom: 40px
     .grow
         margin-bottom: 50px
-        .grow_container 
-            @media ( max-width: 576px )
-                padding: 0            
+        .grow_container  
+            @media ( max-width: 767px )
+                padding: 0        
             .row
                 flex-wrap: nowrap
-                @media ( max-width: 1199px )
+                @media ( max-width: 1279px )
                     flex-direction: column
+                @media ( max-width: 767px )
+                    margin: 0
                 .grow_img
                     width: 50%
-                    @media ( max-width: 1199px )
+                    @media ( max-width: 1279px )    
                         width: 100%
                         text-align: center
                         margin: 0 0 80px
                     img
                         width: 490px
                         height: 720px
-                        @media ( max-width: 576px )
+                        @media ( max-width: 767px )
                             width: 100%
+                            height: auto
                 .grow_content
                     width: 50%
-                    @media ( max-width: 1199px )
+                    @media ( max-width: 1279px )
                         width: 100%
-                    @media ( max-width: 576px )
-                        padding: 0 15px
+                    @media ( max-width: 767px )
+                        padding: 0 5%
                     .grow_header
                         h3
                             +FontStyle(32px,#000,600,1px,1)
@@ -138,11 +149,11 @@ main
                 height: 520px
                 background-size: cover
                 background-position: 50% 58%
-                @media ( max-width: 1441px )
+                @media ( max-width: 1441px ) 
                     width: 100%
         .continue_container
             .row
-                @media ( max-width: 576px )
+                @media ( max-width: 767px )
                         padding: 0 15px
                 .continue_header
                     margin-bottom: 36px
@@ -162,10 +173,14 @@ main
     .focus
         margin: 200px 0
         .focus_container
+            @media ( max-width: 767px )
+                padding: 0 
             .row
                 position: relative
-                @media ( max-width: 1199px )
+                @media ( max-width: 1279px )
                     flex-direction: column
+                @media ( max-width: 767px )
+                    margin: 0 
                 .focus_img
                     width: 50vw
                     height: 712px
@@ -174,7 +189,7 @@ main
                     left: calc( (100vw - 1140px) / 2  * -1 - 86px)
                     background-position: center
                     background-size: cover
-                    @media ( max-width: 1199px )
+                    @media ( max-width: 1279px )
                         position: relative
                         top: unset
                         left: unset
@@ -182,10 +197,10 @@ main
                         margin: 0 0 80px
                 .foucs_right
                     width: 50%
-                    @media ( max-width: 1199px )
+                    @media ( max-width: 1279px )
                         width: 100%
-                    @media ( max-width: 576px )
-                        padding: 0 15px
+                    @media ( max-width: 767px )
+                        padding: 0 5%
                     .focus_header
                         margin-bottom: 36px
                         h3

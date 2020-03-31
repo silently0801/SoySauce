@@ -88,34 +88,64 @@ main .header .header_container .row .header_content .header_en {
   line-height: unset;
 }
 
-@media (max-width: 576px) {
-  main .start .start_container {
-    padding: 0;
-  }
+main .start .start_container .row .start_banner {
+  width: 100%;
+  text-align: center;
+}
+
+main .start .start_container .row .start_banner img {
+  width: 100%;
 }
 
 main .start .start_container .row .start_banner h2 {
   position: absolute;
   bottom: -5px;
   left: 35px;
-  font-size: 50px;
+  font-size: 63px;
   color: #FFF;
   font-weight: 600;
   letter-spacing: 15px;
   line-height: 1;
 }
 
+@media (max-width: 1440px) {
+  main .start .start_container .row .start_banner h2 {
+    position: absolute;
+    bottom: -5px;
+    left: 120px;
+  }
+}
+
+@media (max-width: 1279px) {
+  main .start .start_container .row .start_banner h2 {
+    font-size: 42px;
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: 15px;
+    line-height: 1;
+    position: absolute;
+    bottom: -5px;
+    left: 120px;
+  }
+}
+
 main .start .start_container .row .start_content {
   padding: 40px 200px 50px 35px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1441px) {
+  main .start .start_container .row .start_content {
+    padding: 40px 120px 50px;
+  }
+}
+
+@media (max-width: 1279px) {
   main .start .start_container .row .start_content {
     padding: 40px 0 50px 0;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .start .start_container .row .start_content {
     padding: 50px 15px;
   }
@@ -165,7 +195,7 @@ main .grow {
   margin-bottom: 50px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .grow .grow_container {
     padding: 0;
   }
@@ -176,7 +206,7 @@ main .grow .grow_container .row {
       flex-wrap: nowrap;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .grow .grow_container .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -185,11 +215,17 @@ main .grow .grow_container .row {
   }
 }
 
+@media (max-width: 767px) {
+  main .grow .grow_container .row {
+    margin: 0;
+  }
+}
+
 main .grow .grow_container .row .grow_img {
   width: 50%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .grow .grow_container .row .grow_img {
     width: 100%;
     text-align: center;
@@ -202,9 +238,10 @@ main .grow .grow_container .row .grow_img img {
   height: 720px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .grow .grow_container .row .grow_img img {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -212,15 +249,15 @@ main .grow .grow_container .row .grow_content {
   width: 50%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .grow .grow_container .row .grow_content {
     width: 100%;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .grow .grow_container .row .grow_content {
-    padding: 0 15px;
+    padding: 0 5%;
   }
 }
 
@@ -286,7 +323,7 @@ main .continue .continue_banner .banner_img {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .continue .continue_container .row {
     padding: 0 15px;
   }
@@ -340,16 +377,28 @@ main .focus {
   margin: 200px 0;
 }
 
+@media (max-width: 767px) {
+  main .focus .focus_container {
+    padding: 0;
+  }
+}
+
 main .focus .focus_container .row {
   position: relative;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .focus .focus_container .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  main .focus .focus_container .row {
+    margin: 0;
   }
 }
 
@@ -363,7 +412,7 @@ main .focus .focus_container .row .focus_img {
   background-size: cover;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .focus .focus_container .row .focus_img {
     position: relative;
     top: unset;
@@ -377,15 +426,15 @@ main .focus .focus_container .row .foucs_right {
   width: 50%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
   main .focus .focus_container .row .foucs_right {
     width: 100%;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   main .focus .focus_container .row .foucs_right {
-    padding: 0 15px;
+    padding: 0 5%;
   }
 }
 
