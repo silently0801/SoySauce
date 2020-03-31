@@ -42,6 +42,19 @@ nav
                 background-size: cover
                 @media ( max-width: 767px )
                     display: none
+                .menu_backEnd
+                    display: none
+                    width: 250px
+                    padding: 10px 0
+                    @media ( max-width: 1279px )
+                        display: block
+                    ul 
+                        li
+                            margin: 0 5px
+                            a
+                                margin-left: 10px
+                                writing-mode: vertical-lr
+                                +FontStyle(14px,#fff,900,7px,1)
             .nav_btns
                 @media ( max-width: 767px )
                     display: none
@@ -142,24 +155,14 @@ nav
                                         +FontStyle(12px,#FFF,400,1px) 
                 .menu_backEnd
                     width: 50px
-                    @media ( max-width: 767px )
-                        width: 190px
-                        position: absolute
-                        top: -50px
-                        left: 0
-                        display: flex
+                    @media ( max-width: 1279px )
+                        display: none
                     ul
                         li
                             a
                                 margin-left: 10px
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,$colorBlack,900,7px,1)
-                    .circle_logo
-                        display: none
-                        @media ( max-width: 767px )
-                            display: block
-                            width: 80px
-                            height: 80px
             hr
                 border: 0
                 height: 1px
