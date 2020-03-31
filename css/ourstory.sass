@@ -49,6 +49,10 @@ main
                 z-index: -4
             .row
                 padding: 50px 0  400px
+                @media ( max-width: 1279px )
+                    padding: 50px 0  482px
+                @media ( max-width: 767px )
+                    padding: 50px 0  580px
                 .header_content
                     .header_icon
                         img
@@ -71,7 +75,9 @@ main
                             +absolute(null,null,-5px,120px)
                         @media ( max-width: 1279px )
                             +FontStyle(42px,#FFF,600,15px,1)
-                            +absolute(null,null,-5px,120px)
+                            +absolute(null,null,-5px,unset)
+                        @media ( max-width: 767px )
+                            +absolute(null,null,-5px,15px)
                 .start_content
                     padding: 40px 200px 50px 35px 
                     @media ( max-width: 1441px ) 

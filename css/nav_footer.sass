@@ -32,22 +32,35 @@ nav
             width: 90% !important
         .row
             justify-content: flex-end
+            align-items: center
             @media ( max-width: 767px )
-                padding: 140px 0 0
+                align-items: flex-start
+                position: relative
+            @media ( max-width: 375px )
+                position: unset
+                align-items: center
             .logo
-                margin: 50px 0
+                margin: 50px 0 20px
                 width: 104px
                 height: 179px
+                background-image: url('../img/logo_white.png')
                 background-position: center
                 background-size: cover
                 @media ( max-width: 767px )
-                    display: none
+                    width: 81px
+                    height: 81px
+                    background-image: url('../img/footer_logo.png')
                 .menu_backEnd
                     display: none
                     width: 250px
                     padding: 10px 0
                     @media ( max-width: 1279px )
                         display: block
+                    @media ( max-width: 767px )
+                        padding: 0
+                        width: 230px
+                    @media ( max-width: 375px )
+                        display: none
                     ul 
                         li
                             margin: 0 5px
@@ -56,7 +69,7 @@ nav
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,#fff,900,7px,1)
             .nav_btns
-                @media ( max-width: 767px )
+                @media ( max-width: 1279px)
                     display: none
                 ul
                     justify-content: space-around
@@ -89,8 +102,13 @@ nav
                 top: 50px
                 right: 5%
                 z-index: 99
-                @media ( max-width: 767px )
-                    width: 540px
+                @media ( max-width: 1279px)
+                    position: absolute
+                    top: 50px
+                    right: 5%
+                @media ( max-width: 375px )
+                    top: 0px
+                    right: 0px
                 .menu_btn
                     width: 50px
                     height: 50px
@@ -121,6 +139,8 @@ nav
                     right: 0
                     padding: 100px 0
                     display: none
+                    @media ( max-width: 767px )
+                        width: 100%
                     ul
                         flex-direction: column 
                         justify-content: center
@@ -195,12 +215,19 @@ footer
                     width: 351px
                     @media ( max-width: 1279px )
                         flex: unset
+                    @media ( max-width: 540px )
+                        width: 100%
                     li
                         display: flex
                         margin-bottom: 10px
                         white-space: nowrap
                         @media ( max-width: 767px )
                             justify-content: center
+                            &:nth-child(1)
+                                .footer_information_header
+                                    display: unset
+                                    text-align: end
+                                
                         .footer_information_header
                             flex: 0 0 80px
                             border-right: 1px solid #FFF
@@ -208,8 +235,8 @@ footer
                             +FontStyle( 12px,#FFF,600,5px)
                             @media ( max-width: 767px )
                                 display: none
+                                flex: unset                    
                         .footer_information_header2
-                            flex: 0 0 80px
                             border-right: 1px solid #FFF
                             margin-right: 10px 
                             +FontStyle( 12px,#FFF,600,5px)
@@ -217,6 +244,8 @@ footer
                             display: none
                             @media ( max-width: 767px )
                                 display: block
+                                
+                                
                         .footer_information_text
                             flex: 1 1 auto
                             +FontStyle( 12px,#FFF,600,2px)
