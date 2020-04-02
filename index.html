@@ -284,6 +284,8 @@
             {
                 document.querySelector(".carousel_container").classList.add("container");
             }
+            let scaleValue = (1/window.devicePixelRatio);
+            $("html").css({"zoom": scaleValue});
         });
         $(window).resize(() => {
             console.log(window.innerWidth);
