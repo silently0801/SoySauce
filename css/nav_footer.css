@@ -53,6 +53,7 @@ a:hover {
 nav {
   border-top: 9px solid #C0362D;
   color: #231714;
+  position: relative !important;
 }
 
 @media (max-width: 767px) {
