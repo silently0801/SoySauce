@@ -27,6 +27,7 @@ nav
             hr
                 background: #FFF
 main
+    text-align: justify
     &::before
         +before_after_default(absolute)
         background-image: url("../img/01-OurStory/DSC_9239.jpg")
@@ -37,6 +38,12 @@ main
         width: 100%
         height: 1080px
         z-index: -5
+        @media ( max-width: 1279px )
+            height: 780px
+        @media ( max-width: 767px )
+            height: 650px
+        @media ( max-width: 320px )
+            background-position: 13% 63%
     .header
         .header_container
             &::after
@@ -50,16 +57,26 @@ main
             .row
                 padding: 50px 0  400px
                 @media ( max-width: 1279px )
-                    padding: 50px 0  482px
+                    padding: 50px 0  182px
                 @media ( max-width: 767px )
-                    padding: 50px 0  580px
+                    padding: 50px 0  280px
                 .header_content
                     .header_icon
+                        @media ( max-width: 767px )
+                            display: none   
                         img
                     .header_tw
                         +FontStyle(32px,#FFF,600,10px)
+                        @media ( max-width: 1279px )
+                            +FontStyle(24px,#FFF,600,10px)
+                        @media ( max-width: 767px )
+                            +FontStyle(22px,#FFF,600,10px)
                     .header_en
                         +FontStyle(25px,#FFF,400,7px)
+                        @media ( max-width: 1279px )
+                            +FontStyle(18px,#FFF,400,7px)
+                        @media ( max-width: 767px )
+                            +FontStyle(18px,#FFF,600,10px)
     .start
         .start_container
             .row
@@ -69,6 +86,7 @@ main
                     img
                         width: 100%
                     h2
+                        text-align: left
                         +absolute(null,null,-5px,35px)
                         +FontStyle(63px,#FFF,600,15px,1)
                         @media ( max-width: 1440px )
@@ -77,6 +95,7 @@ main
                             +FontStyle(42px,#FFF,600,15px,1)
                             +absolute(null,null,-5px,unset)
                         @media ( max-width: 767px )
+                            +FontStyle(32px,#FFF,600,15px,1)
                             +absolute(null,null,-5px,15px)
                 .start_content
                     padding: 40px 200px 50px 35px 
@@ -87,19 +106,43 @@ main
                     @media ( max-width: 767px )
                         padding: 50px 15px
                     h3
-                        +FontStyle(26px,#000,700,1px,1)
+                        text-align: left
+                        +FontStyle(27px,#000,600,1px,42px)
+                        @media ( max-width: 767px )
+                            +FontStyle(24px,#000,600,1px,42px)
+                        @media ( max-width: 320px )
+                            +FontStyle(16px,#000,600,1px,1)
+                        br
+                            display: none
+                            @media ( max-width: 320px )
+                                display: block
+                            &:nth-child(2)
+                                display: block
+                                @media ( max-width: 320px )
+                                    display: none
+
                     hr
                         border-top: 1px solid rgba(0,0,0,1)
+                        margin: 40px 0 
                     .tw_content
                         margin-bottom: 70px
+                        @media ( max-width: 767px )
+                            margin-bottom: 35px
                         p
                             +FontStyle(18px,#000,400,3px,1)
+                            @media ( max-width: 767px )
+                                +FontStyle(16px,#000,400,3px,1)
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,#000,400,3px,1)
                             &:nth-child(1)
                                 margin-bottom: 40px
-                                
                     .en_content
                         p
                             +FontStyle(16px,#979797,400,1px,1)
+                            @media ( max-width: 767px )
+                                +FontStyle(14px,#979797,400,1px,1)
+                            @media ( max-width: 320px )
+                                display: none
                             &:nth-child(1)
                                 margin-bottom: 40px
     .grow
@@ -118,10 +161,11 @@ main
                     @media ( max-width: 1279px )    
                         width: 100%
                         text-align: center
-                        margin: 0 0 80px
+                        margin: 0 0 80px    
                     img
                         width: 490px
-                        height: 720px
+                        height: 520px
+                        box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.5)
                         @media ( max-width: 767px )
                             width: 100%
                             height: auto
@@ -133,21 +177,43 @@ main
                         padding: 0 5%
                     .grow_header
                         h3
-                            +FontStyle(32px,#000,600,1px,1)
+                            text-align: left
                             margin-bottom: 25px
+                            +FontStyle(32px,#000,600,6px,1)
+                            @media ( max-width: 320px ) 
+                                +FontStyle(18px,#000,600,6px,1)
                         h4
+                            text-align: left
                             +FontStyle(18px,#000,400,1px,1)
+                            @media ( max-width: 320px ) 
+                                +FontStyle(14px,#000,400,1px,1)
                     .tw_content
                         margin: 80px 0
+                        @media ( max-width: 767px )
+                            margin: 40px 0
                         p
                             +FontStyle(18px,#000,400,3px,34px)
+                            @media ( max-width: 767px )
+                                +FontStyle(16px,#000,400,3px,34px)
+                            @media ( max-width: 320px ) 
+                                +FontStyle(12px,#000,400,3px,34px)
                     .en_content
                         p
                             +FontStyle(16px,#979797,400,1px,28px)
+                            @media ( max-width: 767px )
+                                +FontStyle(14px,#979797,400,1px,28px)
+                            @media ( max-width: 320px )
+                                display: none
                             &:nth-child(1)
-                                margin-bottom: 40px
+                                margin-bottom: 80px
+                                @media ( max-width: 767px )
+                                    margin-bottom: 40px
     .continue
-        margin-bottom: 93px
+        margin-bottom: 80px
+        @media ( max-width: 767px )
+            margin-bottom: 60px
+        @media ( max-width: 320px )
+            margin-bottom: 50px
         .continue_banner
             margin-bottom: 80px
             .banner_img
@@ -157,6 +223,10 @@ main
                 background-position: 50% 58%
                 @media ( max-width: 1441px ) 
                     width: 100%
+                @media ( max-width: 1279px )
+                    height: 325px
+                @media ( max-width: 320px )
+                    height: 450px
         .continue_container
             .row
                 @media ( max-width: 767px )
@@ -164,20 +234,44 @@ main
                 .continue_header
                     margin-bottom: 36px
                     h3
-                        +FontStyle(32px,#000,600,1px,1)
+                        text-align: left
+                        margin-bottom: 25px
+                        +FontStyle(32px,#000,600,6px,1)
+                        @media ( max-width: 320px )
+                            +FontStyle( 18px,#000,600,6px,1)
                     h4
+                        text-align: left
                         +FontStyle(18px,#000,600,1px,32px)
+                        @media ( max-width: 320px )
+                            +FontStyle(14px,#000,600,1px,26px)
                 .tw_content
-                    margin-bottom: 75px
+                    margin-bottom: 40px
+                    @media ( max-width: 767px )
+                        margin-bottom: 20px
                     p
                         +FontStyle(18px,#000,400,3px,34px)
+                        @media ( max-width: 767px )
+                            +FontStyle(16px,#000,400,3px,34px)
+                        @media ( max-width: 320px )
+                            FontStyle(12px,#000,400,3px,23px)
                 .en_content                                
                     p
                         +FontStyle(16px,#979797,400,2px,28px)
+                        @media ( max-width: 767px )
+                            +FontStyle(14px,#979797,400,2px,28px)
+                        @media ( max-width: 320px )
+                            display: none
                         &:nth-child(1)
-                                margin-bottom: 40px
+                            margin-bottom: 40px
+                            @media ( max-width: 320px )
+                                margin-bottom: 0
+
     .focus
-        margin: 200px 0
+        margin-bottom: 80px
+        @media ( max-width: 767px )
+            margin-bottom: 60px
+        @media ( max-width: 320px )
+            margin-bottom: 50px
         .focus_container
             @media ( max-width: 767px )
                 padding: 0 
@@ -195,12 +289,19 @@ main
                     left: calc( (100vw - 1140px) / 2  * -1 - 86px)
                     background-position: center
                     background-size: cover
+                    box-shadow: 6px 6px 15px 5px rgba(0, 0, 0, 0.5)
                     @media ( max-width: 1279px )
                         position: relative
                         top: unset
                         left: unset
                         width: 100%
-                        margin: 0 0 80px
+                        height: 507px
+                        margin-bottom: 80px
+                    @media ( max-width: 767px )
+                        height: 441px
+                    @media ( max-width: 320px )
+                        margin-bottom: 40px
+                        height: 262px
                 .foucs_right
                     width: 50%
                     @media ( max-width: 1279px )
@@ -210,13 +311,29 @@ main
                     .focus_header
                         margin-bottom: 36px
                         h3
-                            +FontStyle(32px,#000,600,1px,1)
+                            text-align: left
+                            +FontStyle(32px,#000,600,6px,1)
+                            @media ( max-width: 320px )
+                                +FontStyle(18px,#000,600,6px,1) 
                         h4
+                            text-align: left
                             +FontStyle(18px,#000,600,1px,32px)
+                            @media ( max-width: 320px )
+                                +FontStyle(14px,#000,600,1px,32px)
                     .tw_content
-                        margin-bottom: 75px
+                        margin-bottom: 40px
+                        @media ( max-width: 767px )
+                            margin-bottom: 20px
                         p
                             +FontStyle(18px,#000,400,3px,34px)
+                            @media ( max-width: 767px )
+                                +FontStyle(16px,#000,400,3px,34px)
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,#000,400,3px,23px)
                     .en_content
                         p
                             +FontStyle(16px,#979797,400,1px,28px)
+                            @media ( max-width: 767px )
+                                +FontStyle(14px,#979797,400,1px,28px)
+                            @media ( max-width: 320px )
+                                display: none
