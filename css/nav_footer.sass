@@ -42,15 +42,15 @@ nav
                 align-items: center
             .logo
                 margin: 50px 0 20px
-                width: 104px
-                height: 179px
-                background-image: url('../img/logo_white.png')
+                width: 89px
+                height: 157px
+                background-image: url('../img/99-LOGO/logo_white.png')
                 background-position: center
                 background-size: cover
                 @media ( max-width: 767px )
-                    width: 81px
-                    height: 81px
-                    background-image: url('../img/footer_logo.png')
+                    width: 80px
+                    height: 80px
+                    background-image: url('../img/99-LOGO/logo-01.png')
                 .menu_backEnd
                     display: none
                     width: 250px
@@ -85,6 +85,7 @@ nav
                                 margin-top: 10px
                                 background-color: $colorOrange
                                 transition: 0.3s
+                                bottom: 5px
                             &:hover span
                                 color: $colorOrange !important
                                 transition: 0.3s
@@ -94,9 +95,9 @@ nav
                             span
                                 transition: 0.3s
                                 &:nth-child(1)
-                                    +FontStyle(18px,$colorBlack,600,2px)
+                                    +FontStyle(18px,$colorBlack,400,2px,31px)
                                 &:nth-child(2)
-                                    +FontStyle(12px,$colorBlack,600,2px)    
+                                    +FontStyle(12px,$colorBlack,400,2px,31px)    
             .menu_Area
                 margin-left: auto 
                 position: fixed
@@ -115,6 +116,8 @@ nav
                     height: 50px
                     background-color: $colorOrange
                     border-radius: 0 0 0 50%
+                    &:focus
+                        box-shadow: unset
                     .bar
                         background-color: #FFF
                         width: 26px

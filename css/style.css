@@ -394,6 +394,7 @@ nav .container .row .nav_btns ul li a::after {
   background-color: #C0362D;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  bottom: 5px;
 }
 
 @media (max-width: 1090px) {
@@ -481,6 +482,11 @@ nav .container .row .menu_btn_Area .menu_btn {
   height: 50px;
   background-color: #C0362D;
   border-radius: 0 0 0 50%;
+}
+
+nav .container .row .menu_btn_Area .menu_btn:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 
 nav .container .row .menu_btn_Area .menu_btn .bar {

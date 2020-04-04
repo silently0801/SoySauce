@@ -5,41 +5,161 @@ nav
     left: 0
     z-index: 999    
     width: 100%
+    border: unset
     .container
         .row
+            padding: 40px 0 0
+            position: relative
+            @media ( max-width: 767px)
+                position: unset
             .logo
+                margin: unset
+                background-image: url('../img/99-LOGO/logo-01.png')
+                background-position: center
+                background-size: cover
+                position: absolute
+                left: calc( 10px - 81px)
+                top: 39px
+                width: 81px
+                height: 81px
+                @media ( max-width: 1279px)
+                    left: calc( -5% - 81px)
+                @media ( max-width: 767px)
+                    display: none
+                .menu_backEnd
+                    @media ( max-width: 1279px )
+                        display: none
             .nav_btns
+                @media ( max-width: 1279px)
+                    display: block
+                @media ( max-width: 767px)
+                    display: none
                 ul
+                    margin: 0 0 12px
                     li
+                        @media ( max-width: 1279px)
+                            padding: 10px 0 0
                         a
                             &::after
                                 +before_after_default()
+                                bottom: 5px 
                                 background-color: $colorOrange
                             &:hover span
                                 color: $colorOrange !important
                             span
                                 &:nth-child(1)
-                                    +FontStyle(18px,#FFF,600,2px)
+                                    +FontStyle(18px,#FFF,400,2px,31px)
+                                    @media ( max-width: 1279px)
+                                        +FontStyle(14px,#FFF,400,2px)
                                 &:nth-child(2)
-                                    +FontStyle(12px,#FFF,600,2px)    
+                                    +FontStyle(12px,#FFF,400,2px) 
+                                    @media ( max-width: 1279px)   
+                                        +FontStyle(12px,#FFF,400,2px) 
             .menu_Area
+                position: absolute
+                top: 40px
+                right: calc(-1% - 50px)
+                @media ( max-width: 1279px)
+                    right: calc(-5% - 50px)
+                @media ( max-width: 767px)
+                    top: 20px
+                    right: 15px
+                .menu_btn
+                    background-color: unset
+                    border: 1px solid #FFF
+                    &:focus
+                        box-shadow: unset
+                    @media ( max-width: 767px)
+                        border: unset
                 .menu_backEnd
+                    @media ( max-width: 1279px )
+                        display: block
+                    @media ( max-width: 767px)
+                        display: none
                     ul
                         li
                             a
                                 +FontStyle(14px,#FFF,900,7px,1)
             hr
                 background: #FFF
+                margin: 0
+                @media ( max-width: 767px)
+                    display: none
 main
     .swiper-container 
-        width: 100%
+        width: 100% 
         height: 100vh
-    .swiper-slide 
-      text-align: center
-      font-size: 18px
-      background-color: #333
-      display: flex
-      justify-content: center
-      align-items: center
+        .aesthetics_header
+            top: 200px
+            left: 50%       
+            z-index: 99
+            transform: translateX(-50%)
+            .header_tw
+                +FontStyle(54px,#FFF,400,6px,49px)
+                margin-bottom: 18px
+            .header_en
+                +FontStyle(30px,#FFF,200,2px,37px)
+        .swiper-wrapper
+            .swiper-slide 
+                padding: 35.2vh 0 0
+                text-align: center
+                background-color: #333
+                display: flex
+                flex-direction: column 
+                align-items: center
+                background-size: cover
+                background-position: center
+                .aesthetics_title
+                    margin-bottom: 50px
+                    .title
+                        +FontStyle(82px,#FFF,400,2px,128px)
+                        margin-left: 50px
+                    .subtitle 
+                        +FontStyle(32px,#FFF,400,6px,50px)
+                .aesthetics_content
+                    width: 530px
+                    p
+                        +FontStyle(18px,#FFF,400,3px,34px)
+                        text-align: justify
+                &:nth-child(1)
+                    .aesthetics_title
+                        padding: 30px 0 0
+                        .title
+                            +FontStyle(32px,#FFF,400,6px,50px)
+                &:nth-child(2)
+                    background-position: 50% 6%
+                &:nth-child(3)
+                    background-position: 50% 80%
+                &:nth-child(4)
+                    .aesthetics_content
+                        width: 740px
+                &:nth-child(5)
+                    background-size: 138%
+                    background-position: 100% 57%
+                &:nth-child(6)
+                    background-size: 138%
+                    background-position: 100% 57%
+                &:nth-child(7)
+                    background-position: 50% 40%
+                &:nth-child(8)
+                    background-size: 126%
+                    background-position: 100% 58%
+    .swiper-button-next
+        top: 85%
+        right: calc(50% - 75px)
+        &:focus
+            outline: unset
+        &::after
+            content: url("../img/99-LOGO/arrow_right_big.png")
+    .swiper-button-prev
+        top: 85%
+        left: calc(50% - 75px)
+        &:focus
+            outline: unset
+        &::after
+            content: url("../img/99-LOGO/arrow_left_big.png")
+    .swiper-button-disabled 
+        opacity: 0 !important
+            
 footer
     display: none

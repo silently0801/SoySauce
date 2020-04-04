@@ -91,18 +91,18 @@ nav .container .row {
 
 nav .container .row .logo {
   margin: 50px 0 20px;
-  width: 104px;
-  height: 179px;
-  background-image: url("../img/logo_white.png");
+  width: 89px;
+  height: 157px;
+  background-image: url("../img/99-LOGO/logo_white.png");
   background-position: center;
   background-size: cover;
 }
 
 @media (max-width: 767px) {
   nav .container .row .logo {
-    width: 81px;
-    height: 81px;
-    background-image: url("../img/footer_logo.png");
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/99-LOGO/logo-01.png");
   }
 }
 
@@ -170,6 +170,7 @@ nav .container .row .nav_btns ul li a::after {
   background-color: #C0362D;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  bottom: 5px;
 }
 
 nav .container .row .nav_btns ul li a:hover span {
@@ -192,17 +193,17 @@ nav .container .row .nav_btns ul li a span {
 nav .container .row .nav_btns ul li a span:nth-child(1) {
   font-size: 18px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 2px;
-  line-height: unset;
+  line-height: 31px;
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(2) {
   font-size: 12px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 2px;
-  line-height: unset;
+  line-height: 31px;
 }
 
 nav .container .row .menu_Area {
@@ -233,6 +234,11 @@ nav .container .row .menu_Area .menu_btn {
   height: 50px;
   background-color: #C0362D;
   border-radius: 0 0 0 50%;
+}
+
+nav .container .row .menu_Area .menu_btn:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 
 nav .container .row .menu_Area .menu_btn .bar {
