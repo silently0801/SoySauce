@@ -89,19 +89,9 @@ main
     .swiper-container 
         width: 100% 
         height: 100vh
-        .aesthetics_header
-            top: 200px
-            left: 50%       
-            z-index: 99
-            transform: translateX(-50%)
-            .header_tw
-                +FontStyle(54px,#FFF,400,6px,49px)
-                margin-bottom: 18px
-            .header_en
-                +FontStyle(30px,#FFF,200,2px,37px)
         .swiper-wrapper
             .swiper-slide 
-                padding: 35.2vh 0 0
+                padding: 27vh 0 0
                 text-align: center
                 background-color: #333
                 display: flex
@@ -109,23 +99,52 @@ main
                 align-items: center
                 background-size: cover
                 background-position: center
+                @media ( max-width: 767px )
+                    padding: 13vh 0 0
+                .aesthetics_header
+                    .header_tw
+                        +FontStyle(54px,#FFF,400,6px,49px)
+                        margin-bottom: 18px
+                        @media ( max-width: 575px )
+                            +FontStyle(32px,#FFF,400,6px,49px)
+                    .header_en
+                        +FontStyle(30px,#FFF,200,2px,37px)
+                        @media ( max-width: 575px )
+                            +FontStyle(12px,#FFF,200,2px,37px)
                 .aesthetics_title
-                    margin-bottom: 50px
+                    margin-bottom: 4.6vh
+                    @media ( max-width: 767px )
+                        margin-bottom: 5.5vh
                     .title
                         +FontStyle(82px,#FFF,400,2px,128px)
                         margin-left: 50px
+                        @media ( max-width: 575px )
+                            +FontStyle(48px,#FFF,400,2px,128px)
+                        br
+                            display: none
+                            @media ( max-width: 767px )
+                                display: block
                     .subtitle 
                         +FontStyle(32px,#FFF,400,6px,50px)
+                        @media ( max-width: 575px )
+                            +FontStyle(16px,#FFF,400,6px,50px)
                 .aesthetics_content
                     width: 530px
+                    @media ( max-width: 767px )
+                        width: 87.5% !important
                     p
                         +FontStyle(18px,#FFF,400,3px,34px)
                         text-align: justify
+                        @media ( max-width: 575px )
+                            +FontStyle(12px,#FFF,400,3px,14px)
                 &:nth-child(1)
+                    .aesthetics_header
+                        margin-bottom: 4.6vh
                     .aesthetics_title
-                        padding: 30px 0 0
                         .title
                             +FontStyle(32px,#FFF,400,6px,50px)
+                            @media ( max-width: 575px )
+                                +FontStyle(16px,#FFF,400,6px,50px)
                 &:nth-child(2)
                     background-position: 50% 6%
                 &:nth-child(3)
@@ -136,28 +155,68 @@ main
                 &:nth-child(5)
                     background-size: 138%
                     background-position: 100% 57%
+                    @media ( max-width: 1800px )
+                        background-size: cover
                 &:nth-child(6)
                     background-size: 138%
                     background-position: 100% 57%
+                    @media ( max-width: 1800px )
+                        background-size: cover
                 &:nth-child(7)
                     background-position: 50% 40%
                 &:nth-child(8)
                     background-size: 126%
                     background-position: 100% 58%
+                    @media ( max-width: 1800px )
+                        background-size: cover
+                        background-position: 70% 100%
     .swiper-button-next
-        top: 85%
+        top: 85vh
         right: calc(50% - 75px)
+        margin-top: unset
+        @media ( max-width: 575px )
+            top: 90vh
+            right: calc(50% - 50px)
         &:focus
             outline: unset
         &::after
             content: url("../img/99-LOGO/arrow_right_big.png")
+            @media ( max-width: 575px )
+                content: url("../img/99-LOGO/arrow_right_small.png")
     .swiper-button-prev
-        top: 85%
+        top: 85vh
         left: calc(50% - 75px)
+        margin-top: unset
+        @media ( max-width: 575px )
+            top: 90vh
+            left: calc(50% - 50px)
         &:focus
             outline: unset
         &::after
             content: url("../img/99-LOGO/arrow_left_big.png")
+            @media ( max-width: 575px )
+                content: url("../img/99-LOGO/arrow_left_small.png")
+    .more
+        position: absolute
+        z-index: 10
+        cursor: pointer
+        top: calc(85vh - 23.5px)
+        left: calc(50% - 5px)
+        display: none
+        @media ( max-width: 575px )
+            top: calc(90vh - 11.5px)
+        &:focus
+            outline: unset
+        &::after
+            font-family: swiper-icons
+            font-size: var(--swiper-navigation-size)
+            text-transform: none!important
+            letter-spacing: 0
+            text-transform: none
+            font-variant: initial
+            content: url("../img/99-LOGO/more_big.png")
+            @media ( max-width: 575px )
+                content: url("../img/99-LOGO/more_small.png")
     .swiper-button-disabled 
         opacity: 0 !important
             
