@@ -1,4 +1,7 @@
 @import "_function.sass"
+body
+    @media ( max-width: 1279px )
+        background: #ededed
 nav
     .container
         .row
@@ -28,6 +31,7 @@ nav
                 background: #FFF
 main
     text-align: justify
+
     &::before
         +before_after_default(absolute)
         background-image: url("../img/01-OurStory/DSC_9239.jpg")
@@ -44,6 +48,15 @@ main
             height: 650px
         @media ( max-width: 320px )
             background-position: 13% 63%
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background: linear-gradient(to top, #ebebeb, #ebebeb,  #ebebeb, #fff 85%)
+        @media ( max-width: 1279px )
+            display: none
     .header
         .header_container
             &::after

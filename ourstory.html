@@ -141,6 +141,7 @@
         </div>
     </nav>
     <main>
+        <div class="mask"></div>
         <section class="header position-relative">
             <div class="container header_container">
                 <div class="row text-center">
@@ -184,7 +185,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="grow">
             <div class="container grow_container">
                 <div class="row w-100">
@@ -317,10 +318,28 @@
     <script>
 
         /*btn_click*/
-        $(document).ready(function(){
-            let scaleValue = (1/window.devicePixelRatio);
-            $("html").css({"zoom": scaleValue});
+        $(document).ready(function () {
+            let scaleValue = (1 / window.devicePixelRatio);
+            $("html").css({ "zoom": scaleValue });
+
+            let height;
+            let width = $(window).width();
+            console.log($("html").height());
+            if (width > 1279)
+                height = parseInt($("html").height()) - parseInt($("footer").height());
+            $(".mask").height(height);
         });
+        $(window).resize(
+            function () {
+                let scaleValue = (1 / window.devicePixelRatio);
+                $("html").css({ "zoom": scaleValue });
+                let width = $(window).width();
+                let height;
+                if (width > 1279)
+                    height = parseInt($("html").height()) - parseInt($("footer").height());
+                $(".mask").height(height);
+            }
+        );
 
         let backEnd = document.querySelector(".backEnd");
         let menu_btn = document.querySelector(".menu_btn");
@@ -338,10 +357,10 @@
             menu_btn_inner.classList.toggle("menu_btn_inner_click");
         }
         menu_btn.addEventListener("click", menu_click);
-    
-        
 
-        
+
+
+
     </script>
 
 </body>

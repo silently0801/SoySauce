@@ -2,6 +2,12 @@ body {
   font-family: 'Noto Serif TC';
 }
 
+@media (max-width: 1279px) {
+  body {
+    background: #ededed;
+  }
+}
+
 nav .container .row .nav_btns ul li a::after {
   content: " ";
   display: block;
@@ -74,6 +80,22 @@ main::before {
 @media (max-width: 320px) {
   main::before {
     background-position: 13% 63%;
+  }
+}
+
+main .mask {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: -9999;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ebebeb), color-stop(#ebebeb), color-stop(#ebebeb), color-stop(85%, #fff));
+  background: linear-gradient(to top, #ebebeb, #ebebeb, #ebebeb, #fff 85%);
+}
+
+@media (max-width: 1279px) {
+  main .mask {
+    display: none;
   }
 }
 
