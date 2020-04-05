@@ -88,9 +88,9 @@ nav
 main
     .swiper-container 
         width: 100% 
-        height: 100vh
         .swiper-wrapper
             .swiper-slide 
+                height: 100vh
                 padding: 27vh 0 0
                 text-align: center
                 background-color: #333
@@ -119,7 +119,7 @@ main
                         +FontStyle(82px,#FFF,400,2px,128px)
                         margin-left: 50px
                         @media ( max-width: 575px )
-                            +FontStyle(48px,#FFF,400,2px,128px)
+                            +FontStyle(48px,#FFF,400,2px,80px)
                         br
                             display: none
                             @media ( max-width: 767px )
@@ -138,11 +138,24 @@ main
                         @media ( max-width: 575px )
                             +FontStyle(12px,#FFF,400,3px,14px)
                 &:nth-child(1)
+                    @media ( max-width: 575px )
+                        height: calc(100vh + 72px)
+                        padding: 8vh 0 0
+                    .aesthetics_header_img
+                        display: flex
+                        justify-content: center
+                        width: 100%
+                        padding: 0 0 5vh
+                        img
+                            display: none
+                            @media ( max-width: 575px )
+                                display: block
                     .aesthetics_header
                         margin-bottom: 4.6vh
                     .aesthetics_title
                         .title
                             +FontStyle(32px,#FFF,400,6px,50px)
+                            margin-left: unset
                             @media ( max-width: 575px )
                                 +FontStyle(16px,#FFF,400,6px,50px)
                 &:nth-child(2)
@@ -171,6 +184,7 @@ main
                         background-size: cover
                         background-position: 70% 100%
     .swiper-button-next
+        transition: 0.5s
         top: 85vh
         right: calc(50% - 75px)
         margin-top: unset
@@ -184,6 +198,7 @@ main
             @media ( max-width: 575px )
                 content: url("../img/99-LOGO/arrow_right_small.png")
     .swiper-button-prev
+        transition: 0.5s
         top: 85vh
         left: calc(50% - 75px)
         margin-top: unset
@@ -202,7 +217,8 @@ main
         cursor: pointer
         top: calc(85vh - 23.5px)
         left: calc(50% - 5px)
-        display: none
+        transition: 0.5s
+        opacity: 0
         @media ( max-width: 575px )
             top: calc(90vh - 11.5px)
         &:focus
@@ -217,7 +233,10 @@ main
             content: url("../img/99-LOGO/more_big.png")
             @media ( max-width: 575px )
                 content: url("../img/99-LOGO/more_small.png")
+    .swiper_btn
+        top: calc(90vh + 72px)          
     .swiper-button-disabled 
+        transition: 0.5s
         opacity: 0 !important
             
 footer

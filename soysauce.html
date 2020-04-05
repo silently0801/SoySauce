@@ -146,6 +146,9 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image: url('./img/02-製醬美學/DSC_4509.jpg');">
                     <div class="aesthetics_header text-center">
+                        <div class="aesthetics_header_img">
+                            <img src="./img/99-LOGO/logo-01.png" alt="">
+                        </div>
                         <div class="header_tw">製醬美學</div>
                         <div class="header_en">Art of Making black bean sauce</div>
                     </div>
@@ -255,9 +258,9 @@
                 </div>
         </section>
         <!-- Add Arrows -->
-        <div  class="swiper-button-next"></div>
-        <div  class="swiper-button-prev"></div>
-        <div  class="more" tabindex="0" role="button"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="more" tabindex="0" role="button"></div>
         </div>
     </main>
     <footer>
@@ -307,6 +310,7 @@
         /*btn_click*/
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
+            autoHeight: true, //enable auto height
             zoom: true,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -316,30 +320,60 @@
 
         $(document).ready(function () {
             let scaleValue = (1 / window.devicePixelRatio);
-            let scaleContent = $(window).height()/937;
+            let scaleContent = $(window).height() / 937;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
+            console.log($(".swiper-button-prev")[0].classList[1]);
+
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                $(".swiper-button-next").addClass("swiper_btn");
+            else
+                $(".swiper-button-next").removeClass("swiper_btn");
         });
         $(window).resize(function () {
             let scaleValue = (1 / window.devicePixelRatio);
-            let scaleContent = $(window).height()/937;
+            let scaleContent = $(window).height() / 937;
             // if(scaleContent > 1) scaleContent = 1;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                $(".swiper-button-next").addClass("swiper_btn");
+            else
+                $(".swiper-button-next").removeClass("swiper_btn");
         });
 
         /*swiper_btn*/
         $(".swiper-button-next").click(
             function () {
-                if(this.classList[1] == "swiper-button-disabled")
-                    $(".more").css({"display": "block"});
+                $(".swiper-button-next").removeClass("swiper_btn")
+                if (this.classList[1] == "swiper-button-disabled")
+                    $(".more").css({ "opacity": "1" });
+
             }
         )
         $(".swiper-button-prev").click(
             function () {
-                $(".more").css({"display": "none"});
+                $(".more").css({ "opacity": "0" });
+                if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                    $(".swiper-button-next").addClass("swiper_btn");
+                else
+                    $(".swiper-button-next").removeClass("swiper_btn");
             }
         )
+
+        document.querySelector("html").addEventListener('touchend', function (event) {
+            if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
+                $(".more").css({ "opacity": "1" });
+            else
+                $(".more").css({ "opacity": "0" });
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                $(".swiper-button-next").addClass("swiper_btn");
+            else
+                $(".swiper-button-next").removeClass("swiper_btn");
+        }, false);
+
+
+
         /*menu_btn*/
         let backEnd = document.querySelector(".backEnd");
         let menu_btn = document.querySelector(".menu_btn");

@@ -190,10 +190,10 @@ nav .container .row hr {
 
 main .swiper-container {
   width: 100%;
-  height: 100vh;
 }
 
 main .swiper-container .swiper-wrapper .swiper-slide {
+  height: 100vh;
   padding: 27vh 0 0;
   text-align: center;
   background-color: #333;
@@ -279,7 +279,7 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title {
     color: #FFF;
     font-weight: 400;
     letter-spacing: 2px;
-    line-height: 128px;
+    line-height: 80px;
   }
 }
 
@@ -340,6 +340,34 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_content p {
   }
 }
 
+@media (max-width: 575px) {
+  main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
+    height: calc(100vh + 72px);
+    padding: 8vh 0 0;
+  }
+}
+
+main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 0 5vh;
+}
+
+main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header_img img {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header_img img {
+    display: block;
+  }
+}
+
 main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header {
   margin-bottom: 4.6vh;
 }
@@ -350,6 +378,7 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_ti
   font-weight: 400;
   letter-spacing: 6px;
   line-height: 50px;
+  margin-left: unset;
 }
 
 @media (max-width: 575px) {
@@ -413,6 +442,8 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(8) {
 }
 
 main .swiper-button-next {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   top: 85vh;
   right: calc(50% - 75px);
   margin-top: unset;
@@ -440,6 +471,8 @@ main .swiper-button-next::after {
 }
 
 main .swiper-button-prev {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   top: 85vh;
   left: calc(50% - 75px);
   margin-top: unset;
@@ -472,7 +505,9 @@ main .more {
   cursor: pointer;
   top: calc(85vh - 23.5px);
   left: calc(50% - 5px);
-  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 @media (max-width: 575px) {
@@ -501,7 +536,13 @@ main .more::after {
   }
 }
 
+main .swiper_btn {
+  top: calc(90vh + 72px);
+}
+
 main .swiper-button-disabled {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   opacity: 0 !important;
 }
 
