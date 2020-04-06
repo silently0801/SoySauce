@@ -373,7 +373,7 @@ main
                             display: none
                         circle
                             fill: #EDEDED
-                            stroke: $colorOrange
+                            stroke: #ededed
                             stroke-width: 40px
                     .rectangle
                         display: none
@@ -649,6 +649,7 @@ main
                 top: 0
                 left: 50%
                 transform: translateX(-50%)
+                background-color: $colorOrange
                 height: 660px
                 width: 1180px
                 border: 40px solid $colorOrange
@@ -725,7 +726,6 @@ main
                             +FontStyle(72px,#fff,600,20px)
                         @media ( max-width: 475px )
                             +FontStyle(53px,#fff,600,0px)
-                            
                     p
                         width: 575px
                         text-align: center
@@ -743,11 +743,11 @@ main
                             width: unset
                             margin: 0 22px 30px
                         &:nth-child(1)
-                            +FontStyle(18px,$colorBlack,600,5px)
+                            +FontStyle(18px,#FFF,600,5px)
                             @media ( max-width: 1300px )
                                 +FontStyle(18px,#FFF,600,5px)
                         &:nth-child(2)
-                            +FontStyle(16px,$colorGrey,400,2px)
+                            +FontStyle(16px,#FFF,400,2px)
                             @media ( max-width: 1300px )
                                 +FontStyle(16px,#FFF,400,2px)
     .facebook

@@ -311,6 +311,7 @@
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             autoHeight: true, //enable auto height
+            effect: 'fade',
             zoom: true,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -323,7 +324,7 @@
             // let scaleContent = $(window).height() / 937;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width()<576   )
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
                 $(".swiper-button-next").addClass("swiper_btn");
             else
                 $(".swiper-button-next").removeClass("swiper_btn");
@@ -334,7 +335,7 @@
             // if(scaleContent > 1) scaleContent = 1;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
                 $(".swiper-button-next").addClass("swiper_btn");
             else
                 $(".swiper-button-next").removeClass("swiper_btn");
@@ -345,14 +346,13 @@
             function () {
                 $(".swiper-button-next").removeClass("swiper_btn")
                 if (this.classList[1] == "swiper-button-disabled")
-                    $(".more").css({ "display" : "block"});
-                
+                    $(".more").css({ "display": "block" });
             }
         )
         $(".swiper-button-prev").click(
             function () {
-                $(".more").css({ "display": "none"});
-                if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                $(".more").css({ "display": "none" });
+                if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
                     $(".swiper-button-next").addClass("swiper_btn");
                 else
                     $(".swiper-button-next").removeClass("swiper_btn");
@@ -360,13 +360,11 @@
         )
 
         document.querySelector("html").addEventListener('touchend', function (event) {
-            console.log("123");
-            
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
-                $(".more").css({ "display" : "block"});
+                $(".more").css({ "display": "block" });
             else
-                $(".more").css({ "display": "none"});
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width()<576 )
+                $(".more").css({ "display": "none" });
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
                 $(".swiper-button-next").addClass("swiper_btn");
             else
                 $(".swiper-button-next").removeClass("swiper_btn");

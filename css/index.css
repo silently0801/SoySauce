@@ -873,7 +873,7 @@ main .carousel .carousel_container .row .carousel_bot .halfcircle {
 
 main .carousel .carousel_container .row .carousel_bot .halfcircle circle {
   fill: #EDEDED;
-  stroke: #C0362D;
+  stroke: #ededed;
   stroke-width: 40px;
 }
 
@@ -1493,6 +1493,7 @@ main .soysauce .soysauce_container::after {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background-color: #C0362D;
   height: 660px;
   width: 1180px;
   border: 40px solid #C0362D;
@@ -1686,7 +1687,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p {
 
 main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
   font-size: 18px;
-  color: #231714;
+  color: #FFF;
   font-weight: 600;
   letter-spacing: 5px;
   line-height: unset;
@@ -1704,7 +1705,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
 
 main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(2) {
   font-size: 16px;
-  color: #808080;
+  color: #FFF;
   font-weight: 400;
   letter-spacing: 2px;
   line-height: unset;
