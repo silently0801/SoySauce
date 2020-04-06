@@ -29,7 +29,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="nav_btns w-100">
+                <div class="nav_btns w-100">z
                     <ul class="list-unstyled p-0 d-flex">
                         <li class="story text-center">
                             <a class="d-flex flex-column" href="">
@@ -319,20 +319,18 @@
         });
 
         $(document).ready(function () {
-            let scaleValue = (1 / window.devicePixelRatio);
-            let scaleContent = $(window).height() / 937;
+            // let scaleValue = (1 / window.devicePixelRatio);
+            // let scaleContent = $(window).height() / 937;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
-            console.log($(".swiper-button-prev")[0].classList[1]);
-
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width()<576   )
                 $(".swiper-button-next").addClass("swiper_btn");
             else
                 $(".swiper-button-next").removeClass("swiper_btn");
         });
         $(window).resize(function () {
-            let scaleValue = (1 / window.devicePixelRatio);
-            let scaleContent = $(window).height() / 937;
+            // let scaleValue = (1 / window.devicePixelRatio);
+            // let scaleContent = $(window).height() / 937;
             // if(scaleContent > 1) scaleContent = 1;
             // $('.zoom').css({"zoom": scaleContent});
             // $("html").css({ "zoom": scaleValue });
@@ -347,13 +345,13 @@
             function () {
                 $(".swiper-button-next").removeClass("swiper_btn")
                 if (this.classList[1] == "swiper-button-disabled")
-                    $(".more").css({ "opacity": "1" });
-
+                    $(".more").css({ "display" : "block"});
+                
             }
         )
         $(".swiper-button-prev").click(
             function () {
-                $(".more").css({ "opacity": "0" });
+                $(".more").css({ "display": "none"});
                 if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
                     $(".swiper-button-next").addClass("swiper_btn");
                 else
@@ -362,11 +360,13 @@
         )
 
         document.querySelector("html").addEventListener('touchend', function (event) {
+            console.log("123");
+            
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
-                $(".more").css({ "opacity": "1" });
+                $(".more").css({ "display" : "block"});
             else
-                $(".more").css({ "opacity": "0" });
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                $(".more").css({ "display": "none"});
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width()<576 )
                 $(".swiper-button-next").addClass("swiper_btn");
             else
                 $(".swiper-button-next").removeClass("swiper_btn");

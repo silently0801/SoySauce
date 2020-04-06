@@ -188,8 +188,9 @@ main
         top: 85vh
         right: calc(50% - 75px)
         margin-top: unset
+        height: unset
         @media ( max-width: 575px )
-            top: 90vh
+            top: 87vh
             right: calc(50% - 50px)
         &:focus
             outline: unset
@@ -201,9 +202,10 @@ main
         transition: 0.5s
         top: 85vh
         left: calc(50% - 75px)
+        height: unset
         margin-top: unset
         @media ( max-width: 575px )
-            top: 90vh
+            top: 87vh
             left: calc(50% - 50px)
         &:focus
             outline: unset
@@ -215,12 +217,12 @@ main
         position: absolute
         z-index: 10
         cursor: pointer
-        top: calc(85vh - 23.5px)
+        top: calc(85vh + 1px)
         left: calc(50% - 5px)
         transition: 0.5s
-        opacity: 0
+        display: none
         @media ( max-width: 575px )
-            top: calc(90vh - 11.5px)
+            top: 87vh
         &:focus
             outline: unset
         &::after
@@ -234,7 +236,7 @@ main
             @media ( max-width: 575px )
                 content: url("../img/99-LOGO/more_small.png")
     .swiper_btn
-        top: calc(90vh + 72px)          
+        top: calc(90vh + 60px)          
     .swiper-button-disabled 
         transition: 0.5s
         opacity: 0 !important

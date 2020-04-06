@@ -447,11 +447,12 @@ main .swiper-button-next {
   top: 85vh;
   right: calc(50% - 75px);
   margin-top: unset;
+  height: unset;
 }
 
 @media (max-width: 575px) {
   main .swiper-button-next {
-    top: 90vh;
+    top: 87vh;
     right: calc(50% - 50px);
   }
 }
@@ -475,12 +476,13 @@ main .swiper-button-prev {
   transition: 0.5s;
   top: 85vh;
   left: calc(50% - 75px);
+  height: unset;
   margin-top: unset;
 }
 
 @media (max-width: 575px) {
   main .swiper-button-prev {
-    top: 90vh;
+    top: 87vh;
     left: calc(50% - 50px);
   }
 }
@@ -503,16 +505,16 @@ main .more {
   position: absolute;
   z-index: 10;
   cursor: pointer;
-  top: calc(85vh - 23.5px);
+  top: calc(85vh + 1px);
   left: calc(50% - 5px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  opacity: 0;
+  display: none;
 }
 
 @media (max-width: 575px) {
   main .more {
-    top: calc(90vh - 11.5px);
+    top: 87vh;
   }
 }
 
@@ -537,7 +539,7 @@ main .more::after {
 }
 
 main .swiper_btn {
-  top: calc(90vh + 72px);
+  top: calc(90vh + 60px);
 }
 
 main .swiper-button-disabled {
