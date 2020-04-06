@@ -4,7 +4,7 @@ body {
 
 .top_click {
   top: 24px !important;
-  left: 12px !important;
+  left: 17px !important;
   -webkit-transform: rotate(-45deg) !important;
           transform: rotate(-45deg) !important;
 }
@@ -15,7 +15,7 @@ body {
 
 .bot_click {
   top: 24px !important;
-  left: 12px !important;
+  left: 17px !important;
   -webkit-transform: rotate(45deg) !important;
           transform: rotate(45deg) !important;
 }
@@ -23,6 +23,18 @@ body {
 .menu_btn_click {
   border: 1px solid #FFF;
   z-index: 9999;
+  position: fixed !important;
+  top: 80px;
+  right: 322px;
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+}
+
+@media (max-width: 767px) {
+  .menu_btn_click {
+    top: 40px;
+    right: 100px;
+  }
 }
 
 .menu_btn_inner_click {
@@ -291,17 +303,24 @@ nav .container .row .menu_Area .menu_btn .bot_bar {
 nav .container .row .menu_Area .menu_btn_inner {
   position: fixed;
   height: 100%;
-  width: 50vw;
+  width: 670px;
   background: #C0362D;
   top: 0;
   z-index: 998;
   right: 0;
-  padding: 100px 0;
+  padding: 150px 0;
   display: none;
+}
+
+@media (max-width: 1279px) {
+  nav .container .row .menu_Area .menu_btn_inner {
+    width: 50vw;
+  }
 }
 
 @media (max-width: 767px) {
   nav .container .row .menu_Area .menu_btn_inner {
+    padding: 100px 0;
     width: 100%;
   }
 }
