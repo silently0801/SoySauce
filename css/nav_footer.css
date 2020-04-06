@@ -63,6 +63,12 @@ nav {
   position: relative !important;
 }
 
+@media (max-width: 1279px) {
+  nav .container {
+    position: relative;
+  }
+}
+
 @media (max-width: 767px) {
   nav .container {
     width: 90% !important;
@@ -115,7 +121,8 @@ nav .container .row .logo {
 
 nav .container .row .logo .menu_backEnd {
   display: none;
-  width: 250px;
+  width: 19vw;
+  min-width: 216px;
   padding: 10px 0;
 }
 
@@ -224,7 +231,7 @@ nav .container .row .menu_Area {
 @media (max-width: 1279px) {
   nav .container .row .menu_Area {
     position: absolute;
-    top: 50px;
+    top: 31px;
     right: 5%;
   }
 }

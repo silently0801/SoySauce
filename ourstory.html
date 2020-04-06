@@ -321,12 +321,20 @@
         $(document).ready(function () {
             let scaleValue = (1 / window.devicePixelRatio);
             $("html").css({ "zoom": scaleValue });
-
             let height;
             let width = $(window).width();
-            console.log($("html").height());
-            if (width > 1279)
+            if (width > 1512) {
+                let menu_area_position = 331 + (width - 1920) / 2
+                $(".menu_Area").css({ right: `${menu_area_position}px` });
+            }
+            else if (width > 1261) {
                 height = parseInt($("html").height()) - parseInt($("footer").height());
+                let menu_area_position = 401 + (width - 1920) / 2;
+                $(".menu_Area").css({ right: `${menu_area_position}px` });
+            }
+            else
+                $(".menu_Area")[0].style = "";
+
             $(".mask").height(height);
         });
         $(window).resize(
@@ -335,11 +343,24 @@
                 $("html").css({ "zoom": scaleValue });
                 let width = $(window).width();
                 let height;
-                if (width > 1279)
+                console.log(width);
+                
+                if (width > 1512) {
+                    let menu_area_position = 331 + (width - 1920) / 2
+                    $(".menu_Area").css({ right: `${menu_area_position}px` });
+                }
+                else if (width > 1261) {
                     height = parseInt($("html").height()) - parseInt($("footer").height());
+                    let menu_area_position = 401 + (width - 1920) / 2;
+                    $(".menu_Area").css({ right: `${menu_area_position}px` });
+                }
+                else
+                    $(".menu_Area")[0].style = "";
                 $(".mask").height(height);
             }
         );
+
+
 
         let backEnd = document.querySelector(".backEnd");
         let menu_btn = document.querySelector(".menu_btn");
