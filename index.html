@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap&subset=chinese-traditional"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body class="m-0 p-0">
@@ -40,8 +40,8 @@
                         </li>
                         <li class="sauce text-center">
                             <a class="d-flex flex-column" href="">
-                                <span>製醬工藝</span>
-                                <span>Soy Sauce</span>
+                                <span>製醬美學</span>
+                                <span>Production</span>
                             </a>
                         </li>
                         <li class="products text-center">
@@ -58,7 +58,7 @@
                         </li>
                         <li class="news text-center">
                             <a class="d-flex flex-column" href="">
-                                <span>職人手札</span>
+                                <span>職人筆記</span>
                                 <span>News</span>
                             </a>
                         </li>
@@ -77,7 +77,8 @@
                     </ul>
                 </div>
                 <div class="menu_btn_Area d-flex flex-column align-items-end">
-                    <button class="menu_btn btn flex-column position-relative" tabindex="-1" aria-label="Mobile menu toggle">
+                    <button class="menu_btn btn flex-column position-relative" tabindex="-1"
+                        aria-label="Mobile menu toggle">
                         <span class="top_bar bar"></span>
                         <span class="mid_bar bar"></span>
                         <span class="bot_bar bar"></span>
@@ -98,22 +99,31 @@
                     <div class="carousel_top w-100 position-relative">
                         <div class="swiper-container position-relative">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide1.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide3.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide4.png');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide1.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide3.jpg');"></div>
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide4.png');"></div> 
-                                <div class="swiper-slide" style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide1.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide3.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide4.png');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide1.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide3.jpg');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide4.png');"></div>
+                                <div class="swiper-slide"
+                                    style="background-image:url('./img/swiper-slide/slide2.jpg');"></div>
                             </div>
                         </div>
                         <div class="swiper-pagination d-flex flex-column position-absolute"></div>
                     </div>
                     <div class="carousel_bot position-absolute w-100">
                         <div class="textArea position-absolute w-100">
-                            <p class="text_jp">「一本の醤油、一生分の思い」</p>
+                            <p class="text_jp">「一本の醬油、一生分の思い」</p>
                             <p class="text_tw">「一瓶賀欸醬油，一世人欸情分。」</p>
                             <p class="text_en">“A bottle of soy sauce, a lifelong friendship.”</p>
                         </div>
@@ -218,7 +228,7 @@
                     </ul>
                     <hr>
                 </div>
-               
+
             </div>
         </section>
         <section class="bottom_img w-100 position-relative">
@@ -275,27 +285,25 @@
             },
         });
         $(document).ready(() => {
-            console.log(document.body.offsetWidth );
+            console.log(document.body.offsetWidth);
             $(".bg").height($("body").height());
-            if(window.innerWidth  <= 539){
+            if (window.innerWidth <= 539) {
                 document.querySelector(".carousel_container").classList.remove("container");
             }
-            else
-            {
+            else {
                 document.querySelector(".carousel_container").classList.add("container");
             }
-            let scaleValue = (1/window.devicePixelRatio);
-            $("html").css({"zoom": scaleValue});
+            let scaleValue = (1 / window.devicePixelRatio);
+            $("html").css({ "zoom": scaleValue });
         });
         $(window).resize(() => {
             console.log(window.innerWidth);
-            
+
             $(".bg").height($("body").height());
-            if(window.innerWidth  <= 539){
+            if (window.innerWidth <= 539) {
                 document.querySelector(".carousel_container").classList.remove("container");
             }
-            else
-            {
+            else {
                 document.querySelector(".carousel_container").classList.add("container");
             }
         });
@@ -304,13 +312,13 @@
         let backEnd = document.querySelector(".backEnd");
         let nav_btns = document.querySelector(".nav_btns");
         let menu_btn = document.querySelector(".menu_btn");
-        let top_bar  = document.querySelector(".top_bar");
-        let mid_bar  = document.querySelector(".mid_bar");
-        let bot_bar  = document.querySelector(".bot_bar");
+        let top_bar = document.querySelector(".top_bar");
+        let mid_bar = document.querySelector(".mid_bar");
+        let bot_bar = document.querySelector(".bot_bar");
 
-        function menu_click(e){
+        function menu_click(e) {
             // $(".menu,main,footer").toggle();
-            if(window.innerWidth  <= 1090){
+            if (window.innerWidth <= 1090) {
                 html.classList.toggle("hidden");
                 top_bar.classList.toggle("top_click");
                 mid_bar.classList.toggle("mid_click");
@@ -320,7 +328,7 @@
                 backEnd.classList.toggle("nav_btns_click");
             }
         }
-        menu_btn.addEventListener("click",menu_click);
+        menu_btn.addEventListener("click", menu_click);
     </script>
 </body>
 

@@ -8,6 +8,24 @@ body {
   }
 }
 
+nav .container .row .logo {
+  background-image: url("../img/99-LOGO/logo_white.png");
+}
+
+@media (max-width: 767px) {
+  nav .container .row .logo {
+    background-image: url("../img/99-LOGO/logo-01.png");
+  }
+}
+
+nav .container .row .logo .menu_backEnd ul li a {
+  font-size: 14px;
+  color: #FFF;
+  font-weight: 900;
+  letter-spacing: 7px;
+  line-height: 1;
+}
+
 nav .container .row .nav_btns ul li a::after {
   content: " ";
   display: block;
@@ -118,7 +136,7 @@ main .header .header_container .row {
 
 @media (max-width: 1279px) {
   main .header .header_container .row {
-    padding: 50px 0  182px;
+    padding: 50px 0  210px;
   }
 }
 

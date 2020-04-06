@@ -482,6 +482,13 @@ nav .container .row .menu_btn_Area .menu_btn {
   height: 50px;
   background-color: #C0362D;
   border-radius: 0 0 0 50%;
+  cursor: default;
+}
+
+@media (max-width: 1090px) {
+  nav .container .row .menu_btn_Area .menu_btn {
+    cursor: pointer;
+  }
 }
 
 nav .container .row .menu_btn_Area .menu_btn:focus {
@@ -1284,6 +1291,7 @@ main .introduction .introduction_container .row .introduction_right p:nth-child(
 }
 
 main .introduction .introduction_container .row .introduction_right p:nth-child(2) {
+  text-align: justify;
   font-size: 16px;
   color: #808080;
   font-weight: 400;
@@ -1393,9 +1401,11 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   letter-spacing: 4px;
   line-height: unset;
   margin-bottom: 50px;
+  text-align: justify;
 }
 
 main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(2) {
+  text-align: justify;
   font-size: 16px;
   color: #fff;
   font-weight: 400;
@@ -1644,6 +1654,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
 main .soysauce .soysauce_container .row .soysauce_text_Area p {
   width: 575px;
   text-align: center;
+  white-space: normal;
   margin-bottom: 30px;
 }
 
@@ -1771,14 +1782,15 @@ main .facebook .facebook_container .row .facebook_header {
 main .facebook .facebook_container .row .facebook_btn {
   position: absolute;
   font-size: 18px;
-  color: #231714;
+  color: #FFF;
   font-weight: 600;
   letter-spacing: 2px;
   line-height: unset;
-  border: 1px solid #231714;
+  border-radius: 10px;
+  background-color: #4E64AD;
   top: 3px;
   right: 20px;
-  padding: 5px 35px;
+  padding: 10px 35px;
   white-space: nowrap;
 }
 
@@ -2331,4 +2343,4 @@ footer .footer_container .row .copyright_Area .copyright_bot {
   width: 100%;
   max-width: 490px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=index.css.map */

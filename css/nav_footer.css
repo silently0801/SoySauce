@@ -93,7 +93,7 @@ nav .container .row .logo {
   margin: 50px 0 20px;
   width: 89px;
   height: 157px;
-  background-image: url("../img/99-LOGO/logo_white.png");
+  background-image: url("../img/99-LOGO/logo-03.png");
   background-position: center;
   background-size: cover;
 }
@@ -102,7 +102,7 @@ nav .container .row .logo {
   nav .container .row .logo {
     width: 80px;
     height: 80px;
-    background-image: url("../img/99-LOGO/logo-01.png");
+    background-image: url("../img/99-LOGO/logo-02.png");
   }
 }
 
@@ -141,7 +141,7 @@ nav .container .row .logo .menu_backEnd ul li a {
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   font-weight: 900;
   letter-spacing: 7px;
   line-height: 1;
@@ -195,7 +195,7 @@ nav .container .row .nav_btns ul li a span:nth-child(1) {
   color: #231714;
   font-weight: 400;
   letter-spacing: 2px;
-  line-height: 31px;
+  line-height: unset;
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(2) {
@@ -203,7 +203,7 @@ nav .container .row .nav_btns ul li a span:nth-child(2) {
   color: #231714;
   font-weight: 400;
   letter-spacing: 2px;
-  line-height: 31px;
+  line-height: unset;
 }
 
 nav .container .row .menu_Area {

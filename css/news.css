@@ -1,0 +1,15 @@
+main .mask {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: -9999;
+  background: #ebebeb;
+}
+
+@media (max-width: 1279px) {
+  main .mask {
+    display: none;
+  }
+}
+/*# sourceMappingURL=news.css.map */

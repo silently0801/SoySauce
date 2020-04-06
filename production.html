@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/nav_footer.css">
-    <link rel="stylesheet" href="./css/soysauce.css">
+    <link rel="stylesheet" href="./css/production.css">
 </head>
 
 <body>
@@ -352,7 +352,8 @@
         $(".swiper-button-prev").click(
             function () {
                 $(".more").css({ "display": "none"});
-                if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled")
+                if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disab
+                led")
                     $(".swiper-button-next").addClass("swiper_btn");
                 else
                     $(".swiper-button-next").removeClass("swiper_btn");
