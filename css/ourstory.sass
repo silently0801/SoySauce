@@ -1,6 +1,6 @@
 @import "_function.sass"
 body
-    @media ( max-width: 1279px )
+    @media ( max-width: 1530px )
         background: #ededed
 nav
     .container
@@ -25,9 +25,9 @@ nav
                                 color: $colorOrange !important
                             span
                                 &:nth-child(1)
-                                    +FontStyle(18px,#FFF,400,4px)
+                                    color: #FFF
                                 &:nth-child(2)
-                                    +FontStyle(12px,#FFF,400,4px)    
+                                    color: #FFF    
             .menu_Area
                 .menu_backEnd
                     ul
@@ -81,21 +81,20 @@ main
                     padding: 50px 0  280px
                 .header_content
                     .header_icon
+                        margin: 0 0 20px 
                         @media ( max-width: 767px )
                             display: none   
                         img
                     .header_tw
-                        +FontStyle(32px,#FFF,600,10px)
+                        +FontStyle(32px,#FFF,700,6px)
                         @media ( max-width: 1279px )
-                            +FontStyle(24px,#FFF,600,10px)
+                            +FontStyle(24px,#FFF,700,6px)
                         @media ( max-width: 767px )
-                            +FontStyle(22px,#FFF,600,10px)
+                            +FontStyle(22px,#FFF,700,6px)
                     .header_en
-                        +FontStyle(25px,#FFF,400,7px)
+                        +FontStyle(24px,#FFF,700,6px)
                         @media ( max-width: 1279px )
-                            +FontStyle(18px,#FFF,400,7px)
-                        @media ( max-width: 767px )
-                            +FontStyle(18px,#FFF,600,10px)
+                            +FontStyle(18px,#FFF,700,6px)
     .start
         .start_container
             .row
@@ -117,9 +116,9 @@ main
                             +FontStyle(32px,#FFF,600,15px,1)
                             +absolute(null,null,-5px,15px)
                 .start_content
-                    padding: 40px 200px 50px 35px 
+                    padding: 40px 200px 120px 35px 
                     @media ( max-width: 1441px ) 
-                        padding: 40px 120px 50px
+                        padding: 40px 120px 120px
                     @media ( max-width: 1279px )
                         padding: 40px 0 50px 0
                     @media ( max-width: 767px )
@@ -128,11 +127,11 @@ main
                         padding: 40px 15px 0
                     h3
                         text-align: left
-                        +FontStyle(27px,#000,600,1px,42px)
+                        +FontStyle(27px,#000,700,1px,42px)
                         @media ( max-width: 767px )
-                            +FontStyle(24px,#000,600,1px,42px)
+                            +FontStyle(24px,#000,700,1px,42px)
                         @media ( max-width: 320px )
-                            +FontStyle(16px,#000,600,1px,1)
+                            +FontStyle(16px,#000,700,1px,1)
                         br
                             display: none
                             @media ( max-width: 320px )
@@ -171,6 +170,9 @@ main
         @media ( max-width: 320px ) 
             margin-bottom: 0
         .grow_container  
+            @media ( max-width: 1530px )
+                max-width: 1140px !important
+                width: 100%
             @media ( max-width: 767px )
                 padding: 0        
             .row
@@ -184,7 +186,7 @@ main
                     @media ( max-width: 1279px )    
                         width: 100%
                         text-align: center
-                        margin-bottom: 80px
+                        margin-bottom: 70px
                     @media ( max-width: 320px )   
                         margin-bottom: 40px    
                     img
@@ -213,7 +215,7 @@ main
                             @media ( max-width: 320px ) 
                                 +FontStyle(14px,#000,400,1px,1)
                     .tw_content
-                        margin: 80px 0
+                        margin: 70px 0
                         @media ( max-width: 767px )
                             margin: 40px 0
                         p
@@ -230,7 +232,7 @@ main
                             @media ( max-width: 320px )
                                 display: none
                             &:nth-child(1)
-                                margin-bottom: 80px
+                                margin-bottom: 70px
                                 @media ( max-width: 767px )
                                     margin-bottom: 40px
     .continue
@@ -248,7 +250,7 @@ main
                 height: 520px
                 background-size: cover
                 background-position: 50% 58%
-                @media ( max-width: 1441px ) 
+                @media ( max-width: 1530px ) 
                     width: 100%
                 @media ( max-width: 1279px )
                     height: 325px
@@ -283,9 +285,9 @@ main
                             +FontStyle(12px,#000,400,3px,23px)
                 .en_content                                
                     p
-                        +FontStyle(16px,#979797,400,2px,28px)
+                        +FontStyle(16px,#979797,400,1px,28px)
                         @media ( max-width: 767px )
-                            +FontStyle(14px,#979797,400,2px,28px)
+                            +FontStyle(14px,#979797,400,1px,28px)
                         @media ( max-width: 320px )
                             display: none
                         &:nth-child(1)
@@ -296,6 +298,9 @@ main
     .focus
         .focus_container
             margin-bottom: 200px
+            @media ( max-width: 1530px )
+                max-width: 1140px !important
+                width: 100%
             @media ( max-width: 767px )
                 padding: 0
                 margin-bottom: 120px
@@ -330,7 +335,7 @@ main
                         height: 262px
                 .foucs_right
                     width: 50%
-                    padding: 140px 0 0
+                    padding: 75px 0 0
                     @media ( max-width: 1279px )
                         padding: 0
                         width: 100%

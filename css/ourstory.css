@@ -2,7 +2,7 @@ body {
   font-family: 'Noto Serif TC';
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1530px) {
   body {
     background: #ededed;
   }
@@ -38,19 +38,11 @@ nav .container .row .nav_btns ul li a:hover span {
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(1) {
-  font-size: 18px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 4px;
-  line-height: unset;
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(2) {
-  font-size: 12px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 4px;
-  line-height: unset;
 }
 
 nav .container .row .menu_Area .menu_backEnd ul li a {
@@ -146,6 +138,10 @@ main .header .header_container .row {
   }
 }
 
+main .header .header_container .row .header_content .header_icon {
+  margin: 0 0 20px;
+}
+
 @media (max-width: 767px) {
   main .header .header_container .row .header_content .header_icon {
     display: none;
@@ -155,8 +151,8 @@ main .header .header_container .row {
 main .header .header_container .row .header_content .header_tw {
   font-size: 32px;
   color: #FFF;
-  font-weight: 600;
-  letter-spacing: 10px;
+  font-weight: 700;
+  letter-spacing: 6px;
   line-height: unset;
 }
 
@@ -164,8 +160,8 @@ main .header .header_container .row .header_content .header_tw {
   main .header .header_container .row .header_content .header_tw {
     font-size: 24px;
     color: #FFF;
-    font-weight: 600;
-    letter-spacing: 10px;
+    font-weight: 700;
+    letter-spacing: 6px;
     line-height: unset;
   }
 }
@@ -174,17 +170,17 @@ main .header .header_container .row .header_content .header_tw {
   main .header .header_container .row .header_content .header_tw {
     font-size: 22px;
     color: #FFF;
-    font-weight: 600;
-    letter-spacing: 10px;
+    font-weight: 700;
+    letter-spacing: 6px;
     line-height: unset;
   }
 }
 
 main .header .header_container .row .header_content .header_en {
-  font-size: 25px;
+  font-size: 24px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 7px;
+  font-weight: 700;
+  letter-spacing: 6px;
   line-height: unset;
 }
 
@@ -192,18 +188,8 @@ main .header .header_container .row .header_content .header_en {
   main .header .header_container .row .header_content .header_en {
     font-size: 18px;
     color: #FFF;
-    font-weight: 400;
-    letter-spacing: 7px;
-    line-height: unset;
-  }
-}
-
-@media (max-width: 767px) {
-  main .header .header_container .row .header_content .header_en {
-    font-size: 18px;
-    color: #FFF;
-    font-weight: 600;
-    letter-spacing: 10px;
+    font-weight: 700;
+    letter-spacing: 6px;
     line-height: unset;
   }
 }
@@ -264,12 +250,12 @@ main .start .start_container .row .start_banner h2 {
 }
 
 main .start .start_container .row .start_content {
-  padding: 40px 200px 50px 35px;
+  padding: 40px 200px 120px 35px;
 }
 
 @media (max-width: 1441px) {
   main .start .start_container .row .start_content {
-    padding: 40px 120px 50px;
+    padding: 40px 120px 120px;
   }
 }
 
@@ -295,7 +281,7 @@ main .start .start_container .row .start_content h3 {
   text-align: left;
   font-size: 27px;
   color: #000;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 42px;
 }
@@ -304,7 +290,7 @@ main .start .start_container .row .start_content h3 {
   main .start .start_container .row .start_content h3 {
     font-size: 24px;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     line-height: 42px;
   }
@@ -314,7 +300,7 @@ main .start .start_container .row .start_content h3 {
   main .start .start_container .row .start_content h3 {
     font-size: 16px;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     line-height: 1;
   }
@@ -425,6 +411,13 @@ main .grow {
   }
 }
 
+@media (max-width: 1530px) {
+  main .grow .grow_container {
+    max-width: 1140px !important;
+    width: 100%;
+  }
+}
+
 @media (max-width: 767px) {
   main .grow .grow_container {
     padding: 0;
@@ -459,7 +452,7 @@ main .grow .grow_container .row .grow_img {
   main .grow .grow_container .row .grow_img {
     width: 100%;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 }
 
@@ -539,7 +532,7 @@ main .grow .grow_container .row .grow_content .grow_header h4 {
 }
 
 main .grow .grow_container .row .grow_content .tw_content {
-  margin: 80px 0;
+  margin: 70px 0;
 }
 
 @media (max-width: 767px) {
@@ -601,7 +594,7 @@ main .grow .grow_container .row .grow_content .en_content p {
 }
 
 main .grow .grow_container .row .grow_content .en_content p:nth-child(1) {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 767px) {
@@ -643,7 +636,7 @@ main .continue .continue_banner .banner_img {
   background-position: 50% 58%;
 }
 
-@media (max-width: 1441px) {
+@media (max-width: 1530px) {
   main .continue .continue_banner .banner_img {
     width: 100%;
   }
@@ -752,7 +745,7 @@ main .continue .continue_container .row .en_content p {
   font-size: 16px;
   color: #979797;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 28px;
 }
 
@@ -761,7 +754,7 @@ main .continue .continue_container .row .en_content p {
     font-size: 14px;
     color: #979797;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     line-height: 28px;
   }
 }
@@ -784,6 +777,13 @@ main .continue .continue_container .row .en_content p:nth-child(1) {
 
 main .focus .focus_container {
   margin-bottom: 200px;
+}
+
+@media (max-width: 1530px) {
+  main .focus .focus_container {
+    max-width: 1140px !important;
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -856,7 +856,7 @@ main .focus .focus_container .row .focus_img {
 
 main .focus .focus_container .row .foucs_right {
   width: 50%;
-  padding: 140px 0 0;
+  padding: 75px 0 0;
 }
 
 @media (max-width: 1279px) {
