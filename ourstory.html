@@ -323,12 +323,12 @@
             $("html").css({ "zoom": scaleValue });
             let height;
             let width = $(window).width();
+            height = parseInt($("html").height()) - parseInt($("footer").height());
             if (width > 1512) {
                 let menu_area_position = 331 + (width - 1920) / 2
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
             else if (width > 1261) {
-                height = parseInt($("html").height()) - parseInt($("footer").height());
                 let menu_area_position = 401 + (width - 1920) / 2;
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
@@ -338,19 +338,19 @@
             $(".mask").height(height);
         });
         $(window).resize(
+            
             function () {
                 let scaleValue = (1 / window.devicePixelRatio);
                 $("html").css({ "zoom": scaleValue });
                 let width = $(window).width();
                 let height;
                 console.log(width);
-                
+                height = parseInt($("html").height()) - parseInt($("footer").height());
                 if (width > 1512) {
                     let menu_area_position = 331 + (width - 1920) / 2
                     $(".menu_Area").css({ right: `${menu_area_position}px` });
                 }
                 else if (width > 1261) {
-                    height = parseInt($("html").height()) - parseInt($("footer").height());
                     let menu_area_position = 401 + (width - 1920) / 2;
                     $(".menu_Area").css({ right: `${menu_area_position}px` });
                 }

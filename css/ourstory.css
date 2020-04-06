@@ -452,7 +452,7 @@ main .grow .grow_container .row .grow_img {
   main .grow .grow_container .row .grow_img {
     width: 100%;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 }
 
@@ -532,7 +532,7 @@ main .grow .grow_container .row .grow_content .grow_header h4 {
 }
 
 main .grow .grow_container .row .grow_content .tw_content {
-  margin: 70px 0;
+  margin: 65px 0;
 }
 
 @media (max-width: 767px) {
