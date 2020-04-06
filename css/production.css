@@ -28,8 +28,8 @@ nav .container .row .logo {
   background-position: center;
   background-size: cover;
   position: absolute;
-  left: calc( 10px - 81px);
-  top: 39px;
+  left: -10%;
+  top: 69px;
   width: 81px;
   height: 81px;
 }
@@ -87,45 +87,17 @@ nav .container .row .nav_btns ul li a:hover span {
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(1) {
-  font-size: 18px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 31px;
-}
-
-@media (max-width: 1279px) {
-  nav .container .row .nav_btns ul li a span:nth-child(1) {
-    font-size: 14px;
-    color: #FFF;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: unset;
-  }
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(2) {
-  font-size: 12px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: unset;
-}
-
-@media (max-width: 1279px) {
-  nav .container .row .nav_btns ul li a span:nth-child(2) {
-    font-size: 12px;
-    color: #FFF;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: unset;
-  }
 }
 
 nav .container .row .menu_Area {
   position: absolute;
-  top: 40px;
-  right: calc(-1% - 50px);
+  top: 69px;
+  right: -10%;
 }
 
 @media (max-width: 1279px) {
@@ -194,7 +166,7 @@ main .swiper-container {
 
 main .swiper-container .swiper-wrapper .swiper-slide {
   height: 100vh;
-  padding: 27vh 0 0;
+  padding: 24vh 0 0;
   text-align: center;
   background-color: #333;
   display: -webkit-box;
@@ -220,8 +192,8 @@ main .swiper-container .swiper-wrapper .swiper-slide {
 main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_header .header_tw {
   font-size: 54px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 6px;
+  font-weight: 600;
+  letter-spacing: 12px;
   line-height: 49px;
   margin-bottom: 18px;
 }
@@ -230,14 +202,14 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_header .header_
   main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_header .header_tw {
     font-size: 32px;
     color: #FFF;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 6px;
     line-height: 49px;
   }
 }
 
 main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_header .header_en {
-  font-size: 30px;
+  font-size: 24px;
   color: #FFF;
   font-weight: 200;
   letter-spacing: 2px;
@@ -267,7 +239,7 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title {
 main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title {
   font-size: 82px;
   color: #FFF;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 2px;
   line-height: 128px;
   margin-left: 50px;
@@ -277,7 +249,7 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title {
   main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title {
     font-size: 48px;
     color: #FFF;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 2px;
     line-height: 80px;
   }
@@ -372,10 +344,18 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_he
   margin-bottom: 4.6vh;
 }
 
+main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header .header_en {
+  font-size: 30px;
+  color: #FFF;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 37px;
+}
+
 main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_title .title {
   font-size: 32px;
   color: #FFF;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 6px;
   line-height: 50px;
   margin-left: unset;
@@ -385,7 +365,7 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_ti
   main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_title .title {
     font-size: 16px;
     color: #FFF;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 6px;
     line-height: 50px;
   }
@@ -538,8 +518,12 @@ main .more::after {
   }
 }
 
-main .swiper_btn {
+main .swiper_btn_mobile {
   top: calc(90vh + 60px);
+}
+
+main .swiper_btn_pc {
+  right: 50%;
 }
 
 main .swiper-button-disabled {

@@ -19,6 +19,9 @@
 a:hover
     text-decoration: none    
 .container
+    @media ( max-width: 1530px )
+        max-width: 1000px !important 
+        width: 70%
     @media ( max-width: 1279px )
         max-width: 70% !important 
     @media ( max-width: 767px )
@@ -41,7 +44,7 @@ nav
                 position: unset
                 align-items: center
             .logo
-                margin: 50px 0 20px
+                margin: 31px 0 20px
                 width: 89px
                 height: 157px
                 background-image: url('../img/99-LOGO/logo-03.png')
@@ -95,14 +98,14 @@ nav
                             span
                                 transition: 0.3s
                                 &:nth-child(1)
-                                    +FontStyle(18px,$colorBlack,400,2px)
+                                    +FontStyle(18px,$colorBlack,200,4px)
                                 &:nth-child(2)
-                                    +FontStyle(12px,$colorBlack,400,2px)    
+                                    +FontStyle(12px,$colorBlack,200,4px)    
             .menu_Area
                 margin-left: auto 
                 position: fixed
-                top: 50px
-                right: 5%
+                top: 40px
+                right: 311px
                 z-index: 99
                 @media ( max-width: 1279px)
                     position: absolute
@@ -112,7 +115,7 @@ nav
                     top: 0px
                     right: 0px
                 .menu_btn
-                    width: 50px
+                    width: 60px
                     height: 50px
                     background-color: $colorOrange
                     border-radius: 0 0 0 50%
@@ -125,13 +128,13 @@ nav
                         transition: 0.3s
                         display: block
                     .top_bar
-                        +absolute(17px ,null,null,12px)
+                        +absolute(17px ,null,null,17px)
                         transform: rotate(0deg)
                     .mid_bar
-                        +absolute(24px ,null,null,12px)
+                        +absolute(24px ,null,null,17px)
                         opacity: 1
                     .bot_bar
-                        +absolute(31px ,null,null,12px)
+                        +absolute(31px ,null,null,17px)
                         transform: rotate(0deg)
                 .menu_btn_inner
                     position: fixed

@@ -37,6 +37,13 @@ a:hover {
   text-decoration: none;
 }
 
+@media (max-width: 1530px) {
+  .container {
+    max-width: 1000px !important;
+    width: 70%;
+  }
+}
+
 @media (max-width: 1279px) {
   .container {
     max-width: 70% !important;
@@ -90,7 +97,7 @@ nav .container .row {
 }
 
 nav .container .row .logo {
-  margin: 50px 0 20px;
+  margin: 31px 0 20px;
   width: 89px;
   height: 157px;
   background-image: url("../img/99-LOGO/logo-03.png");
@@ -193,24 +200,24 @@ nav .container .row .nav_btns ul li a span {
 nav .container .row .nav_btns ul li a span:nth-child(1) {
   font-size: 18px;
   color: #231714;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 200;
+  letter-spacing: 4px;
   line-height: unset;
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(2) {
   font-size: 12px;
   color: #231714;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 200;
+  letter-spacing: 4px;
   line-height: unset;
 }
 
 nav .container .row .menu_Area {
   margin-left: auto;
   position: fixed;
-  top: 50px;
-  right: 5%;
+  top: 40px;
+  right: 311px;
   z-index: 99;
 }
 
@@ -230,7 +237,7 @@ nav .container .row .menu_Area {
 }
 
 nav .container .row .menu_Area .menu_btn {
-  width: 50px;
+  width: 60px;
   height: 50px;
   background-color: #C0362D;
   border-radius: 0 0 0 50%;
@@ -253,7 +260,7 @@ nav .container .row .menu_Area .menu_btn .bar {
 nav .container .row .menu_Area .menu_btn .top_bar {
   position: absolute;
   top: 17px;
-  left: 12px;
+  left: 17px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -261,14 +268,14 @@ nav .container .row .menu_Area .menu_btn .top_bar {
 nav .container .row .menu_Area .menu_btn .mid_bar {
   position: absolute;
   top: 24px;
-  left: 12px;
+  left: 17px;
   opacity: 1;
 }
 
 nav .container .row .menu_Area .menu_btn .bot_bar {
   position: absolute;
   top: 31px;
-  left: 12px;
+  left: 17px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }

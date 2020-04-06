@@ -18,8 +18,8 @@ nav
                 background-position: center
                 background-size: cover
                 position: absolute
-                left: calc( 10px - 81px)
-                top: 39px
+                left: -10%
+                top: 69px
                 width: 81px
                 height: 81px
                 @media ( max-width: 1279px)
@@ -48,17 +48,13 @@ nav
                                 color: $colorOrange !important
                             span
                                 &:nth-child(1)
-                                    +FontStyle(18px,#FFF,400,2px,31px)
-                                    @media ( max-width: 1279px)
-                                        +FontStyle(14px,#FFF,400,2px)
+                                   color: #FFF
                                 &:nth-child(2)
-                                    +FontStyle(12px,#FFF,400,2px) 
-                                    @media ( max-width: 1279px)   
-                                        +FontStyle(12px,#FFF,400,2px) 
+                                    color: #FFF
             .menu_Area
                 position: absolute
-                top: 40px
-                right: calc(-1% - 50px)
+                top: 69px
+                right: -10%
                 @media ( max-width: 1279px)
                     right: calc(-5% - 50px)
                 @media ( max-width: 767px)
@@ -91,7 +87,7 @@ main
         .swiper-wrapper
             .swiper-slide 
                 height: 100vh
-                padding: 27vh 0 0
+                padding: 24vh 0 0
                 text-align: center
                 background-color: #333
                 display: flex
@@ -103,12 +99,12 @@ main
                     padding: 13vh 0 0
                 .aesthetics_header
                     .header_tw
-                        +FontStyle(54px,#FFF,400,6px,49px)
+                        +FontStyle(54px,#FFF,600,12px,49px)
                         margin-bottom: 18px
                         @media ( max-width: 575px )
-                            +FontStyle(32px,#FFF,400,6px,49px)
+                            +FontStyle(32px,#FFF,600,6px,49px)
                     .header_en
-                        +FontStyle(30px,#FFF,200,2px,37px)
+                        +FontStyle(24px,#FFF,200,2px,37px)
                         @media ( max-width: 575px )
                             +FontStyle(12px,#FFF,200,2px,37px)
                 .aesthetics_title
@@ -116,10 +112,10 @@ main
                     @media ( max-width: 767px )
                         margin-bottom: 5.5vh
                     .title
-                        +FontStyle(82px,#FFF,400,2px,128px)
+                        +FontStyle(82px,#FFF,700,2px,128px)
                         margin-left: 50px
                         @media ( max-width: 575px )
-                            +FontStyle(48px,#FFF,400,2px,80px)
+                            +FontStyle(48px,#FFF,700,2px,80px)
                         br
                             display: none
                             @media ( max-width: 767px )
@@ -152,12 +148,14 @@ main
                                 display: block
                     .aesthetics_header
                         margin-bottom: 4.6vh
+                        .header_en
+                            +FontStyle(30px,#FFF,200,2px,37px)
                     .aesthetics_title
                         .title
-                            +FontStyle(32px,#FFF,400,6px,50px)
+                            +FontStyle(32px,#FFF,600,6px,50px)
                             margin-left: unset
                             @media ( max-width: 575px )
-                                +FontStyle(16px,#FFF,400,6px,50px)
+                                +FontStyle(16px,#FFF,600,6px,50px)
                 &:nth-child(2)
                     background-position: 50% 6%
                 &:nth-child(3)
@@ -235,8 +233,10 @@ main
             content: url("../img/99-LOGO/more_big.png")
             @media ( max-width: 575px )
                 content: url("../img/99-LOGO/more_small.png")
-    .swiper_btn
-        top: calc(90vh + 60px)          
+    .swiper_btn_mobile
+        top: calc(90vh + 60px)        
+    .swiper_btn_pc
+        right: 50%
     .swiper-button-disabled 
         transition: 0.5s
         opacity: 0 !important

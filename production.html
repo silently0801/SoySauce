@@ -320,42 +320,47 @@
         });
 
         $(document).ready(function () {
-            // let scaleValue = (1 / window.devicePixelRatio);
-            // let scaleContent = $(window).height() / 937;
-            // $('.zoom').css({"zoom": scaleContent});
-            // $("html").css({ "zoom": scaleValue });
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
-                $(".swiper-button-next").addClass("swiper_btn");
-            else
-                $(".swiper-button-next").removeClass("swiper_btn");
+                $(".swiper-button-next").addClass("swiper_btn_mobile");
+            else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() > 575)
+                $(".swiper-button-next").addClass("swiper_btn_pc");
+            else {
+                $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                $(".swiper-button-next").removeClass("swiper_btn_pc");
+            }
         });
         $(window).resize(function () {
-            // let scaleValue = (1 / window.devicePixelRatio);
-            // let scaleContent = $(window).height() / 937;
-            // if(scaleContent > 1) scaleContent = 1;
-            // $('.zoom').css({"zoom": scaleContent});
-            // $("html").css({ "zoom": scaleValue });
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
-                $(".swiper-button-next").addClass("swiper_btn");
-            else
-                $(".swiper-button-next").removeClass("swiper_btn");
+                $(".swiper-button-next").addClass("swiper_btn_mobile");
+            else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() > 575)
+                $(".swiper-button-next").addClass("swiper_btn_pc");
+            else {
+                $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                $(".swiper-button-next").removeClass("swiper_btn_pc");
+            }
         });
 
-        /*swiper_btn*/
+        /*swiper_btn_mobile*/
         $(".swiper-button-next").click(
             function () {
-                $(".swiper-button-next").removeClass("swiper_btn")
+                $(".swiper-button-next").removeClass("swiper_btn_mobile")
                 if (this.classList[1] == "swiper-button-disabled")
                     $(".more").css({ "display": "block" });
+                $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                $(".swiper-button-next").removeClass("swiper_btn_pc");
             }
         )
         $(".swiper-button-prev").click(
             function () {
                 $(".more").css({ "display": "none" });
                 if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
-                    $(".swiper-button-next").addClass("swiper_btn");
-                else
-                    $(".swiper-button-next").removeClass("swiper_btn");
+                    $(".swiper-button-next").addClass("swiper_btn_mobile");
+                else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() > 575)
+                    $(".swiper-button-next").addClass("swiper_btn_pc");
+                else {
+                    $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                    $(".swiper-button-next").removeClass("swiper_btn_pc");
+                }
             }
         )
 
@@ -365,9 +370,14 @@
             else
                 $(".more").css({ "display": "none" });
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() < 576)
-                $(".swiper-button-next").addClass("swiper_btn");
-            else
-                $(".swiper-button-next").removeClass("swiper_btn");
+                $(".swiper-button-next").addClass("swiper_btn_mobile");
+            else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && $(window).width() > 575)
+                $(".swiper-button-next").addClass("swiper_btn_pc");
+            else {
+                $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                $(".swiper-button-next").removeClass("swiper_btn_pc");
+            }
+
         }, false);
 
 
