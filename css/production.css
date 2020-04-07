@@ -58,6 +58,8 @@ nav .container .row .logo .logo_icon {
 @media (max-width: 1279px) {
   nav .container .row .nav_btns {
     display: block;
+    z-index: -5;
+    opacity: 0;
   }
 }
 
@@ -151,6 +153,12 @@ nav .container .row hr {
   margin: 0;
 }
 
+@media (max-width: 1279px) {
+  nav .container .row hr {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 767px) {
   nav .container .row hr {
     display: none;
@@ -178,6 +186,12 @@ main .swiper-container .swiper-wrapper .swiper-slide {
           align-items: center;
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 1279px) {
+  main .swiper-container .swiper-wrapper .swiper-slide {
+    padding: 18vh 0 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -325,6 +339,12 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_he
           justify-content: center;
   width: 100%;
   padding: 0 0 5vh;
+}
+
+@media (max-width: 1279px) {
+  main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header_img {
+    padding: 0;
+  }
 }
 
 main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .aesthetics_header_img img {
