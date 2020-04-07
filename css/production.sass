@@ -14,18 +14,19 @@ nav
                 position: unset
             .logo
                 margin: unset
-                background-image: url('../img/99-LOGO/logo-01.png')
-                background-position: center
-                background-size: cover
                 position: absolute
                 left: -10%
-                top: 69px
-                width: 81px
-                height: 81px
-                @media ( max-width: 1279px)
-                    left: calc( -5% - 81px)
+                // top: 69px
+                @media (max-width: 1279px)
+                    transform: unset
                 @media ( max-width: 767px)
                     display: none
+                .logo_icon
+                    background-image: url('../img/99-LOGO/logo-01.png')
+                    background-position: center
+                    background-size: cover
+                    width: 81px
+                    height: 81px
                 .menu_backEnd
                     @media ( max-width: 1279px )
                         display: none
@@ -37,8 +38,6 @@ nav
                 ul
                     margin: 0 0 12px
                     li
-                        @media ( max-width: 1279px)
-                            padding: 10px 0 0
                         a
                             &::after
                                 +before_after_default()
@@ -53,10 +52,10 @@ nav
                                     color: #FFF
             .menu_Area
                 position: absolute
-                top: 69px
+                top: 40px
                 right: -10%
                 @media ( max-width: 1279px)
-                    right: calc(-5% - 50px)
+                    top: 40px
                 @media ( max-width: 767px)
                     top: 20px
                     right: 15px

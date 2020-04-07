@@ -24,19 +24,14 @@ nav .container .row {
 
 nav .container .row .logo {
   margin: unset;
-  background-image: url("../img/99-LOGO/logo-01.png");
-  background-position: center;
-  background-size: cover;
   position: absolute;
   left: -10%;
-  top: 69px;
-  width: 81px;
-  height: 81px;
 }
 
 @media (max-width: 1279px) {
   nav .container .row .logo {
-    left: calc( -5% - 81px);
+    -webkit-transform: unset;
+            transform: unset;
   }
 }
 
@@ -44,6 +39,14 @@ nav .container .row .logo {
   nav .container .row .logo {
     display: none;
   }
+}
+
+nav .container .row .logo .logo_icon {
+  background-image: url("../img/99-LOGO/logo-01.png");
+  background-position: center;
+  background-size: cover;
+  width: 81px;
+  height: 81px;
 }
 
 @media (max-width: 1279px) {
@@ -68,12 +71,6 @@ nav .container .row .nav_btns ul {
   margin: 0 0 12px;
 }
 
-@media (max-width: 1279px) {
-  nav .container .row .nav_btns ul li {
-    padding: 10px 0 0;
-  }
-}
-
 nav .container .row .nav_btns ul li a::after {
   content: " ";
   display: block;
@@ -96,13 +93,13 @@ nav .container .row .nav_btns ul li a span:nth-child(2) {
 
 nav .container .row .menu_Area {
   position: absolute;
-  top: 69px;
+  top: 40px;
   right: -10%;
 }
 
 @media (max-width: 1279px) {
   nav .container .row .menu_Area {
-    right: calc(-5% - 50px);
+    top: 40px;
   }
 }
 

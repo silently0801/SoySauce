@@ -87,6 +87,12 @@ nav {
   }
 }
 
+@media (max-width: 540px) {
+  nav .container {
+    position: unset;
+  }
+}
+
 nav .container .row {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -116,6 +122,26 @@ nav .container .row {
 
 nav .container .row .logo {
   margin: 31px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1279px) {
+  nav .container .row .logo {
+    -webkit-transform: translateX(68px);
+            transform: translateX(68px);
+  }
+}
+
+@media (max-width: 767px) {
+  nav .container .row .logo {
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+nav .container .row .logo .logo_icon {
   width: 89px;
   height: 157px;
   background-image: url("../img/99-LOGO/logo-03.png");
@@ -124,7 +150,7 @@ nav .container .row .logo {
 }
 
 @media (max-width: 767px) {
-  nav .container .row .logo {
+  nav .container .row .logo .logo_icon {
     width: 80px;
     height: 80px;
     background-image: url("../img/99-LOGO/logo-02.png");
@@ -133,8 +159,6 @@ nav .container .row .logo {
 
 nav .container .row .logo .menu_backEnd {
   display: none;
-  width: 19vw;
-  min-width: 216px;
   padding: 10px 0;
 }
 
@@ -147,7 +171,6 @@ nav .container .row .logo .menu_backEnd {
 @media (max-width: 767px) {
   nav .container .row .logo .menu_backEnd {
     padding: 0;
-    width: 230px;
   }
 }
 
@@ -245,7 +268,7 @@ nav .container .row .menu_Area {
   nav .container .row .menu_Area {
     position: absolute;
     top: 31px;
-    right: 5%;
+    right: 0;
   }
 }
 
@@ -417,8 +440,14 @@ nav .container .row .menu_Area .menu_backEnd ul li a {
 nav .container .row hr {
   border: 0;
   height: 1px;
-  width: 94%;
+  width: 98%;
   background: #231714;
+}
+
+@media (max-width: 1279px) {
+  nav .container .row hr {
+    width: 100%;
+  }
 }
 
 footer {

@@ -43,6 +43,8 @@ nav
             position: relative
         @media ( max-width: 767px )
             width: 90% !important
+        @media ( max-width: 540px) 
+            position: unset
         .row
             justify-content: flex-end
             align-items: center
@@ -54,25 +56,28 @@ nav
                 align-items: center
             .logo
                 margin: 31px 0 20px
-                width: 89px
-                height: 157px
-                background-image: url('../img/99-LOGO/logo-03.png')
-                background-position: center
-                background-size: cover
+                display: flex
+                @media ( max-width: 1279px )
+                    transform: translateX(68px)
                 @media ( max-width: 767px )
-                    width: 80px
-                    height: 80px
-                    background-image: url('../img/99-LOGO/logo-02.png')
+                    transform: unset
+                .logo_icon
+                    width: 89px
+                    height: 157px
+                    background-image: url('../img/99-LOGO/logo-03.png')
+                    background-position: center
+                    background-size: cover
+                    @media ( max-width: 767px )
+                        width: 80px
+                        height: 80px
+                        background-image: url('../img/99-LOGO/logo-02.png')
                 .menu_backEnd
                     display: none
-                    width: 19vw
-                    min-width: 216px
                     padding: 10px 0
                     @media ( max-width: 1279px )
                         display: block
                     @media ( max-width: 767px )
                         padding: 0
-                        width: 230px
                     @media ( max-width: 375px )
                         display: none
                     ul 
@@ -121,7 +126,7 @@ nav
                 @media ( max-width: 1279px) 
                     position: absolute
                     top: 31px
-                    right: 5%
+                    right: 0
                 @media ( max-width: 375px )
                     top: 0px
                     right: 0px
@@ -207,8 +212,10 @@ nav
             hr
                 border: 0
                 height: 1px
-                width: 94%
+                width: 98%
                 background: $colorBlack
+                @media ( max-width: 1279px )
+                    width: 100%
 footer
     background: #1A1A1A
     height: 161px
