@@ -321,18 +321,22 @@
         /*btn_click*/
         $(document).ready(function () {
             let scaleValue = (1 / window.devicePixelRatio);
-            $("html").css({ "zoom": scaleValue });
             let height;
             let width = $(window).width();
+            console.log(scaleValue);
+            
+            if(window.innerWidth >1280)
+                $("html").css({ "zoom": scaleValue });
+            
             let menu_btn_line = parseInt($("nav").height() + $(".header").height());
 
 
             height = parseInt($("html").height()) - parseInt($("footer").height());
-            if (width > 1512) {
+            if (window.innerWidth > 1529) {
                 let menu_area_position = 230 + (width - 1920) / 2
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
-            else if (width > 1261) {
+            else if (window.innerWidth > 1279) {
                 let menu_area_position = 339 + (width - 1920) / 2;
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
@@ -343,16 +347,17 @@
         });
         $(window).resize(function () {
             let scaleValue = (1 / window.devicePixelRatio);
-            $("html").css({ "zoom": scaleValue });
             let height;
             let width = $(window).width();
+            if(window.innerWidth >1279)
+                $("html").css({ "zoom": scaleValue });
             let menu_btn_line = parseInt($("nav").height() + $(".header").height()); 
             height = parseInt($("html").height()) - parseInt($("footer").height());
-            if (width > 1512) {
+            if (window.innerWidth > 1529) {
                 let menu_area_position = 230 + (width - 1920) / 2
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
-            else if (width > 1261) {
+            else if (window.innerWidth > 1279) {
                 let menu_area_position = 339 + (width - 1920) / 2;
                 $(".menu_Area").css({ right: `${menu_area_position}px` });
             }
