@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
@@ -71,7 +72,7 @@ main::before {
   content: " ";
   display: block;
   position: absolute;
-  background-image: url("../img/01-OurStory/DSC_9239.png");
+  background-image: url("../img/01-品牌故事/DSC_9239.png");
   background-size: cover;
   background-position: 50% 63%;
   top: 0;
