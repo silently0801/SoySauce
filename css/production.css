@@ -532,22 +532,6 @@ main .more:focus {
   outline: unset;
 }
 
-main .more::after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  text-transform: none;
-  font-variant: initial;
-  content: url("../img/99-LOGO/more_big.png");
-}
-
-@media (max-width: 575px) {
-  main .more::after {
-    content: url("../img/99-LOGO/more_small.png");
-  }
-}
-
 main .swiper_btn_mobile {
   top: calc(90vh + 60px);
 }

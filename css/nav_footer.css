@@ -475,6 +475,7 @@ footer .footer_container .row {
 
 @media (max-width: 1279px) {
   footer .footer_container .row {
+    padding: 40px 0 6px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -645,7 +646,7 @@ footer .footer_container .row .footer_content .copyright_Area {
     -webkit-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
-    padding: 50px 0 0;
+    padding: 35px 0 0;
   }
 }
 
@@ -654,6 +655,7 @@ footer .footer_container .row .footer_content .copyright_Area {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 26px 0 0;
   }
 }
 
