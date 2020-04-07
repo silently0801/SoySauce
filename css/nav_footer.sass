@@ -12,15 +12,6 @@
 .menu_btn_click
     border: 1px solid #FFF
     z-index: 9999
-    position: fixed !important
-    top: 80px
-    right: 322px
-    transform: translateX(25px)
-    @media ( max-width: 767px )
-        top: 40px
-        right: 100px
-.menu_btn_inner_click
-    display: block !important
 .hidden
     overflow: hidden
 a:hover
@@ -153,21 +144,26 @@ nav
                     .bot_bar
                         +absolute(31px ,null,null,17px)
                         transform: rotate(0deg)
-                .menu_btn_inner
+                .menu_btn_inner_bg
                     position: fixed
                     height: 100%
-                    width: 670px
+                    width: 35vw
                     background: $colorOrange
-                    top: 0
                     z-index: 998
+                    top: 0
                     right: 0
-                    padding: 150px 0
-                    display: none
-                    @media ( max-width: 1279px )
-                        width: 50vw
                     @media ( max-width: 767px )
-                        padding: 100px 0
+                        width: 50vw
+                    @media ( max-width: 540px )
                         width: 100%
+                .menu_btn_inner
+                    padding: 50px 0
+                    display: none
+                    height: 80vh
+                    @media ( max-width: 767px )
+                        width: calc(40vw - 60px)
+                    @media ( max-width: 540px )
+                        width: calc(90vw - 60px)
                     ul
                         flex-direction: column 
                         justify-content: center
