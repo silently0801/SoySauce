@@ -1,3 +1,4 @@
+@import "_function.sass"
 main
     .mask
         position: absolute
@@ -9,26 +10,87 @@ main
         @media ( max-width: 1279px )
             display: none
     .header
+        padding: 21px 0 37px
         .header_container
             .row
+                align-items: flex-end
                 .header_content
+                    +FontStyle(32px,$colorBlack,400,3px,1) 
                 .header_btns
                     .news_btn
+                        +FontStyle(14px,$colorBlack,600,3px,1) 
+                        border-right: 1px solid #000
+                        padding: 0 30px
                     .videos_btn
+                        +FontStyle(14px,$colorBlack,600,3px,1) 
+                        padding: 0 30px
     .news
         .news_container
             .row
                 .news_content
+                    margin-bottom: 60px
                     .news_img_area
-                        img
+                        position: relative
+                        overflow: hidden
+                        margin-bottom: 20px
+                        &:hover .news_img_hover
+                            opacity: 1
+                            &::before
+                                opacity: 1
+                        .news_img
+                            width: 100%
+                            height: 290px
+                            background-size: cover
+                            background-position: center 
+                            background-color: #C5362D 
                         .news_img_text
+                            +FontStyle(329px,#FFF,600,5px,31px) 
+                            position: absolute
+                            right: -18px
+                            bottom: 137px
                         .news_img_hover
+                            width: 100%
+                            height: 100%
+                            padding: 20px 40px
+                            opacity: 0
+                            display: flex
+                            flex-direction: column
+                            position: absolute
+                            justify-content: flex-end
+                            top: 0
+                            left: 0
+                            background-color: rgba(#000, .9)
+                            &::before
+                                opacity: 0
+                                content: ""
+                                width: calc( 100% - 40px )
+                                height: calc( 100% - 20px )
+                                border: 1px solid rgba(#FFF, 0.5)
+                                position: absolute
+                                top: 10px
+                                left: 20px
                             .hover_title
                                 span
+                                    +FontStyle(19px,#FFF,600,3px,22px)
+                                    &:nth-child(1)
+                                        +FontStyle(43px,#FFF,600,3px,50px)
                             hr
+                                width: 50%
+                                margin: 10px 0   
+                                height: 1px
+                                background: #FFF
                             p
+                                overflow: hidden
+                                text-overflow: ellipsis
+                                display: -webkit-box
+                                -webkit-box-orient: vertical
+                                -webkit-line-clamp: 2
+                                width: 50%
+                                +FontStyle(14px,#FFF,600,3px,20px)
                             .hover_btn
                     .news_title
+                        +FontStyle(18px,$colorBlack,600,5px,31px) 
                     .news_date
+                        +FontStyle(14px,#4d4d4d,600,3px,20px) 
     .videos
         display: none
