@@ -219,23 +219,19 @@ nav
                     width: 100%
 footer
     background: #1A1A1A
-    height: 161px
-    @media ( max-width: 1279px )
-        height: auto
+    height: auto
     .footer_container
-        height: 100%
         .row
-            justify-content: center 
+            justify-content: space-between
             align-items: center
             padding: 40px 0 
-            height: 100%
             @media ( max-width: 1279px )
                 align-items: flex-start
             @media ( max-width: 767px )
                 align-items: center
                 flex-direction: column
             .footer_logo
-                margin: 0 65px
+                margin: 0 90px 0 0
                 @media ( max-width: 1279px )
                     margin: 0 10% 0 0
                 @media ( max-width: 767px )
@@ -246,17 +242,9 @@ footer
                 @media ( max-width: 1279px )
                     flex-direction: column
                 .footer_information
-                    flex: 0 0 351px
-                    height: 66px
-                    width: 351px
                     margin: 0
-                    @media ( max-width: 1279px )
-                        flex: unset
-                    @media ( max-width: 540px )
-                        width: 100%
                     li
                         display: flex
-                        margin-bottom: 10px
                         white-space: nowrap
                         @media ( max-width: 767px )
                             justify-content: center
@@ -264,32 +252,30 @@ footer
                                 .footer_information_header
                                     display: unset
                                     text-align: end
-                                
                         .footer_information_header
                             flex: 0 0 80px
                             border-right: 1px solid #FFF
                             margin-right: 10px  
-                            +FontStyle( 12px,#FFF,600,5px)
+                            padding-right: 10px 
+                            +FontStyle(14px,#FFF,400,5px,27px)
                             @media ( max-width: 767px )
                                 display: none
                                 flex: unset                    
                         .footer_information_header2
                             border-right: 1px solid #FFF
                             margin-right: 10px 
-                            +FontStyle( 12px,#FFF,600,5px)
+                            +FontStyle(14px,#FFF,400,5px,27px)
                             text-align: end
                             display: none
                             @media ( max-width: 767px )
                                 display: block
-                                
-                                
                         .footer_information_text
                             flex: 1 1 auto
-                            +FontStyle( 12px,#FFF,600,2px)
+                            +FontStyle(14px,#FFF,400,2px,27px)
                             @media ( max-width: 767px )
                                 flex: unset
                 .copyright_Area
-                    +FontStyle(12px,#FFF,600,2px)
+                    +FontStyle(14px,#FFF,400,2px,27px)
                     flex: 1 1 auto
                     flex-direction: column
                     align-items: flex-end
@@ -299,7 +285,6 @@ footer
                     @media ( max-width: 767px )
                         align-items: center
                     .copyright_top
-                        margin-bottom: 10px
                         @media ( max-width: 1279px )
                             align-self: start
                         @media ( max-width: 767px )
@@ -315,5 +300,7 @@ footer
                         width: 100%
                         max-width: 490px
                         display: block
+                        @media ( max-width: 1530px )
+                            width: 90%
                         @media ( max-width: 1279px )
                             display: none
