@@ -83,7 +83,8 @@
                         <span class="mid_bar bar"></span>
                         <span class="bot_bar bar"></span>
                     </button>
-                    <div class="menu_btn_inner">
+                    <div class="menu_btn_inner_bg" style="display: none;"></div>
+                    <div class="menu_btn_inner" style="display: none;">
                         <ul class="list-unstyled m-0 p-0 d-flex">
                             <li class="story text-center">
                                 <a class="d-flex flex-column" href="">
@@ -409,12 +410,12 @@
         let bot_bar = document.querySelector(".bot_bar");
 
         function menu_click(e) {
-            // $(".menu,main,footer").toggle();
+            $(".menu_btn_inner_bg").toggle();
+            $(".menu_btn_inner").toggle();
             top_bar.classList.toggle("top_click");
             mid_bar.classList.toggle("mid_click");
             bot_bar.classList.toggle("bot_click");
             menu_btn.classList.toggle("menu_btn_click")
-            menu_btn_inner.classList.toggle("menu_btn_inner_click");
         }
         menu_btn.addEventListener("click", menu_click);
 
