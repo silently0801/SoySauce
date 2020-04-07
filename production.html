@@ -366,8 +366,6 @@
         )
 
         document.querySelector("html").addEventListener('touchend', function (event) {
-            console.log("123");
-            
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
                 $(".more").css({ "display": "block" });
             else
@@ -385,8 +383,6 @@
         }, false);
 
         document.querySelector("html").addEventListener('mouseup', function (event) {
-            console.log("123");
-            
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
                 $(".more").css({ "display": "block" });
             else
