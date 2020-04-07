@@ -366,10 +366,13 @@
         )
 
         document.querySelector("html").addEventListener('touchend', function (event) {
+            console.log("123");
+            
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
                 $(".more").css({ "display": "block" });
             else
                 $(".more").css({ "display": "none" });
+                
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth < 576)
                 $(".swiper-button-next").addClass("swiper_btn_mobile");
             else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth > 575)
@@ -381,6 +384,24 @@
 
         }, false);
 
+        document.querySelector("html").addEventListener('mouseup', function (event) {
+            console.log("123");
+            
+            if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
+                $(".more").css({ "display": "block" });
+            else
+                $(".more").css({ "display": "none" });
+                
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth < 576)
+                $(".swiper-button-next").addClass("swiper_btn_mobile");
+            else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth > 575)
+                $(".swiper-button-next").addClass("swiper_btn_pc");
+            else {
+                $(".swiper-button-next").removeClass("swiper_btn_mobile");
+                $(".swiper-button-next").removeClass("swiper_btn_pc");
+            }
+
+        }, false);
 
 
         /*menu_btn*/
