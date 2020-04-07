@@ -19,6 +19,7 @@
         <div class="container ">
             <div class="row d-flex flex-column">
                 <div class="logo">
+                    <div class="logo_icon"></div>
                     <div class="menu_backEnd">
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
                             <li class="orderSearch"><a href="">訂單查詢</a></li>
@@ -31,13 +32,13 @@
                 <div class="nav_btns w-100">
                     <ul class="list-unstyled p-0 d-flex">
                         <li class="story text-center">
-                            <a class="d-flex flex-column" href="">
+                            <a class="d-flex flex-column" href="./ourstory.html">
                                 <span>品牌故事</span>
                                 <span>Our Story</span>
                             </a>
                         </li>
                         <li class="sauce text-center">
-                            <a class="d-flex flex-column" href="">
+                            <a class="d-flex flex-column" href="./production.html">
                                 <span>製醬美學</span>
                                 <span>Production</span>
                             </a>
@@ -55,7 +56,7 @@
                             </a>
                         </li>
                         <li class="news text-center">
-                            <a class="d-flex flex-column" href="">
+                            <a class="d-flex flex-column" href="./news.html">
                                 <span>職人筆記</span>
                                 <span>News</span>
                             </a>
@@ -81,7 +82,8 @@
                         <span class="mid_bar bar"></span>
                         <span class="bot_bar bar"></span>
                     </button>
-                    <div class="menu_btn_inner">
+                    <div class="menu_btn_inner_bg" style="display: none;"></div>
+                    <div class="menu_btn_inner" style="display: none;">
                         <ul class="list-unstyled m-0 p-0 d-flex">
                             <li class="story text-center">
                                 <a class="d-flex flex-column" href="">
@@ -142,11 +144,74 @@
     </nav>
     <main>
         <div class="mask"></div>
-        
+        <section class="header">
+            <div class="header_container container">
+                <div class="row m-0">
+                    <div class="header_content">職人筆記 / </div>
+                    <div class="header_btns d-flex">
+                        <div class="news_btn">
+                            大灶動態
+                        </div>
+                        <div class="videos_btn">
+                            媒體採訪
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="news_container container">
+                <div class="row">
+                    <div class="news_content col-6">
+                        <div class="news_img_area">
+                            <img src="" alt="">
+                            <div class="news_img_text"></div>
+                            <div class="news_img_hover">
+                                <div class="hover_title">
+                                    <span>2019</span>
+                                    <span>05/09</span>
+                                </div>
+                                <hr>
+                                <p>感謝大家對於「土旺來黑豆醬油清」的支持，從販售到後來得知各位朋友們的意見，讓我們對於新口味的研發上醬油一家子有更多的信心，醬油哥在新的一年也會繼續尋找台灣各地好的食材。
+                                </p>
+                                <div class="hover_btn"></div>
+                            </div>
+                        </div>
+                        <div class="news_title">五月十二柳丁醬油出品</div>
+                        <div class="news_date">2019.05.09</div>
+                    </div>
+                    <div class="news_content col-6">
+                        <div class="news_img_area">
+                            <img src="" alt="">
+                            <div class="news_img_text"></div>
+                            <div class="news_img_hover">
+                                <div class="hover_title">
+                                    <span>2019</span>
+                                    <span>05/09</span>
+                                </div>
+                                <hr>
+                                <p>感謝大家對於「土旺來黑豆醬油清」的支持，從販售到後來得知各位朋友們的意見，讓我們對於新口味的研發上醬油一家子有更多的信心，醬油哥在新的一年也會繼續尋找台灣各地好的食材。
+                                </p>
+                                <div class="hover_btn"></div>
+                            </div>
+                        </div>
+                        <div class="news_title">五月十二柳丁醬油出品</div>
+                        <div class="news_date">2019.05.09</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="videos">
+            <div class="videos_container container">
+                <div class="row">
+
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer_container container w-100">
-            <div class="row w-100 m-0 d-flex justify-content-center align-items-center">
+            <div class="row w-100 m-0 d-flex ">
                 <div class="footer_logo">
                     <img src="./img/footer_logo.png" alt="">
                 </div>
@@ -168,7 +233,7 @@
                         </li>
                     </ul>
                     <div class="copyright_Area d-flex ">
-                        <div class="copyright_top">Copyright © 201９ ydsin1940.</div>
+                        <div class="copyright_top">Copyright © 2019 ydsin1940.</div>
                         <div class="copyright_mid">All rights reserved.</div>
                         <div class="copyright_bot align-self-end"></div>
                     </div>
@@ -185,53 +250,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script>
-
-        /*btn_click*/
-        $(document).ready(function () {
-            let scaleValue = (1 / window.devicePixelRatio);
-            $("html").css({ "zoom": scaleValue });
-            let height;
-            let width = $(window).width();
-            console.log($("html").height());
-            if (width > 1279)
-                height = parseInt($("html").height()) - parseInt($("footer").height());
-            $(".mask").height(height);
-        });
-        $(window).resize(
-            function () {
-                let scaleValue = (1 / window.devicePixelRatio);
-                $("html").css({ "zoom": scaleValue });
-                let width = $(window).width();
-                let height;
-                if (width > 1279)
-                    height = parseInt($("html").height()) - parseInt($("footer").height());
-                $(".mask").height(height);
-            }
-        );
-
-        let backEnd = document.querySelector(".backEnd");
-        let menu_btn = document.querySelector(".menu_btn");
-        let menu_btn_inner = document.querySelector(".menu_btn_inner");
-        let top_bar = document.querySelector(".top_bar");
-        let mid_bar = document.querySelector(".mid_bar");
-        let bot_bar = document.querySelector(".bot_bar");
-
-        function menu_click(e) {
-            // $(".menu,main,footer").toggle();
-            top_bar.classList.toggle("top_click");
-            mid_bar.classList.toggle("mid_click");
-            bot_bar.classList.toggle("bot_click");
-            menu_btn.classList.toggle("menu_btn_click")
-            menu_btn_inner.classList.toggle("menu_btn_inner_click");
-        }
-        menu_btn.addEventListener("click", menu_click);
-
-
-
-
-    </script>
-
+    <script src="./js/menu_btn.js"></script>
+    <script src="./js/nav_position.js"></script>
+    <script src="./js/widows_scale.js"></script>
+    <script src="./js/background.js"></script>
 </body>
 
 </html>
