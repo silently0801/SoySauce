@@ -261,7 +261,7 @@
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="more" tabindex="0" role="button">系列介紹</div>
+        <div class="more justify-content-center align-items-center" tabindex="0" role="button">系列介紹</div>
         </div>
     </main>
     <footer>
@@ -313,7 +313,6 @@
             slidesPerView: 1,
             autoHeight: true, //enable auto height
             effect: 'fade',
-            zoom: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -346,7 +345,7 @@
             function () {
                 $(".swiper-button-next").removeClass("swiper_btn_mobile")
                 if (this.classList[1] == "swiper-button-disabled")
-                    $(".more").css({ "display": "block" });
+                    $(".more").css({ "display": "flex" });
                 $(".swiper-button-next").removeClass("swiper_btn_mobile");
                 $(".swiper-button-next").removeClass("swiper_btn_pc");
             }
@@ -367,7 +366,7 @@
 
         document.querySelector("html").addEventListener('touchend', function (event) {
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
-                $(".more").css({ "display": "block" });
+                $(".more").css({ "display": "flex" });
             else
                 $(".more").css({ "display": "none" });
                 
@@ -384,7 +383,7 @@
 
         document.querySelector("html").addEventListener('mouseup', function (event) {
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
-                $(".more").css({ "display": "block" });
+                $(".more").css({ "display": "flex" });
             else
                 $(".more").css({ "display": "none" });
                 

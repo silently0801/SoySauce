@@ -49,7 +49,7 @@ nav
                                 color: $colorOrange !important
                             span
                                 &:nth-child(1)
-                                   color: #FFF
+                                    color: #FFF
                                 &:nth-child(2)
                                     color: #FFF
             .menu_Area
@@ -129,6 +129,8 @@ main
                         +FontStyle(32px,#FFF,700,6px,50px)
                         @media ( max-width: 575px )
                             +FontStyle(24px,#FFF,700,6px,50px)
+                        @media ( max-width: 320px )
+                            +FontStyle(16px,#FFF,700,6px,50px)
                 .aesthetics_content
                     width: 530px
                     @media ( max-width: 767px )
@@ -138,6 +140,8 @@ main
                         text-align: justify
                         @media ( max-width: 575px )
                             +FontStyle(16px,#FFF,400,3px,30px)
+                        @media ( max-width: 320px )
+                            +FontStyle(12px,#FFF,400,3px,1)
                 &:nth-child(1)
                     @media ( max-width: 575px )
                         height: calc(100vh + 72px)
@@ -149,6 +153,8 @@ main
                         padding: 0 0 5vh
                         @media ( max-width: 1279px)
                             padding: 0
+                        @media ( max-width: 575px)
+                            margin: 0 0 30px
                         img
                             display: none
                             @media ( max-width: 575px )
@@ -221,17 +227,27 @@ main
             @media ( max-width: 575px )
                 content: url("../img/99-LOGO/arrow_left_small.png")
     .more
+        +FontStyle(18px,#FFF,700,4px,1)
         position: absolute
         z-index: 10
         cursor: pointer
+        border: 2px solid #FFF
+        border-radius: 91.5px
         top: calc(85vh + 1px)
         left: calc(50% - 5px)
+        width: 183px
+        height: 78px
         transition: 0.5s
         display: none
         @media ( max-width: 575px )
+            +FontStyle(12px,#FFF,700,4px,1)
+            border: 1px solid #FFF
             top: 87vh
+            width: 119px
+            height: 50px
         &:focus
             outline: unset
+        
     .swiper_btn_mobile
         top: calc(90vh + 60px)        
     .swiper_btn_pc
