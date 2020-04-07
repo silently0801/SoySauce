@@ -246,8 +246,10 @@ footer
                     li
                         display: flex
                         white-space: nowrap
+                        margin: 0 0 10px
                         @media ( max-width: 767px )
                             justify-content: center
+                            
                             &:nth-child(1)
                                 .footer_information_header
                                     display: unset
@@ -257,22 +259,25 @@ footer
                             border-right: 1px solid #FFF
                             margin-right: 10px  
                             padding-right: 10px 
-                            +FontStyle(14px,#FFF,400,5px,27px)
+                            +FontStyle(14px,#FFF,400,5px,1)
                             @media ( max-width: 767px )
+                                +FontStyle(14px,#FFF,400,5px,1)
                                 display: none
                                 flex: unset                    
                         .footer_information_header2
                             border-right: 1px solid #FFF
                             margin-right: 10px 
-                            +FontStyle(14px,#FFF,400,5px,27px)
+                            padding-right: 10px 
+                            +FontStyle(14px,#FFF,400,5px,1)
                             text-align: end
                             display: none
                             @media ( max-width: 767px )
                                 display: block
                         .footer_information_text
                             flex: 1 1 auto
-                            +FontStyle(14px,#FFF,400,2px,27px)
+                            +FontStyle(14px,#FFF,400,2px,1)
                             @media ( max-width: 767px )
+                                +FontStyle(14px,#FFF,400,2px,1)
                                 flex: unset
                 .copyright_Area
                     +FontStyle(14px,#FFF,400,2px,27px)

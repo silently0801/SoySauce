@@ -392,7 +392,7 @@ main .start .start_container .row .start_content .en_content p {
   color: #979797;
   font-weight: 400;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 28px;
 }
 
 @media (max-width: 767px) {
@@ -401,7 +401,7 @@ main .start .start_container .row .start_content .en_content p {
     color: #979797;
     font-weight: 400;
     letter-spacing: 1px;
-    line-height: 1;
+    line-height: 28px;
   }
 }
 
