@@ -1,6 +1,8 @@
 @charset "UTF-8";
-body {
+body * {
   font-family: 'Noto Serif TC';
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .top_click {

@@ -1,5 +1,7 @@
-body {
+body * {
   font-family: 'Noto Serif TC';
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav {
@@ -280,16 +282,16 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title br
 main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .subtitle {
   font-size: 32px;
   color: #FFF;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 6px;
   line-height: 50px;
 }
 
 @media (max-width: 575px) {
   main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .subtitle {
-    font-size: 16px;
+    font-size: 24px;
     color: #FFF;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 6px;
     line-height: 50px;
   }
@@ -316,11 +318,11 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_content p {
 
 @media (max-width: 575px) {
   main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_content p {
-    font-size: 12px;
+    font-size: 16px;
     color: #FFF;
     font-weight: 400;
     letter-spacing: 3px;
-    line-height: 14px;
+    line-height: 30px;
   }
 }
 
