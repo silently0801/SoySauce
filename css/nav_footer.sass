@@ -33,6 +33,7 @@ a:hover
         max-width: 70% !important 
     @media ( max-width: 767px )
         max-width: 100% !important
+        width: 100%
         padding: 0 5%
 nav
     border-top: 9px solid $colorOrange 
@@ -224,12 +225,19 @@ footer
     .footer_container
         height: 100%
         .row
+            justify-content: center 
+            align-items: center
             padding: 40px 0 
             height: 100%
+            @media ( max-width: 1279px )
+                align-items: flex-start
             @media ( max-width: 767px )
+                align-items: center
                 flex-direction: column
             .footer_logo
                 margin: 0 65px
+                @media ( max-width: 1279px )
+                    margin: 0 10% 0 0
                 @media ( max-width: 767px )
                     margin: 0 0 40px
             .footer_content
@@ -241,6 +249,7 @@ footer
                     flex: 0 0 351px
                     height: 66px
                     width: 351px
+                    margin: 0
                     @media ( max-width: 1279px )
                         flex: unset
                     @media ( max-width: 540px )
