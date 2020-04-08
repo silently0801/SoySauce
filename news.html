@@ -152,7 +152,7 @@
                         <div class="news_btn">
                             大灶動態
                         </div>
-                        <div class="videos_btn">
+                        <div class="medias_btn">
                             媒體採訪
                         </div>
                     </div>
@@ -222,24 +222,123 @@
                 </div>
             </div>
         </section>
-        <section class="videos">
-            <div class="videos_container container">
+        <section class="medias">
+            <div class="medias_container container">
                 <div class="row">
-
+                    <!-- video.mp4 有御覽圖 改video的poster -->
+                    <div class="medias_content col-6">
+                        <div class="medias_img_area">
+                            <video class="medias_img"
+                                poster="./img/05-1-職人手札-列表頁面/59465034_2360439840685228_5514520540984901632_o.jpg">
+                                <source
+                                    src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4"
+                                    type="video/mp4" />
+                            </video>
+                            <div class="medias_btn">
+                                <svg viewBox="0 0 150 100">
+                                    <rect x="0" width="150" height="100" rx="15" />
+                                    <polygon fill="#FFF" points="60,30 60,70 100,50" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="medias_title">
+                            <span>甘醇柴香</span>
+                            <div class="medias_text_btn position-relative">
+                                <div class="plus1 plus position-absolute"></div>
+                                <div class="plus2 plus position-absolute"></div>
+                            </div>
+                        </div>
+                        <div class="medias_date">2015.03.07</div>
+                        <div class="medias_text">
+                            <p>喜歡御鼎興的朋友們：
+                                臨時接收到大愛的通知
+                                今天晚上8點，在大愛二台首播
+                                重播時間：(在大愛二台)
+                                10/10(五)早上9點 中午12:30
+                                10/12(日)下午6點
+                                這是所有採訪過的節目中，最多製程的一部小紀綠片
+                                請大家準時收看喔</p>
+                        </div>
+                    </div>
+                    <!-- video.mp4 沒御覽圖 medias_btn的bg-color -->
+                    <div class="medias_content col-6">
+                        <div class="medias_img_area">
+                            <video class="medias_img" poster="">
+                                <source
+                                    src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4"
+                                    type="video/mp4" />
+                            </video>
+                            <div class="medias_btn" style="background-color: #B3B3B3;">
+                                <svg viewBox="0 0 150 100">
+                                    <rect x="0" width="150" height="100" rx="15" />
+                                    <polygon fill="#FFF" points="60,30 60,70 100,50" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="medias_title">
+                            <span>甘醇柴香</span>
+                            <div class="medias_text_btn"></div>
+                        </div>
+                        <div class="medias_date">2015.03.07</div>
+                        <div class="medias_text_"></div>
+                    </div>
+                    <!-- youtube 嵌入影片 改iframe的src -->
+                    <div class="medias_content col-6">
+                        <div class="medias_img_area">
+                            <iframe class="medias_img" src="https://www.youtube.com/embed/FEJ45Rf6Fpc" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="medias_title">
+                            <span>大愛二台首播!!</span>
+                            <div class="medias_text_btn"></div>
+                        </div>
+                        <div class="medias_date">2014.12.19</div>
+                        <div class="medias_text"></div>
+                    </div>
+                    <!-- magazines 文章 -->
+                    <div class="medias_content col-6">
+                        <div class="medias_img_area">
+                            <div class="medias_img"
+                                style="background-image: url(./img/05-1-職人手札-列表頁面/59465034_2360439840685228_5514520540984901632_o.jpg);">
+                            </div>
+                        </div>
+                        <div class="medias_title">
+                            <span>傳承父子情</span>
+                            <a href="" class="medias_more">前往閱讀</a>
+                        </div>
+                        <div class="medias_date">2014.10.20</div>
+                        <div class="medias_text"></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="change_list">
+        <section class="news_list">
             <div class="change_list_container container">
                 <div class="row justify-content-end">
                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                        <a href="" type="button" class="btn">1</a>
-                        <a href="" type="button" class="btn">2</a>
-                        <a href="" type="button" class="btn">3</a>
-                        <a href="" type="button" class="btn">4</a>
-                        <a href="" type="button" class="btn">5</a>
-                        <a href="" type="button" class="btn">6</a>
-                        <a href="" type="button" class="btn">></a>
+                        <a href="" type="button" class="btn"><span>1</span></a>
+                        <a href="" type="button" class="btn"><span>2</span></a>
+                        <a href="" type="button" class="btn"><span>3</span></a>
+                        <a href="" type="button" class="btn"><span>4</span></a>
+                        <a href="" type="button" class="btn"><span>5</span></a>
+                        <a href="" type="button" class="btn"><span>6</span></a>
+                        <a href="" type="button" class="btn"><span>></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="medias_list">
+            <div class="change_list_container container">
+                <div class="row justify-content-end">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <a href="" type="button" class="btn"><span>1</span></a>
+                        <a href="" type="button" class="btn"><span>2</span></a>
+                        <a href="" type="button" class="btn"><span>3</span></a>
+                        <a href="" type="button" class="btn"><span>4</span></a>
+                        <a href="" type="button" class="btn"><span>5</span></a>
+                        <a href="" type="button" class="btn"><span>6</span></a>
+                        <a href="" type="button" class="btn"><span>></span></a>
                     </div>
                 </div>
             </div>
@@ -290,6 +389,46 @@
     <script src="./js/nav_position.js"></script>
     <script src="./js/widows_scale.js"></script>
     <script src="./js/background.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        /*tabs*/
+        $(".news_btn").click(function () {
+            $("main .news").css({ "display": "block" })
+            $("main .news_list").css({ "display": "block" })
+            $("main .medias").css({ "display": "none" })
+            $("main .medias_list").css({ "display": "none" })
+            $(this).css({ "color": "#C5362D" })
+            $(".medias_btn").css({ "color": "#231714" })
+        });
+        $(".header_btns .medias_btn").click(function () {
+            $("main .news").css({ "display": "none" })
+            $("main .news_list").css({ "display": "none" })
+            $("main .medias").css({ "display": "block" })
+            $("main .medias_list").css({ "display": "block" })
+            $(this).css({ "color": "#C5362D" })
+            $(".news_btn").css({ "color": "#231714" })
+        });
+        /*pages_btn*/
+        $('.medias_img').parent().click(function () {
+            if ($(this).children(".medias_img").get(0).paused) {
+                $(this).children(".medias_img").get(0).play(); $(this).children(".medias_btn").fadeOut();
+            } else {
+                $(this).children(".medias_img").get(0).pause();
+                $(this).children(".medias_btn").fadeIn();
+            }
+        });
+        $(".medias_text_btn").click(function () {
+            $(".plus1").toggleClass("rotate")
+            $(".medias_text p").toggleClass("click")
+            $(".medias_content").toggleClass("click")
+            setTimeout(function () {
+                if (window.innerWidth > 1279)
+                    $(".mask").height(parseInt($("html").height()) - parseInt($("footer").height()));
+            }, 300);
+
+        });
+
+    </script>
 </body>
 
 </html>
