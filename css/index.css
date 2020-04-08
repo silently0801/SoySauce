@@ -576,7 +576,8 @@ main .carousel::before {
   top: 365px;
   height: 265px;
   width: 100%;
-  background: #C0362D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8D362D), to(#C0362D));
+  background: linear-gradient(#8D362D, #C0362D);
   z-index: 1;
 }
 
