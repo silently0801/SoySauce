@@ -22,30 +22,32 @@ main
             .row
                 align-items: flex-end
                 .header_content
-                    +FontStyle(32px,$colorBlack,400,3px,1) 
+                    +FontStyle(32px,$colorBlack,700,7px,1) 
                     @media ( max-width: 540px )
-                        +FontStyle(22px,$colorBlack,400,3px,31px) 
+                        +FontStyle(22px,$colorBlack,700,7px,31px) 
                 .header_btns
                     .news_btn
-                        +FontStyle(14px,$colorOrange,600,3px,1) 
+                        +FontStyle(16px,$colorOrange,700,3px,1) 
                         border-right: 1px solid $colorBlack
                         padding: 0 30px
                         cursor: pointer
                         @media ( max-width: 540px )
-                            +FontStyle(12px,$colorOrange,600,3px,1) 
+                            +FontStyle(12px,$colorOrange,700,3px,1) 
+                            padding: 0 5px
                     .medias_btn
-                        +FontStyle(14px,$colorBlack,600,3px,1) 
+                        +FontStyle(16px,$colorBlack,700,3px,1) 
                         padding: 0 30px
                         cursor: pointer
                         @media ( max-width: 540px )
-                            +FontStyle(12px,$colorBlack,600,3px,1) 
+                            +FontStyle(12px,$colorBlack,700,3px,1) 
+                            padding: 0 5px
     .news_img
         width: 100%
         margin-bottom: 60px
         @media ( max-width: 540px )
-            margin-bottom: 30px
+            margin-bottom: 30px     
         .swiper-container
-            width: 1360px
+            width: 1280px
             height: 680px
             @media ( max-width: 1530px )
                 max-width: 1000px !important 
@@ -90,14 +92,17 @@ main
                             @media ( max-width: 767px )
                                 width: unset
                             span
-                                +FontStyle(40px,$colorBlack,600,3px,70px)
+                                +FontStyle(40px,$colorBlack,700,3px,1)
                                 @media ( max-width: 767px )  
-                                    +FontStyle(21px,$colorOrange,600,3px,35px)
+                                    +FontStyle(21px,$colorOrange,700,3px,35px)
                                     display: none
                                 @media ( max-width: 540px )
-                                    +FontStyle(12px,$colorOrange,600,3px,68px)
+                                    +FontStyle(12px,$colorOrange,700,3px,68px)
+                                @media ( max-width: 320px )
+                                    +FontStyle(12px,$colorOrange,700,3px,1)
+                                    margin-bottom: 10px
                                 &:nth-child(3)
-                                    +FontStyle(21px,$colorBlack,600,3px,35px) 
+                                    +FontStyle(21px,$colorBlack,700,3px,35px) 
                                 &:nth-child(4)
                                     display: none
                                     @media ( max-width: 767px )  
@@ -114,7 +119,9 @@ main
                                 width: 100%
                             .news_title
                                 +FontStyle(22px,$colorBlack,600,3px,31px)
+                                margin-bottom: 50px
                                 @media ( max-width: 540px )
+                                    margin-bottom: 45px
                                     +FontStyle(14px,$colorBlack,600,3px,25px)
                             .news_text
                                 +FontStyle(18px,$colorBlack,400,2px,34px)

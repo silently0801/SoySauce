@@ -48,8 +48,8 @@ main .header .header_container .row {
 main .header .header_container .row .header_content {
   font-size: 32px;
   color: #231714;
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-weight: 700;
+  letter-spacing: 7px;
   line-height: 1;
 }
 
@@ -57,16 +57,16 @@ main .header .header_container .row .header_content {
   main .header .header_container .row .header_content {
     font-size: 22px;
     color: #231714;
-    font-weight: 400;
-    letter-spacing: 3px;
+    font-weight: 700;
+    letter-spacing: 7px;
     line-height: 31px;
   }
 }
 
 main .header .header_container .row .header_btns .news_btn {
-  font-size: 14px;
+  font-size: 16px;
   color: #C0362D;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 1;
   border-right: 1px solid #231714;
@@ -78,16 +78,17 @@ main .header .header_container .row .header_btns .news_btn {
   main .header .header_container .row .header_btns .news_btn {
     font-size: 12px;
     color: #C0362D;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 1;
+    padding: 0 5px;
   }
 }
 
 main .header .header_container .row .header_btns .medias_btn {
-  font-size: 14px;
+  font-size: 16px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 1;
   padding: 0 30px;
@@ -98,9 +99,10 @@ main .header .header_container .row .header_btns .medias_btn {
   main .header .header_container .row .header_btns .medias_btn {
     font-size: 12px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 1;
+    padding: 0 5px;
   }
 }
 
@@ -116,7 +118,7 @@ main .news_img {
 }
 
 main .news_img .swiper-container {
-  width: 1360px;
+  width: 1280px;
   height: 680px;
 }
 
@@ -221,16 +223,16 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
   font-size: 40px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
-  line-height: 70px;
+  line-height: 1;
 }
 
 @media (max-width: 767px) {
   main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
     font-size: 21px;
     color: #C0362D;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 35px;
     display: none;
@@ -241,16 +243,27 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
     font-size: 12px;
     color: #C0362D;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 68px;
+  }
+}
+
+@media (max-width: 320px) {
+  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
+    font-size: 12px;
+    color: #C0362D;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 10px;
   }
 }
 
 main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span:nth-child(3) {
   font-size: 21px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 35px;
 }
@@ -293,10 +306,12 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 31px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 540px) {
   main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content .news_title {
+    margin-bottom: 45px;
     font-size: 14px;
     color: #231714;
     font-weight: 600;

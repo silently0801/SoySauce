@@ -1,0 +1,83 @@
+body * {
+  font-family: 'Noto Serif TC';
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1279px) {
+  body {
+    background-color: #ebebeb;
+  }
+}
+
+main {
+  text-align: justify;
+}
+
+main .mask {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: -9999;
+  background-color: #ebebeb;
+}
+
+@media (max-width: 1279px) {
+  main .mask {
+    display: none;
+  }
+}
+
+main .header {
+  padding: 21px 0 37px;
+}
+
+@media (max-width: 540px) {
+  main .header {
+    padding: 16px 0 22px;
+  }
+}
+
+main .header .header_container .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .header .header_container .row .title {
+  font-size: 32px;
+  color: #231714;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 540px) {
+  main .header .header_container .row .title {
+    font-size: 22px;
+    color: #231714;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 31px;
+  }
+}
+
+main .header .header_container .row .content {
+  font-size: 18px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+  margin-bottom: 40px;
+}
+
+main .header .header_container .row .banner {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=Q&A.css.map */

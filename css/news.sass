@@ -15,17 +15,23 @@ main
             .row
                 align-items: flex-end
                 .header_content
-                    +FontStyle(32px,$colorBlack,400,3px,1) 
+                    +FontStyle(32px,$colorBlack,700,7px,1) 
+                    @media ( max-width: 540px )
+                        +FontStyle(22px,$colorBlack,700,7px,31px) 
                 .header_btns
                     .news_btn
-                        +FontStyle(14px,#C5362D,600,3px,1) 
+                        +FontStyle(16px,$colorOrange,700,3px,1) 
                         border-right: 1px solid $colorBlack
                         padding: 0 30px
                         cursor: pointer
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorOrange,700,3px,1) 
                     .medias_btn
-                        +FontStyle(14px,$colorBlack,600,3px,1) 
+                        +FontStyle(16px,$colorBlack,700,3px,1) 
                         padding: 0 30px
                         cursor: pointer
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorBlack,700,3px,1) 
     .news
         display: block
         .news_container

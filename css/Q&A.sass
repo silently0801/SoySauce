@@ -1,0 +1,37 @@
+@import "_function.sass"
+body
+    @media ( max-width: 1279px )
+        background-color: #ebebeb
+   
+main
+    text-align: justify
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .header
+        padding: 21px 0 37px
+        @media ( max-width: 540px )
+            padding: 16px 0 22px
+        .header_container
+            .row
+                flex-direction: column
+                .title
+                    +FontStyle(32px,$colorBlack,600,3px,1) 
+                    margin-bottom: 40px
+                    @media ( max-width: 540px )
+                        +FontStyle(22px,$colorBlack,400,3px,31px)   
+                .content
+                    +FontStyle(18px,$colorBlack,400,3px,34px) 
+                    margin-bottom: 40px
+                .banner
+                    width: 100%
+                    height: 500px
+                    background-size: cover
+                    background-position: center
+        

@@ -34,7 +34,7 @@ nav
         @media ( max-width: 1279px) 
             position: relative
         @media ( max-width: 767px )
-            width: 90% !important
+            width: 95% !important
         @media ( max-width: 540px) 
             position: unset
         .row
@@ -106,9 +106,9 @@ nav
                             span
                                 transition: 0.3s
                                 &:nth-child(1)
-                                    +FontStyle(18px,$colorBlack,700,4px)
+                                    +FontStyle(18px,$colorBlack,800,4px)
                                 &:nth-child(2)
-                                    +FontStyle(12px,$colorBlack,400,3px)    
+                                    +FontStyle(12px,$colorBlack,700,3px)    
             .menu_Area
                 margin-left: auto 
                 position: fixed
@@ -247,14 +247,15 @@ footer
                     flex-direction: column
                     flex: unset
                 .footer_information
-                    margin: 0
+                    margin: 9px 0 0
+                    @media ( max-width: 1279px )
+                        margin: 0
                     li
                         display: flex
                         white-space: nowrap
                         margin: 0 0 10px
                         @media ( max-width: 767px )
                             justify-content: center
-                            
                             &:nth-child(1)
                                 .footer_information_header
                                     display: unset
