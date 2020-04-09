@@ -198,6 +198,17 @@ main .news .news_container .row .news_content .news_img_area .news_img_hover p {
   line-height: 20px;
 }
 
+main .news .news_container .row .news_content .news_img_area .news_img_hover .hover_btn {
+  width: 54px;
+  height: 36px;
+  position: absolute;
+  bottom: 50px;
+  right: 60px;
+  background-image: url("../img/99-LOGO/hover.png");
+  background-size: cover;
+  background-position: center;
+}
+
 main .news .news_container .row .news_content .news_title {
   font-size: 18px;
   color: #231714;

@@ -34,4 +34,42 @@ main
                     height: 500px
                     background-size: cover
                     background-position: center
-        
+    section
+        .container
+            .row
+                flex-direction: column
+                .header
+                    position: relative
+                    span
+                        +FontStyle(22px,$colorBlack,400,3px,31px)  
+                    span.active
+                        +FontStyle(22px,$colorOrange,400,3px,31px)  
+                    .arrow
+                        position: absolute
+                        left: 110px
+                        top: 45%
+                        width: 9px
+                        height: 9px
+                        border-top: 2px solid rgba($colorBlack , 1)
+                        border-right: 2px solid rgba($colorBlack , 1)
+                        border-bottom: 2px solid rgba($colorOrange , 0)
+                        border-left: 2px solid rgba($colorOrange , 0)
+                        transition: .2s
+                        transform: translateY(-50%) rotate(135deg)  
+                    .arrow.active
+                        border-top: 2px solid rgba($colorBlack , 0)
+                        border-right: 2px solid rgba($colorBlack , 0)
+                        border-bottom: 2px solid rgba($colorOrange , 1)
+                        border-left: 2px solid rgba($colorOrange , 1)
+                        transition: .3s
+                .content
+                    border-bottom: 1px solid #000
+                    overflow: hidden
+                    height: 0px
+                    ul
+                        li
+                            +FontStyle(18px,$colorBlack,400,3px,34px)  
+                            p
+                                margin-left: 50px
+                .content.active
+                    height: auto

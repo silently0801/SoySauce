@@ -80,4 +80,78 @@ main .header .header_container .row .banner {
   background-size: cover;
   background-position: center;
 }
+
+main section .container .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .container .row .header {
+  position: relative;
+}
+
+main section .container .row .header span {
+  font-size: 22px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 31px;
+}
+
+main section .container .row .header span.active {
+  font-size: 22px;
+  color: #C0362D;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 31px;
+}
+
+main section .container .row .header .arrow {
+  position: absolute;
+  left: 110px;
+  top: 45%;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #231714;
+  border-right: 2px solid #231714;
+  border-bottom: 2px solid rgba(192, 54, 45, 0);
+  border-left: 2px solid rgba(192, 54, 45, 0);
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
+}
+
+main section .container .row .header .arrow.active {
+  border-top: 2px solid rgba(35, 23, 20, 0);
+  border-right: 2px solid rgba(35, 23, 20, 0);
+  border-bottom: 2px solid #c0362d;
+  border-left: 2px solid #c0362d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main section .container .row .content {
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+  height: 0px;
+}
+
+main section .container .row .content ul li {
+  font-size: 18px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+}
+
+main section .container .row .content ul li p {
+  margin-left: 50px;
+}
+
+main section .container .row .content.active {
+  height: auto;
+}
 /*# sourceMappingURL=Q&A.css.map */

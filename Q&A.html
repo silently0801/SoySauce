@@ -160,13 +160,14 @@
             </div>
         </section>
         <section class="payment">
-            <div class="continer">
-                <div class="row">
+            <div class="payment_continer container">
+                <div class="row m-0">
                     <div class="header">
                         <span>付款方式</span>
+                        <div class="arrow"></div>
                     </div>
                     <div class="content">
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>
                                 <div class="title">１.貨到付款</div>
                                 <p></p>
@@ -194,38 +195,110 @@
             </div>
         </section>
         <section class="delivery">
-            <div class="continer">
-                <div class="row">
+            <div class="delivery_continer container">
+                <div class="row m-0">
                     <div class="header">
-                        <span></span>
+                        <span>付款方式</span>
+                        <div class="arrow"></div>
                     </div>
-                    <div class="content"> </div>
+                    <div class="content">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="title">１.貨到付款</div>
+                                <p></p>
+                            </li>
+                            <li>
+                                <div class="title">２.郵政劃撥</div>
+                                <p>
+                                    戶名：邱碧惠<br>
+                                    帳號：22429968<br>
+                                    聯絡電話：05-5868272<br>
+                                    地址：雲林縣西螺鎮安定里安定路171-11號<br>
+                                </p>
+                            </li>
+                            <li>
+                                <div class="title">３.ATM轉帳</div>
+                                <p>
+                                    戶名：御鼎興柴燒醬業有限公司<br>
+                                    銀行代號：009<br>
+                                    匯款帳號：60510100893200<br>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="testing">
-            <div class="continer">
-                <div class="row">
+            <div class="testing_continer container">
+                <div class="row m-0">
                     <div class="header">
-                        <span></span>
+                        <span>付款方式</span>
+                        <div class="arrow"></div>
                     </div>
-                    <div class="content"> </div>
+                    <div class="content">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="title">１.貨到付款</div>
+                                <p></p>
+                            </li>
+                            <li>
+                                <div class="title">２.郵政劃撥</div>
+                                <p>
+                                    戶名：邱碧惠<br>
+                                    帳號：22429968<br>
+                                    聯絡電話：05-5868272<br>
+                                    地址：雲林縣西螺鎮安定里安定路171-11號<br>
+                                </p>
+                            </li>
+                            <li>
+                                <div class="title">３.ATM轉帳</div>
+                                <p>
+                                    戶名：御鼎興柴燒醬業有限公司<br>
+                                    銀行代號：009<br>
+                                    匯款帳號：60510100893200<br>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="additives">
-            <div class="continer">
-                <div class="row">
+            <div class="additives_continer container">
+                <div class="row m-0">
                     <div class="header">
-                        <span></span>
+                        <span>付款方式</span>
+                        <div class="arrow"></div>
                     </div>
-                    <div class="content"> </div>
+                    <div class="content">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="title">１.貨到付款</div>
+                                <p></p>
+                            </li>
+                            <li>
+                                <div class="title">２.郵政劃撥</div>
+                                <p>
+                                    戶名：邱碧惠<br>
+                                    帳號：22429968<br>
+                                    聯絡電話：05-5868272<br>
+                                    地址：雲林縣西螺鎮安定里安定路171-11號<br>
+                                </p>
+                            </li>
+                            <li>
+                                <div class="title">３.ATM轉帳</div>
+                                <p>
+                                    戶名：御鼎興柴燒醬業有限公司<br>
+                                    銀行代號：009<br>
+                                    匯款帳號：60510100893200<br>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-
-
-
     </main>
     <footer>
         <div class="footer_container container w-100">
@@ -274,6 +347,17 @@
     <script src="./js/widows_scale.js"></script>
     <script src="./js/background.js"></script>
     <script>
+        $(".row .header").click(
+            function () {
+                $(this).children(".header span").toggleClass("active");
+                $(this).children(".header .arrow").toggleClass("active");
+                $(this).parent().children(".content").toggleClass("active");
+                setTimeout(function () {
+                if (window.innerWidth > 1279)
+                    $(".mask").height(parseInt($("html").height()) - parseInt($("footer").height()));
+            }, 100);    
+            }
+        );
     </script>
 </body>
 
