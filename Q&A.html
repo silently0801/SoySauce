@@ -162,11 +162,11 @@
         <section class="payment">
             <div class="payment_continer container">
                 <div class="row m-0">
-                    <div class="header">
+                    <a class="header" data-toggle="collapse" href="#payment_collapse" role="button">
                         <span>付款方式</span>
                         <div class="arrow"></div>
-                    </div>
-                    <div class="content">
+                    </a>
+                    <div class="content collapse" id="payment_collapse">
                         <ul class="list-unstyled">
                             <li>
                                 <div class="title">１.貨到付款</div>
@@ -197,11 +197,11 @@
         <section class="delivery">
             <div class="delivery_continer container">
                 <div class="row m-0">
-                    <div class="header">
+                    <a class="header" data-toggle="collapse" href="#delivery_collapse" role="button">
                         <span>付款方式</span>
                         <div class="arrow"></div>
-                    </div>
-                    <div class="content">
+                    </a>
+                    <div class="content collapse" id="delivery_collapse">
                         <ul class="list-unstyled">
                             <li>
                                 <div class="title">１.貨到付款</div>
@@ -232,11 +232,11 @@
         <section class="testing">
             <div class="testing_continer container">
                 <div class="row m-0">
-                    <div class="header">
+                    <a class="header" data-toggle="collapse" href="#testing_collapse" role="button">
                         <span>付款方式</span>
                         <div class="arrow"></div>
-                    </div>
-                    <div class="content">
+                    </a>
+                    <div class="content collapse" id="testing_collapse">
                         <ul class="list-unstyled">
                             <li>
                                 <div class="title">１.貨到付款</div>
@@ -267,11 +267,11 @@
         <section class="additives">
             <div class="additives_continer container">
                 <div class="row m-0">
-                    <div class="header">
+                    <a class="header" data-toggle="collapse" href="#additives_collapse" role="button">
                         <span>付款方式</span>
                         <div class="arrow"></div>
-                    </div>
-                    <div class="content">
+                    </a>
+                    <div class="content collapse" id="additives_collapse">
                         <ul class="list-unstyled">
                             <li>
                                 <div class="title">１.貨到付款</div>
@@ -351,7 +351,7 @@
             function () {
                 $(this).children(".header span").toggleClass("active");
                 $(this).children(".header .arrow").toggleClass("active");
-                $(this).parent().children(".content").toggleClass("active");
+                // $(this).parent().children(".content").toggleClass("active");
                 setTimeout(function () {
                 if (window.innerWidth > 1279)
                     $(".mask").height(parseInt($("html").height()) - parseInt($("footer").height()));

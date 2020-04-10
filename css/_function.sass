@@ -4,12 +4,6 @@ $colorOrange:  #C0362D
 $colorDarkOrange: #8D362D
 $colorGrey: #808080
 
-@mixin Font-Style($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
-    font-size: $font-size
-    color: $font-color
-    font-weight: $font-weight
-    letter-spacing: $letter-spacing
-    line-height: $line-height
 @mixin FontStyle($font-size:14px,$font-color:#231714,$font-weight:600,$letter-spacing:7px,$line-height:unset)
     font-size: $font-size
     color: $font-color
@@ -32,7 +26,6 @@ $colorGrey: #808080
         right: $bottom
         top: 7px
         bottom: unset
-
 @mixin before_after_default($position:relative,$content:" ")
     content: $content
     display: block
@@ -44,7 +37,23 @@ $colorGrey: #808080
     bottom: $bottom
     left: $left
 
+@mixin keyframes($animationName)
+    @keyframes #{$animationName}
+        @content
+@function randomNum($min, $max)
+  $rand: random()
+  $randomNum: $min + floor($rand * (($max - $min) + 1))
+  @return $randomNum
+
+@include keyframes(square)
+    0%
+        transform: translateX(0)
+        background-color: rgba(255, 255, 255, .3)
+    100%
+        transform: scale(3) translateX(1000px) rotate(600deg)
+        background-color: rgba(255, 255, 255, 0)
+
 body
     *
         font-family: 'Noto Serif TC' 
-        transition: 0.3s
+        transition: 0.5s

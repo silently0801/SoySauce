@@ -40,6 +40,7 @@ main
                 flex-direction: column
                 .header
                     position: relative
+                    border-top: 1px solid #000
                     span
                         +FontStyle(22px,$colorBlack,400,3px,31px)  
                     span.active
@@ -63,13 +64,13 @@ main
                         border-left: 2px solid rgba($colorOrange , 1)
                         transition: .3s
                 .content
-                    border-bottom: 1px solid #000
-                    overflow: hidden
-                    height: 0px
                     ul
                         li
                             +FontStyle(18px,$colorBlack,400,3px,34px)  
                             p
                                 margin-left: 50px
-                .content.active
-                    height: auto
+    .payment
+        .container   
+            .row
+                .header
+                    border-top: 0px solid #000

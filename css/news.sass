@@ -187,14 +187,9 @@ main
                     .medias_text
                         p
                             +FontStyle(14px,#4d4d4d,400,3px,27px) 
-                            height: 0px
                             width: 375px
-                            overflow: hidden
-                            transition: .3s
                             margin: 0
-                        p.click
-                            height: auto
-                            transition: .3s
+
     .news_list
         display: block
         margin-bottom: 80px
@@ -203,6 +198,8 @@ main
                 .btn-group
                     a
                         position: relative
+                        border: unset
+                        background-color: unset
                         &:hover::before
                             opacity: 1
                         &:hover span
@@ -218,7 +215,7 @@ main
                             border-radius: 50%
                             background-color: #C5362D 
                             position: absolute
-                            top: 50%
+                            top: 55%
                             left: 50%
                             z-index: -1
                             transform: translate(-53%,-50%)
@@ -231,6 +228,8 @@ main
                 .btn-group
                     a
                         position: relative
+                        border: unset
+                        background-color: unset
                         &:hover::before
                             opacity: 1
                         &:hover span
@@ -246,7 +245,7 @@ main
                             border-radius: 50%
                             background-color: #C5362D 
                             position: absolute
-                            top: 50%
+                            top: 55%
                             left: 50%
                             z-index: -1
                             transform: translate(-53%,-50%)
