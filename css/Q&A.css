@@ -26,8 +26,15 @@
 
 body * {
   font-family: 'Noto Serif TC';
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 @media (max-width: 1279px) {
@@ -56,12 +63,12 @@ main .mask {
 }
 
 main .header {
-  padding: 21px 0 37px;
+  padding: 21px 0 40px;
 }
 
 @media (max-width: 540px) {
   main .header {
-    padding: 16px 0 22px;
+    padding: 16px 0 40px;
   }
 }
 
@@ -97,14 +104,55 @@ main .header .header_container .row .content {
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
-  margin-bottom: 40px;
 }
 
-main .header .header_container .row .banner {
-  width: 100%;
+@media (max-width: 540px) {
+  main .header .header_container .row .content {
+    font-size: 12px;
+    color: #231714;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 23px;
+  }
+}
+
+@media (max-width: 1279px) {
+  main .banner .container {
+    padding: 0;
+  }
+}
+
+main .banner .container .row {
+  margin: 0;
   height: 500px;
   background-size: cover;
   background-position: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1530px) {
+  main .banner .container .row {
+    height: 430px;
+  }
+}
+
+@media (max-width: 1279px) {
+  main .banner .container .row {
+    height: 455px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .banner .container .row {
+    height: 320px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  main .banner .container .row {
+    height: 189px;
+  }
 }
 
 main section .container .row {
@@ -138,7 +186,7 @@ main section .container .row .header span.active {
 main section .container .row .header .arrow {
   position: absolute;
   left: 110px;
-  top: 45%;
+  top: 38%;
   width: 9px;
   height: 9px;
   border-top: 2px solid #231714;
@@ -166,6 +214,16 @@ main section .container .row .content ul li {
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
+}
+
+@media (max-width: 540px) {
+  main section .container .row .content ul li {
+    font-size: 12px;
+    color: #231714;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 23px;
+  }
 }
 
 main section .container .row .content ul li p {

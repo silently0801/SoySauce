@@ -1,0 +1,147 @@
+@import "_function.sass"
+body
+    @media ( max-width: 1279px )
+        background-color: #ebebeb
+   
+main
+    text-align: justify
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .contact
+        padding: 21px 0 60px
+        @media ( max-width: 540px )
+            padding: 16px 0 30px
+        .contact_container
+            .row
+                margin: 0
+                .contact_header
+                    width: 400px
+                    @media ( max-width: 1270px )
+                        width: 100%
+                        margin-bottom: 40px
+                    .title
+                        +FontStyle(32px,$colorBlack,600,3px,1) 
+                        margin-bottom: 40px
+                        @media ( max-width: 540px )
+                            +FontStyle(22px,$colorBlack,400,3px,31px)   
+                    .contact_content
+                        p
+                            +FontStyle(18px,$colorBlack,400,3px,34px) 
+                            @media ( max-width: 540px )
+                                +FontStyle(12px,$colorBlack,400,3px,23px) 
+                        span
+                            +FontStyle(22px,$colorBlack,600,3px,31px) 
+                            @media ( max-width: 540px )
+                                +FontStyle(18px,$colorBlack,600,3px,31px) 
+                        .contact_info
+                            div
+                                span
+                                    +FontStyle(16px,$colorBlack,400,3px,34px) 
+                                    @media ( max-width: 540px )
+                                        +FontStyle(12px,$colorBlack,400,3px,23px) 
+                                    &:nth-child(2)
+                                        margin: 0 14px
+                form
+                    flex: 1
+                    display: flex
+                    @media ( max-width: 1530px )
+                        width: 600px
+                        flex-direction: column
+                    .contact_input
+                        width: 100%
+                        padding: 0 45px
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        @media ( max-width: 1270px )
+                            padding: 0
+                        .input_area
+                            margin-bottom: 20px
+                            @media ( max-width: 1530px )
+                                    width: 100%
+                            &:last-child
+                                margin-bottom: unset
+                                @media ( max-width: 1530px )
+                                    margin-bottom: 20px
+                            .title
+                                +FontStyle(14px,$colorBlack,400,3px,27px) 
+                            input
+                                width: 500px
+                                height: 34px
+                                border: 1px solid $colorBlack 
+                                padding-left: 10px
+                                background-color: rgba(#fff, 0)
+                                transition: unset
+                                +FontStyle(14px,$colorBlack,400,3px,27px) 
+                                @media ( max-width: 1530px )
+                                    width: 100%
+                                &:focus
+                                    transition: unset
+                                    border: 1px solid $colorOrange 
+                                    outline: 2px solid $colorOrange 
+                            textarea
+                                width: 500px
+                                height: 155px
+                                border: 1px solid $colorBlack 
+                                padding-left: 10px
+                                background-color: rgba(#fff, 0)
+                                transition: unset
+                                resize: none
+                                +FontStyle(14px,$colorBlack,400,3px,27px) 
+                                @media ( max-width: 1530px )
+                                    width: 100%
+                                @media ( max-width: 1279px )
+                                    height: 200px
+                                &:focus
+                                    transition: unset
+                                    border: 1px solid $colorOrange 
+                                    outline: 2px solid $colorOrange 
+                    .submit_area
+                        display: flex
+                        align-items: flex-end
+                        @media ( max-width: 1530px )
+                            padding: 0 45px
+                            justify-content: flex-end
+                        @media ( max-width: 1270px )
+                            padding: 0
+                        .submit
+                            overflow: hidden
+                            position: relative
+                            border: 1px solid $colorBlack 
+                            width: 120px
+                            height: 35px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            span
+                                +FontStyle(14px,$colorBlack,400,3px,27px)
+                            &::before
+                                content: ""
+                                position: absolute
+                                top: 0
+                                left: 0
+                                width: 17px
+                                height: 17px
+                                background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+    .googlemap
+        margin-bottom: 60px
+        @media ( max-width: 767px )
+            margin-bottom: 0px
+        .container
+            @media ( max-width: 767px )
+                padding: 0
+            .row
+                margin: 0
+                height: 550px
+                background-color: #B3B3B3
+                @media ( max-width: 767px )
+                    height: 320px
+                @media ( max-width: 540px )
+                    height: 360px
