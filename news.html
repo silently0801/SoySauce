@@ -567,21 +567,23 @@
         let getUrlString = location.href;
         let url = new URL(getUrlString);
         let page = url.searchParams.get('page');
-        if(page = "news"){
-            $("main .news").css({ "display": "block" })
-            $("main .news_list").css({ "display": "block" })
-            $("main .medias").css({ "display": "none" })
-            $("main .medias_list").css({ "display": "none" })
-            $(".news_btn").css({ "color": "#C5362D" })
-            $(".medias_btn").css({ "color": "#231714" })
-        }
-        if(page = "medias"){
+       
+        
+        if (page == "medias") {
             $("main .news").css({ "display": "none" })
             $("main .news_list").css({ "display": "none" })
             $("main .medias").css({ "display": "block" })
             $("main .medias_list").css({ "display": "block" })
             $(".medias_btn").css({ "color": "#C5362D" })
             $(".news_btn").css({ "color": "#231714" })
+        }
+        else {
+            $("main .news").css({ "display": "block" })
+            $("main .news_list").css({ "display": "block" })
+            $("main .medias").css({ "display": "none" })
+            $("main .medias_list").css({ "display": "none" })
+            $(".news_btn").css({ "color": "#C5362D" })
+            $(".medias_btn").css({ "color": "#231714" })
         }
 
 
