@@ -466,11 +466,21 @@ nav .container .row .nav_btns ul li a span {
 }
 
 nav .container .row .nav_btns ul li a span:nth-child(1) {
-  font-size: 14px;
+  font-size: 18px;
   color: #231714;
   font-weight: 900;
   letter-spacing: 2px;
   line-height: unset;
+}
+
+@media (max-width: 1240px) {
+  nav .container .row .nav_btns ul li a span:nth-child(1) {
+    font-size: 16px;
+    color: #231714;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: unset;
+  }
 }
 
 @media (max-width: 1090px) {
@@ -489,6 +499,16 @@ nav .container .row .nav_btns ul li a span:nth-child(2) {
   font-weight: 900;
   letter-spacing: 2px;
   line-height: unset;
+}
+
+@media (max-width: 1240px) {
+  nav .container .row .nav_btns ul li a span:nth-child(2) {
+    font-size: 12px;
+    color: #231714;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: unset;
+  }
 }
 
 @media (max-width: 1090px) {

@@ -233,4 +233,8 @@ main section .container .row .content ul li p {
 main .payment .container .row .header {
   border-top: 0px solid #000;
 }
+
+main .additives .container .row .header .arrow {
+  left: 132px;
+}
 /*# sourceMappingURL=Q&A.css.map */

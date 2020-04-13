@@ -186,11 +186,15 @@ nav
                             span
                                 transition: 0.3s
                                 &:nth-child(1)
-                                    +FontStyle(14px,$colorBlack,900,2px)
+                                    +FontStyle(18px,$colorBlack,900,2px)
+                                    @media ( max-width: 1240px )
+                                        +FontStyle(16px,$colorBlack,900,2px)
                                     @media ( max-width: 1090px )
                                         +FontStyle(18px,#FFF,400,4px)
                                 &:nth-child(2)
                                     +FontStyle(12px,$colorBlack,900,2px)
+                                    @media ( max-width: 1240px )
+                                        +FontStyle(12px,$colorBlack,900,1px)
                                     @media ( max-width: 1090px )
                                         +FontStyle(12px,#fff,400,1px)    
             .menu_btn_Area
