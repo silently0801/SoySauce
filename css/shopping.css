@@ -1,0 +1,185 @@
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    -webkit-transform: scale(3) translateX(1000px) rotate(600deg);
+            transform: scale(3) translateX(1000px) rotate(600deg);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    -webkit-transform: scale(3) translateX(1000px) rotate(600deg);
+            transform: scale(3) translateX(1000px) rotate(600deg);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+body * {
+  font-family: 'Noto Serif TC';
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+@media (max-width: 1279px) {
+  body {
+    background-color: #ebebeb;
+  }
+}
+
+main {
+  text-align: justify;
+  height: 100vh;
+}
+
+main .mask {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: -9999;
+  background-color: #ebebeb;
+}
+
+@media (max-width: 1279px) {
+  main .mask {
+    display: none;
+  }
+}
+
+main .header {
+  padding: 21px 0 37px;
+}
+
+main .header .header_container .row .header_content {
+  font-size: 32px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 7px;
+  line-height: 1;
+}
+
+@media (max-width: 540px) {
+  main .header .header_container .row .header_content {
+    font-size: 22px;
+    color: #231714;
+    font-weight: 700;
+    letter-spacing: 7px;
+    line-height: 31px;
+  }
+}
+
+main .header .header_container .row .header_btns {
+  position: relative;
+}
+
+main .header .header_container .row .header_btns .types_select {
+  width: 200px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #231714;
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .header .header_container .row .header_btns .types_select::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .header .header_container .row .header_btns .types_select::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+main .header .header_container .row .header_btns .option_area {
+  border: 1px solid #231714;
+  width: 200px;
+  position: absolute;
+}
+
+main .header .header_container .row .header_btns .option_area .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  font-size: 16px;
+  color: #989898;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .header .header_container .row .header_btns .option_area .option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 55%;
+  height: 1px;
+  background-color: #231714;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .header .header_container .row .header_btns .option_area .option:last-child::after {
+  display: none;
+}
+
+main .header .header_container .row .header_btns .option_area .option:hover {
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+/*# sourceMappingURL=shopping.css.map */

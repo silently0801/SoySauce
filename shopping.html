@@ -10,9 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap&subset=chinese-traditional"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/nav_footer.css">
-    <link rel="stylesheet" href="./css/Q&A.css">
+    <link rel="stylesheet" href="./css/shopping.css">
 </head>
 
 <body>
@@ -145,13 +144,39 @@
     </nav>
     <main>
         <div class="mask"></div>
-        <div class="wait">
-            <div class="container">
-                <div class="row" style="font-size: 200px; font-weight: 900;">
-                    購物車
+        <section class="header">
+            <div class="header_container container">
+                <div class="row m-0">
+                    <div class="header_content">前往購買 / </div>
+                    <div class="header_btns">
+                        <div class="types_select" data-toggle="collapse" href="#types_select" value="">系列選擇</div>
+                        <div class="option_area collapse" id="types_select">
+                            <div class="option" value="classic">經典系列</div>
+                            <div class="option" value="muddy">濁水琥珀</div>
+                            <div class="option" value="rice">米粒醬油</div>
+                            <div class="option" value="miso">味噌醬油</div>
+                            <div class="option" value="raw">裸醬</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="classic">
+            <div class="soysauce_type">
+                <div class="soysauce_title"></div>
+                <div class="soysauce_summary"></div>
+            </div>
+            <div class="soysauce_product">
+                <div class="product_card">
+                    <div class="product_img"></div>
+                    <div class="product_content">
+                        <div class="product_title"></div>
+                        <div class="product_price"></div>
+                        <div class="product_btn"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer_container container w-100">
@@ -194,12 +219,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/menu_btn.js"></script>
     <script src="./js/nav_position.js"></script>
     <script src="./js/widows_scale.js"></script>
     <script src="./js/background.js"></script>
     <script>
+        $(".option").click(function () {
+            $(".types_select").text($(this).text())
+            $(".types_select").attr("value", $(this).attr("value"))
+            $('#types_select').collapse('hide')
+        });
     </script>
 </body>
 

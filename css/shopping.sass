@@ -1,0 +1,80 @@
+@import "_function.sass"
+body
+    @media ( max-width: 1279px )
+        background-color: #ebebeb
+   
+main
+    text-align: justify
+    height: 100vh
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .header
+        padding: 21px 0 37px
+        .header_container
+            .row
+                
+                .header_content
+                    +FontStyle(32px,$colorBlack,700,7px,1) 
+                    @media ( max-width: 540px )
+                        +FontStyle(22px,$colorBlack,700,7px,31px) 
+                .header_btns
+                    position: relative
+                    .types_select
+                        width: 200px
+                        height: 45px
+                        display: flex
+                        position: relative
+                        align-items: center
+                        justify-content: center
+                        border: 1px solid $colorBlack
+                        +FontStyle(16px,$colorBlack,700,3px,54px) 
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 17px
+                            height: 17px
+                            background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+                        &::after 
+                            content: ""
+                            position: absolute
+                            top: 30%
+                            right: 18px
+                            width: 12px
+                            height: 12px
+                            border-radius: 2px
+                            background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+                            transform: rotate(225deg)
+                    .option_area
+                        border: 1px solid $colorBlack
+                        width: 200px
+                        position: absolute
+                        .option
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            position: relative
+                            +FontStyle(16px,#989898,700,3px,54px) 
+                            &::after
+                                content: ""
+                                position: absolute
+                                bottom: 0
+                                left: 50%
+                                width: 55%
+                                height: 1px
+                                background-color: $colorBlack
+                                transform: translateX(-50%)
+                            &:last-child
+                                &::after
+                                    display: none
+                            &:hover
+                                +FontStyle(16px,$colorBlack,700,3px,54px) 
+                                
