@@ -27,23 +27,25 @@ main
                         width: 100%
                         margin-bottom: 40px
                     .title
-                        +FontStyle(32px,$colorBlack,600,3px,1) 
-                        margin-bottom: 40px
+                        +FontStyle(32px,$colorBlack,700,3px,1) 
+                        margin-bottom: 30px
                         @media ( max-width: 540px )
-                            +FontStyle(22px,$colorBlack,400,3px,31px)   
+                            +FontStyle(22px,$colorBlack,700,3px,31px)   
                         span
                             @media ( max-width: 767px )
                                 display: none
                     .contact_content
                         p
-                            +FontStyle(18px,$colorBlack,400,3px,34px) 
+                            +FontStyle(16px,$colorBlack,400,3px,34px) 
+                            margin-bottom: 40px
                             @media ( max-width: 540px )
                                 +FontStyle(12px,$colorBlack,400,3px,23px) 
                         span
-                            +FontStyle(22px,$colorBlack,600,3px,31px) 
+                            +FontStyle(22px,$colorBlack,700,3px,31px) 
                             @media ( max-width: 540px )
-                                +FontStyle(18px,$colorBlack,600,3px,31px) 
+                                +FontStyle(18px,$colorBlack,700,3px,31px) 
                         .contact_info
+                            padding-top: 30px
                             div
                                 span
                                     +FontStyle(16px,$colorBlack,400,3px,34px) 
@@ -74,7 +76,8 @@ main
                                 @media ( max-width: 1530px )
                                     margin-bottom: 20px
                             .title
-                                +FontStyle(14px,$colorBlack,400,3px,27px) 
+                                +FontStyle(14px,$colorBlack,600,3px,27px) 
+                                margin-bottom: 15px
                             input
                                 width: 500px
                                 height: 34px
@@ -109,6 +112,7 @@ main
                     .submit_area
                         display: flex
                         align-items: flex-end
+                        padding: 0 0 6px
                         @media ( max-width: 1530px )
                             padding: 0 45px
                             justify-content: flex-end

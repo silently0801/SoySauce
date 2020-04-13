@@ -82,17 +82,17 @@ main .header .header_container .row {
 main .header .header_container .row .title {
   font-size: 32px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 @media (max-width: 540px) {
   main .header .header_container .row .title {
     font-size: 22px;
     color: #231714;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;
   }
@@ -133,7 +133,6 @@ main .banner .container .row {
   height: 500px;
   background-size: cover;
   background-position: center;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 1530px) {
@@ -151,7 +150,6 @@ main .banner .container .row {
 @media (max-width: 767px) {
   main .banner .container .row {
     height: 320px;
-    margin-bottom: 20px;
   }
 }
 
@@ -171,12 +169,13 @@ main section .container .row {
 main section .container .row .header {
   position: relative;
   border-top: 1px solid #000;
+  padding: 40px 0;
 }
 
 main section .container .row .header span {
   font-size: 22px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 31px;
 }
@@ -184,7 +183,7 @@ main section .container .row .header span {
 main section .container .row .header span.active {
   font-size: 22px;
   color: #C0362D;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 31px;
 }
@@ -192,7 +191,7 @@ main section .container .row .header span.active {
 main section .container .row .header .arrow {
   position: absolute;
   left: 110px;
-  top: 38%;
+  top: 50%;
   width: 9px;
   height: 9px;
   border-top: 2px solid #231714;
@@ -212,6 +211,10 @@ main section .container .row .header .arrow.active {
   border-left: 2px solid #c0362d;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+main section .container .row .content ul {
+  margin-bottom: 40px;
 }
 
 main section .container .row .content ul li {
@@ -234,6 +237,11 @@ main section .container .row .content ul li {
 
 main section .container .row .content ul li p {
   margin-left: 50px;
+}
+
+main section .container .row .content ul li img {
+  width: 100%;
+  height: auto;
 }
 
 main .payment .container .row .header {
