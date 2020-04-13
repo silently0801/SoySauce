@@ -31,6 +31,9 @@ main
                         margin-bottom: 40px
                         @media ( max-width: 540px )
                             +FontStyle(22px,$colorBlack,400,3px,31px)   
+                        span
+                            @media ( max-width: 767px )
+                                display: none
                     .contact_content
                         p
                             +FontStyle(18px,$colorBlack,400,3px,34px) 
@@ -111,6 +114,8 @@ main
                             justify-content: flex-end
                         @media ( max-width: 1270px )
                             padding: 0
+                        @media ( max-width: 375px )
+                            justify-content: flex-start
                         .submit
                             overflow: hidden
                             position: relative

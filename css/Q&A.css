@@ -98,6 +98,12 @@ main .header .header_container .row .title {
   }
 }
 
+@media (max-width: 767px) {
+  main .header .header_container .row .title span {
+    display: none;
+  }
+}
+
 main .header .header_container .row .content {
   font-size: 18px;
   color: #231714;

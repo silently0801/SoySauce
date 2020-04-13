@@ -106,6 +106,12 @@ main .contact .contact_container .row .contact_header .title {
   }
 }
 
+@media (max-width: 767px) {
+  main .contact .contact_container .row .contact_header .title span {
+    display: none;
+  }
+}
+
 main .contact .contact_container .row .contact_header .contact_content p {
   font-size: 18px;
   color: #231714;
@@ -316,6 +322,14 @@ main .contact .contact_container .row form .submit_area {
 @media (max-width: 1270px) {
   main .contact .contact_container .row form .submit_area {
     padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  main .contact .contact_container .row form .submit_area {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
