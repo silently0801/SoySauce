@@ -197,6 +197,16 @@ main
                                     justify-content: center
                                     align-items: center
                                     +FontStyle(14px,#fff,400,4px,23px) 
+                            .cart_qty.click
+                                display: flex
+                                .layer1
+                                    animation: add_cart 0.2s linear 0.3s 1 forwards
+                                .layer2
+                                    animation: add_cart 0.2s linear 0.2s 1 forwards
+                                .layer3
+                                    animation: add_cart 0.2s linear 0.1s 1 forwards
+                                .layer4
+                                    animation: add_cart 0.2s linear 0s 1 forwards
                             .cart_qty
                                 position: absolute
                                 top: -20px
@@ -204,10 +214,12 @@ main
                                 width: 45px
                                 height: 45px
                                 border-radius: 50%
-                                display: flex
+                                background-color: rgba(#C4362D,1)
+                                display: none
                                 justify-content: center
                                 align-items: center
-                                animation: add_cart 2s
+                                animation: add_cart 1s
+                                animation-delay: 0.5s
                                 span
                                     position: relative
                                     z-index: 10
@@ -240,7 +252,6 @@ main
                                     height: 90px
                                     border-radius: 50%
                                     border: 2px solid rgba(#C4362D,0.4)
-
                         .product_content
                             position: relative
                             .product_title
