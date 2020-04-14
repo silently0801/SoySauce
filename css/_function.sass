@@ -40,18 +40,56 @@ $colorGrey: #808080
 @mixin keyframes($animationName)
     @keyframes #{$animationName}
         @content
-@function randomNum($min, $max)
-  $rand: random()
-  $randomNum: $min + floor($rand * (($max - $min) + 1))
-  @return $randomNum
 
-@include keyframes(square)
-    0%
-        transform: translateX(0)
-        background-color: rgba(255, 255, 255, .3)
+@include keyframes(add_cart)
+    20%
+        .layer4
+            width: 75px
+            height: 75px 
+    40%
+        .layer4
+            width: 60px
+            height: 60px
+        .layer3
+            width: 60px
+            height: 60px 
+    60%
+        .layer4
+            width: 45px
+            height: 45px
+        .layer3
+            width: 45px
+            height: 45px 
+        .layer2
+            width: 45px
+            height: 45px
+     
+    80%
+        .layer4
+            width: 45px
+            height: 45px
+        .layer3
+            width: 45px
+            height: 45px 
+        .layer2
+            width: 45px
+            height: 45px
+        .layer1
+            width: 50px
+            height: 50px 
     100%
-        transform: scale(3) translateX(1000px) rotate(600deg)
-        background-color: rgba(255, 255, 255, 0)
+        .layer4
+            width: 45px
+            height: 45px
+        .layer3
+            width: 45px
+            height: 45px 
+        .layer2
+            width: 45px
+            height: 45px
+        .layer1
+            width: 45px
+            height: 45px 
 
 body
     *
