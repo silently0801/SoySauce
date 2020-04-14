@@ -86,13 +86,20 @@ main
                         li
                             +FontStyle(16px,$colorBlack,400,3px,34px)  
                             @media ( max-width: 540px )
-                                +FontStyle(12px,$colorBlack,400,3px,23px)  
+                                +FontStyle(12px,$colorBlack,400,3px,23px)
+                            &:nth-child(1)
+                                .testing_title
+                                    margin: 0 0 20px
+                            &:nth-child(2)
+                                .testing_title
+                                    margin: 40px 0 20px
                             p
                                 margin-left: 50px
                             img
                                 width: 100%
                                 height: auto
-    .payment
+                                max-width: 848px
+    .payment    
         .container   
             .row
                 .header
