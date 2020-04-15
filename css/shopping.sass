@@ -5,6 +5,10 @@ body
    
 main
     text-align: justify
+    @media ( max-width: 767px )
+        padding-bottom: 50px 
+    @media ( max-width: 540px )
+        padding-bottom: 30px 
     .mask
         position: absolute
         top: 0px
@@ -22,6 +26,8 @@ main
                     +FontStyle(32px,$colorBlack,700,7px,1) 
                     margin-right: 50px
                     @media ( max-width: 540px )
+                        margin-right: unset
+                        margin-bottom: 30px
                         +FontStyle(22px,$colorBlack,700,7px,31px) 
                 .header_btns
                     position: relative
@@ -34,6 +40,8 @@ main
                         justify-content: center
                         border: 1px solid $colorBlack
                         +FontStyle(16px,$colorBlack,700,3px,54px) 
+                        @media ( max-width: 540px )
+                            width: 100%
                         &::before
                             content: ""
                             position: absolute
@@ -57,6 +65,8 @@ main
                         width: 200px
                         position: absolute
                         z-index: 10
+                        @media ( max-width: 540px )
+                            width: 100%
                         .option
                             display: flex
                             align-items: center
@@ -110,6 +120,8 @@ main
                 @media ( max-width: 1279px )
                     left: 50%
                     transform: translateX(-50%)
+                @media ( max-width: 767px )
+                    display: none
             .backline_border
                 width: 100%
                 height: 100%
@@ -124,7 +136,7 @@ main
                     align-items: center
                 .soysauce_type
                     width: 250px
-                    padding: 0 0 220px
+                    padding-bottom: 220px
                     display: flex
                     flex-direction: column
                     @media ( max-width: 1530px )
@@ -133,8 +145,10 @@ main
                         margin-left: 25px
                     @media ( max-width: 1279px )
                         align-items: center
-                        padding: 0 0 40px
+                        padding-bottom: 40px
                         margin-left: 0
+                    @media ( max-width: 540px )
+                        padding-bottom: 20px
                     .soysauce_title
                         width: 175px
                         height: 300px
@@ -144,12 +158,26 @@ main
                         @media ( max-width: 767px )
                             width: 123px
                             height: 214px
+                        @media ( max-width: 540px )
+                            display: none
+                    .soysauce_title_sm
+                        width: 66px
+                        height: 114px
+                        background-size: cover
+                        background-position: center
+                        display: none
+                        margin-bottom: 30px
+                        @media ( max-width: 540px )
+                            display: block
                     .soysauce_summary
                         width: 210px
                         margin-top: auto
                         +FontStyle(16px,$colorGrey,400,1px,31px)
                         @media ( max-width: 1279px ) 
                             width: 310px
+                        @media ( max-width: 540px )
+                            width: 280px
+                            +FontStyle(14px,$colorGrey,400,1px,26px)
                 .soysauce_product  
                     flex: 1
                     @media ( max-width: 1279px ) 
@@ -227,6 +255,7 @@ main
                                         +FontStyle(16px,#fff,700,4px,31px) 
                                         margin-bottom: 40px 
                                         @media ( max-width: 540px )
+                                            margin-bottom: 20px 
                                             +FontStyle(12px,#fff,700,4px,31px) 
                                     .hover_btn
                                         width: 176px
@@ -237,9 +266,9 @@ main
                                         align-items: center
                                         +FontStyle(14px,#fff,400,4px,23px) 
                                         @media ( max-width: 540px )
-                                            width: 176px
-                                            height: 43px
-                                            +FontStyle(12px,#fff,400,4px,23px) 
+                                            width: 110px
+                                            height: 35px
+                                            +FontStyle(12px,#fff,400,1px,23px) 
                                 .cart_qty.click
                                     .layer2
                                         opacity: 1
@@ -346,12 +375,16 @@ main
                         @media ( max-width: 1530px )
                             justify-content: unset  
         &:nth-child(2)
+            /*這是header*/
             .container     
                 .row
                     @media ( max-width: 1279px )
                         flex-direction: unset
                         align-items: unset
                         margin: 0 -15px !important
+                    @media ( max-width: 540px )
+                        margin: 0 !important
+                        flex-direction: column
         &:nth-child(4)
             .container     
                 .row
@@ -362,6 +395,9 @@ main
                             @media ( max-width: 767px )
                                 width: 92px
                                 height: 212px
+                        .soysauce_title_sm
+                            width: 133px
+                            height: 72px
         &:nth-child(5)
             .container     
                 .row
@@ -372,6 +408,9 @@ main
                             @media ( max-width: 767px )
                                 width: 117px
                                 height: 211px
+                        .soysauce_title_sm
+                            width: 129px
+                            height: 86px
         &:nth-child(6)
             .container     
                 .row
@@ -382,6 +421,9 @@ main
                             @media ( max-width: 767px )
                                 width: 92px
                                 height: 211px
+                        .soysauce_title_sm
+                            width: 115px
+                            height: 85px
         &:nth-child(7)
             .container     
                 .row
@@ -389,6 +431,9 @@ main
                         .soysauce_title
                             width: 96px
                             height: 277px 
+                        .soysauce_title_sm
+                            width: 111px
+                            height: 72px
               
                                     
                                 
