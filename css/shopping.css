@@ -415,36 +415,49 @@ main section .container .row .soysauce_product {
   }
 }
 
-main section .container .row .soysauce_product .product_card {
+main section .container .row .soysauce_product .product_cards {
+  width: 100%;
+}
+
+main section .container .row .soysauce_product .product_cards .product_card {
   margin-bottom: 65px;
   margin-right: 28px;
 }
 
 @media (max-width: 1530px) {
-  main section .container .row .soysauce_product .product_card:nth-child(2n) {
+  main section .container .row .soysauce_product .product_cards .product_card:nth-child(2n) {
     margin-right: unset;
   }
 }
 
 @media (min-width: 1531px) {
-  main section .container .row .soysauce_product .product_card:nth-child(3n) {
+  main section .container .row .soysauce_product .product_cards .product_card:nth-child(3n) {
     margin-right: unset;
   }
 }
 
-main section .container .row .soysauce_product .product_card:last-child {
+main section .container .row .soysauce_product .product_cards .product_card:last-child {
   margin-right: unset;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area {
   position: relative;
+  width: 268px;
+  height: 360px;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area:hover .product_hover {
+@media (max-width: 867px) {
+  main section .container .row .soysauce_product .product_cards .product_card .product_img_area {
+    width: 221px;
+    height: 284px;
+  }
+}
+
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area:hover .product_hover {
   opacity: 1;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .product_img {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_img {
   width: 268px;
   height: 360px;
   margin-bottom: 15px;
@@ -455,13 +468,13 @@ main section .container .row .soysauce_product .product_card .product_img_area .
 }
 
 @media (max-width: 867px) {
-  main section .container .row .soysauce_product .product_card .product_img_area .product_img {
+  main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_img {
     width: 221px;
     height: 284px;
   }
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .product_hover {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_hover {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -484,7 +497,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .product_hover .hover_title {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_hover .hover_title {
   font-size: 22px;
   color: #fff;
   font-weight: 700;
@@ -492,7 +505,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   line-height: 31px;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .product_hover .hover_price {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_hover .hover_price {
   font-size: 16px;
   color: #fff;
   font-weight: 700;
@@ -501,7 +514,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   margin-bottom: 40px;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .product_hover .hover_btn {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .product_hover .hover_btn {
   width: 176px;
   height: 43px;
   border: 1px solid #FFF;
@@ -521,31 +534,31 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   line-height: 23px;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty.click .layer2 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty.click .layer2 {
   opacity: 1;
   -webkit-animation: add_cart1 0.2s linear 0.2s 1 alternate forwards;
           animation: add_cart1 0.2s linear 0.2s 1 alternate forwards;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty.click .layer3 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty.click .layer3 {
   opacity: 1;
   -webkit-animation: add_cart2 0.2s linear 0.1s 1 alternate forwards;
           animation: add_cart2 0.2s linear 0.1s 1 alternate forwards;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty.click .layer4 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty.click .layer4 {
   opacity: 1;
   -webkit-animation: add_cart3 0.2s linear 0s 1 alternate forwards;
           animation: add_cart3 0.2s linear 0s 1 alternate forwards;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty.count {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty.count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty {
   position: absolute;
   top: -20px;
   right: -15px;
@@ -566,7 +579,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
           animation-delay: 0.5s;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty span {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty span {
   position: relative;
   z-index: 10;
   font-size: 22px;
@@ -576,7 +589,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   line-height: 1;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty .layer1 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty .layer1 {
   position: absolute;
   z-index: 9;
   width: 45px;
@@ -586,7 +599,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   background-color: #c4362d;
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty .layer2 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty .layer2 {
   position: absolute;
   z-index: 8;
   width: 60px;
@@ -596,7 +609,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   background-color: rgba(196, 54, 45, 0.7);
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty .layer3 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty .layer3 {
   position: absolute;
   z-index: 7;
   width: 75px;
@@ -606,7 +619,7 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   background-color: rgba(196, 54, 45, 0.4);
 }
 
-main section .container .row .soysauce_product .product_card .product_img_area .cart_qty .layer4 {
+main section .container .row .soysauce_product .product_cards .product_card .product_img_area .cart_qty .layer4 {
   position: absolute;
   z-index: 6;
   width: 90px;
@@ -616,11 +629,11 @@ main section .container .row .soysauce_product .product_card .product_img_area .
   border: 2px solid rgba(196, 54, 45, 0.4);
 }
 
-main section .container .row .soysauce_product .product_card .product_content {
+main section .container .row .soysauce_product .product_cards .product_card .product_content {
   position: relative;
 }
 
-main section .container .row .soysauce_product .product_card .product_content .product_title {
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_title {
   font-size: 18px;
   color: #231714;
   font-weight: 700;
@@ -628,7 +641,7 @@ main section .container .row .soysauce_product .product_card .product_content .p
   line-height: 31px;
 }
 
-main section .container .row .soysauce_product .product_card .product_content .product_price {
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_price {
   font-size: 16px;
   color: #808080;
   font-weight: 600;
@@ -636,7 +649,7 @@ main section .container .row .soysauce_product .product_card .product_content .p
   line-height: 31px;
 }
 
-main section .container .row .soysauce_product .product_card .product_content .product_btn {
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn {
   width: 32px;
   height: 32px;
   position: absolute;
@@ -649,12 +662,12 @@ main section .container .row .soysauce_product .product_card .product_content .p
 }
 
 @media (max-width: 767px) {
-  main section .container .row .soysauce_product .product_card .product_content .product_btn {
+  main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn {
     display: none;
   }
 }
 
-main section .container .row .soysauce_product .product_card .product_content .product_btn span::before {
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn span::before {
   content: "";
   width: 18px;
   height: 3px;
@@ -666,7 +679,7 @@ main section .container .row .soysauce_product .product_card .product_content .p
           transform: translate(-50%);
 }
 
-main section .container .row .soysauce_product .product_card .product_content .product_btn span::after {
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn span::after {
   content: "";
   width: 18px;
   height: 3px;
