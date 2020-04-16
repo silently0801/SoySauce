@@ -168,7 +168,7 @@
                 <div class="backline_border"></div>
             </div>
             <div class="collapses">
-                <div class="collapse show product" id="product_1">
+                <div class="collapse product" id="product_1">
                     <a data-toggle="collapse" href="#product_1" class="close_collapse">
                         <div class="line line1"></div>
                         <div class="line line2"></div>
@@ -740,7 +740,7 @@
             $(".types_select").attr("value", $(this).attr("value"))
             $('#types_select').collapse('hide')
         });
-        
+
         $(".product_btn").click(function () {
             $(".cart_qty").removeClass("click")
             $(this).parent(".product_content").parent(".product_card").children(".product_img_area").children(".cart_qty").addClass("count")
