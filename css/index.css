@@ -268,6 +268,10 @@ nav .container .row {
   }
 }
 
+nav .container .row .backEnd ul li {
+  width: 21px;
+}
+
 @media (max-width: 610px) {
   nav .container .row .backEnd ul li {
     width: 50%;

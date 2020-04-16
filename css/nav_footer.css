@@ -259,6 +259,7 @@ nav .container .row .logo .menu_backEnd {
 }
 
 nav .container .row .logo .menu_backEnd ul li {
+  width: 24px;
   margin: 0 5px;
 }
 
@@ -522,6 +523,10 @@ nav .container .row .menu_Area .menu_backEnd {
   nav .container .row .menu_Area .menu_backEnd {
     display: none;
   }
+}
+
+nav .container .row .menu_Area .menu_backEnd ul li {
+  width: 24px;
 }
 
 nav .container .row .menu_Area .menu_backEnd ul li a {
