@@ -918,7 +918,7 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
 
 @media (max-width: 768px) {
   main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
-    padding: 0 80px;
+    padding: 0 70px;
   }
 }
 
@@ -929,7 +929,7 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 18px;
-    padding: 0 45px;
+    padding: 0 40px;
   }
 }
 
