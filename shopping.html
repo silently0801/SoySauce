@@ -758,10 +758,13 @@
         // <div class="qty">1</div>
         // <div class="plus">＋</div>
         $(".minus").click(function () {
-            
-            qty = parseInt($(this).parent(".qty_btn").children(".qty").text());
-            console.log(qty);
-            
+            let qty = $(this).parent(".qty_btn").children(".qty");
+            qty.text(Math.max(parseInt(qty.text())-1, 1));
+        });
+
+        $(".plus").click(function () {
+            let qty = $(this).parent(".qty_btn").children(".qty");
+            qty.text(Math.max(parseInt(qty.text())+1, 1));
         });
 
 
