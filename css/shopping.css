@@ -374,9 +374,9 @@ main section .collapses .product {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product {
-    height: auto;
+    height: 100vh;
   }
 }
 
@@ -407,7 +407,7 @@ main section .collapses .product .close_collapse {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .close_collapse {
     width: 60px;
     height: 40px;
@@ -483,9 +483,9 @@ main section .collapses .product .card {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card {
-    padding: 110px 0 0;
+    padding: 80px 0 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -495,6 +495,8 @@ main section .collapses .product .card {
 
 @media (max-width: 540px) {
   main section .collapses .product .card {
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 60px 0 0;
   }
 }
@@ -517,7 +519,7 @@ main section .collapses .product .card .product_img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_img {
     width: 478px;
     height: 640px;
@@ -558,8 +560,10 @@ main section .collapses .product .card .product_img .header_img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_img .header_img {
+    width: 126px;
+    height: 333px;
     left: -45px;
     top: -65px;
   }
@@ -577,7 +581,7 @@ main section .collapses .product .card .product_detail {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail {
     padding: 55px 0 0;
     width: 478px;
@@ -630,7 +634,7 @@ main section .collapses .product .card .product_detail .product_title {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .product_title {
     padding-left: unset;
     background-color: unset;
@@ -655,7 +659,7 @@ main section .collapses .product .card .product_detail .product_title .product_n
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .product_title .product_name {
     font-size: 32px;
     color: #FFF;
@@ -693,7 +697,7 @@ main section .collapses .product .card .product_detail .product_title .product_p
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .product_title .product_price {
     font-size: 20px;
     color: #FFF;
@@ -729,7 +733,7 @@ main section .collapses .product .card .product_detail .product_content {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .product_content {
     padding: 30px 0 0;
     -webkit-box-ordinal-group: 2;
@@ -746,7 +750,7 @@ main section .collapses .product .card .product_detail .product_content div {
   line-height: 41px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .product_content div {
     white-space: nowrap;
   }
@@ -776,7 +780,7 @@ main section .collapses .product .card .product_detail .add_cart {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .add_cart {
     padding-left: unset;
     -webkit-box-ordinal-group: 1;
@@ -802,7 +806,7 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .add_cart .qty_btn {
     padding: 0 10px;
   }
@@ -834,7 +838,7 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
     padding: 0 80px;
   }
@@ -886,7 +890,7 @@ main section .collapses .product .card .product_detail .add_cart form {
   padding: 0 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main section .collapses .product .card .product_detail .add_cart form {
     padding: 0 45px;
   }

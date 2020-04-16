@@ -146,8 +146,8 @@ main
                     width: 1200px
                 @media ( max-width: 1279px )  
                     width: 100vw
-                @media ( max-width: 767px )
-                    height: auto
+                @media ( max-width: 768px )
+                    height: 100vh
                 .close_collapse
                     border: 1px solid $colorOrange
                     overflow: hidden
@@ -164,7 +164,7 @@ main
                         top: 120px
                     @media ( max-width: 1279px )  
                         top: 200px
-                    @media ( max-width: 767px )  
+                    @media ( max-width: 768px )  
                         width: 60px
                         height: 40px
                         right: 30px
@@ -203,10 +203,12 @@ main
                         padding: 0
                         align-items: center
                         justify-content: center
-                    @media ( max-width: 767px )  
-                        padding: 110px 0 0
+                    @media ( max-width: 768px )  
+                        padding: 80px 0 0
                         flex-direction: column
                     @media ( max-width: 540px)  
+                        overflow-y: scroll
+                        overflow-x: hidden
                         padding: 60px 0 0
                     .product_img
                         width: 570px
@@ -219,7 +221,7 @@ main
                         @media ( max-width: 1279px )  
                             width: 375px
                             height: 500px
-                        @media ( max-width: 767px )  
+                        @media ( max-width: 768px )  
                             width: 478px
                             height: 640px
                         @media ( max-width: 540px)  
@@ -242,7 +244,9 @@ main
                                 height: 397px
                                 left: -45px
                                 top: -65px
-                            @media ( max-width: 767px )
+                            @media ( max-width: 768px )
+                                width: 126px
+                                height: 333px
                                 left: -45px
                                 top: -65px
                     .product_detail
@@ -251,7 +255,7 @@ main
                             padding: 45px 0 0
                             width: 360px
                             height: 500px
-                        @media ( max-width: 767px )  
+                        @media ( max-width: 768px )  
                             padding: 55px 0 0
                             width: 478px
                             display: flex
@@ -274,14 +278,14 @@ main
                             @media ( max-width: 1279px )  
                                 width: 350px
                                 height: 118px 
-                            @media ( max-width: 767px ) 
+                            @media ( max-width: 768px ) 
                                 padding-left: unset
                                 background-color: unset
                             .product_name
                                 +FontStyle(37px,$colorOrange,600,5px,52px)
                                 @media ( max-width: 1279px )  
                                     +FontStyle(32px,$colorOrange,600,5px,52px)
-                                @media ( max-width: 767px ) 
+                                @media ( max-width: 768px ) 
                                     +FontStyle(32px,#FFF,600,5px,52px)
                                 @media ( max-width: 540px) 
                                     +FontStyle(22px,#FFF,600,5px,52px)
@@ -289,22 +293,22 @@ main
                                 +FontStyle(27px,$colorOrange,600,5px,52px)
                                 @media ( max-width: 1279px )  
                                     +FontStyle(20px,$colorOrange,600,5px,52px)
-                                @media ( max-width: 767px ) 
+                                @media ( max-width: 768px ) 
                                     +FontStyle(20px,#FFF,600,5px,52px)
                                 @media ( max-width: 540px) 
-                                    +FontStyle(18px,#FFF,600,5px,52px)
+                                    +FontStyle(18px,#FFF,600,5px,52px)  
                         .product_content
                             padding: 65px 0 65px 100px
                             @media ( max-width: 1530px )   
                                 padding: 65px 0 65px 40px
                             @media ( max-width: 1279px )  
                                 padding: 50px 0 30px 40px
-                            @media ( max-width: 767px )
+                            @media ( max-width: 768px )
                                 padding: 30px 0 0
                                 order: 1
                             div
                                 +FontStyle(18px,#FFF,400,3px,41px)
-                                @media ( max-width: 767px )
+                                @media ( max-width: 768px )
                                     white-space: nowrap
                                 @media ( max-width: 540px) 
                                     white-space: unset
@@ -314,7 +318,7 @@ main
                             display: flex
                             @media ( max-width: 1530px )  
                                 padding-left: 40px
-                            @media ( max-width: 767px )
+                            @media ( max-width: 768px )
                                 padding-left: unset
                                 order: 0
                             .qty_btn
@@ -324,7 +328,7 @@ main
                                 padding: 0 10px
                                 @media ( max-width: 1279px )
                                     padding: 0 5px
-                                @media ( max-width: 767px )  
+                                @media ( max-width: 768px )  
                                     padding: 0 10px
                                 @media ( max-width: 540px ) 
                                     padding: 0 5px
@@ -334,7 +338,7 @@ main
                                     @media ( max-width: 1279px )
                                         +FontStyle(18px,#FFF,400,3px,31px)
                                         padding: 0 10px
-                                    @media ( max-width: 767px )  
+                                    @media ( max-width: 768px )  
                                         padding: 0 80px
                                     @media ( max-width: 540px) 
                                         +FontStyle(13px,#FFF,400,3px,18px)
@@ -350,7 +354,7 @@ main
                                 border: 1px solid #fff
                                 border-left: unset
                                 padding: 0 20px
-                                @media ( max-width: 767px ) 
+                                @media ( max-width: 768px ) 
                                     padding: 0 45px
                                 @media ( max-width: 540px) 
                                     padding: 0 5px
