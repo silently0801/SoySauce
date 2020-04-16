@@ -342,12 +342,24 @@ main
                                 padding: 30px 0 0
                                 order: 1
                             div
+                                display: flex
                                 +FontStyle(18px,#FFF,400,3px,41px)
+                                span
+                                    &:nth-child(1)
+                                        width: 110px
+                                        @media ( max-width: 767px) 
+                                            width: 95px
+                                            margin-right: 10px
+                                        @media ( max-width: 540px) 
+                                            width: 80px
+                                    &:nth-child(2)
+                                        flex: 1
                                 @media ( max-width: 768px )
                                     white-space: nowrap
                                 @media ( max-width: 540px) 
                                     white-space: unset
                                     +FontStyle(12px,#FFF,400,3px,23px)
+                                    
                         .add_cart
                             padding-left: 100px
                             display: flex
