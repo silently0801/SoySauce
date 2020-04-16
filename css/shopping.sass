@@ -1,4 +1,29 @@
 @import "_function.sass"
+
+@mixin close_collapse()
+    overflow: hidden
+    position: absolute
+    z-index: 5
+    transition: 0s
+    .line
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 300px
+        height: 1px
+        z-index: 10
+        background-color: $colorOrange
+        @media ( max-width: 1530px ) 
+            background-color: #FFF 
+    .line1
+        transform: translate(-50%) rotate(45deg)
+        @media ( max-width: 1530px ) 
+            transform: translate(-50%) rotate(35deg)
+    .line2
+        transform: translate(-50%) rotate(-45deg)
+        @media ( max-width: 1530px ) 
+            transform: translate(-50%) rotate(-35deg)
+
 body
     @media ( max-width: 1279px )
         background-color: #ebebeb
@@ -145,49 +170,20 @@ main
                 @media ( max-width: 1530px )
                     width: 1200px
                 @media ( max-width: 1279px )  
-                    width: 100vw
+                    width: 100%
                 @media ( max-width: 768px )
+                    overflow-y: scroll
+                    overflow-x: hidden
                     height: 100vh
                 .close_collapse
+                    +close_collapse()
                     border: 1px solid $colorOrange
-                    overflow: hidden
                     width: 150px
                     height: 150px
-                    position: absolute
                     right: -150px
                     top: 150px
-                    transition: 0s
-                    @media ( max-width: 1530px )   
-                        width: 100px
-                        height: 70px
-                        right: 56px
-                        top: 120px
-                    @media ( max-width: 1279px )  
-                        top: 200px
-                    @media ( max-width: 768px )  
-                        width: 60px
-                        height: 40px
-                        right: 30px
-                        top: 30px
-                    @media ( max-width: 540px)  
-                        width: 20px
-                        height: 15px
-                        right: 25px
-                        top: 25px
-                    .line
-                        position: absolute
-                        top: 50%
-                        left: 50%
-                        width: 300px
-                        height: 1px
-                        z-index: 10
-                        background-color: $colorOrange
-                        @media ( max-width: 1530px ) 
-                            background-color: #FFF 
-                    .line1
-                        transform: translate(-50%) rotate(35deg)
-                    .line2
-                        transform: translate(-50%) rotate(-35deg)
+                    @media ( max-width: 1530px )  
+                        display: none
                 .card
                     width: 100%
                     height: 100%
@@ -203,16 +199,16 @@ main
                         padding: 0
                         align-items: center
                         justify-content: center
-                    @media ( max-width: 768px )  
-                        padding: 80px 0 0
+                    @media ( max-width: 768px ) 
+                        height: auto
+                        padding: 120px 0 
                         flex-direction: column
                     @media ( max-width: 540px)  
-                        overflow-y: scroll
-                        overflow-x: hidden
-                        padding: 60px 0 0
+                        padding: 70px 0 40px
                     .product_img
                         width: 570px
                         height: 760px
+                        min-height: 760px
                         position: relative
                         z-index: 2
                         background-size: cover
@@ -221,12 +217,15 @@ main
                         @media ( max-width: 1279px )  
                             width: 375px
                             height: 500px
+                            min-height: 500px
                         @media ( max-width: 768px )  
                             width: 478px
                             height: 640px
+                            min-height: 640px
                         @media ( max-width: 540px)  
                             width: 280px
                             height: 375px
+                            min-height: 375px
                         .header_img
                             width: 285px
                             height: 752px
@@ -249,38 +248,73 @@ main
                                 height: 333px
                                 left: -45px
                                 top: -65px
+                            @media ( max-width: 540px )
+                                width: 93px
+                                height: 247px
+                                left: -21px
+                                top: -69px
                     .product_detail
                         padding: 230px 0 0
+                        position: relative
                         @media ( max-width: 1279px ) 
                             padding: 45px 0 0
                             width: 360px
                             height: 500px
+                            min-height: 500px
                         @media ( max-width: 768px )  
+                            height: auto
+                            min-height: unset
                             padding: 55px 0 0
                             width: 478px
                             display: flex
                             flex-direction: column
                         @media ( max-width: 540px)  
                             width: 280px
-                            padding: 30px 0 0
+                            padding: 0
+                        .close_collapse
+                            @media ( max-width: 1530px )  
+                                display: block
+                                border: unset 
+                                width: 100px
+                                height: 70px
+                                right: 30px
+                                top: 0
+                            @media ( max-width: 1279px )  
+                                right: 10px
+                                top: -100px
+                            @media ( max-width: 768px )  
+                                width: 60px
+                                height: 40px
+                                right: 0px
+                                top: -710px
+                            @media ( max-width: 540px)  
+                                width: 20px
+                                height: 15px
+                                top: -410px
                         .product_title
                             width: 590px
                             height: 122px
+                            min-height: 122px
                             padding-left: 100px
                             background-color: #FFF
                             display: flex
                             flex-direction: column
-                            justify-content: center 
+                            justify-content: center
                             @media ( max-width: 1530px )   
                                 padding-left: 40px 
                                 width: 515px
                                 height: 118px 
+                                min-height: 118px
                             @media ( max-width: 1279px )  
-                                width: 350px
-                                height: 118px 
+                                width: 350px                
                             @media ( max-width: 768px ) 
+                                width: unset
                                 padding-left: unset
                                 background-color: unset
+                            @media ( max-width: 540px )
+                                padding: 30px 0 
+                                height: auto
+                                min-height: unset
                             .product_name
                                 +FontStyle(37px,$colorOrange,600,5px,52px)
                                 @media ( max-width: 1279px )  
@@ -288,7 +322,8 @@ main
                                 @media ( max-width: 768px ) 
                                     +FontStyle(32px,#FFF,600,5px,52px)
                                 @media ( max-width: 540px) 
-                                    +FontStyle(22px,#FFF,600,5px,52px)
+                                    +FontStyle(22px,#FFF,600,5px,1)
+                                    margin: 0 0 10px
                             .product_price
                                 +FontStyle(27px,$colorOrange,600,5px,52px)
                                 @media ( max-width: 1279px )  
@@ -296,7 +331,7 @@ main
                                 @media ( max-width: 768px ) 
                                     +FontStyle(20px,#FFF,600,5px,52px)
                                 @media ( max-width: 540px) 
-                                    +FontStyle(18px,#FFF,600,5px,52px)  
+                                    +FontStyle(18px,#FFF,600,5px,1)  
                         .product_content
                             padding: 65px 0 65px 100px
                             @media ( max-width: 1530px )   
