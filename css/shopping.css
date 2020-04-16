@@ -403,7 +403,7 @@ main section .collapses .product .close_collapse {
 
 @media (max-width: 1279px) {
   main section .collapses .product .close_collapse {
-    top: 250px;
+    top: 200px;
   }
 }
 
