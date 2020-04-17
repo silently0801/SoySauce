@@ -100,6 +100,24 @@
   }
 }
 
+@-webkit-keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
 body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
@@ -138,6 +156,13 @@ body nav {
 
 .hidden {
   overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .hidden {
+    position: relative;
+    left: -9px;
+  }
 }
 
 a:hover {

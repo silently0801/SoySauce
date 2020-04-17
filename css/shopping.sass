@@ -178,9 +178,18 @@ main
                     overflow-y: scroll
                     overflow-x: hidden
                     height: 100vh
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 9px
+                    right: -100px
+                    width: 100px
+                    height: 500px
+                    background-color: #ebebeb
                 .close_collapse
                     +close_collapse()
                     border: 1px solid $colorOrange
+                    background-color: #ebebeb
                     width: 150px
                     height: 150px
                     right: -150px
@@ -275,6 +284,7 @@ main
                             width: 280px
                             padding: 0
                         .close_collapse
+                            display: none
                             @media ( max-width: 1530px )  
                                 display: block
                                 border: unset 
@@ -639,8 +649,8 @@ main
                                     transform: translateY(-50%)
                                     display: flex
                                     &:hover .minus
-                                        right: 0
                                         opacity: 1
+                                        animation: minus 0.3s linear 0s 1 alternate forwards
                                     @media ( max-width: 767px )
                                         display: none
                                     .minus    
@@ -663,6 +673,8 @@ main
                                             transform: translate(-50%)
                                     .minus.active
                                         display: block
+                                    .minus.remove
+                                        right: -28px !important
                                     .plus
                                         position: relative
                                         width: 24px

@@ -100,6 +100,24 @@
   }
 }
 
+@-webkit-keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
 body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
@@ -406,6 +424,16 @@ main section .collapses .product {
   }
 }
 
+main section .collapses .product::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -100px;
+  width: 100px;
+  height: 500px;
+  background-color: #ebebeb;
+}
+
 main section .collapses .product .close_collapse {
   overflow: hidden;
   position: absolute;
@@ -413,6 +441,7 @@ main section .collapses .product .close_collapse {
   -webkit-transition: 0s;
   transition: 0s;
   border: 1px solid #C0362D;
+  background-color: #ebebeb;
   width: 150px;
   height: 150px;
   right: -150px;
@@ -630,6 +659,10 @@ main section .collapses .product .card .product_detail {
     width: 280px;
     padding: 0;
   }
+}
+
+main section .collapses .product .card .product_detail .close_collapse {
+  display: none;
 }
 
 @media (max-width: 1530px) {
@@ -1530,8 +1563,9 @@ main section .container .row .soysauce_product .product_cards .product_card .pro
 }
 
 main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn:hover .minus {
-  right: 0;
   opacity: 1;
+  -webkit-animation: minus 0.3s linear 0s 1 alternate forwards;
+          animation: minus 0.3s linear 0s 1 alternate forwards;
 }
 
 @media (max-width: 767px) {
@@ -1565,6 +1599,10 @@ main section .container .row .soysauce_product .product_cards .product_card .pro
 
 main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn .minus.active {
   display: block;
+}
+
+main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn .minus.remove {
+  right: -28px !important;
 }
 
 main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn .plus {

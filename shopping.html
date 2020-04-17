@@ -162,7 +162,7 @@
                 </div>
             </div>
         </section>
-        <section class="classic">
+        <section class="classic products_type">
             <div class="backline">
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
@@ -243,7 +243,7 @@
                                     <div class="product_title">米粒原燉醬油</div>
                                     <div class="product_price">售 價 | NT.350/瓶</div>
                                     <div class="product_btn">
-                                        <div class="minus active">
+                                        <div class="minus">
                                             <div class="line1"></div>
                                         </div>
                                         <div class="plus">
@@ -515,7 +515,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="muddy products_type">
             <div class="backline">
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
@@ -631,7 +631,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="rice products_type">
             <div class="backline">
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
@@ -716,7 +716,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="miso products_type">
             <div class="backline">
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
@@ -769,7 +769,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="raw products_type">
             <div class="backline">
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
@@ -863,6 +863,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src="./js/menu_btn.js"></script>
     <script src="./js/nav_position.js"></script>
     <script src="./js/widows_scale.js"></script>
@@ -872,6 +873,11 @@
         $(".option").click(function () {
             $(".types_select").text($(this).text())
             $(".types_select").attr("value", $(this).attr("value"))
+            $(".products_type").hide();
+            if ($(this).attr("value") == "all")
+                $(".products_type").show();
+            else
+                $(`.products_type.${$(this).attr("value")}`).show();
             $('#types_select').collapse('hide')
         });
 
@@ -882,8 +888,8 @@
             /*目前數量-1*/
             qty.text(Math.max(parseInt(qty.text()) - 1, 0));
             /*判斷數量低於0移除右上數量*/
-            if(parseInt(qty.text()) == 0){
-                $(this).parent(".product_btn").parent(".product_content").parent(".product_card").children(".product_img_area").children(".cart_qty").removeClass("count")  
+            if (parseInt(qty.text()) == 0) {
+                $(this).parent(".product_btn").parent(".product_content").parent(".product_card").children(".product_img_area").children(".cart_qty").removeClass("count")
                 $(this).removeClass("active");
             }
             /*動畫*/
