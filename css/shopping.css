@@ -903,6 +903,10 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn .qty {
   letter-spacing: 3px;
   line-height: 31px;
   padding: 0 80px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (max-width: 1279px) {
@@ -940,6 +944,10 @@ main section .collapses .product .card .product_detail .add_cart .qty_btn .minus
   letter-spacing: 3px;
   line-height: 31px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (max-width: 1279px) {
