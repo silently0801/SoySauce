@@ -663,6 +663,7 @@ main section .collapses .product .card .product_detail {
 
 main section .collapses .product .card .product_detail .close_collapse {
   display: none;
+  background-color: unset;
 }
 
 @media (max-width: 1530px) {
