@@ -40,7 +40,6 @@ main
                             display: none
                             @media ( max-width: 767px )
                                 display: block
-                                
     .classic
         position: relative
         .square
@@ -74,6 +73,8 @@ main
                 background-position: left
             @media ( max-width: 767px )
                 height: 320px
+            @media ( max-width: 540px )
+                height: 200px
         .container
             height: 923px
             margin-bottom: 120px
@@ -84,6 +85,8 @@ main
             @media ( max-width: 767px )
                 height: 520px
                 margin-bottom: unset
+            @media ( max-width: 540px )
+                height: 400px
             .row
                 padding-top: 135px
                 @media ( max-width: 1279px )
@@ -92,6 +95,8 @@ main
                     padding-top: 95px
                     align-items: center
                     justify-content: center
+                @media ( max-width: 540px )
+                    padding-top: 28px
                 .product_content
                     @media ( max-width: 767px )
                         position: relative
@@ -109,6 +114,8 @@ main
                             width: 73px
                             height: 128px
                             margin-bottom: 130px
+                        @media ( max-width: 540px )
+                            margin-bottom: 79px
                     .content
                         +FontStyle(18px,#FFF,400,3px,33px) 
                         margin-bottom: 45px 
@@ -175,12 +182,17 @@ main
                 box-shadow: unset
                 width: 100%
                 height: 320px
+            @media ( max-width: 540px )
+                height: 200px
         .container
             height: 700px
             margin-bottom: 120px
             @media ( max-width: 767px )
                 height: 540px
                 margin-bottom: 5px
+            @media ( max-width: 540px )
+                margin-bottom: 35px
+                height: auto
             .row
                 padding-top: 166px
                 @media ( max-width: 767px )
@@ -188,6 +200,8 @@ main
                     align-items: center
                     justify-content: center
                     margin: unset
+                @media ( max-width: 540px )
+                    padding-top: 70px
                 .product_content
                     @media ( max-width: 767px )
                         position: relative
@@ -206,6 +220,8 @@ main
                             width: 123px
                             height: 72px
                             margin-bottom: 160px
+                        @media ( max-width: 540px )
+                            margin-bottom: 92px
                     .content
                         +FontStyle(18px,#FFF,400,3px,33px) 
                         width: 377px
@@ -251,6 +267,8 @@ main
                 height: 480px
             @media ( max-width: 767px )
                 height: 320px
+            @media ( max-width: 540px )
+                height: 200px
         .container
             height: 700px
             margin-bottom: 120px
@@ -258,7 +276,11 @@ main
                 height: auto
                 margin-bottom: 80px
             @media ( max-width: 767px )
+                height: 500px
                 margin-bottom: 35px
+            @media ( max-width: 540px )
+                margin-bottom: 50px
+                height: auto
             .row
                 padding-top: 56px
                 justify-content: center
@@ -266,7 +288,9 @@ main
                 @media ( max-width: 1279px )
                     padding-top: 105px
                 @media ( max-width: 767px )
-                    adding-top: 95px
+                    padding-top: 95px
+                @media ( max-width: 540px )
+                    padding-top: 40px
                 .product_content
                     display: flex
                     flex-direction: column
@@ -286,6 +310,8 @@ main
                             width: 94px
                             height: 129px
                             margin-bottom: 130px 
+                        @media ( max-width: 540px )
+                            margin-bottom: 65px 
                     .content
                         +FontStyle(18px,#FFF,600,3px,33px) 
                         text-align: center
@@ -294,6 +320,7 @@ main
                         @media ( max-width: 1279px )
                             +FontStyle(18px,$colorBlack,400,3px,33px) 
                         @media ( max-width: 767px )
+                            width: unset
                             margin-bottom: 60px 
                             +FontStyle(14px,$colorBlack,400,3px,26px) 
                             &::after
@@ -305,7 +332,7 @@ main
                                 bottom: 65px
                                 left: 50%
                                 transform: translateX(-50%)
-                                
+
                     .product_btn
                         width: 176px
                         text-align: center
@@ -358,6 +385,8 @@ main
                 box-shadow: unset
                 background-position: 60% 50%
                 height: 320px
+            @media ( max-width: 540px )
+                height: 200px
         .container
             height: 923px
             margin-bottom: 120px
@@ -375,6 +404,9 @@ main
                 width: 100%
                 height: 560px
                 padding: 0 5%
+            @media ( max-width: 540px )
+                margin-bottom: 35px
+                height: auto
             .row
                 @media ( max-width: 1279px )
                     padding-top: 63px
@@ -383,6 +415,8 @@ main
                     margin: unset
                     align-items: center
                     justify-content: center
+                @media ( max-width: 540px )
+                    padding-top: 65px
                 .product_content
                     position: relative
                     @media ( max-width: 767px )
@@ -404,6 +438,8 @@ main
                             width: 96px
                             height: 82px   
                             background-image: url(../img/03-1-系列介紹-列表頁面/miso_sm.png)
+                        @media ( max-width: 540px )
+                            margin-bottom: 90px
                     .content
                         +FontStyle(18px,$colorBlack,400,3px,31px) 
                         width: 458px
@@ -459,6 +495,8 @@ main
                 background-position: 20% 50%
                 width: 100%
                 height: 320px
+            @media ( max-width: 540px )
+                height: 200px
         .container
             height: 700px
             margin-bottom: 155px
@@ -467,12 +505,17 @@ main
             @media ( max-width: 767px )
                 height: 600px
                 margin-bottom: unset
+            @media ( max-width: 540px )
+                margin-bottom: 30px
+                height: auto
             .row
                 padding-top: 136px
                 justify-content: center
                 align-items: center
                 @media ( max-width: 767px )
                     padding-top: 105px
+                @media ( max-width: 540px )
+                    padding-top: 45px
                 .product_content
                     display: flex
                     flex-direction: column
@@ -489,6 +532,8 @@ main
                             width: 55px
                             height: 114px
                             margin-bottom: 135px 
+                        @media ( max-width: 540px )
+                            margin-bottom: 75px 
                     .content
                         width: 150px
                         height: 92px
@@ -508,6 +553,11 @@ main
                                 bottom: 125px
                                 left: 50%
                                 transform: translateX(-50%)
+                        @media ( max-width: 540px )
+                            margin-bottom: 50px 
+                            &::after
+                                bottom: 65px
+
                     .product_btn
                         width: 176px
                         text-align: center
