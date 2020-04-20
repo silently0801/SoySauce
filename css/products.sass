@@ -6,8 +6,6 @@ body
    
 main
     text-align: justify
-    @media ( max-width: 767px )
-        padding-bottom: 50px 
     @media ( max-width: 540px )
         padding-bottom: 30px 
     .mask
@@ -296,9 +294,10 @@ main
                         width: 377px
                         margin-bottom: 45px 
                         @media ( max-width: 1279px )
-                            +FontStyle(18px,$colorBlack,600,3px,33px) 
+                            +FontStyle(18px,$colorBlack,400,3px,33px) 
                         @media ( max-width: 767px )
                             margin-bottom: 60px 
+                            +FontStyle(14px,$colorBlack,400,3px,26px) 
                             &::after
                                 content: ""
                                 width: 160px
@@ -308,6 +307,7 @@ main
                                 bottom: 65px
                                 left: 50%
                                 transform: translateX(-50%)
+                                
                     .product_btn
                         width: 176px
                         text-align: center
@@ -331,6 +331,14 @@ main
             z-index: -1
             @media ( max-width: 1279px )
                 display: none
+            @media ( max-width: 767px )
+                display: block
+                background-color: $colorOrange
+                height: 500px
+                width: 100%
+                left: 0
+                bottom: -100px
+                z-index: -3
         .bg_img
             height: 923px
             width: calc( (100% - 1140px) / 2 + 1140px )
@@ -350,6 +358,7 @@ main
                 background-position: left
             @media ( max-width: 767px ) 
                 box-shadow: unset
+                background-position: 60% 50%
                 height: 320px
         .container
             height: 923px
@@ -364,14 +373,25 @@ main
                 max-width: 70% !important 
             @media ( max-width: 767px )
                 max-width: 100% !important
+                margin-bottom: 25px
                 width: 100%
                 height: 560px
                 padding: 0 5%
             .row
                 @media ( max-width: 1279px )
                     padding-top: 63px
+                @media ( max-width: 767px )
+                    padding-top: 120px
+                    margin: unset
+                    align-items: center
+                    justify-content: center
                 .product_content
                     position: relative
+                    @media ( max-width: 767px )
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center    
                     .title
                         width: 105px
                         height: 558px
@@ -385,14 +405,26 @@ main
                         @media ( max-width: 767px )
                             width: 96px
                             height: 82px   
-                            background-image: url(../img/03-1-系列介紹-列表頁面/miso_white.png)
+                            background-image: url(../img/03-1-系列介紹-列表頁面/miso_sm.png)
                     .content
-                        +FontStyle(18px,$colorBlack,600,3px,31px) 
+                        +FontStyle(18px,$colorBlack,400,3px,31px) 
                         width: 458px
                         margin-bottom: 45px 
                         @media ( max-width: 1279px )
                             margin-bottom: 40px 
                             width: 100%
+                        @media ( max-width: 767px )
+                            margin-bottom: 70px 
+                            +FontStyle(14px,#FFF,400,3px,23px) 
+                            &::after
+                                content: ""
+                                width: 160px
+                                height: 2px
+                                background-color: #FFF
+                                position: absolute
+                                bottom: 65px
+                                left: 50%
+                                transform: translateX(-50%)
                     .product_btn
                         position: relative
                         width: 176px
@@ -401,6 +433,11 @@ main
                         padding: 16px 22px
                         left: 35%
                         +FontStyle(12px,$colorBlack,600,4px,1)   
+                        @media ( max-width: 767px )
+                            border: 1px solid #FFF
+                            +FontStyle(12px,#FFF,600,4px,1)   
+                            padding: 9px 22px
+                            left: 0
     .raw
         position: relative
         .square
@@ -419,15 +456,25 @@ main
                 width: calc( (100% - 1000px) / 2 + 1000px )
             @media ( max-width: 1279px )
                 width: 85%
+            @media ( max-width: 767px )
+                box-shadow: unset
+                background-position: 20% 50%
+                width: 100%
+                height: 320px
         .container
             height: 700px
             margin-bottom: 155px
             @media ( max-width: 1279px )
                 margin-bottom: 75px
+            @media ( max-width: 767px )
+                height: 600px
+                margin-bottom: unset
             .row
                 padding-top: 136px
                 justify-content: center
                 align-items: center
+                @media ( max-width: 767px )
+                    padding-top: 105px
                 .product_content
                     display: flex
                     flex-direction: column
@@ -439,16 +486,37 @@ main
                         background-position: center
                         background-size: cover
                         margin-bottom: 42px 
+                        @media ( max-width: 767px )
+                            background-image: url(../img/03-1-系列介紹-列表頁面/raw_sm.png)
+                            width: 55px
+                            height: 114px
+                            margin-bottom: 135px 
                     .content
                         width: 150px
                         height: 92px
-                        background-image: url(../img/03-1-系列介紹-列表頁面/raw_content.png)
+                        background-image: url(../img/03-1-系列介紹-列表頁面/raw_content_white.png)
                         background-position: center
                         background-size: cover
                         margin-bottom: 46px 
+                        @media ( max-width: 767px )
+                            margin-bottom: 75px 
+                            background-image: url(../img/03-1-系列介紹-列表頁面/raw_content_black.png)
+                            &::after
+                                content: ""
+                                width: 160px
+                                height: 2px
+                                background-color: $colorBlack
+                                position: absolute
+                                bottom: 125px
+                                left: 50%
+                                transform: translateX(-50%)
                     .product_btn
                         width: 176px
                         text-align: center
                         border: 1px solid #FFF
                         padding: 16px 22px
                         +FontStyle(12px,#FFF,600,4px,1)  
+                        @media ( max-width: 767px )
+                            border: 1px solid $colorBlack
+                            +FontStyle(12px,$colorBlack,600,4px,1)   
+                            padding: 9px 22px
