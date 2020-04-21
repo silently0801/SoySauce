@@ -1,5 +1,10 @@
 @import "_function.sass"
 
+.product_btn
+    &:hover
+        background-color: rgba(#FFF, .4)
+
+
 body
     @media ( max-width: 1530px )
         background-color: #ebebeb
@@ -117,7 +122,7 @@ main
                         @media ( max-width: 540px )
                             margin-bottom: 79px
                     .content
-                        +FontStyle(18px,#FFF,400,3px,33px) 
+                        +FontStyle(16px,#FFF,700,3px,33px) 
                         margin-bottom: 45px 
                         @media ( max-width: 767px )
                             margin-bottom: 52px 
@@ -133,11 +138,11 @@ main
                                 left: 50%
                                 transform: translateX(-50%)
                     .product_btn
-                        width: 176px
+                        width: 180px
                         text-align: center
                         border: 1px solid #FFF
-                        padding: 16px 22px
-                        +FontStyle(12px,#FFF,600,4px,1) 
+                        padding: 14px 24px
+                        +FontStyle(12px,#FFF,700,3px,1) 
                         @media ( max-width: 767px ) 
                             padding: 9px 22px
     .muddy
@@ -223,7 +228,7 @@ main
                         @media ( max-width: 540px )
                             margin-bottom: 92px
                     .content
-                        +FontStyle(18px,#FFF,400,3px,33px) 
+                        +FontStyle(16px,#FFF,700,3px,33px) 
                         width: 377px
                         margin-bottom: 45px 
                         @media ( max-width: 767px )
@@ -240,14 +245,14 @@ main
                                 left: 50%
                                 transform: translateX(-50%)
                     .product_btn
-                        width: 176px
+                        width: 180px
                         text-align: center
                         border: 1px solid #FFF
-                        padding: 16px 22px
-                        +FontStyle(12px,#FFF,600,4px,1)  
+                        padding: 14px 24px
+                        +FontStyle(12px,#FFF,700,3px,1)  
                         @media ( max-width: 767px ) 
                             border: 1px solid $colorBlack
-                            +FontStyle(12px,$colorBlack,600,4px,1)  
+                            +FontStyle(12px,$colorBlack,700,3px,1)  
                             padding: 9px 22px
     .rice
         position: relative
@@ -267,6 +272,7 @@ main
                 height: 480px
             @media ( max-width: 767px )
                 height: 320px
+                box-shadow: unset
             @media ( max-width: 540px )
                 height: 200px
         .container
@@ -313,7 +319,7 @@ main
                         @media ( max-width: 540px )
                             margin-bottom: 65px 
                     .content
-                        +FontStyle(18px,#FFF,600,3px,33px) 
+                        +FontStyle(16px,#FFF,700,3px,33px) 
                         text-align: center
                         width: 377px
                         margin-bottom: 45px 
@@ -332,16 +338,15 @@ main
                                 bottom: 65px
                                 left: 50%
                                 transform: translateX(-50%)
-
                     .product_btn
-                        width: 176px
+                        width: 180px
                         text-align: center
                         border: 1px solid #FFF
-                        padding: 16px 22px
-                        +FontStyle(12px,#FFF,600,4px,1)  
+                        padding: 14px 24px
+                        +FontStyle(12px,#FFF,700,3px,1)  
                         @media ( max-width: 1279px )
                             border: 1px solid $colorBlack
-                            +FontStyle(12px,$colorBlack,600,4px,1)
+                            +FontStyle(12px,$colorBlack,700,3px,1)
                         @media ( max-width: 767px ) 
                             padding: 9px 22px
     .miso
@@ -441,7 +446,7 @@ main
                         @media ( max-width: 540px )
                             margin-bottom: 90px
                     .content
-                        +FontStyle(18px,$colorBlack,400,3px,31px) 
+                        +FontStyle(16px,$colorBlack,700,3px,33px) 
                         width: 458px
                         margin-bottom: 45px 
                         @media ( max-width: 1279px )
@@ -461,15 +466,15 @@ main
                                 transform: translateX(-50%)
                     .product_btn
                         position: relative
-                        width: 176px
+                        width: 180px
                         text-align: center
                         border: 1px solid $colorBlack
-                        padding: 16px 22px
-                        left: 35%
-                        +FontStyle(12px,$colorBlack,600,4px,1)   
+                        padding: 14px 24px
+                        left: 0
+                        +FontStyle(12px,$colorBlack,700,3px,1)   
                         @media ( max-width: 767px )
                             border: 1px solid #FFF
-                            +FontStyle(12px,#FFF,600,4px,1)   
+                            +FontStyle(12px,#FFF,700,3px,1)   
                             padding: 9px 22px
                             left: 0
     .raw
@@ -559,12 +564,12 @@ main
                                 bottom: 65px
 
                     .product_btn
-                        width: 176px
+                        width: 180px
                         text-align: center
                         border: 1px solid #FFF
-                        padding: 16px 22px
-                        +FontStyle(12px,#FFF,600,4px,1)  
+                        padding: 14px 24px
+                        +FontStyle(12px,#FFF,700,3px,1)  
                         @media ( max-width: 767px )
                             border: 1px solid $colorBlack
-                            +FontStyle(12px,$colorBlack,600,4px,1)   
+                            +FontStyle(12px,$colorBlack,700,3px,1)   
                             padding: 9px 22px

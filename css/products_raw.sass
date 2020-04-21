@@ -1,0 +1,294 @@
+@import "_function.sass"
+.container
+    @media ( max-width: 1530px )
+        max-width: 1140px !important 
+        width: 100%
+    @media ( max-width: 1279px )
+        max-width: 70% !important 
+    @media ( max-width: 767px )
+        max-width: 100% !important
+        width: 100%
+        padding: 0 5%
+
+
+body
+    @media ( max-width: 1530px )
+        background-color: #ebebeb
+main
+    text-align: justify
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .header
+        padding: 30px 0 35px
+        .header_container
+            .row
+                justify-content: unset
+                align-items: unset
+                .header_content
+                    span
+                        &:nth-child(1)
+                            +FontStyle(32px,$colorBlack,700,7px,49px) 
+                            @media ( max-width: 540px )
+                                +FontStyle(22px,$colorBlack,700,7px,1)  
+                        &:nth-child(2)
+                            +FontStyle(18px,$colorBlack,700,3px,31px)  
+    .rice
+        .carousel
+            .swiper-container
+                width: 100%
+                height: 713px
+                @media ( max-width: 1530px )
+                    height: 600px
+                @media ( max-width: 1279px )
+                    height: 445px
+                @media ( max-width: 767px )
+                    height: 260px
+                @media ( max-width: 540px )
+                    height: 200px
+                .swiper-wrapper
+                    .swiper-slide
+                        text-align: center
+                        font-size: 18px
+                        background: #fff
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background-position: center
+                        background-size: cover
+            .swiper-pagination
+                .swiper-pagination-bullet
+                    background-color: #ffffff
+                    opacity: 1
+                .swiper-pagination-bullet-active
+                    background-color: $colorOrange
+        .introduction
+            .container
+                .row
+                    margin: unset
+                    @media ( max-width: 1279px )
+                        flex-direction: column
+                    .introduction_header
+                        position: relative
+                        width: 50%
+                        height: 830px
+                        display: flex
+                        justify-content: center
+                        @media ( max-width: 1279px )
+                            width: 100%
+                        @media ( max-width: 767px )
+                            height: 460px
+                        @media ( max-width: 540px )
+                            height: 380px
+                        .header_bg
+                            width: 243px
+                            height: 515px
+                            background-color: #B2362D
+                            @media ( max-width: 767px )
+                                width: 115px
+                                height: 244px
+                        .header_title
+                            position: absolute
+                            left: 50%
+                            top: 65px
+                            z-index: 2
+                            transform: translateX(-50%)
+                            +FontStyle(123px,#FFF,500,7px,141px)
+                            @media ( max-width: 767px )
+                                top: 25px
+                                +FontStyle(58px,#FFF,500,7px,75px)
+                        .header_img
+                            width: 490px
+                            height: 490px
+                            position: absolute
+                            left: 50%
+                            top: 280px
+                            border-radius: 50%
+                            transform: translateX(-50%)
+                            background-position: center
+                            background-size: cover
+                            @media ( max-width: 767px )
+                                width: 320px
+                                height: 320px
+                                top: 140px
+                            @media ( max-width: 540px )
+                                width: 230px
+                                height: 230px
+                    .introduction_type
+                        width: 50%
+                        padding-top: 230px
+                        @media ( max-width: 1279px )
+                            width: 100%
+                            padding-top: 70px
+                        @media ( max-width: 767px )
+                            padding-top: 30px
+                        .type_title
+                            position: relative
+                            +FontStyle(48px,$colorBlack,600,7px,74px) 
+                            margin-bottom: 20px
+                            @media ( max-width: 1279px )
+                                text-align: center
+                            @media ( max-width: 767px )
+                                +FontStyle(36px,$colorBlack,600,7px,74px) 
+                                br
+                                    display: none
+                            @media ( max-width: 540px )
+                                +FontStyle(22px,$colorBlack,600,7px,31px) 
+                            span
+                                &:nth-child(2)
+                                    +FontStyle(22px,$colorBlack,600,4px,36px) 
+                                    @media ( max-width: 767px )
+                                        +FontStyle(18px,$colorBlack,600,4px,36px)
+                                    @media ( max-width: 767px ) 
+                                        +FontStyle(16px,$colorBlack,600,4px,36px)
+                            &::before
+                                content: ""
+                                width: 100px
+                                height: 71px
+                                position: absolute
+                                top: -100px
+                                left: 0
+                                background-image: url(../img/03-2-系列介紹-內容頁面/04-裸醬/icon.png)
+                                @media ( max-width: 1279px )
+                                    left: 50%
+                                    transform: translateX(-50%)
+                                @media ( max-width: 767px )
+                                    display: none
+
+                        .type_subtitle
+                            +FontStyle(22px,$colorBlack,600,3px,34px)
+                            margin-bottom: 40px 
+                            @media ( max-width: 1279px )
+                                text-align: center
+                            @media ( max-width: 767px )
+                                margin-bottom: 20px 
+                                text-align: unset
+                                +FontStyle(22px,$colorBlack,600,3px,34px) 
+                                br
+                                    display: none
+                            @media ( max-width: 540px )
+                                +FontStyle(16px,$colorBlack,600,3px,28px) 
+                        .logo
+                            width: 224px
+                            height: 76px
+                            margin-bottom: 40px
+                            background-position: center
+                            background-size: cover
+                            @media ( max-width: 1279px )
+                                position: relative
+                                left: 50%
+                                transform: translateX(-50%)
+                        .type_content
+                            +FontStyle(18px,$colorBlack,400,3px,34px)
+                            @media ( max-width: 540px )
+                                +FontStyle(14px,$colorBlack,400,3px,26px)
+                            
+                                
+    .go_shopping
+        padding: 70px 0
+        .container
+            .row
+                justify-content: center
+                align-items: center
+                .shopping_btn
+                    width: 361px
+                    height: 90px
+                    background-color: #1a1a1a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 10px
+                    +FontStyle(21px,#FFF,400,3px,35px)
+                    @media ( max-width: 540px )
+                        width: 259px
+                        height: 64px
+                        +FontStyle(15px,#FFF,400,3px,25px)
+    .producer
+        .container
+            .row
+                flex-direction: column
+                .producer_header
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: relative
+                    padding: 80px 0 40px
+                    @media ( max-width: 540px )
+                        padding: 20px 0 40px
+                    &::before
+                        content: ""
+                        width: 840px
+                        height: 1px
+                        position: absolute
+                        left: 50%
+                        z-index: -4
+                        transform: translate(-50%)
+                        background-color: $colorBlack
+                        @media ( max-width: 1279px )
+                            width: 620px
+                        @media ( max-width: 767px )
+                            width: 100%
+                    .title
+                        position: relative
+                        +FontStyle(32px,$colorBlack,600,3px,49px)   
+                        @media ( max-width: 767px ) 
+                            +FontStyle(24px,$colorBlack,600,3px,38px)  
+                        @media ( max-width: 540px )
+                            +FontStyle(22px,$colorBlack,600,3px,31px)  
+                    .title_img
+                        width: 330px
+                        height: 330px   
+                        border-radius: 50%
+                        border: 65px solid #EBEBEB
+                        background-position: center
+                        background-size: cover
+                        position: absolute
+                        z-index: -2
+                        left: 49.5%
+                        transform: translate(-48%)
+                        background-color: #EBEBEB
+                        @media ( max-width: 767px )
+                            border: 54px solid #EBEBEB
+                            width: 265px
+                            height: 265px  
+                        @media ( max-width: 540px )
+                            border: 25px solid #EBEBEB
+                            width: 134px
+                            height: 134px  
+                .producer_content
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    flex-wrap: wrap
+                    margin-bottom: 170px
+                    @media ( max-width: 767px )
+                        margin-bottom: 30px
+                    .producer_detail
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        width: 25%
+                        @media ( max-width: 1140px )
+                            width: 50%
+                            margin-bottom: 30px
+                        @media ( max-width: 767px )
+                            width: 100%
+                        .producer_photo
+                            width: 190px
+                            height: 190px
+                            background-position: center
+                            background-size: cover 
+                        .producer_name
+                            text-align: center
+                            span
+                                &:nth-child(1)
+                                    +FontStyle(20px,$colorBlack,600,3px,44px)
+                                &:nth-child(2)
+                                    +FontStyle(16px,$colorBlack,400,3px,27px)
