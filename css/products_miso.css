@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes add_cart3 {
   0% {
     width: 90px;
@@ -11,7 +12,6 @@
     opacity: 0;
   }
 }
-
 @keyframes add_cart3 {
   0% {
     width: 90px;
@@ -399,6 +399,7 @@ main .rice .introduction .container .row .introduction_type {
 }
 
 main .rice .introduction .container .row .introduction_type .type_title {
+  position: relative;
   font-size: 48px;
   color: #231714;
   font-weight: 600;
@@ -433,6 +434,30 @@ main .rice .introduction .container .row .introduction_type .type_title {
     font-weight: 600;
     letter-spacing: 7px;
     line-height: 31px;
+  }
+}
+
+main .rice .introduction .container .row .introduction_type .type_title::before {
+  content: "";
+  width: 224px;
+  height: 76px;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-image: url(../img/03-2-系列介紹-內容頁面/05-味增御露油膏/icon.png);
+}
+
+@media (max-width: 1279px) {
+  main .rice .introduction .container .row .introduction_type .type_title::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  main .rice .introduction .container .row .introduction_type .type_title::before {
+    display: none;
   }
 }
 
@@ -473,6 +498,23 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
     font-weight: 600;
     letter-spacing: 3px;
     line-height: 28px;
+  }
+}
+
+main .rice .introduction .container .row .introduction_type .logo {
+  width: 224px;
+  height: 76px;
+  margin-bottom: 40px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  main .rice .introduction .container .row .introduction_type .logo {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -795,4 +837,4 @@ main .producer .container .row .producer_content .producer_detail .producer_name
   letter-spacing: 3px;
   line-height: 27px;
 }
-/*# sourceMappingURL=products_rice.css.map */
+/*# sourceMappingURL=products_miso.css.map */

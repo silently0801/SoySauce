@@ -511,7 +511,7 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
 }
 
 main .rice .introduction .container .row .introduction_type .type_content:nth-child(4) {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-size: 32px;
   color: #231714;
   font-weight: 700;
@@ -547,7 +547,23 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
   }
 }
 
-main .rice .introduction .container .row .introduction_type .type_content:nth-child(5) {
+main .rice .introduction .container .row .introduction_type .type_content:nth-child(5), main .rice .introduction .container .row .introduction_type .type_content:nth-child(7), main .rice .introduction .container .row .introduction_type .type_content:nth-child(9), main .rice .introduction .container .row .introduction_type .type_content:nth-child(11) {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  main .rice .introduction .container .row .introduction_type .type_content:nth-child(5), main .rice .introduction .container .row .introduction_type .type_content:nth-child(7), main .rice .introduction .container .row .introduction_type .type_content:nth-child(9), main .rice .introduction .container .row .introduction_type .type_content:nth-child(11) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  main .rice .introduction .container .row .introduction_type .type_content:nth-child(5), main .rice .introduction .container .row .introduction_type .type_content:nth-child(7), main .rice .introduction .container .row .introduction_type .type_content:nth-child(9), main .rice .introduction .container .row .introduction_type .type_content:nth-child(11) {
+    margin-bottom: 20px;
+  }
+}
+
+main .rice .introduction .container .row .introduction_type .type_content:nth-child(6), main .rice .introduction .container .row .introduction_type .type_content:nth-child(8), main .rice .introduction .container .row .introduction_type .type_content:nth-child(10) {
   font-size: 22px;
   color: #231714;
   font-weight: 600;
@@ -556,7 +572,7 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
 }
 
 @media (max-width: 540px) {
-  main .rice .introduction .container .row .introduction_type .type_content:nth-child(5) {
+  main .rice .introduction .container .row .introduction_type .type_content:nth-child(6), main .rice .introduction .container .row .introduction_type .type_content:nth-child(8), main .rice .introduction .container .row .introduction_type .type_content:nth-child(10) {
     font-size: 18px;
     color: #231714;
     font-weight: 600;
@@ -795,4 +811,4 @@ main .producer .container .row .producer_content .producer_detail .producer_name
   letter-spacing: 3px;
   line-height: 27px;
 }
-/*# sourceMappingURL=products_rice.css.map */
+/*# sourceMappingURL=products_muddy.css.map */

@@ -129,6 +129,7 @@ main
                         @media ( max-width: 767px )
                             padding-top: 30px
                         .type_title
+                            position: relative
                             +FontStyle(48px,$colorBlack,600,7px,74px) 
                             margin-bottom: 20px
                             @media ( max-width: 1279px )
@@ -139,6 +140,20 @@ main
                                     display: none
                             @media ( max-width: 540px )
                                 +FontStyle(22px,$colorBlack,600,7px,31px) 
+                            &::before
+                                content: ""
+                                width: 224px
+                                height: 76px
+                                position: absolute
+                                top: -100px
+                                left: 0
+                                background-image: url(../img/03-2-系列介紹-內容頁面/05-味增御露油膏/icon.png)
+                                @media ( max-width: 1279px )
+                                    left: 50%
+                                    transform: translateX(-50%)
+                                @media ( max-width: 767px )
+                                    display: none
+
                         .type_subtitle
                             +FontStyle(22px,$colorBlack,600,3px,34px)
                             margin-bottom: 40px 
@@ -152,6 +167,16 @@ main
                                     display: none
                             @media ( max-width: 540px )
                                 +FontStyle(16px,$colorBlack,600,3px,28px) 
+                        .logo
+                            width: 224px
+                            height: 76px
+                            margin-bottom: 40px
+                            background-position: center
+                            background-size: cover
+                            @media ( max-width: 1279px )
+                                position: relative
+                                left: 50%
+                                transform: translateX(-50%)
                         .type_content
                             +FontStyle(18px,$colorBlack,400,3px,34px)
                             @media ( max-width: 540px )
