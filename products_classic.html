@@ -251,29 +251,29 @@
                         <div class="producer_detail">
                             <div class="producer_photo" style="background-image: url(./img/03-2-系列介紹-內容頁面/第一代謝耀仁-01.png);"></div>
                             <div class="producer_name">
-                                <span>第一代</span><br>
-                                <span>製醬人 | 謝耀仁</span> 
+                                <div>第一代</div>
+                                <div>製醬人 | 謝耀仁</div> 
                             </div>
                         </div>
                         <div class="producer_detail">
                             <div class="producer_photo" style="background-image: url(./img/03-2-系列介紹-內容頁面/第二代謝裕讀-01.png);"></div>
                             <div class="producer_name">
-                                <span>第二代</span><br>
-                                <span>製醬人 | 謝裕讀</span> 
+                                <div>第二代</div>
+                                <div>製醬人 | 謝裕讀</div> 
                             </div>
                         </div>
                         <div class="producer_detail">
                             <div class="producer_photo" style="background-image: url(./img/03-2-系列介紹-內容頁面/澂.png);"></div>
                             <div class="producer_name">
-                                <span>第三代</span><br>
-                                <span>製醬人 | 謝宜澂</span> 
+                                <div>第三代</div>
+                                <div>製醬人 | 謝宜澂</div> 
                             </div>
                         </div>
                         <div class="producer_detail">
                             <div class="producer_photo" style="background-image: url(./img/03-2-系列介紹-內容頁面/第三代謝宜哲-01.png);"></div>
                             <div class="producer_name">
-                                <span>第三代</span><br>
-                                <span>製醬人 | 謝宜哲</span> 
+                                <div>第三代</div>
+                                <div>製醬人 | 謝宜哲</div> 
                             </div>
                         </div>
                     </div>
@@ -341,27 +341,6 @@
                 el: '.swiper-pagination',
             },
         });
-
-        let getUrlString = location.href;
-        let url = new URL(getUrlString);
-        let page = url.searchParams.get('page');
-        
-        if (page == "medias") {
-            $("main .news").css({ "display": "none" })
-            $("main .news_list").css({ "display": "none" })
-            $("main .medias").css({ "display": "block" })
-            $("main .medias_list").css({ "display": "block" })
-            $(".medias_btn").css({ "color": "#C5362D" })
-            $(".news_btn").css({ "color": "#231714" })
-        }
-        else {
-            $("main .news").css({ "display": "block" })
-            $("main .news_list").css({ "display": "block" })
-            $("main .medias").css({ "display": "none" })
-            $("main .medias_list").css({ "display": "none" })
-            $(".news_btn").css({ "color": "#C5362D" })
-            $(".medias_btn").css({ "color": "#231714" })
-        }
     </script>
 </body>
 

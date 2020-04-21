@@ -80,6 +80,7 @@ main
                         height: 830px
                         display: flex
                         justify-content: center
+                        padding-right: 7px
                         @media ( max-width: 1279px )
                             width: 100%
                         @media ( max-width: 767px )
@@ -95,10 +96,11 @@ main
                                 height: 244px
                         .header_title
                             position: absolute
-                            left: 50%
+                            left: calc( 50% - 7px)
                             top: 65px
                             z-index: 2
                             transform: translateX(-50%)
+                            text-shadow: rgba(0, 0, 0, 0.6) 10px 10px 10px 
                             +FontStyle(123px,#FFF,500,7px,141px)
                             @media ( max-width: 767px )
                                 top: 25px
@@ -107,12 +109,13 @@ main
                             width: 490px
                             height: 490px
                             position: absolute
-                            left: 50%
+                            left: calc( 50% - 7px)
                             top: 280px
                             border-radius: 50%
                             transform: translateX(-50%)
                             background-position: center
                             background-size: cover
+                            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.6)
                             @media ( max-width: 767px )
                                 width: 320px
                                 height: 320px
@@ -130,7 +133,7 @@ main
                             padding-top: 30px
                         .type_title
                             +FontStyle(48px,$colorBlack,600,7px,74px) 
-                            margin-bottom: 20px
+                            margin-bottom: 3px
                             @media ( max-width: 1279px )
                                 text-align: center
                             @media ( max-width: 767px )
@@ -141,7 +144,7 @@ main
                                 +FontStyle(22px,$colorBlack,600,7px,31px) 
                         .type_subtitle
                             +FontStyle(22px,$colorBlack,600,3px,34px)
-                            margin-bottom: 40px 
+                            margin-bottom: 45px 
                             @media ( max-width: 1279px )
                                 text-align: center
                             @media ( max-width: 767px )
@@ -157,13 +160,13 @@ main
                             @media ( max-width: 540px )
                                 +FontStyle(14px,$colorBlack,400,3px,26px)
                             &:nth-child(3)
-                                margin-bottom: 30px
+                                margin-bottom: 65px
                                 @media ( max-width: 767px )
                                     margin-bottom: 20px
                                 @media ( max-width: 540px )
                                     margin-bottom: 10px
                             &:nth-child(4)
-                                margin-bottom: 40px
+                                margin-bottom: 26px
                                 +FontStyle(32px,$colorBlack,700,3px,49px)
                                 @media ( max-width: 1279px )
                                     text-align: center
@@ -174,7 +177,7 @@ main
                                     margin-bottom: 20px
                                     +FontStyle(18px,$colorBlack,700,3px,49px)
                             &:nth-child(5),&:nth-child(7),&:nth-child(9),&:nth-child(11)
-                                margin-bottom: 40px
+                                margin-bottom: 6px
                                 @media ( max-width: 767px )
                                     margin-bottom: 30px
                                 @media ( max-width: 540px )
@@ -183,7 +186,10 @@ main
                                 +FontStyle(22px,$colorBlack,600,3px,34px)
                                 @media ( max-width: 540px )
                                     +FontStyle(18px,$colorBlack,600,3px,34px)
-                                
+                            &:nth-child(11)
+                                white-space: nowrap
+                                @media ( max-width: 767px )
+                                    white-space: unset
     .go_shopping
         padding: 70px 0
         .container
@@ -203,6 +209,8 @@ main
                         width: 259px
                         height: 64px
                         +FontStyle(15px,#FFF,400,3px,25px)
+                    &:hover
+                        background-color: $colorOrange                        
     .producer
         .container
             .row
@@ -231,11 +239,11 @@ main
                             width: 100%
                     .title
                         position: relative
-                        +FontStyle(32px,$colorBlack,600,3px,49px)   
+                        +FontStyle(32px,$colorBlack,700,3px,49px)   
                         @media ( max-width: 767px ) 
-                            +FontStyle(24px,$colorBlack,600,3px,38px)  
+                            +FontStyle(24px,$colorBlack,700,3px,38px)  
                         @media ( max-width: 540px )
-                            +FontStyle(22px,$colorBlack,600,3px,31px)  
+                            +FontStyle(22px,$colorBlack,700,3px,31px)  
                     .title_img
                         width: 330px
                         height: 330px   
@@ -279,10 +287,11 @@ main
                             height: 190px
                             background-position: center
                             background-size: cover 
+                            margin-bottom: 18px 
                         .producer_name
                             text-align: center
-                            span
-                                &:nth-child(1)
-                                    +FontStyle(20px,$colorBlack,600,3px,44px)
+                            div
+                                +FontStyle(20px,$colorBlack,700,3px,42px)
                                 &:nth-child(2)
                                     +FontStyle(16px,$colorBlack,400,3px,27px)
+

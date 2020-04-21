@@ -294,6 +294,7 @@ main .rice .introduction .container .row .introduction_header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-right: 7px;
 }
 
 @media (max-width: 1279px) {
@@ -329,11 +330,12 @@ main .rice .introduction .container .row .introduction_header .header_bg {
 
 main .rice .introduction .container .row .introduction_header .header_title {
   position: absolute;
-  left: 50%;
+  left: calc( 50% - 7px);
   top: 65px;
   z-index: 2;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-shadow: rgba(0, 0, 0, 0.6) 10px 10px 10px;
   font-size: 123px;
   color: #FFF;
   font-weight: 500;
@@ -356,13 +358,15 @@ main .rice .introduction .container .row .introduction_header .header_img {
   width: 490px;
   height: 490px;
   position: absolute;
-  left: 50%;
+  left: calc( 50% - 7px);
   top: 280px;
   border-radius: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 767px) {
@@ -405,7 +409,7 @@ main .rice .introduction .container .row .introduction_type .type_title {
   font-weight: 600;
   letter-spacing: 7px;
   line-height: 74px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1279px) {
@@ -467,7 +471,7 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 34px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 @media (max-width: 1279px) {
@@ -502,8 +506,8 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
 }
 
 main .rice .introduction .container .row .introduction_type .logo {
-  width: 224px;
-  height: 76px;
+  width: 284px;
+  height: 117px;
   margin-bottom: 40px;
   background-position: center;
   background-size: cover;
@@ -537,7 +541,7 @@ main .rice .introduction .container .row .introduction_type .type_content {
 }
 
 main .rice .introduction .container .row .introduction_type .type_content:nth-child(3) {
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
 @media (max-width: 767px) {
@@ -553,7 +557,7 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
 }
 
 main .rice .introduction .container .row .introduction_type .type_content:nth-child(4) {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 32px;
   color: #231714;
   font-weight: 700;
@@ -653,6 +657,10 @@ main .go_shopping .container .row .shopping_btn {
   }
 }
 
+main .go_shopping .container .row .shopping_btn:hover {
+  background-color: #C0362D;
+}
+
 main .producer .container .row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -709,7 +717,7 @@ main .producer .container .row .producer_header .title {
   position: relative;
   font-size: 32px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 49px;
 }
@@ -718,7 +726,7 @@ main .producer .container .row .producer_header .title {
   main .producer .container .row .producer_header .title {
     font-size: 24px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 38px;
   }
@@ -728,7 +736,7 @@ main .producer .container .row .producer_header .title {
   main .producer .container .row .producer_header .title {
     font-size: 22px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;
   }
@@ -816,21 +824,22 @@ main .producer .container .row .producer_content .producer_detail .producer_phot
   height: 190px;
   background-position: center;
   background-size: cover;
+  margin-bottom: 18px;
 }
 
 main .producer .container .row .producer_content .producer_detail .producer_name {
   text-align: center;
 }
 
-main .producer .container .row .producer_content .producer_detail .producer_name span:nth-child(1) {
+main .producer .container .row .producer_content .producer_detail .producer_name div {
   font-size: 20px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
-  line-height: 44px;
+  line-height: 42px;
 }
 
-main .producer .container .row .producer_content .producer_detail .producer_name span:nth-child(2) {
+main .producer .container .row .producer_content .producer_detail .producer_name div:nth-child(2) {
   font-size: 16px;
   color: #231714;
   font-weight: 400;
