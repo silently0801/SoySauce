@@ -258,6 +258,17 @@ main .classic .carousel .swiper-container .swiper-wrapper .swiper-slide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+main .classic .carousel .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+main .classic .carousel .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #C0362D;
 }
 
 main .classic .introduction .container .row {
@@ -839,4 +850,4 @@ main .producer .container .row .producer_content .producer_detail .producer_name
   letter-spacing: 3px;
   line-height: 27px;
 }
-/*# sourceMappingURL=products_info.css.map */
+/*# sourceMappingURL=products_classic.css.map */

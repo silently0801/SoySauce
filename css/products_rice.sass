@@ -39,7 +39,7 @@ main
                                 +FontStyle(22px,$colorBlack,700,7px,1)  
                         &:nth-child(2)
                             +FontStyle(18px,$colorBlack,700,3px,31px)  
-    .classic
+    .rice
         .carousel
             .swiper-container
                 width: 100%
@@ -60,6 +60,14 @@ main
                         display: flex
                         justify-content: center
                         align-items: center
+                        background-position: center
+                        background-size: cover
+            .swiper-pagination
+                .swiper-pagination-bullet
+                    background-color: #ffffff
+                    opacity: 1
+                .swiper-pagination-bullet-active
+                    background-color: $colorOrange
         .introduction
             .container
                 .row
@@ -112,20 +120,6 @@ main
                                 width: 230px
                                 height: 230px
                                 top: 180px
-                        .header_seal
-                            width: 200px
-                            height: 200px
-                            position: absolute
-                            z-index: -1
-                            left: 60%
-                            bottom: 0
-                            background-position: center
-                            background-size: cover
-                            @media ( max-width: 767px )
-                                left: 50%
-                                transform: translateX(-50%)
-                                width: 150px
-                                height: 150px
                     .introduction_type
                         width: 50%
                         padding-top: 230px
@@ -161,47 +155,16 @@ main
                             +FontStyle(18px,$colorBlack,400,3px,34px)
                             @media ( max-width: 540px )
                                 +FontStyle(14px,$colorBlack,400,3px,26px)
-        .idea
-            .container
-                .row
-                    @media ( max-width: 1279px )
-                        flex-direction: column
-                    .idea_img
-                        width: 50%
-                        display: flex
-                        justify-content: center
-                        padding-top: 60px
-                        @media ( max-width: 1279px )
-                            width: 100%
-                        .img
-                            width: 190px
-                            height: 190px
-                            background-position: center
-                            background-size: cover
-                    .idea_area
-                        width: 50%
-                        @media ( max-width: 1279px )
-                            width: 100%
-                            text-align: center
-                        br
-                            display: none
-                            @media ( max-width: 1279px )
-                                display: block
-                        .idea_title
-                            margin-bottom: 32px
-                            span
-                                &:nth-child(1)
-                                    +FontStyle(32px,$colorBlack,600,3px,49px)
-                                    @media ( max-width: 540px )
-                                        +FontStyle(22px,$colorBlack,600,3px,31px)
-                                &:nth-child(2)
-                                    +FontStyle(18px,$colorBlack,600,3px,31px)
-                                    @media ( max-width: 540px )
-                                        +FontStyle(16px,$colorBlack,600,3px,34px)
-                        .idea_content
-                            +FontStyle(18px,$colorBlack,400,3px,34px)
-                            @media ( max-width: 540px )
-                                +FontStyle(14px,$colorBlack,400,3px,26px)
+                            &:nth-child(3)
+                                margin-bottom: 30px
+                            &:nth-child(4)
+                                margin-bottom: 60px
+                                +FontStyle(32px,$colorBlack,700,3px,49px)
+                                @media ( max-width: 1279px )
+                                    text-align: center
+                            &:nth-child(5)
+                                +FontStyle(22px,$colorBlack,600,3px,34px)
+                                
     .go_shopping
         padding: 70px 0
         .container

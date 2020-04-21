@@ -12,9 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/nav_footer.css">
-    <link rel="stylesheet" href="./css/products_info.css">
+    <link rel="stylesheet" href="./css/products_classic.css">
 </head>
-
 <body>
     <nav class="m-auto">
         <div class="container">
@@ -159,16 +158,14 @@
             <div class="carousel">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                        <div class="swiper-slide">Slide 10</div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
+                        <div class="swiper-slide" style="background-image: url(./img/03-2-系列介紹-內容頁面/01-御鼎興經典系列/pgroup180106352311286.jpg);"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -343,9 +340,27 @@
                 el: '.swiper-pagination',
             },
         });
-    </script>
-    <script>
 
+        let getUrlString = location.href;
+        let url = new URL(getUrlString);
+        let page = url.searchParams.get('page');
+        
+        if (page == "medias") {
+            $("main .news").css({ "display": "none" })
+            $("main .news_list").css({ "display": "none" })
+            $("main .medias").css({ "display": "block" })
+            $("main .medias_list").css({ "display": "block" })
+            $(".medias_btn").css({ "color": "#C5362D" })
+            $(".news_btn").css({ "color": "#231714" })
+        }
+        else {
+            $("main .news").css({ "display": "block" })
+            $("main .news_list").css({ "display": "block" })
+            $("main .medias").css({ "display": "none" })
+            $("main .medias_list").css({ "display": "none" })
+            $(".news_btn").css({ "color": "#C5362D" })
+            $(".medias_btn").css({ "color": "#231714" })
+        }
     </script>
 </body>
 
