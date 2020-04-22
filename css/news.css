@@ -316,8 +316,8 @@ main .news .news_container .row .news_content .news_img_area .news_img_hover p {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  width: 50%;
+  -webkit-line-clamp: 3;
+  width: 75%;
   font-size: 14px;
   color: #FFF;
   font-weight: 600;
@@ -330,7 +330,7 @@ main .news .news_container .row .news_content .news_img_area .news_img_hover .ho
   height: 36px;
   position: absolute;
   bottom: 50px;
-  right: 60px;
+  right: 30px;
   background-image: url("../img/99-LOGO/hover.png");
   background-size: cover;
   background-position: center;
