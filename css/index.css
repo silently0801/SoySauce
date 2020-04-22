@@ -1933,6 +1933,15 @@ main .facebook .facebook_container .row .facebook_btn {
   right: 20px;
   padding: 10px 35px;
   white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 1300px) {
@@ -1949,6 +1958,14 @@ main .facebook .facebook_container .row .facebook_btn {
   main .facebook .facebook_container .row .facebook_btn {
     bottom: 30px;
   }
+}
+
+main .facebook .facebook_container .row .facebook_btn .icon {
+  width: 8px;
+  height: 16px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
 }
 
 main .facebook .facebook_container .row .facebook_news {
