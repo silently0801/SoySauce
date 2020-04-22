@@ -382,6 +382,12 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title {
   }
 }
 
+@media (max-width: 320px) {
+  main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title {
+    margin-bottom: 0.5vh;
+  }
+}
+
 main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_title .title {
   font-size: 82px;
   color: #FFF;
@@ -473,9 +479,13 @@ main .swiper-container .swiper-wrapper .swiper-slide .aesthetics_content p {
     font-size: 12px;
     color: #FFF;
     font-weight: 400;
-    letter-spacing: 3px;
-    line-height: 1;
+    letter-spacing: 2px;
+    line-height: 19px;
   }
+}
+
+main .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
+  padding: 19vh 0 0;
 }
 
 @media (max-width: 575px) {
@@ -610,14 +620,14 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(8) {
 }
 
 main .swiper-button-next {
-  width: 79px;
-  height: 79px;
-  border: 2px solid #FFF;
+  width: 78px;
+  height: 78px;
+  border: 1px solid #FFF;
   border-radius: 50%;
   -webkit-transition: 1s;
   transition: 1s;
   top: 85vh;
-  right: calc(50% - 75px);
+  right: calc(50% - 60px);
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   margin-top: unset;
@@ -625,8 +635,10 @@ main .swiper-button-next {
 
 @media (max-width: 575px) {
   main .swiper-button-next {
+    width: 52px;
+    height: 52px;
     top: 87vh;
-    right: calc(50% - 50px);
+    right: calc(50% - 40px);
   }
 }
 
@@ -635,8 +647,7 @@ main .swiper-button-next:focus {
 }
 
 main .swiper-button-next:hover {
-  background-color: #c0362d;
-  border: 2px solid #C0362D;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 main .swiper-button-next::after {
@@ -652,14 +663,14 @@ main .swiper-button-next .arrow {
 }
 
 main .swiper-button-prev {
-  width: 79px;
-  height: 79px;
-  border: 2px solid #FFF;
+  width: 78px;
+  height: 78px;
+  border: 1px solid #FFF;
   border-radius: 50%;
   -webkit-transition: 1s;
   transition: 1s;
   top: 85vh;
-  left: calc(50% - 75px);
+  left: calc(50% - 60px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-top: unset;
@@ -667,8 +678,10 @@ main .swiper-button-prev {
 
 @media (max-width: 575px) {
   main .swiper-button-prev {
+    width: 52px;
+    height: 52px;
     top: 87vh;
-    left: calc(50% - 50px);
+    left: calc(50% - 40px);
   }
 }
 
@@ -724,6 +737,10 @@ main .more {
     width: 119px;
     height: 50px;
   }
+}
+
+main .more:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 main .more:focus {

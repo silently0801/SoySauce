@@ -118,6 +118,8 @@ main
                     margin-bottom: 4.6vh
                     @media ( max-width: 767px )
                         margin-bottom: 5.5vh
+                    @media ( max-width: 320px )
+                        margin-bottom: 0.5vh
                     .title
                         +FontStyle(82px,#FFF,700,2px,128px)
                         margin-left: 50px
@@ -143,8 +145,9 @@ main
                         @media ( max-width: 575px )
                             +FontStyle(16px,#FFF,400,3px,30px)
                         @media ( max-width: 320px )
-                            +FontStyle(12px,#FFF,400,3px,1)
+                            +FontStyle(12px,#FFF,400,2px,19px)
                 &:nth-child(1)
+                    padding: 19vh 0 0
                     @media ( max-width: 575px )
                         height: calc(100vh + 72px)
                         padding: 8vh 0 0
@@ -199,23 +202,24 @@ main
                         background-size: cover
                         background-position: 70% 100%
     .swiper-button-next
-        width: 79px
-        height: 79px
-        border: 2px solid #FFF 
+        width: 78px
+        height: 78px
+        border: 1px solid #FFF 
         border-radius: 50% 
         transition: 1s
         top: 85vh
-        right: calc(50% - 75px)
+        right: calc(50% - 60px)
         transform: translateX(50%)
         margin-top: unset
         @media ( max-width: 575px )
+            width: 52px
+            height: 52px
             top: 87vh
-            right: calc(50% - 50px)
+            right: calc(50% - 40px)
         &:focus
             outline: unset
         &:hover
-            background-color: rgba($colorOrange, 1)
-            border: 2px solid $colorOrange 
+            background-color: rgba(#FFF, .6)
         &::after
             content: unset
         .arrow
@@ -225,18 +229,20 @@ main
             background-position: center
             background-size: cover
     .swiper-button-prev
-        width: 79px
-        height: 79px
-        border: 2px solid #FFF 
+        width: 78px
+        height: 78px
+        border: 1px solid #FFF 
         border-radius: 50% 
         transition: 1s
         top: 85vh
-        left: calc(50% - 75px)
+        left: calc(50% - 60px)
         transform: translateX(-50%)
         margin-top: unset
         @media ( max-width: 575px )
+            width: 52px
+            height: 52px
             top: 87vh
-            left: calc(50% - 50px)
+            left: calc(50% - 40px)
         &:focus
             outline: unset
         &:hover
@@ -263,11 +269,14 @@ main
         transition: 0.5s
         display: none
         @media ( max-width: 575px )
+            
             +FontStyle(12px,#FFF,700,4px,1)
             border: 1px solid #FFF
             top: 87vh
             width: 119px
             height: 50px
+        &:hover
+            background-color: rgba(#FFF, .6)
         &:focus
             outline: unset
         
