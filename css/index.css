@@ -712,6 +712,32 @@ nav .container .row .menu_btn_Area .menu_bot_text span {
   margin-left: 10px;
 }
 
+nav .container .row .menu_btn_Area .swiper-pagination {
+  position: absolute;
+  top: 70px;
+  display: none;
+}
+
+@media (max-width: 610px) {
+  nav .container .row .menu_btn_Area .swiper-pagination {
+    display: block;
+  }
+}
+
+nav .container .row .menu_btn_Area .swiper-pagination .swiper-pagination-bullet {
+  margin: 5px 0;
+  color: #231714;
+  background: #231714;
+  width: 5px;
+  height: 5px;
+  opacity: 1;
+}
+
+nav .container .row .menu_btn_Area .swiper-pagination .swiper-pagination-bullet-active {
+  color: #C0362D;
+  background: #C0362D;
+}
+
 @media (max-width: 610px) {
   main {
     overflow: hidden;
@@ -752,7 +778,8 @@ main .carousel::before {
 
 @media (max-width: 610px) {
   main .carousel::before {
-    display: none;
+    top: 45px;
+    height: 270px;
   }
 }
 
