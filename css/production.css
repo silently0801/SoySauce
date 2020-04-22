@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes add_cart3 {
   0% {
     width: 90px;
@@ -11,7 +12,6 @@
     opacity: 0;
   }
 }
-
 @keyframes add_cart3 {
   0% {
     width: 90px;
@@ -185,11 +185,13 @@ nav .container .row .logo .logo_icon {
   }
 }
 
+nav .container .row .nav_btns {
+  opacity: 0;
+}
+
 @media (max-width: 1279px) {
   nav .container .row .nav_btns {
-    display: block;
     z-index: -5;
-    opacity: 0;
   }
 }
 
@@ -197,6 +199,14 @@ nav .container .row .logo .logo_icon {
   nav .container .row .nav_btns {
     display: none;
   }
+}
+
+nav .container .row .nav_btns:hover {
+  opacity: 1;
+}
+
+nav .container .row .nav_btns:hover ~ hr {
+  opacity: 1;
 }
 
 nav .container .row .nav_btns ul {
@@ -281,12 +291,7 @@ nav .container .row .menu_Area .menu_backEnd ul li a {
 nav .container .row hr {
   background: #FFF;
   margin: 0;
-}
-
-@media (max-width: 1279px) {
-  nav .container .row hr {
-    opacity: 0;
-  }
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
@@ -301,7 +306,7 @@ main .swiper-container {
 
 main .swiper-container .swiper-wrapper .swiper-slide {
   height: 100vh;
-  padding: 24vh 0 0;
+  padding: 21vh 0 0;
   text-align: center;
   background-color: #333;
   display: -webkit-box;
@@ -605,12 +610,17 @@ main .swiper-container .swiper-wrapper .swiper-slide:nth-child(8) {
 }
 
 main .swiper-button-next {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  width: 79px;
+  height: 79px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
   top: 85vh;
   right: calc(50% - 75px);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   margin-top: unset;
-  height: unset;
 }
 
 @media (max-width: 575px) {
@@ -624,22 +634,34 @@ main .swiper-button-next:focus {
   outline: unset;
 }
 
-main .swiper-button-next::after {
-  content: url("../img/99-LOGO/arrow_right_big.png");
+main .swiper-button-next:hover {
+  background-color: #c0362d;
+  border: 2px solid #C0362D;
 }
 
-@media (max-width: 575px) {
-  main .swiper-button-next::after {
-    content: url("../img/99-LOGO/arrow_right_small.png");
-  }
+main .swiper-button-next::after {
+  content: unset;
+}
+
+main .swiper-button-next .arrow {
+  width: 30%;
+  height: 40%;
+  background-image: url(../img/02-製醬美學/right.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 main .swiper-button-prev {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  width: 79px;
+  height: 79px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
   top: 85vh;
   left: calc(50% - 75px);
-  height: unset;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin-top: unset;
 }
 
@@ -654,14 +676,20 @@ main .swiper-button-prev:focus {
   outline: unset;
 }
 
-main .swiper-button-prev::after {
-  content: url("../img/99-LOGO/arrow_left_big.png");
+main .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-@media (max-width: 575px) {
-  main .swiper-button-prev::after {
-    content: url("../img/99-LOGO/arrow_left_small.png");
-  }
+main .swiper-button-prev::after {
+  content: unset;
+}
+
+main .swiper-button-prev .arrow {
+  width: 30%;
+  height: 40%;
+  background-image: url(../img/02-製醬美學/left.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 main .more {

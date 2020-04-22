@@ -31,12 +31,15 @@ nav
                     @media ( max-width: 1279px )
                         display: none
             .nav_btns
+                opacity: 0
                 @media ( max-width: 1279px)
-                    display: block
                     z-index: -5
-                    opacity: 0
                 @media ( max-width: 767px)
                     display: none
+                &:hover
+                    opacity: 1
+                &:hover~hr
+                    opacity: 1
                 ul
                     margin: 0 0 12px
                     li
@@ -80,8 +83,7 @@ nav
             hr
                 background: #FFF
                 margin: 0
-                @media ( max-width: 1279px)
-                    opacity: 0
+                opacity: 0
                 @media ( max-width: 767px)
                     display: none
 main
@@ -90,7 +92,7 @@ main
         .swiper-wrapper
             .swiper-slide 
                 height: 100vh
-                padding: 24vh 0 0
+                padding: 21vh 0 0
                 text-align: center
                 background-color: #333
                 display: flex
@@ -197,35 +199,56 @@ main
                         background-size: cover
                         background-position: 70% 100%
     .swiper-button-next
-        transition: 0.5s
+        width: 79px
+        height: 79px
+        border: 2px solid #FFF 
+        border-radius: 50% 
+        transition: 1s
         top: 85vh
         right: calc(50% - 75px)
+        transform: translateX(50%)
         margin-top: unset
-        height: unset
         @media ( max-width: 575px )
             top: 87vh
             right: calc(50% - 50px)
         &:focus
             outline: unset
+        &:hover
+            background-color: rgba($colorOrange, 1)
+            border: 2px solid $colorOrange 
         &::after
-            content: url("../img/99-LOGO/arrow_right_big.png")
-            @media ( max-width: 575px )
-                content: url("../img/99-LOGO/arrow_right_small.png")
+            content: unset
+        .arrow
+            width: 30%
+            height: 40%
+            background-image: url(../img/02-製醬美學/right.svg)
+            background-position: center
+            background-size: cover
     .swiper-button-prev
-        transition: 0.5s
+        width: 79px
+        height: 79px
+        border: 2px solid #FFF 
+        border-radius: 50% 
+        transition: 1s
         top: 85vh
         left: calc(50% - 75px)
-        height: unset
+        transform: translateX(-50%)
         margin-top: unset
         @media ( max-width: 575px )
             top: 87vh
             left: calc(50% - 50px)
         &:focus
             outline: unset
+        &:hover
+            background-color: rgba(#FFF, .6)
         &::after
-            content: url("../img/99-LOGO/arrow_left_big.png")
-            @media ( max-width: 575px )
-                content: url("../img/99-LOGO/arrow_left_small.png")
+            content: unset
+        .arrow
+            width: 30%
+            height: 40%
+            background-image: url(../img/02-製醬美學/left.svg)
+            background-position: center
+            background-size: cover
     .more
         +FontStyle(18px,#FFF,700,4px,1)
         position: absolute
