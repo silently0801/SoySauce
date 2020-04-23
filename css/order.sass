@@ -1,0 +1,208 @@
+@import "_function.sass"
+body
+    @media ( max-width: 1530px )
+        background-color: #ebebeb
+main
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .header
+        padding: 21px 0 37px
+        @media ( max-width: 1279px )
+            padding: 21px 0 45px
+        .header_container
+            .row
+                align-items: flex-end
+                @media ( max-width: 1279px )
+                    align-items: center
+                    flex-direction: column
+                .header_content
+                    +FontStyle(32px,$colorBlack,700,7px,1) 
+                    @media ( max-width: 1279px )
+                        margin-bottom: 22px
+                        span
+                            display: none
+                    @media ( max-width: 540px )
+                        +FontStyle(22px,$colorBlack,700,7px,31px) 
+                .header_btns
+                    display: flex
+                    @media ( max-width: 540px )
+                        flex-wrap: wrap
+                        width: 210px
+                    .header_btn
+                        position: relative
+                        padding: 0 15px
+                        +FontStyle(22px,$colorBlack,700,3px,1) 
+                        border-right: 1px solid $colorBlack
+                        @media ( max-width: 810px )
+                            padding: 0 10px
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,700,3px,1) 
+                        &::after
+                            content: ""
+                            position: absolute
+                            bottom: -8px
+                            left: 50%
+                            transform: translateX(-50%)
+                            width: calc( 100% - 32px)
+                            height: 1px
+                            background-color: $colorOrange
+                            opacity: 0
+                            @media ( max-width: 810px )
+                                width: calc( 100% - 24px)
+                        &:nth-child(1)
+                            @media ( max-width: 540px )
+                                margin-bottom: 25px   
+                        &:nth-child(2)
+                            +FontStyle(22px,$colorOrange,700,3px,1) 
+                            &::after
+                                opacity: 1
+                            @media ( max-width: 540px ) 
+                                +FontStyle(18px,$colorOrange,700,3px,1)
+                                border-right: unset
+                                margin-bottom: 25px
+                        &:nth-child(3)
+                            display: none
+                            @media ( max-width: 540px )
+                                display: block
+                        &:last-child
+                            border-right: unset
+    .order
+        .order_table
+            .container
+                .row
+                    margin: 0
+                    .order_info
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding-left: 6%
+                        height: 80px
+                        width: 100%
+                        border-bottom: 1px solid $colorBlack
+                        @media ( max-width: 1279px )
+                            padding-left: unset
+                            padding-top: 25px
+                            height: auto
+                            flex-direction: column
+                            margin-bottom: 15px
+                            border: 1px solid #959595
+                        .order_card
+                            margin-bottom: 10px
+                            span
+                                +FontStyle(18px,$colorBlack,700,3px,31px) 
+                                &:nth-child(1)
+                                    display: none
+                                    @media ( max-width: 1279px )
+                                        display: flex
+                                        justify-content: flex-end
+                                        align-items: center
+                                        width: 40%
+                                    @media ( max-width: 320px )
+                                        +FontStyle(12px,$colorBlack,700,3px,31px) 
+                                &:nth-child(2)
+                                    @media ( max-width: 1279px )
+                                        padding-left: 20px
+                                        +FontStyle(18px,#959595,700,3px,31px) 
+                                        display: flex
+                                        justify-content: flex-start
+                                        align-items: center
+                                        width: 60%
+                                    @media ( max-width: 320px )
+                                        +FontStyle(12px,#959595,700,3px,31px) 
+                            &:last-child
+                                span
+                                    &:nth-child(1)
+                                        display: none
+                                    &:nth-child(2)
+                                        width: 100%
+                                        justify-content: center
+                                        +FontStyle(18px,#FFF,700,3px,31px)
+                                        @media ( max-width: 320px )
+                                            +FontStyle(12px,#FFF,700,3px,31px) 
+                                
+                                    
+                        .id
+                            width: 21%
+                            display: flex
+                            justify-content: flex-start
+                            align-items: center
+                            @media ( max-width: 1279px )
+                                width: 100%
+                        .date
+                            width: 20%
+                            display: flex
+                            justify-content: flex-start
+                            align-items: center
+                            @media ( max-width: 1279px )
+                                width: 100%
+                        .price
+                            width: 21%
+                            display: flex
+                            justify-content: flex-start
+                            align-items: center
+                            @media ( max-width: 1279px )
+                                width: 100%
+                        .status
+                            width: 16%
+                            display: flex
+                            justify-content: flex-start
+                            align-items: center
+                            @media ( max-width: 1279px )
+                                padding-bottom: 15px
+                                width: 100%
+                        .detail
+                            flex: 1
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            @media ( max-width: 1279px )
+                                flex: unset
+                                width: 100%
+                                background-color: #959595
+                        &:nth-child(1)
+                            height: 60px
+                            border-top: 2px solid $colorBlack
+                            border-bottom: 2px solid $colorBlack
+                            +FontStyle(22px,$colorBlack,700,3px,31px) 
+                            @media ( max-width: 1279px )
+                                display: none
+                        &:nth-child(2n+1)
+                            background-color: #E5E5E5
+                            @media ( max-width: 1279px )
+                                background-color: unset
+    .page_btn
+        margin: 80px 0
+        .container
+            .row
+                justify-content: center
+                align-items: center
+                .btn-group
+                    a
+                        position: relative
+                        border: unset
+                        background-color: unset
+                        +FontStyle(18px,$colorBlack,600,3px,31px) 
+                        &:hover::before
+                            opacity: 1
+                        &:hover span
+                            color: #FFF
+                        &::before
+                            content: ""
+                            opacity: 0
+                            width: 22px
+                            height: 22px
+                            border-radius: 50%
+                            background-color: #C5362D 
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            z-index: -1
+                            transform: translate(-53%,-50%)
+                            

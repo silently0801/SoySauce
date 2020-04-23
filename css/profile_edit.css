@@ -251,12 +251,12 @@ main .header .header_container .row .header_btns .header_btn {
 main .header .header_container .row .header_btns .header_btn::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: calc( 100% - 32px);
-  height: 2px;
+  height: 1px;
   background-color: #C0362D;
   opacity: 0;
 }
