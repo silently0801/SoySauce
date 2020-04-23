@@ -353,7 +353,11 @@ main .profile .profile_table .container .row .info .title {
 
 @media (max-width: 1279px) {
   main .profile .profile_table .container .row .info .title {
-    width: 40%;
+    margin-right: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 30%;
   }
 }
 
@@ -416,6 +420,25 @@ main .profile .profile_table .container .row .info .input {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 5px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .profile .profile_table .container .row .info .input {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 32px;
+  }
 }
 
 main .profile .profile_table .container .row .info .input input {
@@ -423,6 +446,13 @@ main .profile .profile_table .container .row .info .input input {
   width: 700px;
   background-color: unset;
   border: 1px solid #231714;
+  padding: 0 10px;
+}
+
+@media (max-width: 1530px) {
+  main .profile .profile_table .container .row .info .input input {
+    width: 90%;
+  }
 }
 
 main .profile .profile_table .container .row .info .input input:focus {
@@ -464,7 +494,9 @@ main .profile .profile_table .container .row .info:nth-child(1) .title {
 
 main .profile .profile_table .container .row .password .input input {
   height: 34px;
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
+  color: #FFF;
   background-color: #4D4D4D;
   border: 1px solid #4D4D4D;
 }
