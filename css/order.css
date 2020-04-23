@@ -417,24 +417,39 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
   }
 }
 
-main .order .order_table .container .row .order_info .order_card:last-child span:nth-child(1) {
-  display: none;
-}
-
-main .order .order_table .container .row .order_info .order_card:last-child span:nth-child(2) {
-  width: 100%;
+main .order .order_table .container .row .order_info .order_card:last-child a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
-  color: #FFF;
+  color: #C0362D;
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 31px;
 }
 
+@media (max-width: 1279px) {
+  main .order .order_table .container .row .order_info .order_card:last-child a {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 18px;
+    color: #FFF;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 31px;
+  }
+}
+
 @media (max-width: 320px) {
-  main .order .order_table .container .row .order_info .order_card:last-child span:nth-child(2) {
+  main .order .order_table .container .row .order_info .order_card:last-child a {
     font-size: 12px;
     color: #FFF;
     font-weight: 700;

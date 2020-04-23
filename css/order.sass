@@ -117,15 +117,17 @@ main
                                     @media ( max-width: 320px )
                                         +FontStyle(12px,#959595,700,3px,31px) 
                             &:last-child
-                                span
-                                    &:nth-child(1)
-                                        display: none
-                                    &:nth-child(2)
+                                a
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    +FontStyle(18px,$colorOrange,700,3px,31px)
+                                    @media ( max-width: 1279px )
                                         width: 100%
                                         justify-content: center
                                         +FontStyle(18px,#FFF,700,3px,31px)
-                                        @media ( max-width: 320px )
-                                            +FontStyle(12px,#FFF,700,3px,31px) 
+                                    @media ( max-width: 320px )
+                                        +FontStyle(12px,#FFF,700,3px,31px) 
                                 
                                     
                         .id
