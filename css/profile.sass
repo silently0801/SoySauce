@@ -128,6 +128,9 @@ main
             .container
                 .row
                     justify-content: flex-end
+                    margin: 0
+                    @media ( max-width: 1279px )
+                        margin: unset
                     @media ( max-width: 540px )
                         justify-content: center
                     .edit_btn
@@ -138,4 +141,6 @@ main
                         justify-content: center
                         align-items: center
                         +FontStyle(16px,$colorBlack,700,3px,33px) 
-                    
+                        &:hover
+                            background-color: #1A1A1A
+                            color: #F2F2F2

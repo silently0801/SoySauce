@@ -81,8 +81,10 @@ main
                     .info
                         width: 100%
                         display: flex
+                        margin-bottom: 30px
                         @media ( max-width: 540px )
-                            padding: 12px 0
+                            margin-bottom: 0
+                            padding: 7px 0
                             flex-direction: column
                         .title
                             width: 224px
@@ -133,8 +135,8 @@ main
                                     outline: 2px solid $colorOrange  
                         &:nth-child(1)
                             background-color: #E5E5E5
-                            border-top: 2px solid $colorBlack
-                            border-bottom: 2px solid $colorBlack
+                            border-top: 1px solid #231714
+                            border-bottom: 1px solid #231714
                             margin-bottom: 20px
                             .title
                                 width: 100%
@@ -170,6 +172,10 @@ main
                             +FontStyle(16px,$colorBlack,700,3px,33px)
                             @media ( max-width: 1345px )
                                 display: none
+                            &:hover
+                                background-color: #1A1A1A
+                                color: #F2F2F2
+                                
         .profile_edit
             padding-bottom: 120px 
             .container
@@ -186,4 +192,7 @@ main
                         justify-content: center
                         align-items: center
                         +FontStyle(16px,$colorBlack,700,3px,33px) 
+                        &:hover
+                            background-color: #1A1A1A
+                            color: #F2F2F2
                     

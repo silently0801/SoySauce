@@ -456,6 +456,13 @@ main .profile .profile_edit .container .row {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: 0;
+}
+
+@media (max-width: 1279px) {
+  main .profile .profile_edit .container .row {
+    margin: unset;
+  }
 }
 
 @media (max-width: 540px) {
@@ -484,5 +491,10 @@ main .profile .profile_edit .container .row .edit_btn {
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 33px;
+}
+
+main .profile .profile_edit .container .row .edit_btn:hover {
+  background-color: #1A1A1A;
+  color: #F2F2F2;
 }
 /*# sourceMappingURL=profile.css.map */
