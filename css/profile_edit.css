@@ -492,6 +492,31 @@ main .profile .profile_table .container .row .info:nth-child(1) .title {
   }
 }
 
+main .profile .profile_table .container .row .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 171px;
+}
+
+@media (max-width: 1530px) {
+  main .profile .profile_table .container .row .password {
+    padding-right: 70px;
+  }
+}
+
+@media (max-width: 1345px) {
+  main .profile .profile_table .container .row .password {
+    padding-right: unset;
+  }
+}
+
 main .profile .profile_table .container .row .password .input input {
   height: 34px;
   width: 90%;
@@ -501,21 +526,48 @@ main .profile .profile_table .container .row .password .input input {
   border: 1px solid #4D4D4D;
 }
 
+main .profile .profile_table .container .row .password .edit_btn {
+  width: 200px;
+  height: 36px;
+  border: 1px solid #231714;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 33px;
+}
+
+@media (max-width: 1345px) {
+  main .profile .profile_table .container .row .password .edit_btn {
+    display: none;
+  }
+}
+
 main .profile .profile_edit {
   padding-bottom: 120px;
 }
 
 main .profile .profile_edit .container .row {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 1345px) {
   main .profile .profile_edit .container .row {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

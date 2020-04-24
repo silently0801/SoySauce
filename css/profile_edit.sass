@@ -144,6 +144,14 @@ main
                                 @media ( max-width: 540px )
                                     +FontStyle(18px,$colorBlack,700,3px,57px) 
                     .password
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        padding-right: 171px
+                        @media ( max-width: 1530px )
+                            padding-right: 70px
+                        @media ( max-width: 1345px )
+                            padding-right: unset
                         .input                             
                             input
                                 height: 34px
@@ -152,13 +160,24 @@ main
                                 color: #FFF
                                 background-color: #4D4D4D
                                 border: 1px solid #4D4D4D
+                        .edit_btn
+                            width: 200px
+                            height: 36px
+                            border: 1px solid $colorBlack
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            +FontStyle(16px,$colorBlack,700,3px,33px)
+                            @media ( max-width: 1345px )
+                                display: none
         .profile_edit
             padding-bottom: 120px 
             .container
                 .row
-                    justify-content: flex-end
-                    @media ( max-width: 540px )
-                        justify-content: center
+                    justify-content: center
+                    display: none
+                    @media ( max-width: 1345px )
+                        display: flex
                     .edit_btn
                         width: 240px
                         height: 36px

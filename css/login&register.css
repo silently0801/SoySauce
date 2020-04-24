@@ -1,0 +1,542 @@
+@-webkit-keyframes add_cart3 {
+  0% {
+    width: 90px;
+    height: 90px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes add_cart3 {
+  0% {
+    width: 90px;
+    height: 90px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes add_cart2 {
+  0% {
+    width: 75px;
+    height: 75px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes add_cart2 {
+  0% {
+    width: 75px;
+    height: 75px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes add_cart1 {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes add_cart1 {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+  99% {
+    width: 45px;
+    height: 45px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes minus {
+  0% {
+    right: -28px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+body * {
+  font-family: 'Noto Serif TC';
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+main .mask {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: -9999;
+  background-color: #ebebeb;
+}
+
+@media (max-width: 1279px) {
+  main .mask {
+    display: none;
+  }
+}
+
+main .date .container .row .header_btns {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .date .container .row .header_btns .year_select .selects {
+  width: 200px;
+  height: 45px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #231714;
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .year_select .selects {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .year_select .selects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .date .container .row .header_btns .year_select .selects::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+main .date .container .row .header_btns .year_select .option_area {
+  border: 1px solid #231714;
+  width: 200px;
+  max-height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 10;
+}
+
+main .date .container .row .header_btns .year_select .option_area::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+main .date .container .row .header_btns .year_select .option_area::-webkit-scrollbar-thumb {
+  background: #231714;
+}
+
+main .date .container .row .header_btns .year_select .option_area::-webkit-scrollbar-track {
+  background: #FFF;
+}
+
+main .date .container .row .header_btns .year_select .option_area {
+  scrollbar-face-color: #231714;
+  scrollbar-track-color: #FFF;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .year_select .option_area {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .year_select .option_area .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-color: #ebebeb;
+  font-size: 16px;
+  color: #989898;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .date .container .row .header_btns .year_select .option_area .option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 55%;
+  height: 1px;
+  background-color: #231714;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .date .container .row .header_btns .year_select .option_area .option:last-child::after {
+  display: none;
+}
+
+main .date .container .row .header_btns .year_select .option_area .option:hover {
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .date .container .row .header_btns .month_select .selects {
+  width: 153px;
+  height: 45px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #231714;
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .month_select .selects {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .month_select .selects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .date .container .row .header_btns .month_select .selects::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+main .date .container .row .header_btns .month_select .option_area {
+  border: 1px solid #231714;
+  width: 153px;
+  max-height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 10;
+}
+
+main .date .container .row .header_btns .month_select .option_area::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+main .date .container .row .header_btns .month_select .option_area::-webkit-scrollbar-thumb {
+  background: #231714;
+}
+
+main .date .container .row .header_btns .month_select .option_area::-webkit-scrollbar-track {
+  background: #FFF;
+}
+
+main .date .container .row .header_btns .month_select .option_area {
+  scrollbar-face-color: #231714;
+  scrollbar-track-color: #FFF;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .month_select .option_area {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .month_select .option_area .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-color: #ebebeb;
+  font-size: 16px;
+  color: #989898;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .date .container .row .header_btns .month_select .option_area .option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 55%;
+  height: 1px;
+  background-color: #231714;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .date .container .row .header_btns .month_select .option_area .option:last-child::after {
+  display: none;
+}
+
+main .date .container .row .header_btns .month_select .option_area .option:hover {
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .date .container .row .header_btns .day_select .selects {
+  width: 153px;
+  height: 45px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #231714;
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .day_select .selects {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .day_select .selects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .date .container .row .header_btns .day_select .selects::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+main .date .container .row .header_btns .day_select .option_area {
+  border: 1px solid #231714;
+  width: 153px;
+  max-height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 10;
+}
+
+main .date .container .row .header_btns .day_select .option_area::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+main .date .container .row .header_btns .day_select .option_area::-webkit-scrollbar-thumb {
+  background: #231714;
+}
+
+main .date .container .row .header_btns .day_select .option_area::-webkit-scrollbar-track {
+  background: #FFF;
+}
+
+main .date .container .row .header_btns .day_select .option_area {
+  scrollbar-face-color: #231714;
+  scrollbar-track-color: #FFF;
+}
+
+@media (max-width: 540px) {
+  main .date .container .row .header_btns .day_select .option_area {
+    width: 100%;
+  }
+}
+
+main .date .container .row .header_btns .day_select .option_area .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-color: #ebebeb;
+  font-size: 16px;
+  color: #989898;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+
+main .date .container .row .header_btns .day_select .option_area .option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 55%;
+  height: 1px;
+  background-color: #231714;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .date .container .row .header_btns .day_select .option_area .option:last-child::after {
+  display: none;
+}
+
+main .date .container .row .header_btns .day_select .option_area .option:hover {
+  font-size: 16px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
+}
+/*# sourceMappingURL=login&register.css.map */
