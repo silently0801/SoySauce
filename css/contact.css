@@ -166,10 +166,6 @@ main .contact {
   }
 }
 
-main .contact .contact_container .row {
-  margin: 0;
-}
-
 main .contact .contact_container .row .contact_header {
   width: 400px;
 }
@@ -487,7 +483,6 @@ main .googlemap {
 }
 
 main .googlemap .container .row {
-  margin: 0;
   height: 550px;
   background-color: #B3B3B3;
 }

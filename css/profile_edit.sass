@@ -116,7 +116,6 @@ main
                             justify-content: flex-start
                             align-items: center
                             padding-top: 5px  
-                            +FontStyle(18px,#666,700,3px,54px) 
                             @media ( max-width: 540px )
                                 justify-content: center
                                 width: 100%
@@ -127,8 +126,11 @@ main
                                 background-color: unset
                                 border: 1px solid $colorBlack
                                 padding: 0 10px
+                                +FontStyle(18px,#666,700,3px,54px) 
                                 @media ( max-width: 1530px )
                                     width: 90%
+                                @media ( max-width: 540px )
+                                    +FontStyle(12px,#666,700,3px,32px)    
                                 &:focus
                                     transition: unset
                                     border: 1px solid $colorOrange 

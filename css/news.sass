@@ -1,4 +1,22 @@
 @import "_function.sass"
+.col-12
+    @media ( max-width: 767px )
+        padding: 0
+nav
+    .container
+        max-width: 1110px
+        @media ( max-width: 1530px )
+            max-width: 970px !important 
+            width: calc( 70% - 30px )
+        @media ( max-width: 1279px )
+            max-width: 70% !important 
+        @media ( max-width: 767px )
+            max-width: calc( 100% - 30px ) !important
+            width: calc( 95% - 30px )
+            padding: 0 5%
+body
+    @media ( max-width: 1530px )
+        background-color: #ebebeb
 main
     .mask
         position: absolute

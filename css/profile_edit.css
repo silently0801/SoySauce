@@ -422,11 +422,6 @@ main .profile .profile_table .container .row .info .input {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 5px;
-  font-size: 18px;
-  color: #666;
-  font-weight: 700;
-  letter-spacing: 3px;
-  line-height: 54px;
 }
 
 @media (max-width: 540px) {
@@ -449,11 +444,26 @@ main .profile .profile_table .container .row .info .input input {
   background-color: unset;
   border: 1px solid #231714;
   padding: 0 10px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 54px;
 }
 
 @media (max-width: 1530px) {
   main .profile .profile_table .container .row .info .input input {
     width: 90%;
+  }
+}
+
+@media (max-width: 540px) {
+  main .profile .profile_table .container .row .info .input input {
+    font-size: 12px;
+    color: #666;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 32px;
   }
 }
 

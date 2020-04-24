@@ -715,12 +715,14 @@ nav .container .row .menu_btn_Area .menu_bot_text span {
 nav .container .row .menu_btn_Area .swiper-pagination {
   position: absolute;
   top: 70px;
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 610px) {
   nav .container .row .menu_btn_Area .swiper-pagination {
-    display: block;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
