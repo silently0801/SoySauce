@@ -1,0 +1,61 @@
+                        <div class="year_select">
+                            <div class="selects" data-toggle="collapse" href="#year_select" value="">2020</div>
+                            <div class="option_area collapse" id="year_select">
+                                
+                            </div>
+                        </div>
+
+                        <div class="month_select">
+                            <div class="selects" data-toggle="collapse" href="#month_select" value="">1</div>
+                            <div class="option_area collapse" id="month_select">
+                                <div class="option" value="1">1</div>
+                                <div class="option" value="2">2</div>
+                                <div class="option" value="3">3</div>
+                                <div class="option" value="4">4</div>
+                                <div class="option" value="5">5</div>
+                                <div class="option" value="6">6</div>
+                                <div class="option" value="7">7</div>
+                                <div class="option" value="8">8</div>
+                                <div class="option" value="9">9</div>
+                                <div class="option" value="10">10</div>
+                                <div class="option" value="11">11</div>
+                                <div class="option" value="12">12</div>
+                            </div>
+                        </div>
+
+                        <div class="day_select">
+                            <div class="selects" data-toggle="collapse" href="#day_select" value="">1</div>
+                            <div class="option_area collapse" id="day_select">
+                                <div class="option" value="1">1</div>
+                                <div class="option" value="2">2</div>
+                                <div class="option" value="3">3</div>
+                                <div class="option" value="4">4</div>
+                                <div class="option" value="5">5</div>
+                                <div class="option" value="6">6</div>
+                                <div class="option" value="7">7</div>
+                                <div class="option" value="8">8</div>
+                                <div class="option" value="9">9</div>
+                                <div class="option" value="10">10</div>
+                                <div class="option" value="11">11</div>
+                                <div class="option" value="12">12</div>
+                                <div class="option" value="13">13</div>
+                                <div class="option" value="14">14</div>
+                                <div class="option" value="15">15</div>
+                                <div class="option" value="16">16</div>
+                                <div class="option" value="17">17</div>
+                                <div class="option" value="18">18</div>
+                                <div class="option" value="19">19</div>
+                                <div class="option" value="20">20</div>
+                                <div class="option" value="21">21</div>
+                                <div class="option" value="22">22</div>
+                                <div class="option" value="23">23</div>
+                                <div class="option" value="24">24</div>
+                                <div class="option" value="25">25</div>
+                                <div class="option" value="26">26</div>
+                                <div class="option" value="27">27</div>
+                                <div class="option" value="28">28</div>
+                                <div class="option" value="29">29</div>
+                                <div class="option" value="30">30</div>
+                                <div class="option" value="31">31</div>
+                            </div>
+                        </div>

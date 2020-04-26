@@ -144,73 +144,111 @@
     </nav>
     <main>
         <section class="mask"></section>
+        <section class="login_register_area">
+            <div class="container">
+                <div class="row">
+                    <div class="login_area">
+                        <div class="header">登入 / </div>
+                        <div class="content">如果您已經成為會員，那麼只要登入即可快速查看訂單、修改個人帳戶及使用更多功能。</div>
+                        <form action="">
+                            <div class="account input_title">
+                                <div class="title">帳號(電子郵件)</div>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="password input_title">
+                                <div class="title">密碼</div>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="form_btn">
+                                <a href="" class="forget">忘記密碼</a>
+                                <button type="submit" class="login btn"><span>登入</span></button>
+                            </div>
+                        </form>
+                        <div class="external_login">
+                            <div class="google">Google登入</div>
+                            <div class="facebook">Facebook登入</div>
+                        </div>
+                    </div>
+                    <div class="register_area">
+                        <div class="header">
+                            <span>註冊 / </span>
+                            <span>歡迎您加入御鼎興</span>
+                        </div>
+                        <div class="external_login">
+                            <div class="google">Google註冊</div>
+                            <div class="facebook">Facebook註冊</div>
+                        </div>
+                        <div class="content">或使用電子郵件註冊</div>
+                        <form action="">
+                            <div class="account input_title">
+                                <div class="title">帳號(電子郵件)</div>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="password input_title">
+                                <div class="title">密碼</div>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="password_again input_title">
+                                <div class="title">再次確認密碼</div>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="birthday input_title">
+                                <div class="title">生日(年/月/日)</div>
+                                <div class="input_area" id="birthday_select">
+                                    <div class="year_select">
+                                        <div class="selects" data-toggle="collapse"  href="#year_select" value="">2020
+                                        </div>
+                                        <div class="option_area collapse" data-parent="#birthday_select" id="year_select">
+                                        </div>
+                                    </div>
+                                    <div class="month_select">
+                                        <div class="selects" data-toggle="collapse"  href="#month_select" value="">1
+                                        </div>
+                                        <div class="option_area collapse" data-parent="#birthday_select" id="month_select">
+                                        </div>
+                                    </div>
+                                    <div class="day_select">
+                                        <div class="selects" data-toggle="collapse"  href="#day_select" value="">1</div>
+                                        <div class="option_area collapse" data-parent="#birthday_select" id="day_select">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_btn">
+                                <a href="" class="restart">重新填寫</a>
+                                <button type="submit" class="login btn"><span>送出</span></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="date">
             <div class="container">
                 <div class="row">
-                    <div class="header_btns">
+                    <div class="header_btns" hidden>
                         <div class="year_select">
-                            <div class="selects" data-toggle="collapse" href="#year_select" value="">1</div>
+                            <div class="selects" data-toggle="collapse" href="#year_select" value="">2020</div>
                             <div class="option_area collapse" id="year_select">
-                                <div class="option" value="1">1</div>
+
                             </div>
                         </div>
-
                         <div class="month_select">
                             <div class="selects" data-toggle="collapse" href="#month_select" value="">1</div>
                             <div class="option_area collapse" id="month_select">
-                                <div class="option" value="1">1</div>
-                                <div class="option" value="2">2</div>
-                                <div class="option" value="3">3</div>
-                                <div class="option" value="4">4</div>
-                                <div class="option" value="5">5</div>
-                                <div class="option" value="6">6</div>
-                                <div class="option" value="7">7</div>
-                                <div class="option" value="8">8</div>
-                                <div class="option" value="9">9</div>
-                                <div class="option" value="10">10</div>
-                                <div class="option" value="11">11</div>
-                                <div class="option" value="12">12</div>
                             </div>
                         </div>
-
                         <div class="day_select">
                             <div class="selects" data-toggle="collapse" href="#day_select" value="">1</div>
                             <div class="option_area collapse" id="day_select">
-                                <div class="option" value="1">1</div>
-                                <div class="option" value="2">2</div>
-                                <div class="option" value="3">3</div>
-                                <div class="option" value="4">4</div>
-                                <div class="option" value="5">5</div>
-                                <div class="option" value="6">6</div>
-                                <div class="option" value="7">7</div>
-                                <div class="option" value="8">8</div>
-                                <div class="option" value="9">9</div>
-                                <div class="option" value="10">10</div>
-                                <div class="option" value="11">11</div>
-                                <div class="option" value="12">12</div>
-                                <div class="option" value="13">13</div>
-                                <div class="option" value="14">14</div>
-                                <div class="option" value="15">15</div>
-                                <div class="option" value="16">16</div>
-                                <div class="option" value="17">17</div>
-                                <div class="option" value="18">18</div>
-                                <div class="option" value="19">19</div>
-                                <div class="option" value="20">20</div>
-                                <div class="option" value="21">21</div>
-                                <div class="option" value="22">22</div>
-                                <div class="option" value="23">23</div>
-                                <div class="option" value="24">24</div>
-                                <div class="option" value="25">25</div>
-                                <div class="option" value="26">26</div>
-                                <div class="option" value="27">27</div>
-                                <div class="option" value="28">28</div>
-                                <div class="option" value="29">29</div>
-                                <div class="option" value="30">30</div>
-                                <div class="option" value="31">31</div>
                             </div>
                         </div>
 
-                       
+
                     </div>
                 </div>
             </div>
@@ -264,17 +302,41 @@
     <script src="./js/background.js"></script>
 
     <script>
-        $(".option").click(function () {
-            console.log();
-            let id = $(this).parent().attr('id');
-            $(this).parent().parent().children(".selects").text($(this).text())
-            $(this).parent().parent().children(".selects").attr("value", $(this).attr("value"))
-            $(this).parent().collapse('hide')
+
+
+        $(document).ready(() => {
+            let today = new Date();
+            let year_data = "";
+            let month_data = "";
+            let day_data = "";
+
+            for (let i = parseInt(today.getFullYear()); i > 1911; i--) {
+                year_data += `<div class="option" value="${i}">${i}</div>`;
+            }
+            document.querySelector("#year_select").innerHTML = year_data;
+            for (let i = 1; i <= 12; i++) {
+                month_data += `<div class="option" value="${i}">${i}</div>`;
+            }
+            document.querySelector("#month_select").innerHTML = month_data;
+            for (let i = 1; i <= 31; i++) {
+                day_data += `<div class="option" value="${i}">${i}</div>`;
+            }
+            document.querySelector("#day_select").innerHTML = day_data;
+
+            $(".option").click(function () {
+                let id = $(this).parent().attr('id');
+                $(this).parent().parent().children(".selects").text($(this).text())
+                $(this).parent().parent().children(".selects").attr("value", $(this).attr("value"))
+                $(this).parent().collapse('hide')
+            });
+            $(".option_area").each(function () {
+                $(this).width($(this).parent().children(".selects").width());
+            });
+
         });
-        var today = new Date();
-        let year = 
-        console.log(today.getFullYear());
-        
+
+
+
     </script>
 </body>
 

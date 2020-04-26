@@ -22,18 +22,11 @@
         position: relative
         align-items: center
         justify-content: center
-        border: 1px solid $colorBlack
-        +FontStyle(16px,$colorBlack,700,3px,54px) 
+        background-color: #4D4D4D
+        border: 1px solid #4D4D4D
+        +FontStyle(16px,#FFF,700,3px,54px) 
         @media ( max-width: 540px )
             width: 100%
-        &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 17px
-            height: 17px
-            background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
         &::after 
             content: ""
             position: absolute
@@ -42,10 +35,10 @@
             width: 12px
             height: 12px
             border-radius: 2px
-            background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+            background: linear-gradient(to bottom right, #fff 0%, #fff 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
             transform: rotate(225deg)
     .option_area
-        border: 1px solid $colorBlack
+        border: 1px solid #4D4D4D
         width: $width
         max-height: 300px
         overflow-y: scroll
@@ -59,8 +52,8 @@
             align-items: center
             justify-content: center
             position: relative
-            background-color: #ebebeb
-            +FontStyle(16px,#989898,700,3px,54px) 
+            background-color: #4D4D4D
+            +FontStyle(16px,#FFF,700,3px,54px) 
             &::after
                 content: ""
                 position: absolute
@@ -86,15 +79,81 @@ main
         background-color: #ebebeb
         @media ( max-width: 1279px )
             display: none
-    .date
+    .login_register_area
+        padding-top: 74px
         .container
-            .row       
-                .header_btns
-                    position: relative
-                    display: flex
-                    .year_select
-                        +select_style(200px) 
-                    .month_select
-                        +select_style(153px) 
-                    .day_select
-                        +select_style(153px)
+            .row
+                .login_area
+                    width: 50%
+                    padding-right: 63px
+                    border-right: 1px solid #000
+                    .header
+                        +FontStyle(32px,$colorBlack,700,7px,49px)    
+                    .content
+                        +FontStyle(18px,$colorBlack,400,3px,34px)
+                    form
+                        .input_title
+                            .title
+                                +FontStyle(14px,$colorBlack,400,4px,27px) 
+                            input
+                                border: 1px solid #000
+                                background: unset
+                                width: 100%
+                                &:focus
+                                    transition: unset
+                                    border: 1px solid $colorOrange 
+                                    outline: 2px solid $colorOrange 
+                        .form_btn
+                            .forget
+                            .login
+                    .external_login
+                        +FontStyle(18px,#FFF,700,4px,49px)
+                        .google
+                        .facebook
+                .register_area
+                    width: 50%
+                    padding-left: 63px
+                    .header
+                        +FontStyle(32px,$colorBlack,700,7px,49px)      
+                        span
+                            &:nth-child(2)
+                                +FontStyle(22px,$colorBlack,700,4px,49px)    
+                    .external_login
+                        .google
+                        .facebook
+                    .content
+                        +FontStyle(22px,$colorBlack,700,3px,49px)
+                    form
+                        .input_title
+                            display: flex
+                            flex-direction: column
+                            .title
+                                +FontStyle(14px,$colorBlack,400,4px,27px) 
+                            input
+                                background-color: #4D4D4D
+                                border: 1px solid #4D4D4D
+                                width: 100%
+                                &:focus
+                                    transition: unset
+                                    border: 1px solid $colorOrange 
+                                    outline: 2px solid $colorOrange 
+                        .birthday
+                            width: 100%
+                            .input_area
+                                width: 100%
+                                position: relative
+                                display: flex
+                                align-items: center
+                                .year_select
+                                    width: 40%
+                                    margin: 1px
+                                    +select_style(100%) 
+                                .month_select
+                                    width: 30%
+                                    margin: 1px
+                                    +select_style(100%) 
+                                .day_select
+                                    width: 30%
+                                    +select_style(100%)
+
+                    
