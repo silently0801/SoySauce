@@ -240,30 +240,14 @@
                 </div>
             </div>
         </section>
-
-
-        <section class="date">
-            <div class="container">
-                <div class="row">
-                    <div class="header_btns" hidden>
-                        <div class="year_select">
-                            <div class="selects" data-toggle="collapse" href="#year_select" value="">2020</div>
-                            <div class="option_area collapse" id="year_select">
-
-                            </div>
-                        </div>
-                        <div class="month_select">
-                            <div class="selects" data-toggle="collapse" href="#month_select" value="">1</div>
-                            <div class="option_area collapse" id="month_select">
-                            </div>
-                        </div>
-                        <div class="day_select">
-                            <div class="selects" data-toggle="collapse" href="#day_select" value="">1</div>
-                            <div class="option_area collapse" id="day_select">
-                            </div>
-                        </div>
-
-
+        <section class="modal_area">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="btn close_modal" data-dismiss="modal"></button>
+                        <div class="content">請先行註冊或登入</div>
                     </div>
                 </div>
             </div>
@@ -354,7 +338,8 @@
                 $(".content_area").removeClass("active")
                 $(`.${$(this).attr("data-btn")}`).addClass("active")
             });
-            
+
+            $('#exampleModalCenter').modal('show');
         });
         $(window).resize(() => {
             setTimeout(function () {

@@ -1065,4 +1065,93 @@ main .login_register_area .container .row .register_area form .form_btn .registe
 main .login_register_area .container .row .register_area.active {
   display: block;
 }
+
+main .modal_area .modal .modal-dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .modal_area .modal .modal-dialog .modal-content {
+  border-radius: unset;
+  background-color: #FFF;
+  border: 5px solid #231714;
+  width: 680px;
+  height: 113px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 540px) {
+  main .modal_area .modal .modal-dialog .modal-content {
+    width: 280px;
+  }
+}
+
+main .modal_area .modal .modal-dialog .modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .modal_area .modal .modal-dialog .modal-content .close_modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border-radius: unset;
+}
+
+main .modal_area .modal .modal-dialog .modal-content .close_modal::before {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%) rotate(-45deg);
+          transform: translate(-50%) rotate(-45deg);
+  width: 50px;
+  height: 2px;
+  background-color: #231714;
+}
+
+main .modal_area .modal .modal-dialog .modal-content .close_modal::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+  width: 50px;
+  height: 2px;
+  background-color: #231714;
+}
+
+main .modal_area .modal .modal-dialog .modal-content .content {
+  font-size: 18px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 41px;
+}
 /*# sourceMappingURL=login&register.css.map */
