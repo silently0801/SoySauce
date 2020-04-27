@@ -229,7 +229,7 @@ main .login_register_area .container .row .login_area {
   }
 }
 
-main .login_register_area .container .row .login_area .header {
+main .login_register_area .container .row .login_area .content_header {
   font-size: 32px;
   color: #231714;
   font-weight: 700;
@@ -239,7 +239,7 @@ main .login_register_area .container .row .login_area .header {
 }
 
 @media (max-width: 1279px) {
-  main .login_register_area .container .row .login_area .header {
+  main .login_register_area .container .row .login_area .content_header {
     display: none;
   }
 }
@@ -450,7 +450,7 @@ main .login_register_area .container .row .register_area {
   }
 }
 
-main .login_register_area .container .row .register_area .header {
+main .login_register_area .container .row .register_area .content_header {
   font-size: 32px;
   color: #231714;
   font-weight: 700;
@@ -460,12 +460,12 @@ main .login_register_area .container .row .register_area .header {
 }
 
 @media (max-width: 1279px) {
-  main .login_register_area .container .row .register_area .header {
+  main .login_register_area .container .row .register_area .content_header {
     display: none;
   }
 }
 
-main .login_register_area .container .row .register_area .header span:nth-child(2) {
+main .login_register_area .container .row .register_area .content_header span:nth-child(2) {
   font-size: 22px;
   color: #231714;
   font-weight: 700;
