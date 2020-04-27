@@ -158,6 +158,24 @@ main .header {
   padding: 21px 0 37px;
 }
 
+@media (max-width: 1279px) {
+  main .header .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) {
+  main .header .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 main .header .container .row .title {
   width: 225px;
   font-size: 32px;
@@ -165,6 +183,13 @@ main .header .container .row .title {
   font-weight: 700;
   letter-spacing: 7px;
   line-height: 49px;
+}
+
+@media (max-width: 1279px) {
+  main .header .container .row .title {
+    width: unset;
+    margin: 0 15px 25px 0;
+  }
 }
 
 main .header .container .row .status_area {
@@ -180,6 +205,20 @@ main .header .container .row .status_area {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-transition: unset;
+  transition: unset;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .header .container .row .status_area .status_arrow {
@@ -188,6 +227,12 @@ main .header .container .row .status_area .status_arrow {
   height: 39px;
   overflow: hidden;
   border-left: 1px solid #231714;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status_arrow {
+    display: none;
+  }
 }
 
 main .header .container .row .status_area .status_arrow::before {
@@ -247,6 +292,17 @@ main .header .container .row .status_area .status {
   height: 176px;
   border-radius: 50%;
   border: 1px solid #231714;
+  -webkit-transition: unset;
+  transition: unset;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status {
+    width: unset;
+    height: unset;
+    border: unset;
+    border-radius: unset;
+  }
 }
 
 main .header .container .row .status_area .status .status_title {
@@ -261,6 +317,8 @@ main .header .container .row .status_area .status .status_title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: unset;
+  transition: unset;
   font-size: 73px;
   color: #231714;
   font-weight: 700;
@@ -268,9 +326,36 @@ main .header .container .row .status_area .status .status_title {
   line-height: 1;
 }
 
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status .status_title {
+    width: 100%;
+    font-size: 16px;
+    color: #808080;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 28px;
+  }
+}
+
+main .header .container .row .status_area .status .status_title span {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status .status_title span {
+    display: block;
+  }
+}
+
 main .header .container .row .status_area .status .status_content {
   width: 55%;
   position: relative;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status .status_content {
+    display: none;
+  }
 }
 
 main .header .container .row .status_area .status .status_content .text {
@@ -302,8 +387,21 @@ main .header .container .row .status_area .status:nth-child(1) {
   border: 1px solid #C0362D;
 }
 
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status:nth-child(1) {
+    background-color: unset;
+    border: unset;
+  }
+}
+
 main .header .container .row .status_area .status:nth-child(1) .status_title {
   color: #FFF;
+}
+
+@media (max-width: 991px) {
+  main .header .container .row .status_area .status:nth-child(1) .status_title {
+    color: #C0362D;
+  }
 }
 
 main .header .container .row .status_area .status:nth-child(1) .status_content .text {
@@ -506,11 +604,18 @@ main .payment .container .row .pay_header {
   margin-bottom: 34px;
 }
 
-main .payment .container .row .method {
+main .payment .container .row .pay_content .method {
   margin-bottom: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-main .payment .container .row .method .title {
+main .payment .container .row .pay_content .method .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +624,7 @@ main .payment .container .row .method .title {
           align-items: center;
 }
 
-main .payment .container .row .method .title .text {
+main .payment .container .row .pay_content .method .title .text {
   margin-right: 24px;
   font-size: 22px;
   color: #231714;
@@ -528,7 +633,7 @@ main .payment .container .row .method .title .text {
   line-height: 31px;
 }
 
-main .payment .container .row .method .title .method_btn {
+main .payment .container .row .pay_content .method .title .method_btn {
   height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,6 +651,14 @@ main .payment .container .row .method .title .method_btn {
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 1;
+}
+
+main .payment .container .row .pay_content .method .radio_btn label {
+  font-size: 18px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 41px;
 }
 
 main .modal_area .modal .modal-dialog {
@@ -646,4 +759,4 @@ main .modal_area .modal .modal-dialog .modal-content .content {
     line-height: 27px;
   }
 }
-/*# sourceMappingURL=checkout.css.map */
+/*# sourceMappingURL=checkout_check.css.map */

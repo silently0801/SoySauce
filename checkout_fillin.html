@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap&subset=chinese-traditional"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/nav_footer.css">
-    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/checkout_fillin.css">
 </head>
 
 <body>
@@ -179,7 +179,100 @@
                 </div>
             </div>
         </section>
-       
+        <section class="products_table">
+            <div class="container">
+                <div class="row">
+                    <div class="product">
+                        <div class="product_img"></div>
+                        <div class="name">商品</div>
+                        <div class="qty">數量</div>
+                        <div class="price">單價</div>
+                        <div class="total">小計</div>
+                    </div>
+                    <!-- product -->
+                    <div class="product">
+                        <div class="product_img">
+                            <div class="img"
+                                style="background-image: url(./img/08-1-購物車-結帳頁-選擇商品數量/product18111220369466.jpg);">
+                            </div>
+                        </div>
+                        <div class="name">米粒原燉醬油</div>
+                        <div class="qty">
+                            <div class="minus">
+                                <div class="line1"></div>
+                            </div>
+                            <div class="count" value="1">1</div>
+                            <div class="plus">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                            </div>
+                        </div>
+                        <div class="price" value="350">NT.350</div>
+                        <div class="total" value="350">NT.350</div>
+                    </div>
+                    <!-- end -->
+                    <div class="product">
+                        <div class="product_img">
+                            <div class="img"
+                                style="background-image: url(./img/08-1-購物車-結帳頁-選擇商品數量/product18111220369466.jpg);">
+                            </div>
+                        </div>
+                        <div class="name">米粒原燉醬油</div>
+                        <div class="qty">
+                            <div class="minus">
+                                <div class="line1"></div>
+                            </div>
+                            <div class="count" value="1">1</div>
+                            <div class="plus">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                            </div>
+                        </div>
+                        <div class="price" value="350">NT.350</div>
+                        <div class="total" value="350">NT.350</div>
+                    </div>
+                    <div class="product">
+                        <div class="product_img">
+                            <div class="img"
+                                style="background-image: url(./img/08-1-購物車-結帳頁-選擇商品數量/product18111220369466.jpg);">
+                            </div>
+                        </div>
+                        <div class="name">米粒原燉醬油</div>
+                        <div class="qty">
+                            <div class="minus">
+                                <div class="line1"></div>
+                            </div>
+                            <div class="count" value="1">1</div>
+                            <div class="plus">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                            </div>
+                        </div>
+                        <div class="price" value="350">NT.350</div>
+                        <div class="total" value="350">NT.350</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="payment">
+            <div class="container">
+                <div class="row">
+                    <div class="pay_header">
+                        各品項可以混合搭配，但御鼎興同名系列總瓶數需為6的倍數，<br>
+                        濁水琥珀系列總瓶數需為3的倍數。
+                    </div>
+                    <div class="method">
+                        <div class="title">
+                            <div class="text">付款方式</div>
+                            <div class="method_btn">付款帳號</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
         <section class="modal_area">
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -244,7 +337,20 @@
 
 
         $(document).ready(() => {
+            /*詳細產品加減*/
+            $(".qty .minus").click(function () {
+                let qty = $(this).parent(".qty").children(".count");
+                let count = Math.max(parseInt(qty.text()) - 1, 0);
+                qty.text(count);
+                qty.attr("value", count);
+            });
 
+            $(".qty .plus").click(function () {
+                let qty = $(this).parent(".qty").children(".count");
+                let count = Math.max(parseInt(qty.text()) + 1, 0);
+                qty.text(count);
+                qty.attr("value", count);
+            });
             // $('#exampleModalCenter').modal('show');
         });
         $(window).resize(() => {

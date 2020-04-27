@@ -98,7 +98,124 @@ main
                                     span
                                         color: #FFF
 
-    
+    .products_table
+        .container
+            .row
+                .product
+                    height: 145px
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    border-bottom: 1px solid #B2B2B2
+                    .product_img
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 20%
+                        height: 100%
+                        .img
+                            border-radius: 5px
+                            width: 100px
+                            height: 120px
+                            background-position: center
+                            background-size: cover
+                    .name
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        width: 30%
+                        height: 100%
+                        +FontStyle(22px,$colorBlack,600,3px,31px)
+                    .qty
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 15%
+                        height: 100%
+                        .count
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: 0 10px
+                            margin: 0 5px
+                            min-width: 76px
+                            height: 43px
+                            border: 1px solid $colorBlack
+                            +FontStyle(22px,$colorBlack,600,3px,31px)
+                        .minus,.plus
+                            position: relative
+                            width: 24px
+                            height: 24px
+                            .line1
+                                width: 12px
+                                height: 3px
+                                background-color: $colorBlack
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%)
+                            .line2
+                                width: 12px
+                                height: 3px
+                                background-color: $colorBlack
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%) rotate(90deg)
+                        
+                    .price
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 20%
+                        height: 100%
+                        +FontStyle(18px,$colorBlack,600,3px,28px)
+                    .total
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding-right: 32px
+                        width: 15%
+                        height: 100%
+                        +FontStyle(18px,$colorBlack,600,3px,28px)
+                    &:nth-child(2n+1)
+                        background-color: #E5E5E5
+                    &:nth-child(1)
+                        height: 58px
+                        background-color: #B2B2B2
+                        border-top: 1px solid #333333
+                        border-bottom: 1px solid #333333
+                        +FontStyle(18px,$colorBlack,700,3px,31px)
+                   
+                    &:last-child
+                        margin-bottom: 32px
+    .payment
+        .container
+            .row
+                flex-direction: column
+                .pay_header
+                    +FontStyle(18px,$colorOrange,600,3px,41px)
+                    margin-bottom: 34px
+                .method
+                    margin-bottom: 27px
+                    .title
+                        display: flex
+                        align-items: center
+                        .text
+                            margin-right: 24px
+                            +FontStyle(22px,$colorBlack,700,3px,31px)
+                        .method_btn
+                            height: 24px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: 0 20px
+                            border: 1px solid $colorOrange
+                            +FontStyle(14px,$colorOrange,700,3px,1)
+                        
+                    
+                        
+                
     .modal_area
         .modal
             .modal-dialog
