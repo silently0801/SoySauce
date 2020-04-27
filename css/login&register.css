@@ -122,6 +122,8 @@ body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 body nav {
@@ -129,6 +131,12 @@ body nav {
   transition: 1s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
+}
+
+@media (max-width: 1530px) {
+  body {
+    background-color: #ebebeb;
+  }
 }
 
 main .mask {
@@ -146,8 +154,64 @@ main .mask {
   }
 }
 
+main .header {
+  padding: 21px 0 37px;
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  main .header {
+    display: block;
+  }
+}
+
+main .header .container .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .header .container .row .header_btn {
+  padding: 0 17px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #808080;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+main .header .container .row .login_btn {
+  border-right: 1px solid #000;
+}
+
+main .header .container .row .login_btn.active {
+  color: #231714;
+}
+
+main .header .container .row .register_btn.active {
+  color: #231714;
+}
+
 main .login_register_area {
-  padding-top: 74px;
+  padding: 74px 0 120px;
+}
+
+@media (max-width: 1279px) {
+  main .login_register_area {
+    padding: 0 0 120px;
+  }
+}
+
+@media (max-width: 1279px) {
+  main .login_register_area .container .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 main .login_register_area .container .row .login_area {
@@ -156,12 +220,28 @@ main .login_register_area .container .row .login_area {
   border-right: 1px solid #000;
 }
 
+@media (max-width: 1279px) {
+  main .login_register_area .container .row .login_area {
+    display: none;
+    padding-right: unset;
+    border-right: unset;
+    width: 100%;
+  }
+}
+
 main .login_register_area .container .row .login_area .header {
   font-size: 32px;
   color: #231714;
   font-weight: 700;
   letter-spacing: 7px;
   line-height: 49px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1279px) {
+  main .login_register_area .container .row .login_area .header {
+    display: none;
+  }
 }
 
 main .login_register_area .container .row .login_area .content {
@@ -170,6 +250,27 @@ main .login_register_area .container .row .login_area .content {
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .login_area .content {
+    font-size: 12px;
+    color: #231714;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 23px;
+  }
+}
+
+main .login_register_area .container .row .login_area form {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .login_area form {
+    margin-bottom: 40px;
+  }
 }
 
 main .login_register_area .container .row .login_area form .input_title .title {
@@ -184,6 +285,7 @@ main .login_register_area .container .row .login_area form .input_title input {
   border: 1px solid #000;
   background: unset;
   width: 100%;
+  margin-bottom: 14px;
 }
 
 main .login_register_area .container .row .login_area form .input_title input:focus {
@@ -193,7 +295,90 @@ main .login_register_area .container .row .login_area form .input_title input:fo
   outline: 2px solid #C0362D;
 }
 
+main .login_register_area .container .row .login_area form .password input {
+  margin-bottom: 50px;
+}
+
+main .login_register_area .container .row .login_area form .form_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .forget {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 34px;
+  font-size: 14px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .forget::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 49%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background-color: #231714;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .login {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 34px;
+  border: 1px solid #231714;
+  border-radius: unset;
+  font-size: 14px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
 main .login_register_area .container .row .login_area .external_login {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 18px;
   color: #FFF;
   font-weight: 700;
@@ -201,9 +386,68 @@ main .login_register_area .container .row .login_area .external_login {
   line-height: 49px;
 }
 
+@media (max-width: 540px) {
+  main .login_register_area .container .row .login_area .external_login {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .login_register_area .container .row .login_area .external_login .external_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  width: 50%;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .login_area .external_login .external_btn {
+    width: 100%;
+  }
+}
+
+main .login_register_area .container .row .login_area .external_login .google {
+  margin-right: 20px;
+  background-color: #DD4B39;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .login_area .external_login .google {
+    margin-right: unset;
+    margin-bottom: 20px;
+  }
+}
+
+main .login_register_area .container .row .login_area .external_login .facebook {
+  background-color: #4E64AD;
+}
+
+main .login_register_area .container .row .login_area.active {
+  display: block;
+}
+
 main .login_register_area .container .row .register_area {
   width: 50%;
   padding-left: 63px;
+}
+
+@media (max-width: 1279px) {
+  main .login_register_area .container .row .register_area {
+    display: none;
+    padding-left: unset;
+    width: 100%;
+  }
 }
 
 main .login_register_area .container .row .register_area .header {
@@ -212,6 +456,13 @@ main .login_register_area .container .row .register_area .header {
   font-weight: 700;
   letter-spacing: 7px;
   line-height: 49px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 1279px) {
+  main .login_register_area .container .row .register_area .header {
+    display: none;
+  }
 }
 
 main .login_register_area .container .row .register_area .header span:nth-child(2) {
@@ -222,12 +473,78 @@ main .login_register_area .container .row .register_area .header span:nth-child(
   line-height: 49px;
 }
 
+main .login_register_area .container .row .register_area .external_login {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area .external_login {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .login_register_area .container .row .register_area .external_login .external_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  width: 50%;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area .external_login .external_btn {
+    width: 100%;
+  }
+}
+
+main .login_register_area .container .row .register_area .external_login .google {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #DD4B39;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 49px;
+  border: 1px solid #DD4B39;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area .external_login .google {
+    margin-right: unset;
+    margin-bottom: 20px;
+  }
+}
+
+main .login_register_area .container .row .register_area .external_login .facebook {
+  font-size: 18px;
+  color: #4E64AD;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 49px;
+  border: 1px solid #4E64AD;
+}
+
 main .login_register_area .container .row .register_area .content {
   font-size: 22px;
   color: #231714;
   font-weight: 700;
   letter-spacing: 3px;
-  line-height: 49px;
+  line-height: 1;
+  margin-bottom: 17px;
 }
 
 main .login_register_area .container .row .register_area form .input_title {
@@ -251,6 +568,7 @@ main .login_register_area .container .row .register_area form .input_title .titl
 main .login_register_area .container .row .register_area form .input_title input {
   background-color: #4D4D4D;
   border: 1px solid #4D4D4D;
+  margin-bottom: 14px;
   width: 100%;
 }
 
@@ -263,6 +581,7 @@ main .login_register_area .container .row .register_area form .input_title input
 
 main .login_register_area .container .row .register_area form .birthday {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 main .login_register_area .container .row .register_area form .birthday .input_area {
@@ -271,14 +590,16 @@ main .login_register_area .container .row .register_area form .birthday .input_a
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 main .login_register_area .container .row .register_area form .birthday .input_area .year_select {
-  width: 40%;
-  margin: 1px;
+  width: calc( 40% - 2px);
+  margin: 0 1px 0 0;
 }
 
 main .login_register_area .container .row .register_area form .birthday .input_area .year_select .selects {
@@ -400,9 +721,16 @@ main .login_register_area .container .row .register_area form .birthday .input_a
   line-height: 54px;
 }
 
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area form .birthday .input_area .year_select {
+    width: 100%;
+    margin: 0 0 1px;
+  }
+}
+
 main .login_register_area .container .row .register_area form .birthday .input_area .month_select {
   width: 30%;
-  margin: 1px;
+  margin: 0 1px 0 0;
 }
 
 main .login_register_area .container .row .register_area form .birthday .input_area .month_select .selects {
@@ -522,6 +850,12 @@ main .login_register_area .container .row .register_area form .birthday .input_a
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area form .birthday .input_area .month_select {
+    width: calc( 50% - 1px);
+  }
 }
 
 main .login_register_area .container .row .register_area form .birthday .input_area .day_select {
@@ -645,5 +979,90 @@ main .login_register_area .container .row .register_area form .birthday .input_a
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 54px;
+}
+
+@media (max-width: 540px) {
+  main .login_register_area .container .row .register_area form .birthday .input_area .day_select {
+    width: 50%;
+  }
+}
+
+main .login_register_area .container .row .register_area form .form_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .restart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 34px;
+  font-size: 14px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .restart::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 49%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background-color: #231714;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .register {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 34px;
+  border: 1px solid #231714;
+  border-radius: unset;
+  font-size: 14px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .register::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .login_register_area .container .row .register_area.active {
+  display: block;
 }
 /*# sourceMappingURL=login&register.css.map */

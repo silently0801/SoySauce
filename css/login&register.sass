@@ -68,7 +68,9 @@
                     display: none
             &:hover
                 +FontStyle(16px,$colorBlack,700,3px,54px)    
-
+body
+    @media ( max-width: 1530px )
+        background-color: #ebebeb
 main
     .mask
         position: absolute
@@ -79,19 +81,56 @@ main
         background-color: #ebebeb
         @media ( max-width: 1279px )
             display: none
-    .login_register_area
-        padding-top: 74px
+    .header
+        padding: 21px 0 37px
+        display: none
+        @media ( max-width: 1279px )
+            display: block
         .container
             .row
+                justify-content: center
+                align-items: center
+                .header_btn
+                    padding: 0 17px
+                    cursor: pointer
+                    +FontStyle(22px,$colorGrey,700,3px,1) 
+                .login_btn
+                    border-right: 1px solid #000
+                .login_btn.active
+                    color: $colorBlack
+                .register_btn.active
+                    color: $colorBlack
+    .login_register_area
+        padding: 74px 0 120px
+        @media ( max-width: 1279px )
+            padding: 0 0 120px
+        .container
+            .row
+                @media ( max-width: 1279px )
+                    justify-content: center
                 .login_area
                     width: 50%
                     padding-right: 63px
                     border-right: 1px solid #000
+                    @media ( max-width: 1279px )
+                        display: none
+                        padding-right: unset
+                        border-right: unset
+                        width: 100%
                     .header
-                        +FontStyle(32px,$colorBlack,700,7px,49px)    
+                        +FontStyle(32px,$colorBlack,700,7px,49px) 
+                        margin-bottom: 20px  
+                        @media ( max-width: 1279px )
+                            display: none 
                     .content
                         +FontStyle(18px,$colorBlack,400,3px,34px)
+                        margin-bottom: 22px 
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorBlack,400,3px,23px)
                     form
+                        margin-bottom: 60px 
+                        @media ( max-width: 540px )
+                            margin-bottom: 40px 
                         .input_title
                             .title
                                 +FontStyle(14px,$colorBlack,400,4px,27px) 
@@ -99,30 +138,123 @@ main
                                 border: 1px solid #000
                                 background: unset
                                 width: 100%
+                                margin-bottom: 14px
                                 &:focus
                                     transition: unset
                                     border: 1px solid $colorOrange 
-                                    outline: 2px solid $colorOrange 
+                                    outline: 2px solid $colorOrange
+                        .password
+                            input
+                                margin-bottom: 50px
                         .form_btn
+                            display: flex
+                            justify-content: flex-end
+                            width: 100%
                             .forget
+                                position: relative
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                width: 120px
+                                height: 34px
+                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    bottom: 2px
+                                    left: 49%
+                                    transform: translateX(-50%)
+                                    width: 60%
+                                    height: 1px
+                                    background-color: $colorBlack
                             .login
+                                position: relative
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                width: 120px
+                                height: 34px
+                                border: 1px solid $colorBlack
+                                border-radius: unset
+                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+                                    width: 17px
+                                    height: 17px
+                                    background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
                     .external_login
+                        width: 100%
+                        display: flex
                         +FontStyle(18px,#FFF,700,4px,49px)
+                        @media ( max-width: 540px )
+                            flex-direction: column
+                        .external_btn
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            cursor: pointer
+                            width: 50%
+                            height: 70px
+                            border-radius: 10px
+                            @media ( max-width: 540px )
+                                width: 100%
                         .google
+                            margin-right: 20px
+                            background-color: #DD4B39
+                            @media ( max-width: 540px )
+                                margin-right: unset
+                                margin-bottom: 20px
                         .facebook
+                            background-color: #4E64AD
+                .login_area.active
+                    display: block
                 .register_area
                     width: 50%
                     padding-left: 63px
+                    @media ( max-width: 1279px )
+                        display: none
+                        padding-left: unset
+                        width: 100%
                     .header
-                        +FontStyle(32px,$colorBlack,700,7px,49px)      
+                        +FontStyle(32px,$colorBlack,700,7px,49px)  
+                        margin-bottom: 26px
+                        @media ( max-width: 1279px )
+                            display: none 
                         span
                             &:nth-child(2)
                                 +FontStyle(22px,$colorBlack,700,4px,49px)    
                     .external_login
+                        width: 100%
+                        display: flex
+                        margin-bottom: 32px
+                        @media ( max-width: 540px )
+                            flex-direction: column
+                        .external_btn
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            cursor: pointer
+                            width: 50%
+                            height: 70px
+                            border-radius: 10px
+                            @media ( max-width: 540px )
+                                width: 100%
                         .google
+                            margin-right: 20px
+                            +FontStyle(18px,#DD4B39,700,4px,49px)
+                            border: 1px solid #DD4B39
+                            @media ( max-width: 540px )
+                                margin-right: unset
+                                margin-bottom: 20px
                         .facebook
+                            +FontStyle(18px,#4E64AD,700,4px,49px)
+                            border: 1px solid #4E64AD
                     .content
-                        +FontStyle(22px,$colorBlack,700,3px,49px)
+                        +FontStyle(22px,$colorBlack,700,3px,1)
+                        margin-bottom: 17px
                     form
                         .input_title
                             display: flex
@@ -132,6 +264,7 @@ main
                             input
                                 background-color: #4D4D4D
                                 border: 1px solid #4D4D4D
+                                margin-bottom: 14px
                                 width: 100%
                                 &:focus
                                     transition: unset
@@ -139,21 +272,69 @@ main
                                     outline: 2px solid $colorOrange 
                         .birthday
                             width: 100%
+                            margin-bottom: 50px
                             .input_area
                                 width: 100%
                                 position: relative
                                 display: flex
+                                flex-wrap: wrap
                                 align-items: center
                                 .year_select
-                                    width: 40%
-                                    margin: 1px
+                                    width: calc( 40% - 2px )
+                                    margin: 0 1px 0 0
                                     +select_style(100%) 
+                                    @media ( max-width: 540px )
+                                        width: 100%
+                                        margin: 0 0 1px
                                 .month_select
                                     width: 30%
-                                    margin: 1px
+                                    margin: 0 1px 0 0
                                     +select_style(100%) 
+                                    @media ( max-width: 540px )
+                                        width: calc( 50% - 1px )
                                 .day_select
                                     width: 30%
                                     +select_style(100%)
-
-                    
+                                    @media ( max-width: 540px )
+                                        width: 50%
+                        .form_btn                                    
+                            display: flex
+                            justify-content: flex-end
+                            width: 100%
+                            .restart
+                                position: relative
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                width: 120px
+                                height: 34px
+                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    bottom: 2px
+                                    left: 49%
+                                    transform: translateX(-50%)
+                                    width: 60%
+                                    height: 1px
+                                    background-color: $colorBlack
+                            .register
+                                position: relative
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                width: 120px
+                                height: 34px
+                                border: 1px solid $colorBlack
+                                border-radius: unset
+                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+                                    width: 17px
+                                    height: 17px
+                                    background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+                .register_area.active
+                    display: block    

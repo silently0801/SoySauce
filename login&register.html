@@ -144,10 +144,22 @@
     </nav>
     <main>
         <section class="mask"></section>
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="login_btn header_btn active" data-btn="login_area">
+                        登入
+                    </div>
+                    <div class="register_btn header_btn" data-btn="register_area">
+                        註冊
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="login_register_area">
             <div class="container">
                 <div class="row">
-                    <div class="login_area">
+                    <div class="login_area content_area active">
                         <div class="header">登入 / </div>
                         <div class="content">如果您已經成為會員，那麼只要登入即可快速查看訂單、修改個人帳戶及使用更多功能。</div>
                         <form action="">
@@ -165,18 +177,18 @@
                             </div>
                         </form>
                         <div class="external_login">
-                            <div class="google">Google登入</div>
-                            <div class="facebook">Facebook登入</div>
+                            <div class="google external_btn">Google登入</div>
+                            <div class="facebook external_btn">Facebook登入</div>
                         </div>
                     </div>
-                    <div class="register_area">
+                    <div class="register_area content_area">
                         <div class="header">
                             <span>註冊 / </span>
                             <span>歡迎您加入御鼎興</span>
                         </div>
                         <div class="external_login">
-                            <div class="google">Google註冊</div>
-                            <div class="facebook">Facebook註冊</div>
+                            <div class="google external_btn">Google註冊</div>
+                            <div class="facebook external_btn">Facebook註冊</div>
                         </div>
                         <div class="content">或使用電子郵件註冊</div>
                         <form action="">
@@ -196,20 +208,23 @@
                                 <div class="title">生日(年/月/日)</div>
                                 <div class="input_area" id="birthday_select">
                                     <div class="year_select">
-                                        <div class="selects" data-toggle="collapse"  href="#year_select" value="">2020
+                                        <div class="selects" data-toggle="collapse" href="#year_select" value="">2020
                                         </div>
-                                        <div class="option_area collapse" data-parent="#birthday_select" id="year_select">
+                                        <div class="option_area collapse" data-parent="#birthday_select"
+                                            id="year_select">
                                         </div>
                                     </div>
                                     <div class="month_select">
-                                        <div class="selects" data-toggle="collapse"  href="#month_select" value="">1
+                                        <div class="selects" data-toggle="collapse" href="#month_select" value="">1
                                         </div>
-                                        <div class="option_area collapse" data-parent="#birthday_select" id="month_select">
+                                        <div class="option_area collapse" data-parent="#birthday_select"
+                                            id="month_select">
                                         </div>
                                     </div>
                                     <div class="day_select">
-                                        <div class="selects" data-toggle="collapse"  href="#day_select" value="">1</div>
-                                        <div class="option_area collapse" data-parent="#birthday_select" id="day_select">
+                                        <div class="selects" data-toggle="collapse" href="#day_select" value="">1</div>
+                                        <div class="option_area collapse" data-parent="#birthday_select"
+                                            id="day_select">
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +232,7 @@
 
                             <div class="form_btn">
                                 <a href="" class="restart">重新填寫</a>
-                                <button type="submit" class="login btn"><span>送出</span></button>
+                                <button type="submit" class="register btn"><span>送出</span></button>
                             </div>
                         </form>
 
@@ -333,8 +348,21 @@
                 $(this).width($(this).parent().children(".selects").width());
             });
 
+            $(".header_btn").click(function () {
+                $(".header .container .row .header_btn").removeClass("active")
+                $(this).addClass("active")
+                $(".content_area").removeClass("active")
+                $(`.${$(this).attr("data-btn")}`).addClass("active")
+            });
+            
         });
-
+        $(window).resize(() => {
+            setTimeout(function () {
+                $(".option_area").each(function () {
+                    $(this).width($(this).parent().children(".selects").width());
+                });
+            }, 100);
+        });
 
 
     </script>
