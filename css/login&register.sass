@@ -188,7 +188,6 @@ main
                     .external_login
                         width: 100%
                         display: flex
-                        +FontStyle(18px,#FFF,700,4px,49px)
                         @media ( max-width: 540px )
                             flex-direction: column
                         .external_btn
@@ -199,6 +198,7 @@ main
                             width: 50%
                             height: 70px
                             border-radius: 10px
+                            +FontStyle(18px,#FFF,700,4px,49px)
                             @media ( max-width: 540px )
                                 width: 100%
                         .google
@@ -392,3 +392,5 @@ main
                             background-color: $colorBlack
                     .content
                         +FontStyle(18px,$colorBlack,700,4px,41px)
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorBlack,700,4px,27px)

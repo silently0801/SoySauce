@@ -379,11 +379,6 @@ main .login_register_area .container .row .login_area .external_login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 18px;
-  color: #FFF;
-  font-weight: 700;
-  letter-spacing: 4px;
-  line-height: 49px;
 }
 
 @media (max-width: 540px) {
@@ -409,6 +404,11 @@ main .login_register_area .container .row .login_area .external_login .external_
   width: 50%;
   height: 70px;
   border-radius: 10px;
+  font-size: 18px;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 49px;
 }
 
 @media (max-width: 540px) {
@@ -1153,5 +1153,15 @@ main .modal_area .modal .modal-dialog .modal-content .content {
   font-weight: 700;
   letter-spacing: 4px;
   line-height: 41px;
+}
+
+@media (max-width: 540px) {
+  main .modal_area .modal .modal-dialog .modal-content .content {
+    font-size: 12px;
+    color: #231714;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 27px;
+  }
 }
 /*# sourceMappingURL=login&register.css.map */
