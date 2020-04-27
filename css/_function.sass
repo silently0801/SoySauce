@@ -37,6 +37,21 @@ $colorGrey: #808080
     bottom: $bottom
     left: $left
 
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%))
+    // For Google Chrome
+    &::-webkit-scrollbar 
+        width:  $size
+        height: $size
+    &::-webkit-scrollbar-thumb 
+        background: $foreground-color
+    &::-webkit-scrollbar-track 
+        background: $background-color
+    // For Internet Explorer
+    & 
+        scrollbar-face-color: $foreground-color
+        scrollbar-track-color: $background-color
+
+
 @mixin keyframes($animationName)
     @keyframes #{$animationName}
         @content
@@ -68,8 +83,6 @@ $colorGrey: #808080
         height: 45px
     100%
         opacity: 0
-
-
 
 @include keyframes(fadein)
     0%
