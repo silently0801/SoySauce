@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap&subset=chinese-traditional"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/nav_footer.css">
-    <link rel="stylesheet" href="./css/checkout_fillin.css">
+    <link rel="stylesheet" href="./css/checkout_success.css">
 </head>
 
 <body>
@@ -147,34 +147,9 @@
         <section class="header">
             <div class="container">
                 <div class="row">
-                    <div class="title">購物車 / </div>
-                    <div class="status_area">
-                        <div class="check status">
-                            <div class="status_title">1<span>.確認購買清單</span></div>
-                            <div class="status_content">
-                                <div class="text">確認</div>
-                                <div class="text">購買清單</div>
-                                <div class="text"><span>.</span></div>
-                            </div>
-                        </div>
-                        <div class="status_arrow arrow1"></div>
-                        <div class="fillin status">
-                            <div class="status_title">2<span>.填寫運送資料</span></div>
-                            <div class="status_content">
-                                <div class="text">填寫</div>
-                                <div class="text">運送資料</div>
-                                <div class="text"><span>.</span></div>
-                            </div>
-                        </div>
-                        <div class="status_arrow arrow2"></div>
-                        <div class="success status">
-                            <div class="status_title">3<span>.購物完成</span></div>
-                            <div class="status_content">
-                                <div class="text">購物</div>
-                                <div class="text">完成</div>
-                                <div class="text"><span>.</span></div>
-                            </div>
-                        </div>
+                    <div class="finish">
+                        <div class="title">購物車 / 購物完成</div>
+                        <div class="content">感謝您的支持!</div>
                     </div>
                 </div>
             </div>
@@ -263,68 +238,49 @@
             </div>
         </section>
         <section class="profile_area">
-            <form action="./checkout_success.html" class="profile">
+            <form action="" class="profile">
                 <div class="profile_table">
-                    <div class="table_title">
-                        <div class="title">填寫運送資料</div>
-                    </div>
                     <div class="container">
                         <div class="row">
-                            <div class="table_content">
-                                <div class="info">
-                                    <div class="title">訂購姓名<span>*</span></div>
-                                    <div class="input"><input type="text" name="" id="" value=""></div>
-                                </div>
-                                <div class="info">
-                                    <div class="title">聯絡電話<span>*</span></div>
-                                    <div class="input"><input type="text" name="" id="" value=""></div>
-                                </div>
-                                <div class="info">
-                                    <div class="title">手　　機<span>*</span></div>
-                                    <div class="input"><input type="text" name="" id="" value=""></div>
-                                </div>
-                                <div class="info">
-                                    <div class="title">收件地址<span>*</span></div>
-                                    <div class="input"><input type="text" name="" id="" value=""></div>
-                                </div>
-                                <div class="info">
-                                    <div class="title">電子郵件<span>*</span></div>
-                                    <div class="input"><input type="text" name="" id="" value=""></div>
-                                </div>
-                                <div class="info invoice">
-                                    <div class="title">發票方式<span>*</span></div>
-                                    <div class="input">
-                                        <input type="text" name="" id="" value="double" hidden>
-                                        <div class="single_btn active" value="double">二聯式發票</div>
-                                        <div class="single_btn" value="triple">三聯式發票</div>
-                                    </div>
-                                </div>
-                                <div class="info receipt">
-                                    <div class="title">收貨時間<span>*</span></div>
-                                    <div class="input">
-                                        <input type="text" name="" id="" value="all" hidden>
-                                        <div class="single_btn active" value="all">皆可</div>
-                                        <div class="single_btn" value="morning">中午前</div>
-                                        <div class="single_btn" value="afternoon">下午1:00～5:00</div>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <div class="title">備　　註</div>
-                                    <div class="input"><textarea name="" id="" cols="30" rows="10"></textarea></div>
-                                    
-                                </div>
+                            <div class="info">
+                                <div class="title">訂購資訊</div>
+                                <div class="content"></div>
                             </div>
-                            <div class="submit_btn">
-                                <a href="javascript:history.go(-1)" class="previous">
-                                    <div class="arrow"></div>
-                                    <span>確認購買清單</span>
-                                </a>
-                                <button type="submit" class="next btn">
-                                    <span>送出訂單資料</span>
-                                    <div class="arrow"></div>
-                                </button>
+                            <div class="info">
+                                <div class="title">帳　　號</div>
+                                <div class="content">gmail@gmail.com</div>
                             </div>
-
+                            <div class="info">
+                                <div class="title">姓　　名</div>
+                                <div class="content">無吳無</div>
+                            </div>
+                            <div class="info">
+                                <div class="title">生　　日</div>
+                                <div class="content">1999/99/99</div>
+                            </div>
+                            <div class="info">
+                                <div class="title">聯絡電話</div>
+                                <div class="content">04-9999999</div>
+                            </div>
+                            <div class="info">
+                                <div class="title">手　　機</div>
+                                <div class="content">0999999999</div>
+                            </div>
+                            <div class="info">
+                                <div class="title">收件地址</div>
+                                <div class="content">105台北市松山區南京東路四段2號</div>
+                            </div>
+                            <div class="info">
+                                <div class="title">消費總額</div>
+                                <div class="content">NT.9999999</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile_edit">
+                    <div class="container">
+                        <div class="row">
+                            <a href="./index.html" class="edit_btn">回首頁</a>
                         </div>
                     </div>
                 </div>

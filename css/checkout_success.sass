@@ -1,0 +1,427 @@
+@import "_function.sass"
+
+body
+    @media ( max-width: 1530px )
+        background-color: #ebebeb
+main
+    .mask
+        position: absolute
+        top: 0px
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: -9999
+        background-color: #ebebeb
+        @media ( max-width: 1279px )
+            display: none
+    .header
+        padding: 71px 0 77px
+        @media ( max-width: 540px )
+            padding: 51px 0 22px
+        .container
+            .row
+                justify-content: center
+                align-items: center
+                .finish
+                    width: 700px
+                    height: 172px
+                    position: relative
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    border: 1px solid $colorBlack
+                    padding-top: 35px
+                    @media ( max-width: 540px )
+                        padding-top: 0
+                        width: 280px
+                        height: 75px
+                    &::before
+                        content: "3"
+                        width: 80px
+                        height: 80px
+                        border-radius: 50%
+                        background-color: $colorOrange
+                        position: absolute
+                        z-index: 2
+                        top: -50px
+                        left: 50%
+                        transform: translateX(-50%)
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        +FontStyle(33px,#FFF,700,0px,1)
+                        @media ( max-width: 540px )
+                            width: 60px
+                            height: 60px
+                    .title
+                        +FontStyle(23px,$colorBlack,700,3px,36px)
+                        @media ( max-width: 540px )
+                            +FontStyle(16px,$colorBlack,700,3px,36px)
+                    .content
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        position: relative
+                        background-color: #ebebeb
+                        +FontStyle(42px,$colorBlack,700,7px,72px)
+                        @media ( max-width: 540px )
+                            width: unset
+                            +FontStyle(14px,$colorBlack,700,3px,1)
+                        &::before
+                            content: ""
+                            width: 586px
+                            height: 1px
+                            background-color: #b2b2b2
+                            position: absolute
+                            z-index: -1
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%)
+                            @media ( max-width: 991px )
+                                display: none
+
+
+    .products_area
+        .container
+            .row
+                .product
+                    height: 145px
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    border-bottom: 1px solid #B2B2B2
+                    @media ( max-width: 991px )
+                        height: auto
+                        padding: 20px 0 0
+                        margin-bottom: 20px
+                        flex-direction: column
+                        border: 1px solid #B2B2B2
+                    .product_img
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 20%
+                        height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
+                        .img
+                            border-radius: 5px
+                            width: 100px
+                            height: 120px
+                            background-position: center
+                            background-size: cover
+                    .name
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        width: 30%
+                        height: 100%
+                        +FontStyle(22px,$colorBlack,600,3px,31px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            justify-content: center
+                            margin-bottom: 20px
+                            position: relative
+                            &::before
+                                content: ""
+                                width: 141px
+                                height: 1px
+                                background-color: #b2b2b2
+                                position: absolute
+                                bottom: -15px
+                                left: 50%
+                                transform: translateX(-50%)
+                                @media ( max-width: 540px )
+                                    width: 125px
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,600,3px,31px)
+                    .qty
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 15%
+                        height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
+                        .count
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: 0 10px
+                            margin: 0 5px
+                            min-width: 76px
+                            height: 43px
+                            +FontStyle(18px,$colorBlack,600,3px,28px)
+                            @media ( max-width: 991px )
+                                min-width: 76px
+                            @media ( max-width: 540px )
+                                height: 28px
+                                +FontStyle(14px,$colorBlack,600,3px,20px)
+                            span
+                                &:nth-child(1)
+                                    display: none
+                                    @media ( max-width: 991px )
+                                        margin-right: 10px
+                                        width: 50px
+                                        display: block
+                                    @media ( max-width: 540px )
+                                        width: 35px
+                                &:nth-child(2)
+                                    @media ( max-width: 991px )
+                                        display: flex
+                                        justify-content: center
+                                        align-items: center
+                                        width: 80px
+
+                    .price
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 20%
+                        height: 100%
+                        +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                @media ( max-width: 991px )
+                                    margin-right: 10px
+                                    width: 50px
+                                    display: block
+                                @media ( max-width: 540px )
+                                    width: 35px
+                            &:nth-child(2)
+                                @media ( max-width: 991px )
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 80px
+                    .total
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding-right: 32px
+                        width: 15%
+                        height: 100%
+                        +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            padding: 12px 0
+                            padding-right: unset
+                            background-color: #B2B2B2
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                @media ( max-width: 991px )
+                                    margin-right: 10px
+                                    width: 50px
+                                    display: block
+                                @media ( max-width: 540px )
+                                    width: 35px
+                            &:nth-child(2)
+                                @media ( max-width: 991px )
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 80px
+                    &:nth-child(2n+1)
+                        background-color: #E5E5E5
+                        @media ( max-width: 991px )
+                            background-color: unset
+                    &:nth-child(1)
+                        height: 58px
+                        background-color: #B2B2B2
+                        border-top: 1px solid #333333
+                        border-bottom: 1px solid #333333
+                        +FontStyle(18px,$colorBlack,700,3px,31px)
+                        @media ( max-width: 991px )
+                            display: none
+                    &:last-child
+                        margin-bottom: 32px
+    .price_area
+        .container
+            .row
+                flex-direction: column
+                align-items: flex-end
+                @media ( max-width: 540px )
+                    align-items: center
+                .content
+                    min-width: 220px
+                    div
+                        display: flex
+                        position: relative
+                        &::before
+                            content: ""
+                            width: 100%
+                            height: 1px
+                            background-color: #b2b2b2
+                            position: absolute
+                            bottom: 0px
+                            left: 50%
+                            transform: translateX(-50%)
+                        .title
+                            width: 100px
+                            +FontStyle(18px,$colorBlack,700,3px,42px)
+                        .price
+                            flex: 1
+                            display: flex
+                            justify-content: flex-end
+                            +FontStyle(18px,$colorOrange,700,3px,42px)
+                            span
+                                &:nth-child(2)
+                                    margin-left: auto
+                    .shipping
+                        .title
+                            display: flex
+                            align-items: center
+                            span
+                                width: 19px
+                                height: 19px
+                                background-color: #808080
+                                border-radius: 50%
+                                margin-left: 3px
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                cursor: pointer
+                                +FontStyle(17px,#FFF,700,0px,1)
+    .profile_area
+        .profile
+            .profile_table
+                padding: 45px 0
+                .container
+                    .row
+                        .info
+                            width: 100%
+                            display: flex
+                            border-bottom: 1px solid #B2B2B2
+                            @media ( max-width: 991px )
+                                padding: 12px 0
+                                flex-direction: column
+                            .title
+                                width: 225px
+                                +FontStyle(18px,$colorBlack,700,3px,54px) 
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                @media ( max-width: 991px )
+                                    width: 100%
+                                    +FontStyle(18px,$colorBlack,700,3px,32px)
+                                @media ( max-width: 540px )
+                                    +FontStyle(14px,$colorBlack,700,3px,20px) 
+                            .content
+                                flex: 1
+                                +FontStyle(18px,#666,700,3px,54px) 
+                                display: flex
+                                justify-content: start
+                                align-items: center
+                                @media ( max-width: 991px )
+                                    justify-content: center
+                                    width: 100%
+                                    +FontStyle(18px,#666,700,3px,32px) 
+                                @media ( max-width: 540px )
+                                    +FontStyle(12px,#666,700,3px,32px) 
+                            &:nth-child(1)
+                                background-color: #E5E5E5
+                                border-top: 2px solid #231714
+                                border-bottom: 2px solid #231714
+                                .title
+                                    +FontStyle(22px,$colorBlack,700,3px,54px) 
+                                    @media ( max-width: 540px )
+                                        +FontStyle(18px,$colorBlack,700,3px,57px) 
+                            &:nth-child(7)
+                                .title
+                                    margin-bottom: 10px
+                                .content
+                                    +FontStyle(18px,#666,700,3px,27px)   
+                                    @media ( max-width: 540px )
+                                        +FontStyle(12px,#666,700,3px,16px)  
+            .profile_edit
+                padding-bottom: 120px 
+                .container
+                    .row
+                        justify-content: flex-end
+                        @media ( max-width: 540px )
+                            justify-content: center
+                        .edit_btn
+                            width: 240px
+                            height: 36px
+                            border: 1px solid $colorBlack
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            +FontStyle(16px,$colorBlack,700,3px,33px) 
+                            &:hover
+                                background-color: #1A1A1A
+                                color: #F2F2F2                
+    .modal_area
+        .modal
+            .modal-dialog
+                display: flex
+                justify-content: center
+                align-items: center
+                .modal-content
+                    border-radius: unset
+                    background-color: #FFF
+                    border: 5px solid $colorBlack
+                    min-width: 680px
+                    position: relative
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 45px 5px
+                    @media ( max-width: 991px )
+                        min-width: 400px
+                    @media ( max-width: 540px )
+                        min-width: 280px
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 52px
+                        height: 52px
+                        background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+                    .close_modal
+                        position: absolute
+                        top: 10px
+                        right: 10px
+                        width: 25px
+                        height: 25px
+                        overflow: hidden
+                        border-radius: unset
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 48%
+                            left: 50%
+                            transform: translate(-50%) rotate(-45deg)
+                            width: 50px
+                            height: 2px
+                            background-color: $colorBlack
+                        &::after
+                            content: ""
+                            position: absolute
+                            top: 48%
+                            left: 50%
+                            transform: translate(-50%) rotate(45deg)
+                            width: 50px
+                            height: 2px
+                            background-color: $colorBlack
+                    .title
+                        +FontStyle(22px,$colorBlack,700,4px,41px)
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,700,4px,31px)
+                    .content
+                        +FontStyle(18px,$colorBlack,700,4px,41px)
+                        text-align: center
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorBlack,700,4px,27px)
