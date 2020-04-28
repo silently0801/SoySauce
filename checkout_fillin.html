@@ -179,7 +179,7 @@
                 </div>
             </div>
         </section>
-        <section class="products_table">
+        <section class="products_area">
             <div class="container">
                 <div class="row">
                     <div class="product">
@@ -265,51 +265,66 @@
         <section class="profile_area">
             <form action="" class="profile">
                 <div class="profile_table">
-                    <div class="container">
-                        <div class="row">
-                            <div class="info">
-                                <div class="title">填寫運送資料</div>
-                                <div class="content"></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">訂購姓名</div>
-                                <div class="input"><input type="text" name="" id="" value=""></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">聯絡電話</div>
-                                <div class="input"><input type="text" name="" id="" value=""></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">手　　機</div>
-                                <div class="input"><input type="text" name="" id="" value=""></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">收件地址</div>
-                                <div class="input"><input type="text" name="" id="" value=""></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">電子郵件</div>
-                                <div class="input"><input type="text" name="" id="" value=""></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">電子郵件</div>
-                                <div class="input"><input type="text" name="" id="" value="" hidden></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">收貨時間</div>
-                                <div class="input"><input type="text" name="" id="" value="" hidden></div>
-                            </div>
-                            <div class="info">
-                                <div class="title">收貨時間</div>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
+                    <div class="table_title">
+                        <div class="title">填寫運送資料</div>
                     </div>
-                </div>
-                <div class="profile_edit">
                     <div class="container">
                         <div class="row">
-                            <button type="submit" class="edit_btn">送出修改資料</button>
+                            <div class="table_content">
+                                <div class="info">
+                                    <div class="title">訂購姓名<span>*</span></div>
+                                    <div class="input"><input type="text" name="" id="" value=""></div>
+                                </div>
+                                <div class="info">
+                                    <div class="title">聯絡電話<span>*</span></div>
+                                    <div class="input"><input type="text" name="" id="" value=""></div>
+                                </div>
+                                <div class="info">
+                                    <div class="title">手　　機<span>*</span></div>
+                                    <div class="input"><input type="text" name="" id="" value=""></div>
+                                </div>
+                                <div class="info">
+                                    <div class="title">收件地址<span>*</span></div>
+                                    <div class="input"><input type="text" name="" id="" value=""></div>
+                                </div>
+                                <div class="info">
+                                    <div class="title">電子郵件<span>*</span></div>
+                                    <div class="input"><input type="text" name="" id="" value=""></div>
+                                </div>
+                                <div class="info invoice">
+                                    <div class="title">發票方式<span>*</span></div>
+                                    <div class="input">
+                                        <input type="text" name="" id="" value="double" hidden>
+                                        <div class="single_btn active" value="double">二聯式發票</div>
+                                        <div class="single_btn" value="triple">三聯式發票</div>
+                                    </div>
+                                </div>
+                                <div class="info receipt">
+                                    <div class="title">收貨時間<span>*</span></div>
+                                    <div class="input">
+                                        <input type="text" name="" id="" value="all" hidden>
+                                        <div class="single_btn active" value="all">皆可</div>
+                                        <div class="single_btn" value="morning">中午前</div>
+                                        <div class="single_btn" value="afternoon">下午1:00～5:00</div>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="title">備　　註</div>
+                                    <div class="input"><textarea name="" id="" cols="30" rows="10"></textarea></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="submit_btn">
+                                <a href="javascript:history.go(-1)" class="previous">
+                                    <div class="arrow"></div>
+                                    <span>確認購買清單</span>
+                                </a>
+                                <button type="submit" class="next btn">
+                                    <span>送出訂單資料</span>
+                                    <div class="arrow"></div>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -379,8 +394,20 @@
 
 
         $(document).ready(() => {
+            $(".info .input input").focus(function(){
+                $(this).parent().parent().children(".title").children("span").addClass("active")
+            });
+            $(".info .input input").focusout(function(){
+                $(this).parent().parent().children(".title").children("span").removeClass("active")
+            });
+            $(".single_btn").click(function () {
+                $(this).parent().children(".single_btn").removeClass("active");
+                $(this).parent().children("input").attr("value",$(this).attr("value"));
+                $(this).addClass("active");
+            })
 
         });
+        
         $(window).resize(() => {
             setTimeout(function () {
                 $(".option_area").each(function () {

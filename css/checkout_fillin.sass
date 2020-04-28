@@ -27,6 +27,8 @@ main
                     @media ( max-width: 1279px )
                         width: unset
                         margin: 0 15px 25px 0
+                    @media ( max-width: 540px )
+                        +FontStyle(22px,$colorBlack,700,7px,31px)
                 .status_area
                     display: flex
                     justify-content: space-between
@@ -131,7 +133,7 @@ main
                                     color: #FFF
                                     span
                                         color: #FFF
-    .products_table
+    .products_area
         .container
             .row
                 .product
@@ -175,13 +177,15 @@ main
                             position: relative
                             &::before
                                 content: ""
-                                width: 25%
+                                width: 141px
                                 height: 1px
                                 background-color: #b2b2b2
                                 position: absolute
                                 bottom: -15px
                                 left: 50%
                                 transform: translateX(-50%)
+                                @media ( max-width: 540px )
+                                    width: 125px
                         @media ( max-width: 540px )
                             +FontStyle(18px,$colorBlack,600,3px,31px)
                     .qty
@@ -214,6 +218,8 @@ main
                                         margin-right: 10px
                                         width: 50px
                                         display: block
+                                    @media ( max-width: 540px )
+                                        width: 35px
                                 &:nth-child(2)
                                     @media ( max-width: 991px )
                                         display: flex
@@ -240,6 +246,8 @@ main
                                     margin-right: 10px
                                     width: 50px
                                     display: block
+                                @media ( max-width: 540px )
+                                    width: 35px
                             &:nth-child(2)
                                 @media ( max-width: 991px )
                                     display: flex
@@ -268,6 +276,8 @@ main
                                     margin-right: 10px
                                     width: 50px
                                     display: block
+                                @media ( max-width: 540px )
+                                    width: 35px
                             &:nth-child(2)
                                 @media ( max-width: 991px )
                                     display: flex
@@ -293,6 +303,8 @@ main
             .row
                 flex-direction: column
                 align-items: flex-end
+                @media ( max-width: 540px )
+                    align-items: center
                 .content
                     min-width: 220px
                     div
@@ -336,75 +348,193 @@ main
         .profile
             .profile_table
                 padding: 45px 0
+                display: flex
+                flex-direction: column
+                align-items: center
+                .table_title
+                    background-color: #E5E5E5
+                    border-top: 1px solid #231714
+                    border-bottom: 1px solid #231714
+                    margin-bottom: 60px
+                    display: flex
+                    justify-content: center
+                    width: 100%
+                    max-width: 1140px !important 
+                    @media ( max-width: 1530px )
+                        max-width: 1000px !important 
+                        width: 70%
+                    @media ( max-width: 1279px )
+                        max-width: 100% !important 
+                        width: 100%
+                    @media ( max-width: 767px )
+                        padding: 0 5%
+                    @media ( max-width: 540px )
+                        margin-bottom: 30px
+                    .title
+                        width: 100%
+                        justify-content: start
+                        margin-right: unset
+                        +FontStyle(18px,$colorBlack,700,3px,54px)
+                        @media ( max-width: 1279px )
+                            max-width: 70% !important 
+                            width: 70%
+                        @media ( max-width: 767px )
+                            max-width: 100% !important 
+                            width: 100%
                 .container
                     .row
-                        .info
-                            width: 100%
-                            display: flex
-                            margin-bottom: 30px
-                            @media ( max-width: 540px )
-                                margin-bottom: 0
-                                padding: 7px 0
-                                flex-direction: column
-                            .title
-                                width: 224px
-                                +FontStyle(18px,$colorBlack,700,3px,54px) 
+                        flex-wrap: wrap
+                        @media ( max-width: 991px )
+                            flex-direction: column                        
+                        .table_content
+                            flex: 1
+                            padding-left: 30px 
+                            @media ( max-width: 991px )
+                                flex: unset
+                                width: 100%
+                                padding-left: unset
+                                margin-bottom: 40px
+                            .info
+                                width: 100%
                                 display: flex
-                                justify-content: flex-end
-                                align-items: center
-                                margin-right: 45px
+                                margin-bottom: 30px
                                 @media ( max-width: 1279px )
-                                    margin-right: unset
-                                    justify-content: center
-                                    width: 30%
+                                    flex-direction: column
                                 @media ( max-width: 540px )
-                                    +FontStyle(14px,$colorBlack,700,3px,20px) 
-                                    width: 100%
-                            .content
-                                flex: 1
-                                +FontStyle(18px,#666,700,3px,54px) 
-                                display: flex
-                                justify-content: start
-                                align-items: center
-                                @media ( max-width: 540px )
-                                    justify-content: center
-                                    width: 100%
-                                    +FontStyle(12px,#666,700,3px,32px) 
-                            .input
-                                flex: 1
-                                display: flex
-                                justify-content: flex-start
-                                align-items: center
-                                padding-top: 5px  
-                                @media ( max-width: 540px )
-                                    justify-content: center
-                                    width: 100%
-                                    +FontStyle(12px,#666,700,3px,32px)                               
-                                input
-                                    height: 34px
-                                    width: 700px
-                                    background-color: unset
-                                    border: 1px solid $colorBlack
-                                    padding: 0 10px
-                                    +FontStyle(18px,#666,700,3px,54px) 
-                                    @media ( max-width: 1530px )
-                                        width: 90%
-                                    @media ( max-width: 540px )
-                                        +FontStyle(12px,#666,700,3px,32px)    
-                                    &:focus
-                                        transition: unset
-                                        border: 1px solid $colorOrange 
-                                        outline: 2px solid $colorOrange  
-                            &:nth-child(1)
-                                background-color: #E5E5E5
-                                border-top: 1px solid #231714
-                                border-bottom: 1px solid #231714
-                                margin-bottom: 20px
+                                    margin-bottom: 0
+                                    padding: 7px 0
                                 .title
-                                    width: 100%
-                                    justify-content: center
-                                    margin-right: unset
-                                    +FontStyle(18px,$colorBlack,700,3px,54px)         
+                                    width: 126px
+                                    +FontStyle(18px,$colorBlack,700,3px,54px) 
+                                    display: flex
+                                    align-items: center
+                                    @media ( max-width: 991px )
+                                        margin-right: unset
+                                    @media ( max-width: 540px )
+                                        +FontStyle(14px,$colorBlack,700,3px,20px) 
+                                        width: 100%
+                                    span.active
+                                        color: red
+                                .content
+                                    flex: 1
+                                    +FontStyle(18px,#4d4d4d,700,3px,54px) 
+                                    display: flex
+                                    justify-content: start
+                                    align-items: center
+                                    @media ( max-width: 540px )
+                                        justify-content: center
+                                        width: 100%
+                                        +FontStyle(12px,#4d4d4d,700,3px,32px) 
+                                .input
+                                    flex: 1
+                                    display: flex
+                                    justify-content: flex-start
+                                    align-items: center
+                                    padding-top: 5px  
+                                    @media ( max-width: 540px )
+                                        justify-content: center
+                                        width: 100%
+                                        +FontStyle(12px,#4d4d4d,700,3px,32px)                               
+                                    input
+                                        height: 34px
+                                        width: 90%
+                                        background-color: unset
+                                        border: 1px solid $colorBlack
+                                        padding: 0 10px
+                                        +FontStyle(18px,#4d4d4d,700,3px,54px) 
+                                        @media ( max-width: 991px )
+                                            width: 100%
+                                        @media ( max-width: 540px )
+                                            +FontStyle(12px,#4d4d4d,700,3px,32px)    
+                                        &:focus
+                                            transition: unset
+                                            border: 1px solid $colorOrange 
+                                            outline: 2px solid $colorOrange 
+                                    .single_btn
+                                        display: flex
+                                        justify-content: center
+                                        align-items: center
+                                        height: 34px
+                                        border: 1px solid #4d4d4d
+                                        padding: 0 30px
+                                        border-right: unset
+                                        cursor: pointer
+                                        @media ( max-width: 540px )
+                                            padding: 0
+                                        &:last-child
+                                            border-right: 1px solid #4d4d4d
+                                    .single_btn.active
+                                        background-color: #4d4d4d
+                                        color: #FFF
+                                    textarea
+                                        padding: 0 10px
+                                        border: 1px solid $colorBlack
+                                        background-color: unset
+                                        width: 90%   
+                                        height: 156px
+                                        resize: none
+                                        +FontStyle(18px,#4d4d4d,700,3px,54px) 
+                                        @media ( max-width: 991px )
+                                            width: 100% 
+                                        @media ( max-width: 540px )
+                                            +FontStyle(12px,#4d4d4d,700,3px,32px) 
+                                        &:focus
+                                            transition: unset
+                                            border: 1px solid $colorOrange 
+                                            outline: 2px solid $colorOrange
+                                &:last-child
+                                    margin-bottom: unset
+                                    .title
+                                        align-items: flex-start
+                            .invoice
+                                .input
+                                    .single_btn
+                                        @media ( max-width: 540px )
+                                            width: 50%
+                            .receipt
+                                .input
+                                    .single_btn
+                                        @media ( max-width: 540px )
+                                            &:nth-child(2)
+                                                width: 20%
+                                            &:nth-child(3)
+                                                width: 30%
+                                            &:nth-child(4)
+                                                width: 50%
+                        .submit_btn          
+                            width: 200px     
+                            display: flex
+                            flex-direction: column
+                            justify-content: flex-end
+                            @media ( max-width: 991px )
+                                width: 100%  
+                                align-items: flex-end
+                            @media ( max-width: 540px )
+                                align-items: center
+                            .previous,.next
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                border-radius: unset
+                                border: 1px solid $colorBlack
+                                width: 100%
+                                height: 40px
+                                +FontStyle(18px,$colorBlack,700,3px,1) 
+                                @media ( max-width: 991px )
+                                    width: 200px  
+                                .arrow
+                                    width: 8px
+                                    height: 15px
+                                    background-color: $colorBlack
+                            .previous
+                                margin-bottom: 27px
+                                .arrow
+                                    margin-right: 5px
+                                    clip-path: polygon(100% 0, 0 50%, 100% 100%)
+                            .next
+                                .arrow
+                                    margin-left: 5px
+                                    clip-path: polygon(0 0, 0 100%, 100% 50%)
     .modal_area
         .modal
             .modal-dialog
