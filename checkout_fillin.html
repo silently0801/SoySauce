@@ -22,8 +22,8 @@
                     <a href="./index.html" class="logo_icon"></a>
                     <div class="menu_backEnd">
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
-                            <li class="orderSearch"><a href="">訂單查詢</a></li>
-                            <li class="shoppingCart"><a href="">購物車</a></li>
+                            <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
+                            <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
                             <li class="login"><a href="./login&register.html">登入</a></li>
                             <li class="signup"><a href="./login&register.html">註冊</a></li>
                         </ul>
@@ -133,8 +133,8 @@
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
                             <li class="login"><a href="./login&register.html">登入</a></li>
                             <li class="signup"><a href="./login&register.html">註冊</a></li>
-                            <li class="shoppingCart"><a href="">購物車</a></li>
-                            <li class="orderSearch"><a href="">訂單查詢</a></li>
+                            <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
+                            <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                     <div class="title">購物車 / </div>
                     <div class="status_area">
                         <div class="check status">
-                            <div class="status_title">1</div>
+                            <div class="status_title">1<span>.確認購買清單</span></div>
                             <div class="status_content">
                                 <div class="text">確認</div>
                                 <div class="text">購買清單</div>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="status_arrow arrow1"></div>
                         <div class="fillin status">
-                            <div class="status_title">2</div>
+                            <div class="status_title">2<span>.填寫運送資料</span></div>
                             <div class="status_content">
                                 <div class="text">填寫</div>
                                 <div class="text">運送資料</div>
@@ -168,7 +168,7 @@
                         </div>
                         <div class="status_arrow arrow2"></div>
                         <div class="success status">
-                            <div class="status_title">3</div>
+                            <div class="status_title">3<span>.購物完成</span></div>
                             <div class="status_content">
                                 <div class="text">購物</div>
                                 <div class="text">完成</div>
@@ -198,17 +198,10 @@
                         </div>
                         <div class="name">米粒原燉醬油</div>
                         <div class="qty">
-                            <div class="minus">
-                                <div class="line1"></div>
-                            </div>
-                            <div class="count" value="1">1</div>
-                            <div class="plus">
-                                <div class="line1"></div>
-                                <div class="line2"></div>
-                            </div>
+                            <div class="count"><span>數量 </span><span>1</span></div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.350</span></div>
                     </div>
                     <!-- end -->
                     <div class="product">
@@ -219,17 +212,10 @@
                         </div>
                         <div class="name">米粒原燉醬油</div>
                         <div class="qty">
-                            <div class="minus">
-                                <div class="line1"></div>
-                            </div>
-                            <div class="count" value="1">1</div>
-                            <div class="plus">
-                                <div class="line1"></div>
-                                <div class="line2"></div>
-                            </div>
+                            <div class="count"><span>數量 </span><span>2</span></div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.700</span></div>
                     </div>
                     <div class="product">
                         <div class="product_img">
@@ -239,39 +225,95 @@
                         </div>
                         <div class="name">米粒原燉醬油</div>
                         <div class="qty">
-                            <div class="minus">
-                                <div class="line1"></div>
-                            </div>
-                            <div class="count" value="1">1</div>
-                            <div class="plus">
-                                <div class="line1"></div>
-                                <div class="line2"></div>
-                            </div>
+                            <div class="count"><span>數量 </span><span>1</span></div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.350</span></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="payment">
+        <section class="price_area">
             <div class="container">
                 <div class="row">
-                    <div class="pay_header">
-                        各品項可以混合搭配，但御鼎興同名系列總瓶數需為6的倍數，<br>
-                        濁水琥珀系列總瓶數需為3的倍數。
-                    </div>
-                    <div class="method">
-                        <div class="title">
-                            <div class="text">付款方式</div>
-                            <div class="method_btn">付款帳號</div>
+                    <div class="content">
+                        <div class="product_price">
+                            <div class="title">商品總價</div>
+                            <div class="price">
+                                <span>NT.</span>
+                                <span>1400</span>
+                            </div>
+                        </div>
+                        <div class="shipping">
+                            <div class="title">運　費<span>i</span></div>
+                            <div class="price">
+                                <span>NT.</span>
+                                <span>100</span>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <div class="title">消費金額</div>
+                            <div class="price">
+                                <span>NT.</span>
+                                <span>1500</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
+        </section>
+        <section class="profile_area">
+            <form action="" class="profile">
+                <div class="profile_table">
+                    <div class="container">
+                        <div class="row">
+                            <div class="info">
+                                <div class="title">填寫運送資料</div>
+                                <div class="content"></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">訂購姓名</div>
+                                <div class="input"><input type="text" name="" id="" value=""></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">聯絡電話</div>
+                                <div class="input"><input type="text" name="" id="" value=""></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">手　　機</div>
+                                <div class="input"><input type="text" name="" id="" value=""></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">收件地址</div>
+                                <div class="input"><input type="text" name="" id="" value=""></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">電子郵件</div>
+                                <div class="input"><input type="text" name="" id="" value=""></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">電子郵件</div>
+                                <div class="input"><input type="text" name="" id="" value="" hidden></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">收貨時間</div>
+                                <div class="input"><input type="text" name="" id="" value="" hidden></div>
+                            </div>
+                            <div class="info">
+                                <div class="title">收貨時間</div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile_edit">
+                    <div class="container">
+                        <div class="row">
+                            <button type="submit" class="edit_btn">送出修改資料</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
         <section class="modal_area">
             <!-- Modal -->
@@ -337,21 +379,7 @@
 
 
         $(document).ready(() => {
-            /*詳細產品加減*/
-            $(".qty .minus").click(function () {
-                let qty = $(this).parent(".qty").children(".count");
-                let count = Math.max(parseInt(qty.text()) - 1, 0);
-                qty.text(count);
-                qty.attr("value", count);
-            });
 
-            $(".qty .plus").click(function () {
-                let qty = $(this).parent(".qty").children(".count");
-                let count = Math.max(parseInt(qty.text()) + 1, 0);
-                qty.text(count);
-                qty.attr("value", count);
-            });
-            // $('#exampleModalCenter').modal('show');
         });
         $(window).resize(() => {
             setTimeout(function () {

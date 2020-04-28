@@ -17,20 +17,33 @@ main
         padding: 21px 0 37px
         .container
             .row
+                @media ( max-width: 1279px )
+                    flex-direction: column
+                @media ( max-width: 991px )
+                    flex-direction: row
                 .title
                     width: 225px
                     +FontStyle(32px,$colorBlack,700,7px,49px)
+                    @media ( max-width: 1279px )
+                        width: unset
+                        margin: 0 15px 25px 0
                 .status_area
                     display: flex
                     justify-content: space-between
                     align-items: center 
                     flex: 1
+                    transition: unset
+                    @media ( max-width: 991px )
+                        align-items: flex-start
+                        flex-direction: column
                     .status_arrow
                         position: relative
                         width: 28px
                         height: 39px
                         overflow: hidden
                         border-left: 1px solid $colorBlack
+                        @media ( max-width: 991px )
+                            display: none
                         &::before
                             content: ""
                             position: absolute
@@ -51,15 +64,15 @@ main
                             width: 50px
                             height: 1px
                             background-color: $colorBlack 
-                    .arrow1
+                    .arrow2
                         clip-path: polygon(0 0, 0% 100%, 100% 50%)
                         border-left: 1px solid $colorOrange
                         background-color: $colorOrange
+                        
                         &::before
                             background-color: $colorOrange 
                         &::after
-                            background-color: $colorOrange 
-                            
+                            background-color: $colorOrange       
                     .status
                         display: flex
                         justify-content: center
@@ -68,16 +81,32 @@ main
                         height: 176px
                         border-radius: 50%
                         border: 1px solid $colorBlack
+                        transition: unset
+                        @media ( max-width: 991px )
+                            width: unset
+                            height: unset
+                            border: unset
+                            border-radius: unset
                         .status_title
                             width: 45%
                             padding-right: 5px
                             display: flex
                             justify-content: flex-end
                             align-items: center
+                            transition: unset
                             +FontStyle(73px,$colorBlack,700,3px,1)
+                            @media ( max-width: 991px )
+                                width: 100%
+                                +FontStyle(16px,$colorGrey,600,3px,28px)
+                            span
+                                display: none
+                                @media ( max-width: 991px )
+                                    display: block
                         .status_content
                             width: 55%
                             position: relative
+                            @media ( max-width: 991px )
+                                display: none
                             .text
                                 +FontStyle(18px,$colorBlack,700,3px,28px)
                                 &:last-child
@@ -87,17 +116,21 @@ main
                                         top: 50%
                                         transform: translateY(-50%)
                                         +FontStyle(73px,$colorBlack,700,3px,1)
-                        &:nth-child(1)
+                        &:nth-child(3)
                             background-color: $colorOrange
                             border: 1px solid $colorOrange
+                            @media ( max-width: 991px )
+                                background-color: unset
+                                border: unset
                             .status_title
                                 color: #FFF
+                                @media ( max-width: 991px )
+                                    color: $colorOrange
                             .status_content
                                 .text
                                     color: #FFF
                                     span
                                         color: #FFF
-
     .products_table
         .container
             .row
@@ -107,12 +140,21 @@ main
                     display: flex
                     align-items: center
                     border-bottom: 1px solid #B2B2B2
+                    @media ( max-width: 991px )
+                        height: auto
+                        padding: 20px 0 0
+                        margin-bottom: 20px
+                        flex-direction: column
+                        border: 1px solid #B2B2B2
                     .product_img
                         display: flex
                         justify-content: center
                         align-items: center
                         width: 20%
                         height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
                         .img
                             border-radius: 5px
                             width: 100px
@@ -126,12 +168,31 @@ main
                         width: 30%
                         height: 100%
                         +FontStyle(22px,$colorBlack,600,3px,31px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            justify-content: center
+                            margin-bottom: 20px
+                            position: relative
+                            &::before
+                                content: ""
+                                width: 25%
+                                height: 1px
+                                background-color: #b2b2b2
+                                position: absolute
+                                bottom: -15px
+                                left: 50%
+                                transform: translateX(-50%)
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,600,3px,31px)
                     .qty
                         display: flex
                         justify-content: center
                         align-items: center
                         width: 15%
                         height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
                         .count
                             display: flex
                             justify-content: center
@@ -140,29 +201,26 @@ main
                             margin: 0 5px
                             min-width: 76px
                             height: 43px
-                            border: 1px solid $colorBlack
-                            +FontStyle(22px,$colorBlack,600,3px,31px)
-                        .minus,.plus
-                            position: relative
-                            width: 24px
-                            height: 24px
-                            .line1
-                                width: 12px
-                                height: 3px
-                                background-color: $colorBlack
-                                position: absolute
-                                top: 50%
-                                left: 50%
-                                transform: translate(-50%)
-                            .line2
-                                width: 12px
-                                height: 3px
-                                background-color: $colorBlack
-                                position: absolute
-                                top: 50%
-                                left: 50%
-                                transform: translate(-50%) rotate(90deg)
-                        
+                            +FontStyle(18px,$colorBlack,600,3px,28px)
+                            @media ( max-width: 991px )
+                                min-width: 76px
+                            @media ( max-width: 540px )
+                                height: 28px
+                                +FontStyle(14px,$colorBlack,600,3px,20px)
+                            span
+                                &:nth-child(1)
+                                    display: none
+                                    @media ( max-width: 991px )
+                                        margin-right: 10px
+                                        width: 50px
+                                        display: block
+                                &:nth-child(2)
+                                    @media ( max-width: 991px )
+                                        display: flex
+                                        justify-content: center
+                                        align-items: center
+                                        width: 80px
+
                     .price
                         display: flex
                         justify-content: center
@@ -170,6 +228,24 @@ main
                         width: 20%
                         height: 100%
                         +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                @media ( max-width: 991px )
+                                    margin-right: 10px
+                                    width: 50px
+                                    display: block
+                            &:nth-child(2)
+                                @media ( max-width: 991px )
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 80px
                     .total
                         display: flex
                         justify-content: center
@@ -178,44 +254,157 @@ main
                         width: 15%
                         height: 100%
                         +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            padding: 12px 0
+                            padding-right: unset
+                            background-color: #B2B2B2
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                @media ( max-width: 991px )
+                                    margin-right: 10px
+                                    width: 50px
+                                    display: block
+                            &:nth-child(2)
+                                @media ( max-width: 991px )
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 80px
                     &:nth-child(2n+1)
                         background-color: #E5E5E5
+                        @media ( max-width: 991px )
+                            background-color: unset
                     &:nth-child(1)
                         height: 58px
                         background-color: #B2B2B2
                         border-top: 1px solid #333333
                         border-bottom: 1px solid #333333
                         +FontStyle(18px,$colorBlack,700,3px,31px)
-                   
+                        @media ( max-width: 991px )
+                            display: none
                     &:last-child
                         margin-bottom: 32px
-    .payment
+    .price_area
         .container
             .row
                 flex-direction: column
-                .pay_header
-                    +FontStyle(18px,$colorOrange,600,3px,41px)
-                    margin-bottom: 34px
-                .method
-                    margin-bottom: 27px
-                    .title
+                align-items: flex-end
+                .content
+                    min-width: 220px
+                    div
                         display: flex
-                        align-items: center
-                        .text
-                            margin-right: 24px
-                            +FontStyle(22px,$colorBlack,700,3px,31px)
-                        .method_btn
-                            height: 24px
+                        position: relative
+                        &::before
+                            content: ""
+                            width: 100%
+                            height: 1px
+                            background-color: #b2b2b2
+                            position: absolute
+                            bottom: 0px
+                            left: 50%
+                            transform: translateX(-50%)
+                        .title
+                            width: 100px
+                            +FontStyle(18px,$colorBlack,700,3px,42px)
+                        .price
+                            flex: 1
                             display: flex
-                            justify-content: center
+                            justify-content: flex-end
+                            +FontStyle(18px,$colorOrange,700,3px,42px)
+                            span
+                                &:nth-child(2)
+                                    margin-left: auto
+                    .shipping
+                        .title
+                            display: flex
                             align-items: center
-                            padding: 0 20px
-                            border: 1px solid $colorOrange
-                            +FontStyle(14px,$colorOrange,700,3px,1)
-                        
-                    
-                        
-                
+                            span
+                                width: 19px
+                                height: 19px
+                                background-color: #808080
+                                border-radius: 50%
+                                margin-left: 3px
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                +FontStyle(17px,#FFF,700,0px,1)
+    .profile_area
+        .profile
+            .profile_table
+                padding: 45px 0
+                .container
+                    .row
+                        .info
+                            width: 100%
+                            display: flex
+                            margin-bottom: 30px
+                            @media ( max-width: 540px )
+                                margin-bottom: 0
+                                padding: 7px 0
+                                flex-direction: column
+                            .title
+                                width: 224px
+                                +FontStyle(18px,$colorBlack,700,3px,54px) 
+                                display: flex
+                                justify-content: flex-end
+                                align-items: center
+                                margin-right: 45px
+                                @media ( max-width: 1279px )
+                                    margin-right: unset
+                                    justify-content: center
+                                    width: 30%
+                                @media ( max-width: 540px )
+                                    +FontStyle(14px,$colorBlack,700,3px,20px) 
+                                    width: 100%
+                            .content
+                                flex: 1
+                                +FontStyle(18px,#666,700,3px,54px) 
+                                display: flex
+                                justify-content: start
+                                align-items: center
+                                @media ( max-width: 540px )
+                                    justify-content: center
+                                    width: 100%
+                                    +FontStyle(12px,#666,700,3px,32px) 
+                            .input
+                                flex: 1
+                                display: flex
+                                justify-content: flex-start
+                                align-items: center
+                                padding-top: 5px  
+                                @media ( max-width: 540px )
+                                    justify-content: center
+                                    width: 100%
+                                    +FontStyle(12px,#666,700,3px,32px)                               
+                                input
+                                    height: 34px
+                                    width: 700px
+                                    background-color: unset
+                                    border: 1px solid $colorBlack
+                                    padding: 0 10px
+                                    +FontStyle(18px,#666,700,3px,54px) 
+                                    @media ( max-width: 1530px )
+                                        width: 90%
+                                    @media ( max-width: 540px )
+                                        +FontStyle(12px,#666,700,3px,32px)    
+                                    &:focus
+                                        transition: unset
+                                        border: 1px solid $colorOrange 
+                                        outline: 2px solid $colorOrange  
+                            &:nth-child(1)
+                                background-color: #E5E5E5
+                                border-top: 1px solid #231714
+                                border-bottom: 1px solid #231714
+                                margin-bottom: 20px
+                                .title
+                                    width: 100%
+                                    justify-content: center
+                                    margin-right: unset
+                                    +FontStyle(18px,$colorBlack,700,3px,54px)         
     .modal_area
         .modal
             .modal-dialog
