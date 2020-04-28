@@ -207,8 +207,8 @@
                                 <div class="line2"></div>
                             </div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.350</span></div>
                     </div>
                     <!-- end -->
                     <div class="product">
@@ -228,8 +228,8 @@
                                 <div class="line2"></div>
                             </div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.350</span></div>
                     </div>
                     <div class="product">
                         <div class="product_img">
@@ -248,8 +248,8 @@
                                 <div class="line2"></div>
                             </div>
                         </div>
-                        <div class="price" value="350">NT.350</div>
-                        <div class="total" value="350">NT.350</div>
+                        <div class="price" value="350"><span>單價 </span><span>NT.350</span></div>
+                        <div class="total" value="350"><span>小計 </span><span>NT.350</span></div>
                     </div>
                 </div>
             </div>
@@ -354,9 +354,9 @@
                 let price = $(this).parent().parent().children(".price");
                 let total = $(this).parent().parent().children(".total");
 
-                let new_qty = Math.max(parseInt(qty.text()) - 1, 0);
+                let new_qty = Math.max(parseInt(qty.attr("value")) - 1, 0);
                 let new_total = new_qty * parseInt(price.attr("value"));
-                total.text(`NT.${new_total}`);
+                total.children("span:nth-child(2)").text(`NT.${new_total}`);
                 total.attr("value", new_total);
                 qty.text(new_qty);
                 qty.attr("value", new_qty);
@@ -366,9 +366,9 @@
                 let price = $(this).parent().parent().children(".price");
                 let total = $(this).parent().parent().children(".total");
 
-                let new_qty = Math.max(parseInt(qty.text()) + 1, 1);
+                let new_qty = Math.max(parseInt(qty.attr("value")) + 1, 1);
                 let new_total = new_qty * parseInt(price.attr("value"));
-                total.text(`NT.${new_total}`);
+                total.children("span:nth-child(2)").text(`NT.${new_total}`);
                 total.attr("value", new_total);
                 qty.text(new_qty);
                 qty.attr("value", new_qty);

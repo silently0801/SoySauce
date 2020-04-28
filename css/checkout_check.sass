@@ -140,12 +140,21 @@ main
                     display: flex
                     align-items: center
                     border-bottom: 1px solid #B2B2B2
+                    @media ( max-width: 991px )
+                        height: auto
+                        padding: 20px 0 0
+                        margin-bottom: 20px
+                        flex-direction: column
+                        border: 1px solid #B2B2B2
                     .product_img
                         display: flex
                         justify-content: center
                         align-items: center
                         width: 20%
                         height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
                         .img
                             border-radius: 5px
                             width: 100px
@@ -159,12 +168,21 @@ main
                         width: 30%
                         height: 100%
                         +FontStyle(22px,$colorBlack,600,3px,31px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            justify-content: center
+                            margin-bottom: 20px
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,600,3px,31px)
                     .qty
                         display: flex
                         justify-content: center
                         align-items: center
                         width: 15%
                         height: 100%
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
                         .count
                             display: flex
                             justify-content: center
@@ -175,6 +193,11 @@ main
                             height: 43px
                             border: 1px solid $colorBlack
                             +FontStyle(22px,$colorBlack,600,3px,31px)
+                            @media ( max-width: 991px )
+                                min-width: 76px
+                            @media ( max-width: 540px )
+                                height: 28px
+                                +FontStyle(14px,$colorBlack,600,3px,20px)
                         .minus,.plus
                             position: relative
                             width: 24px
@@ -203,6 +226,17 @@ main
                         width: 20%
                         height: 100%
                         +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            margin-bottom: 20px
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                margin-right: 10px
+                                @media ( max-width: 991px )
+                                    display: block
                     .total
                         display: flex
                         justify-content: center
@@ -211,15 +245,31 @@ main
                         width: 15%
                         height: 100%
                         +FontStyle(18px,$colorBlack,600,3px,28px)
+                        @media ( max-width: 991px )
+                            width: 100%
+                            padding: 12px 0
+                            padding-right: unset
+                            background-color: #B2B2B2
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,600,3px,28px)
+                        span
+                            &:nth-child(1)
+                                display: none
+                                margin-right: 10px
+                                @media ( max-width: 991px )
+                                    display: block
                     &:nth-child(2n+1)
                         background-color: #E5E5E5
+                        @media ( max-width: 991px )
+                            background-color: unset
                     &:nth-child(1)
                         height: 58px
                         background-color: #B2B2B2
                         border-top: 1px solid #333333
                         border-bottom: 1px solid #333333
                         +FontStyle(18px,$colorBlack,700,3px,31px)
-                   
+                        @media ( max-width: 991px )
+                            display: none
                     &:last-child
                         margin-bottom: 32px
     .payment
