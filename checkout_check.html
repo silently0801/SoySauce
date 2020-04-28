@@ -201,7 +201,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <div class="count" value="1">1</div>
+                            <input class="count" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -222,7 +222,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <div class="count" value="1">1</div>
+                            <input class="count" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -242,7 +242,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <div class="count" value="1">1</div>
+                            <input class="count" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -354,24 +354,33 @@
                 let price = $(this).parent().parent().children(".price");
                 let total = $(this).parent().parent().children(".total");
 
-                let new_qty = Math.max(parseInt(qty.attr("value")) - 1, 0);
+                let new_qty = Math.max(parseInt(qty.val()) - 1, 0);
                 let new_total = new_qty * parseInt(price.attr("value"));
                 total.children("span:nth-child(2)").text(`NT.${new_total}`);
                 total.attr("value", new_total);
-                qty.text(new_qty);
-                qty.attr("value", new_qty);
+                qty.val(new_qty);
             });
             $(".qty .plus").click(function () {
                 let qty = $(this).parent(".qty").children(".count");
                 let price = $(this).parent().parent().children(".price");
                 let total = $(this).parent().parent().children(".total");
 
-                let new_qty = Math.max(parseInt(qty.attr("value")) + 1, 1);
+                let new_qty = Math.max(parseInt(qty.val()) + 1, 1);
                 let new_total = new_qty * parseInt(price.attr("value"));
                 total.children("span:nth-child(2)").text(`NT.${new_total}`);
                 total.attr("value", new_total);
-                qty.text(new_qty);
-                qty.attr("value", new_qty);
+                qty.val(new_qty);
+            });
+            $(".qty .count").change(function () {
+                let qty = $(this);
+                let price = $(this).parent().parent().children(".price");
+                let total = $(this).parent().parent().children(".total");
+
+                let new_qty = Math.max(parseInt(qty.val()), 0);
+                let new_total = new_qty * parseInt(price.attr("value"));
+                total.children("span:nth-child(2)").text(`NT.${new_total}`);
+                total.attr("value", new_total);
+                qty.val(new_qty);
             });
             // $('#exampleModalCenter').modal('show');
         });

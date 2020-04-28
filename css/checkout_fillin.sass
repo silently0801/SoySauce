@@ -99,7 +99,7 @@ main
                             +FontStyle(73px,$colorBlack,700,3px,1)
                             @media ( max-width: 991px )
                                 width: 100%
-                                +FontStyle(16px,$colorGrey,600,3px,28px)
+                                +FontStyle(16px,$colorGrey,700,3px,28px)
                             span
                                 display: none
                                 @media ( max-width: 991px )
@@ -169,7 +169,7 @@ main
                         align-items: center
                         width: 30%
                         height: 100%
-                        +FontStyle(22px,$colorBlack,600,3px,31px)
+                        +FontStyle(18px,$colorBlack,700,3px,31px)
                         @media ( max-width: 991px )
                             width: 100%
                             justify-content: center
@@ -306,7 +306,7 @@ main
                 @media ( max-width: 540px )
                     align-items: center
                 .content
-                    min-width: 220px
+                    min-width: 240px
                     div
                         display: flex
                         position: relative
@@ -320,7 +320,7 @@ main
                             left: 50%
                             transform: translateX(-50%)
                         .title
-                            width: 100px
+                            width: 120px
                             +FontStyle(18px,$colorBlack,700,3px,42px)
                         .price
                             flex: 1
@@ -348,10 +348,12 @@ main
     .profile_area
         .profile
             .profile_table
-                padding: 45px 0
+                padding: 45px 0 120px
                 display: flex
                 flex-direction: column
                 align-items: center
+                @media ( max-width: 991px )
+                    padding: 45px 0 
                 .table_title
                     background-color: #E5E5E5
                     border-top: 1px solid #231714
@@ -361,13 +363,13 @@ main
                     justify-content: center
                     width: 100%
                     max-width: 1140px !important 
+                    padding: 0 30px
                     @media ( max-width: 1530px )
                         max-width: 1000px !important 
                         width: 70%
-                    @media ( max-width: 1279px )
+                    @media ( max-width: 767px )
                         max-width: 100% !important 
                         width: 100%
-                    @media ( max-width: 767px )
                         padding: 0 5%
                     @media ( max-width: 540px )
                         margin-bottom: 30px
@@ -376,9 +378,7 @@ main
                         justify-content: start
                         margin-right: unset
                         +FontStyle(18px,$colorBlack,700,3px,54px)
-                        @media ( max-width: 1279px )
-                            max-width: 70% !important 
-                            width: 70%
+
                         @media ( max-width: 767px )
                             max-width: 100% !important 
                             width: 100%
@@ -389,7 +389,6 @@ main
                             flex-direction: column                        
                         .table_content
                             flex: 1
-                            padding-left: 30px 
                             @media ( max-width: 991px )
                                 flex: unset
                                 width: 100%
@@ -460,6 +459,7 @@ main
                                         padding: 0 30px
                                         border-right: unset
                                         cursor: pointer
+                                        font-weight: 500 
                                         @media ( max-width: 540px )
                                             padding: 0
                                         &:last-child

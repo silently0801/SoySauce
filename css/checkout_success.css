@@ -272,6 +272,7 @@ main .header .container .row .finish .content {
   font-weight: 700;
   letter-spacing: 7px;
   line-height: 72px;
+  padding: 0 20px;
 }
 
 @media (max-width: 540px) {
@@ -289,7 +290,7 @@ main .header .container .row .finish .content::before {
   content: "";
   width: 586px;
   height: 1px;
-  background-color: #b2b2b2;
+  background-color: #231714;
   position: absolute;
   z-index: -1;
   top: 50%;

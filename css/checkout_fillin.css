@@ -341,7 +341,7 @@ main .header .container .row .status_area .status .status_title {
     width: 100%;
     font-size: 16px;
     color: #808080;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 28px;
   }
@@ -488,9 +488,9 @@ main .products_area .container .row .product .name {
           align-items: center;
   width: 30%;
   height: 100%;
-  font-size: 22px;
+  font-size: 18px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 31px;
 }
@@ -817,7 +817,7 @@ main .price_area .container .row {
 }
 
 main .price_area .container .row .content {
-  min-width: 220px;
+  min-width: 240px;
 }
 
 main .price_area .container .row .content div {
@@ -840,7 +840,7 @@ main .price_area .container .row .content div::before {
 }
 
 main .price_area .container .row .content div .title {
-  width: 100px;
+  width: 120px;
   font-size: 18px;
   color: #231714;
   font-weight: 700;
@@ -902,7 +902,7 @@ main .price_area .container .row .content .shipping .title span {
 }
 
 main .profile_area .profile .profile_table {
-  padding: 45px 0;
+  padding: 45px 0 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -913,6 +913,12 @@ main .profile_area .profile .profile_table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 991px) {
+  main .profile_area .profile .profile_table {
+    padding: 45px 0;
+  }
 }
 
 main .profile_area .profile .profile_table .table_title {
@@ -928,6 +934,7 @@ main .profile_area .profile .profile_table .table_title {
           justify-content: center;
   width: 100%;
   max-width: 1140px !important;
+  padding: 0 30px;
 }
 
 @media (max-width: 1530px) {
@@ -937,15 +944,10 @@ main .profile_area .profile .profile_table .table_title {
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   main .profile_area .profile .profile_table .table_title {
     max-width: 100% !important;
     width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  main .profile_area .profile .profile_table .table_title {
     padding: 0 5%;
   }
 }
@@ -967,13 +969,6 @@ main .profile_area .profile .profile_table .table_title .title {
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 54px;
-}
-
-@media (max-width: 1279px) {
-  main .profile_area .profile .profile_table .table_title .title {
-    max-width: 70% !important;
-    width: 70%;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1001,7 +996,6 @@ main .profile_area .profile .profile_table .container .row .table_content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 30px;
 }
 
 @media (max-width: 991px) {
@@ -1190,6 +1184,7 @@ main .profile_area .profile .profile_table .container .row .table_content .info 
   padding: 0 30px;
   border-right: unset;
   cursor: pointer;
+  font-weight: 500;
 }
 
 @media (max-width: 540px) {

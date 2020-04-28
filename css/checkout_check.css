@@ -478,9 +478,9 @@ main .products_table .container .row .product .name {
           align-items: center;
   width: 30%;
   height: 100%;
-  font-size: 22px;
+  font-size: 18px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 31px;
 }
@@ -492,16 +492,6 @@ main .products_table .container .row .product .name {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 540px) {
-  main .products_table .container .row .product .name {
-    font-size: 18px;
-    color: #231714;
-    font-weight: 600;
-    letter-spacing: 3px;
-    line-height: 31px;
   }
 }
 
@@ -538,20 +528,15 @@ main .products_table .container .row .product .qty .count {
           align-items: center;
   padding: 0 10px;
   margin: 0 5px;
-  min-width: 76px;
+  width: 76px;
   height: 43px;
   border: 1px solid #231714;
+  text-align: center;
   font-size: 22px;
   color: #231714;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 31px;
-}
-
-@media (max-width: 991px) {
-  main .products_table .container .row .product .qty .count {
-    min-width: 76px;
-  }
 }
 
 @media (max-width: 540px) {

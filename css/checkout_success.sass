@@ -64,6 +64,7 @@ main
                         position: relative
                         background-color: #ebebeb
                         +FontStyle(42px,$colorBlack,700,7px,72px)
+                        padding: 0 20px
                         @media ( max-width: 540px )
                             width: unset
                             +FontStyle(14px,$colorBlack,700,3px,1)
@@ -71,7 +72,7 @@ main
                             content: ""
                             width: 586px
                             height: 1px
-                            background-color: #b2b2b2
+                            background-color: $colorBlack
                             position: absolute
                             z-index: -1
                             top: 50%

@@ -167,13 +167,12 @@ main
                         align-items: center
                         width: 30%
                         height: 100%
-                        +FontStyle(22px,$colorBlack,600,3px,31px)
+                        +FontStyle(18px,$colorBlack,700,3px,31px)
                         @media ( max-width: 991px )
                             width: 100%
                             justify-content: center
                             margin-bottom: 20px
-                        @media ( max-width: 540px )
-                            +FontStyle(18px,$colorBlack,600,3px,31px)
+                        
                     .qty
                         display: flex
                         justify-content: center
@@ -189,12 +188,11 @@ main
                             align-items: center
                             padding: 0 10px
                             margin: 0 5px
-                            min-width: 76px
+                            width: 76px
                             height: 43px
                             border: 1px solid $colorBlack
+                            text-align: center
                             +FontStyle(22px,$colorBlack,600,3px,31px)
-                            @media ( max-width: 991px )
-                                min-width: 76px
                             @media ( max-width: 540px )
                                 height: 28px
                                 +FontStyle(14px,$colorBlack,600,3px,20px)

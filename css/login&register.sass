@@ -2,7 +2,7 @@
 @mixin select_style($width)
     .selects
         width: $width
-        height: 45px
+        height: 43px
         margin-right: 10px
         display: flex
         position: relative
@@ -109,10 +109,10 @@ main
                         @media ( max-width: 1279px )
                             display: none 
                     .content
-                        +FontStyle(18px,$colorBlack,400,3px,34px)
+                        +FontStyle(18px,$colorBlack,500,3px,34px)
                         margin-bottom: 22px 
                         @media ( max-width: 540px )
-                            +FontStyle(12px,$colorBlack,400,3px,23px)
+                            +FontStyle(12px,$colorBlack,500,3px,23px)
                     form
                         margin-bottom: 60px 
                         @media ( max-width: 540px )
@@ -125,6 +125,7 @@ main
                                 background: unset
                                 width: 100%
                                 margin-bottom: 14px
+                                height: 34px
                                 &:focus
                                     transition: unset
                                     border: 1px solid $colorOrange 
@@ -143,7 +144,7 @@ main
                                 justify-content: center
                                 width: 120px
                                 height: 34px
-                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                +FontStyle(14px,$colorBlack,600,4px,1) 
                                 &::before
                                     content: ""
                                     position: absolute
@@ -162,7 +163,12 @@ main
                                 height: 34px
                                 border: 1px solid $colorBlack
                                 border-radius: unset
-                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                +FontStyle(14px,$colorBlack,600,4px,1) 
+                                &:hover
+                                    background-color: #4D4D4D
+                                    color: #FFF
+                                &:hover::before
+                                    opacity: 0
                                 &::before
                                     content: ""
                                     position: absolute
@@ -170,6 +176,7 @@ main
                                     left: 0
                                     width: 17px
                                     height: 17px
+                                    opacity: 1
                                     background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
                     .external_login
                         width: 100%
@@ -193,8 +200,16 @@ main
                             @media ( max-width: 540px )
                                 margin-right: unset
                                 margin-bottom: 20px
+                            &:hover
+                                border: 1px solid #DD4B39
+                                color: #DD4B39
+                                background-color: rgba(#DD4B39,0)
                         .facebook
                             background-color: #4E64AD
+                            &:hover
+                                border: 1px solid #4E64AD
+                                color: #4E64AD
+                                background-color: rgba(#4E64AD,0)
                 .login_area.active
                     display: block
                 .register_area
@@ -235,9 +250,15 @@ main
                             @media ( max-width: 540px )
                                 margin-right: unset
                                 margin-bottom: 20px
+                            &:hover
+                                color: #FFF
+                                background-color: #DD4B39
                         .facebook
                             +FontStyle(18px,#4E64AD,700,4px,49px)
                             border: 1px solid #4E64AD
+                            &:hover
+                                color: #FFF
+                                background-color: #4E64AD
                     .content
                         +FontStyle(22px,$colorBlack,700,3px,1)
                         margin-bottom: 17px
@@ -252,6 +273,7 @@ main
                                 border: 1px solid #4D4D4D
                                 margin-bottom: 14px
                                 width: 100%
+                                height: 34px
                                 &:focus
                                     transition: unset
                                     border: 1px solid $colorOrange 
@@ -265,6 +287,7 @@ main
                                 display: flex
                                 flex-wrap: wrap
                                 align-items: center
+                                
                                 .year_select
                                     width: calc( 40% - 2px )
                                     margin: 0 1px 0 0
@@ -294,7 +317,7 @@ main
                                 justify-content: center
                                 width: 120px
                                 height: 34px
-                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                +FontStyle(14px,$colorBlack,600,4px,1) 
                                 &::before
                                     content: ""
                                     position: absolute
@@ -313,7 +336,12 @@ main
                                 height: 34px
                                 border: 1px solid $colorBlack
                                 border-radius: unset
-                                +FontStyle(14px,$colorBlack,400,4px,1) 
+                                +FontStyle(14px,$colorBlack,600,4px,1) 
+                                &:hover
+                                    background-color: #4D4D4D
+                                    color: #FFF
+                                &:hover::before
+                                    opacity: 0
                                 &::before
                                     content: ""
                                     position: absolute
@@ -321,6 +349,7 @@ main
                                     left: 0
                                     width: 17px
                                     height: 17px
+                                    opacity: 1
                                     background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
                 .register_area.active
                     display: block    

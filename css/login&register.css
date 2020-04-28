@@ -247,7 +247,7 @@ main .login_register_area .container .row .login_area .content_header {
 main .login_register_area .container .row .login_area .content {
   font-size: 18px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 3px;
   line-height: 34px;
   margin-bottom: 22px;
@@ -257,7 +257,7 @@ main .login_register_area .container .row .login_area .content {
   main .login_register_area .container .row .login_area .content {
     font-size: 12px;
     color: #231714;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 3px;
     line-height: 23px;
   }
@@ -286,6 +286,7 @@ main .login_register_area .container .row .login_area form .input_title input {
   background: unset;
   width: 100%;
   margin-bottom: 14px;
+  height: 34px;
 }
 
 main .login_register_area .container .row .login_area form .input_title input:focus {
@@ -324,7 +325,7 @@ main .login_register_area .container .row .login_area form .form_btn .forget {
   height: 34px;
   font-size: 14px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 4px;
   line-height: 1;
 }
@@ -358,9 +359,18 @@ main .login_register_area .container .row .login_area form .form_btn .login {
   border-radius: unset;
   font-size: 14px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 4px;
   line-height: 1;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .login:hover {
+  background-color: #4D4D4D;
+  color: #FFF;
+}
+
+main .login_register_area .container .row .login_area form .form_btn .login:hover::before {
+  opacity: 0;
 }
 
 main .login_register_area .container .row .login_area form .form_btn .login::before {
@@ -370,6 +380,7 @@ main .login_register_area .container .row .login_area form .form_btn .login::bef
   left: 0;
   width: 17px;
   height: 17px;
+  opacity: 1;
   background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
 }
@@ -429,8 +440,20 @@ main .login_register_area .container .row .login_area .external_login .google {
   }
 }
 
+main .login_register_area .container .row .login_area .external_login .google:hover {
+  border: 1px solid #DD4B39;
+  color: #DD4B39;
+  background-color: rgba(221, 75, 57, 0);
+}
+
 main .login_register_area .container .row .login_area .external_login .facebook {
   background-color: #4E64AD;
+}
+
+main .login_register_area .container .row .login_area .external_login .facebook:hover {
+  border: 1px solid #4E64AD;
+  color: #4E64AD;
+  background-color: rgba(78, 100, 173, 0);
 }
 
 main .login_register_area .container .row .login_area.active {
@@ -529,6 +552,11 @@ main .login_register_area .container .row .register_area .external_login .google
   }
 }
 
+main .login_register_area .container .row .register_area .external_login .google:hover {
+  color: #FFF;
+  background-color: #DD4B39;
+}
+
 main .login_register_area .container .row .register_area .external_login .facebook {
   font-size: 18px;
   color: #4E64AD;
@@ -536,6 +564,11 @@ main .login_register_area .container .row .register_area .external_login .facebo
   letter-spacing: 4px;
   line-height: 49px;
   border: 1px solid #4E64AD;
+}
+
+main .login_register_area .container .row .register_area .external_login .facebook:hover {
+  color: #FFF;
+  background-color: #4E64AD;
 }
 
 main .login_register_area .container .row .register_area .content {
@@ -570,6 +603,7 @@ main .login_register_area .container .row .register_area form .input_title input
   border: 1px solid #4D4D4D;
   margin-bottom: 14px;
   width: 100%;
+  height: 34px;
 }
 
 main .login_register_area .container .row .register_area form .input_title input:focus {
@@ -604,7 +638,7 @@ main .login_register_area .container .row .register_area form .birthday .input_a
 
 main .login_register_area .container .row .register_area form .birthday .input_area .year_select .selects {
   width: 100%;
-  height: 45px;
+  height: 43px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,7 +769,7 @@ main .login_register_area .container .row .register_area form .birthday .input_a
 
 main .login_register_area .container .row .register_area form .birthday .input_area .month_select .selects {
   width: 100%;
-  height: 45px;
+  height: 43px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,7 +898,7 @@ main .login_register_area .container .row .register_area form .birthday .input_a
 
 main .login_register_area .container .row .register_area form .birthday .input_area .day_select .selects {
   width: 100%;
-  height: 45px;
+  height: 43px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1012,7 +1046,7 @@ main .login_register_area .container .row .register_area form .form_btn .restart
   height: 34px;
   font-size: 14px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 4px;
   line-height: 1;
 }
@@ -1046,9 +1080,18 @@ main .login_register_area .container .row .register_area form .form_btn .registe
   border-radius: unset;
   font-size: 14px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 4px;
   line-height: 1;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .register:hover {
+  background-color: #4D4D4D;
+  color: #FFF;
+}
+
+main .login_register_area .container .row .register_area form .form_btn .register:hover::before {
+  opacity: 0;
 }
 
 main .login_register_area .container .row .register_area form .form_btn .register::before {
@@ -1058,6 +1101,7 @@ main .login_register_area .container .row .register_area form .form_btn .registe
   left: 0;
   width: 17px;
   height: 17px;
+  opacity: 1;
   background: -webkit-gradient(linear, left top, right bottom, from(#231714), color-stop(49.9%, #231714), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom right, #231714 0%, #231714 49.9%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
 }
