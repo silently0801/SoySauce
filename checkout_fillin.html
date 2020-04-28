@@ -341,6 +341,21 @@
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="shipping" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="btn close_modal" data-dismiss="modal"></button>
+                        <div class="title">運費規則</div>
+                        <div class="content">
+                            ※加價購及運費不列入計算<br>
+                            醬油金額滿3,000元即免運費<br>
+                            醬油瓶數2(含)以下，運費為100元<br>
+                            醬油瓶數3(含)以上，運費為100元<br>
+                            醬油瓶數7(含)以上未滿3,000，運費為140元
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -405,9 +420,12 @@
                 $(this).parent().children("input").attr("value",$(this).attr("value"));
                 $(this).addClass("active");
             })
-
+            $(".shipping .title span").click(function () {
+                $('#shipping').modal('show');
+            });
         });
         
+
         $(window).resize(() => {
             setTimeout(function () {
                 $(".option_area").each(function () {

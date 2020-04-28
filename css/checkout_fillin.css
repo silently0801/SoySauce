@@ -893,6 +893,7 @@ main .price_area .container .row .content .shipping .title span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   font-size: 17px;
   color: #FFF;
   font-weight: 700;
@@ -1367,8 +1368,7 @@ main .modal_area .modal .modal-dialog .modal-content {
   border-radius: unset;
   background-color: #FFF;
   border: 5px solid #231714;
-  width: 680px;
-  height: 113px;
+  min-width: 680px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1379,11 +1379,18 @@ main .modal_area .modal .modal-dialog .modal-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 45px 5px;
+}
+
+@media (max-width: 991px) {
+  main .modal_area .modal .modal-dialog .modal-content {
+    min-width: 400px;
+  }
 }
 
 @media (max-width: 540px) {
   main .modal_area .modal .modal-dialog .modal-content {
-    width: 280px;
+    min-width: 280px;
   }
 }
 
@@ -1432,12 +1439,31 @@ main .modal_area .modal .modal-dialog .modal-content .close_modal::after {
   background-color: #231714;
 }
 
+main .modal_area .modal .modal-dialog .modal-content .title {
+  font-size: 22px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 41px;
+}
+
+@media (max-width: 540px) {
+  main .modal_area .modal .modal-dialog .modal-content .title {
+    font-size: 18px;
+    color: #231714;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 31px;
+  }
+}
+
 main .modal_area .modal .modal-dialog .modal-content .content {
   font-size: 18px;
   color: #231714;
   font-weight: 700;
   letter-spacing: 4px;
   line-height: 41px;
+  text-align: center;
 }
 
 @media (max-width: 540px) {
