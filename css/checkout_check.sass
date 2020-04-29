@@ -191,11 +191,16 @@ main
                             width: 76px
                             height: 43px
                             border: 1px solid $colorBlack
+                            background-color: unset
                             text-align: center
                             +FontStyle(22px,$colorBlack,600,3px,31px)
                             @media ( max-width: 540px )
                                 height: 28px
                                 +FontStyle(14px,$colorBlack,600,3px,20px)
+                            &:focus
+                                transition: unset
+                                border: 1px solid $colorOrange 
+                                outline: 2px solid $colorOrange  
                         .minus,.plus
                             position: relative
                             width: 24px

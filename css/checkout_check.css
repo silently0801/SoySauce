@@ -531,6 +531,7 @@ main .products_table .container .row .product .qty .count {
   width: 76px;
   height: 43px;
   border: 1px solid #231714;
+  background-color: unset;
   text-align: center;
   font-size: 22px;
   color: #231714;
@@ -548,6 +549,13 @@ main .products_table .container .row .product .qty .count {
     letter-spacing: 3px;
     line-height: 20px;
   }
+}
+
+main .products_table .container .row .product .qty .count:focus {
+  -webkit-transition: unset;
+  transition: unset;
+  border: 1px solid #C0362D;
+  outline: 2px solid #C0362D;
 }
 
 main .products_table .container .row .product .qty .minus, main .products_table .container .row .product .qty .plus {
