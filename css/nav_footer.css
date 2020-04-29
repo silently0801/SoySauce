@@ -122,6 +122,9 @@ body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+body *:not(input) {
   -webkit-user-select: none;
   -moz-user-select: none;
 }

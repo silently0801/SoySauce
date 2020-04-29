@@ -122,6 +122,9 @@ body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+body *:not(input) {
   -webkit-user-select: none;
   -moz-user-select: none;
 }
@@ -533,6 +536,7 @@ main .products_table .container .row .product .qty .count {
   border: 1px solid #231714;
   background-color: unset;
   text-align: center;
+  -webkit-user-select: text;
   font-size: 22px;
   color: #231714;
   font-weight: 600;
