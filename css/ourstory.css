@@ -341,84 +341,68 @@ main .start .start_container .row .start_banner img {
   width: 100%;
 }
 
-main .start .start_container .row .start_banner h2 {
-  text-align: left;
-  position: absolute;
-  bottom: -5px;
-  left: 35px;
-  font-size: 63px;
-  color: #FFF;
-  font-weight: 600;
-  letter-spacing: 15px;
-  line-height: 1;
-}
-
-@media (max-width: 1440px) {
-  main .start .start_container .row .start_banner h2 {
-    position: absolute;
-    bottom: -5px;
-    left: 120px;
-  }
-}
-
-@media (max-width: 1279px) {
-  main .start .start_container .row .start_banner h2 {
-    font-size: 42px;
-    color: #FFF;
-    font-weight: 600;
-    letter-spacing: 15px;
-    line-height: 1;
-    position: absolute;
-    bottom: -5px;
-    left: unset;
-  }
-}
-
-@media (max-width: 767px) {
-  main .start .start_container .row .start_banner h2 {
-    font-size: 32px;
-    color: #FFF;
-    font-weight: 600;
-    letter-spacing: 15px;
-    line-height: 1;
-    position: absolute;
-    bottom: -5px;
-    left: 15px;
-  }
-}
-
 main .start .start_container .row .start_content {
-  padding: 40px 200px 120px 35px;
+  padding: 60px 54px 120px 35px;
 }
 
-@media (max-width: 1441px) {
+@media (max-width: 1530px) {
   main .start .start_container .row .start_content {
-    padding: 40px 120px 120px;
+    padding: 60px 50px 120px;
   }
 }
 
 @media (max-width: 1279px) {
   main .start .start_container .row .start_content {
-    padding: 40px 0 50px 0;
+    padding: 60px 0 50px;
   }
 }
 
 @media (max-width: 767px) {
   main .start .start_container .row .start_content {
-    padding: 40px 15px;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 320px) {
   main .start .start_container .row .start_content {
-    padding: 40px 15px 0;
+    padding: 20px 0;
+  }
+}
+
+main .start .start_container .row .start_content h2 {
+  text-align: left;
+  font-size: 63px;
+  color: #231714;
+  font-weight: 600;
+  letter-spacing: 15px;
+  line-height: 98px;
+}
+
+@media (max-width: 1530px) {
+  main .start .start_container .row .start_content h2 {
+    font-size: 42px;
+    color: #231714;
+    font-weight: 600;
+    letter-spacing: 15px;
+    line-height: 98px;
+  }
+}
+
+@media (max-width: 540px) {
+  main .start .start_container .row .start_content h2 {
+    font-size: 32px;
+    color: #231714;
+    font-weight: 600;
+    letter-spacing: 15px;
+    line-height: 1;
   }
 }
 
 main .start .start_container .row .start_content h3 {
   text-align: left;
+  white-space: nowrap;
   font-size: 27px;
-  color: #000;
+  color: #231714;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 42px;
@@ -427,7 +411,7 @@ main .start .start_container .row .start_content h3 {
 @media (max-width: 767px) {
   main .start .start_container .row .start_content h3 {
     font-size: 24px;
-    color: #000;
+    color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 42px;
@@ -437,7 +421,7 @@ main .start .start_container .row .start_content h3 {
 @media (max-width: 576px) {
   main .start .start_container .row .start_content h3 {
     font-size: 18px;
-    color: #000;
+    color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 42px;
@@ -447,7 +431,7 @@ main .start .start_container .row .start_content h3 {
 @media (max-width: 320px) {
   main .start .start_container .row .start_content h3 {
     font-size: 16px;
-    color: #000;
+    color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1;
@@ -458,19 +442,39 @@ main .start .start_container .row .start_content h3 br {
   display: none;
 }
 
-@media (max-width: 320px) {
-  main .start .start_container .row .start_content h3 br {
+@media (max-width: 380px) {
+  main .start .start_container .row .start_content h3 br:nth-child(1) {
     display: block;
   }
 }
 
-main .start .start_container .row .start_content h3 br:nth-child(2) {
-  display: block;
+@media (max-width: 767px) {
+  main .start .start_container .row .start_content h3 br:nth-child(2) {
+    display: block;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   main .start .start_container .row .start_content h3 br:nth-child(2) {
     display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  main .start .start_container .row .start_content h3 br:nth-child(3) {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  main .start .start_container .row .start_content h3 br:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  main .start .start_container .row .start_content h3 br:nth-child(3) {
+    display: block;
   }
 }
 
@@ -491,7 +495,7 @@ main .start .start_container .row .start_content .tw_content {
 
 main .start .start_container .row .start_content .tw_content p {
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 32px;
@@ -500,7 +504,7 @@ main .start .start_container .row .start_content .tw_content p {
 @media (max-width: 767px) {
   main .start .start_container .row .start_content .tw_content p {
     font-size: 16px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 32px;
@@ -510,7 +514,7 @@ main .start .start_container .row .start_content .tw_content p {
 @media (max-width: 320px) {
   main .start .start_container .row .start_content .tw_content p {
     font-size: 12px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 24px;
@@ -651,7 +655,7 @@ main .grow .grow_container .row .grow_content .grow_header h3 {
   text-align: left;
   margin-bottom: 25px;
   font-size: 32px;
-  color: #000;
+  color: #231714;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 1;
@@ -660,7 +664,7 @@ main .grow .grow_container .row .grow_content .grow_header h3 {
 @media (max-width: 320px) {
   main .grow .grow_container .row .grow_content .grow_header h3 {
     font-size: 18px;
-    color: #000;
+    color: #231714;
     font-weight: 600;
     letter-spacing: 6px;
     line-height: 1;
@@ -670,7 +674,7 @@ main .grow .grow_container .row .grow_content .grow_header h3 {
 main .grow .grow_container .row .grow_content .grow_header h4 {
   text-align: left;
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1;
@@ -679,7 +683,7 @@ main .grow .grow_container .row .grow_content .grow_header h4 {
 @media (max-width: 320px) {
   main .grow .grow_container .row .grow_content .grow_header h4 {
     font-size: 14px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1;
@@ -698,7 +702,7 @@ main .grow .grow_container .row .grow_content .tw_content {
 
 main .grow .grow_container .row .grow_content .tw_content p {
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
@@ -707,7 +711,7 @@ main .grow .grow_container .row .grow_content .tw_content p {
 @media (max-width: 767px) {
   main .grow .grow_container .row .grow_content .tw_content p {
     font-size: 16px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 34px;
@@ -717,7 +721,7 @@ main .grow .grow_container .row .grow_content .tw_content p {
 @media (max-width: 320px) {
   main .grow .grow_container .row .grow_content .tw_content p {
     font-size: 12px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 24px;
@@ -823,7 +827,7 @@ main .continue .continue_container .row .continue_header h3 {
   text-align: left;
   margin-bottom: 25px;
   font-size: 32px;
-  color: #000;
+  color: #231714;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 1;
@@ -832,7 +836,7 @@ main .continue .continue_container .row .continue_header h3 {
 @media (max-width: 320px) {
   main .continue .continue_container .row .continue_header h3 {
     font-size: 18px;
-    color: #000;
+    color: #231714;
     font-weight: 600;
     letter-spacing: 6px;
     line-height: 1;
@@ -842,7 +846,7 @@ main .continue .continue_container .row .continue_header h3 {
 main .continue .continue_container .row .continue_header h4 {
   text-align: left;
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 32px;
@@ -851,7 +855,7 @@ main .continue .continue_container .row .continue_header h4 {
 @media (max-width: 320px) {
   main .continue .continue_container .row .continue_header h4 {
     font-size: 14px;
-    color: #000;
+    color: #231714;
     font-weight: 600;
     letter-spacing: 1px;
     line-height: 26px;
@@ -870,7 +874,7 @@ main .continue .continue_container .row .tw_content {
 
 main .continue .continue_container .row .tw_content p {
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
@@ -879,7 +883,7 @@ main .continue .continue_container .row .tw_content p {
 @media (max-width: 767px) {
   main .continue .continue_container .row .tw_content p {
     font-size: 16px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 34px;
@@ -889,7 +893,7 @@ main .continue .continue_container .row .tw_content p {
 @media (max-width: 320px) {
   main .continue .continue_container .row .tw_content p {
     font-size: 12px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 24px;
@@ -1041,7 +1045,7 @@ main .focus .focus_container .row .foucs_right .focus_header {
 main .focus .focus_container .row .foucs_right .focus_header h3 {
   text-align: left;
   font-size: 32px;
-  color: #000;
+  color: #231714;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 1;
@@ -1050,7 +1054,7 @@ main .focus .focus_container .row .foucs_right .focus_header h3 {
 @media (max-width: 320px) {
   main .focus .focus_container .row .foucs_right .focus_header h3 {
     font-size: 18px;
-    color: #000;
+    color: #231714;
     font-weight: 600;
     letter-spacing: 6px;
     line-height: 1;
@@ -1060,7 +1064,7 @@ main .focus .focus_container .row .foucs_right .focus_header h3 {
 main .focus .focus_container .row .foucs_right .focus_header h4 {
   text-align: left;
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 32px;
@@ -1069,7 +1073,7 @@ main .focus .focus_container .row .foucs_right .focus_header h4 {
 @media (max-width: 320px) {
   main .focus .focus_container .row .foucs_right .focus_header h4 {
     font-size: 14px;
-    color: #000;
+    color: #231714;
     font-weight: 600;
     letter-spacing: 1px;
     line-height: 32px;
@@ -1088,7 +1092,7 @@ main .focus .focus_container .row .foucs_right .tw_content {
 
 main .focus .focus_container .row .foucs_right .tw_content p {
   font-size: 18px;
-  color: #000;
+  color: #231714;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 34px;
@@ -1097,7 +1101,7 @@ main .focus .focus_container .row .foucs_right .tw_content p {
 @media (max-width: 767px) {
   main .focus .focus_container .row .foucs_right .tw_content p {
     font-size: 16px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 34px;
@@ -1107,7 +1111,7 @@ main .focus .focus_container .row .foucs_right .tw_content p {
 @media (max-width: 320px) {
   main .focus .focus_container .row .foucs_right .tw_content p {
     font-size: 12px;
-    color: #000;
+    color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 24px;
