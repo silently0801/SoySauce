@@ -136,10 +136,18 @@ body nav {
           transition-timing-function: ease-in-out;
 }
 
+body {
+  overflow-y: scroll !important;
+}
+
 @media (max-width: 1530px) {
   body {
     background-color: #ebebeb;
   }
+}
+
+.modal-open {
+  padding: 0 !important;
 }
 
 main .mask {
