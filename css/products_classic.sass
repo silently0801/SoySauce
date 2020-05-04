@@ -186,18 +186,12 @@ main
                                 display: block
                         .idea_title
                             margin-bottom: 32px
-                            span
-                                &:nth-child(1)
-                                    +FontStyle(32px,$colorBlack,700,3px,49px)
-                                    margin-right: 25px
-                                    @media ( max-width: 1279px )
-                                        margin-right: unset
-                                    @media ( max-width: 540px )
-                                        +FontStyle(22px,$colorBlack,700,3px,31px)
-                                &:nth-child(2)
-                                    +FontStyle(18px,$colorBlack,700,3px,31px)
-                                    @media ( max-width: 540px )
-                                        +FontStyle(16px,$colorBlack,700,3px,34px)
+                            +FontStyle(32px,$colorBlack,700,3px,49px)
+                            margin-right: 25px
+                            @media ( max-width: 1279px )
+                                margin-right: unset
+                            @media ( max-width: 540px )
+                                +FontStyle(22px,$colorBlack,700,3px,31px)
                         .idea_content
                             +FontStyle(18px,$colorBlack,400,3px,34px)
                             @media ( max-width: 540px )
@@ -348,3 +342,5 @@ main
                         align-items: flex-start
                         @media ( max-width: 767px )
                             align-items: center
+                        @media ( max-width: 540px )
+                            +FontStyle(14px,$colorBlack,400,3px,26px)
