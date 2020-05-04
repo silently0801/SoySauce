@@ -284,9 +284,9 @@ main
                     display: flex
                     justify-content: center
                     flex-wrap: wrap
-                    margin-bottom: 170px
+                    margin-bottom: 105px
                     @media ( max-width: 767px )
-                        margin-bottom: 30px
+                        margin-bottom: unset
                     .producer_detail
                         display: flex
                         flex-direction: column
@@ -309,3 +309,42 @@ main
                                 +FontStyle(20px,$colorBlack,700,3px,42px)
                                 &:nth-child(2)
                                     +FontStyle(16px,$colorBlack,400,3px,27px)
+    .designer
+        .container
+            display: flex
+            justify-content: center
+            .row
+                width: 840px
+                margin: unset
+                margin-bottom: 160px
+                justify-content: center
+                align-items: center
+                @media ( max-width: 767px )
+                    flex-direction: column
+                    margin-bottom: 60px
+                .designer_img
+                    width: 190px
+                    height: 190px 
+                    background-position: center
+                    background-size: cover 
+                    margin-right: 50px
+                    @media ( max-width: 767px )
+                        margin-right: unset
+                        margin-bottom: 18px
+                .designer_info
+                    flex: 1
+                    border-bottom: 1px solid $colorBlack
+                    .title
+                        +FontStyle(22px,$colorBlack,700,3px,49px)
+                        @media ( max-width: 767px )
+                            +FontStyle(20px,$colorBlack,700,3px,42px)
+                            text-align: center
+                    .content
+                        padding-bottom: 20px
+                        +FontStyle(18px,$colorBlack,400,3px,34px)
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        @media ( max-width: 767px )
+                            align-items: center
