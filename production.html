@@ -259,9 +259,14 @@
                 </div>
         </section>
         <!-- Add Arrows -->
-        <div class="swiper-button-next"><div class="arrow"></div></div>
-        <div class="swiper-button-prev"><div class="arrow"></div></div>
-        <a href="./products.html" class="more justify-content-center align-items-center" tabindex="0" role="button">系列介紹</a>
+        <div class="swiper-button-next">
+            <div class="arrow"></div>
+        </div>
+        <div class="swiper-button-prev">
+            <div class="arrow"></div>
+        </div>
+        <a href="./products.html" class="more justify-content-center align-items-center" tabindex="0"
+            role="button">系列介紹</a>
         </div>
     </main>
     <footer>
@@ -296,6 +301,7 @@
             </div>
         </div>
     </footer>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -317,14 +323,37 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+        function MouseWheel(e) {
+            e = e || window.event;
+            if (e.wheelDelta <= 0 || e.detail > 0) {
+                $(".swiper-button-next").trigger("click");
+                if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
+                    $(".more").css({ "display": "flex" });
+
+            }
+            else {
+                $(".swiper-button-prev").trigger("click");
+            }
+            // alert(['scrolled ', (( e.wheelDelta <= 0 || e.detail > 0) ? 'down' : 'up')].join(''));
+        }
         $(document).ready(function () {
-            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth< 576)
+            if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth < 576)
                 $(".swiper-button-next").addClass("swiper_btn_mobile");
             else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth > 575)
                 $(".swiper-button-next").addClass("swiper_btn_pc");
             else {
                 $(".swiper-button-next").removeClass("swiper_btn_mobile");
                 $(".swiper-button-next").removeClass("swiper_btn_pc");
+            }
+
+            // hook event listener on window object
+            if ('onmousewheel' in window) {
+                window.onmousewheel = MouseWheel;
+            } else if ('onmousewheel' in document) {
+                document.onmousewheel = MouseWheel;
+            } else if ('addEventListener' in window) {
+                window.addEventListener("mousewheel", MouseWheel, false);
+                window.addEventListener("DOMMouseScroll", MouseWheel, false);
             }
         });
         $(window).resize(function () {
@@ -337,6 +366,10 @@
                 $(".swiper-button-next").removeClass("swiper_btn_pc");
             }
         });
+
+
+
+
         /*swiper_btn_mobile*/
         $(".swiper-button-next").click(
             function () {
@@ -360,12 +393,13 @@
                 }
             }
         )
+
         document.querySelector("html").addEventListener('touchend', function (event) {
             if ($(".swiper-button-next")[0].classList[1] == "swiper-button-disabled")
                 $(".more").css({ "display": "flex" });
             else
                 $(".more").css({ "display": "none" });
-            
+
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth < 576)
                 $(".swiper-button-next").addClass("swiper_btn_mobile");
             else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth > 575)
@@ -380,7 +414,7 @@
                 $(".more").css({ "display": "flex" });
             else
                 $(".more").css({ "display": "none" });
-                
+
             if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth < 576)
                 $(".swiper-button-next").addClass("swiper_btn_mobile");
             else if ($(".swiper-button-prev")[0].classList[1] == "swiper-button-disabled" && window.innerWidth > 575)
