@@ -1130,7 +1130,7 @@ main .introduction::before {
 @media (max-width: 1300px) {
   main .introduction::before {
     width: 100%;
-    top: -480px;
+    top: -490px;
   }
 }
 
@@ -1258,7 +1258,7 @@ main .introduction .introduction_container::before {
 
 @media (max-width: 1300px) {
   main .introduction .introduction_container::before {
-    top: 0px;
+    top: -20px;
   }
 }
 
@@ -1405,7 +1405,7 @@ main .introduction .introduction_container .row .introduction_right {
 
 @media (max-width: 1090px) {
   main .introduction .introduction_container .row .introduction_right {
-    padding: 100px 0 0 50px;
+    padding: 130px 0 0 50px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 420px;
             flex: 0 0 420px;
@@ -1446,6 +1446,16 @@ main .introduction .introduction_container .row .introduction_right p:nth-child(
   }
 }
 
+@media (max-width: 320px) {
+  main .introduction .introduction_container .row .introduction_right p:nth-child(1) {
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 26px;
+  }
+}
+
 main .introduction .introduction_container .row .introduction_right p:nth-child(1)::before {
   content: " ";
   display: block;
@@ -1463,6 +1473,13 @@ main .introduction .introduction_container .row .introduction_right p:nth-child(
   main .introduction .introduction_container .row .introduction_right p:nth-child(1)::before {
     top: -20px;
     left: 90px;
+  }
+}
+
+@media (max-width: 1090px) {
+  main .introduction .introduction_container .row .introduction_right p:nth-child(1)::before {
+    top: 23px;
+    left: 43px;
   }
 }
 
@@ -1488,6 +1505,16 @@ main .introduction .introduction_container .row .introduction_right p:nth-child(
     font-weight: 400;
     letter-spacing: 1px;
     line-height: unset;
+  }
+}
+
+@media (max-width: 320px) {
+  main .introduction .introduction_container .row .introduction_right p:nth-child(2) {
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 23px;
   }
 }
 
@@ -1586,6 +1613,16 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   text-align: justify;
 }
 
+@media (max-width: 320px) {
+  main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(1) {
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 26px;
+  }
+}
+
 main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(2) {
   text-align: justify;
   font-size: 16px;
@@ -1593,6 +1630,16 @@ main .introduction .introduction_container .row .introduction_bot .introduction_
   font-weight: 400;
   letter-spacing: 1px;
   line-height: unset;
+}
+
+@media (max-width: 320px) {
+  main .introduction .introduction_container .row .introduction_bot .introduction_bot_left p:nth-child(2) {
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 23px;
+  }
 }
 
 main .introduction .introduction_container .row .introduction_bot .introduction_bot_right {
@@ -1874,13 +1921,13 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
   line-height: unset;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 320px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
-    font-size: 18px;
+    font-size: 14px;
     color: #FFF;
     font-weight: 600;
     letter-spacing: 3px;
-    line-height: unset;
+    line-height: 26px;
   }
 }
 
@@ -1892,13 +1939,13 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(2) {
   line-height: unset;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 320px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(2) {
-    font-size: 16px;
+    font-size: 12px;
     color: #FFF;
     font-weight: 400;
-    letter-spacing: 2px;
-    line-height: unset;
+    letter-spacing: 1px;
+    line-height: 23px;
   }
 }
 
@@ -2096,7 +2143,7 @@ main .facebook .facebook_container .row .facebook_news .post_content {
 
 @media (max-width: 610px) {
   main .facebook .facebook_container .row .facebook_news .post_content {
-    padding: 30px 60px;
+    padding: 30px 5%;
   }
 }
 
@@ -2140,6 +2187,16 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
   }
 }
 
+@media (max-width: 320px) {
+  main .facebook .facebook_container .row .facebook_news .post_content .post_content_title {
+    font-size: 16px;
+    color: #231714;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: unset;
+  }
+}
+
 main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
   font-size: 16px;
   color: #808080;
@@ -2155,6 +2212,16 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
   }
 }
 
+@media (max-width: 320px) {
+  main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
+    font-size: 12px;
+    color: #808080;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: unset;
+  }
+}
+
 main .facebook .facebook_container .row .facebook_news .post_content .post_content_text {
   width: 100%;
   font-size: 18px;
@@ -2166,6 +2233,16 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media (max-width: 320px) {
+  main .facebook .facebook_container .row .facebook_news .post_content .post_content_text {
+    font-size: 12px;
+    color: #4d4d4d;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 23px;
+  }
 }
 
 main .news_Area {
@@ -2257,7 +2334,7 @@ main .news_Area .news_container .more {
 
 @media (max-width: 610px) {
   main .news_Area .news_container .row {
-    padding: 0 60px;
+    padding: 0 5%;
   }
 }
 
@@ -2393,7 +2470,7 @@ main .news_Area .news_container .row .news_list li .news_title {
 main .news_Area .news_container .row hr {
   position: absolute;
   width: 910px;
-  height: 2px;
+  height: 1px;
   bottom: -20px;
   right: 40px;
   background: #000;
@@ -2416,7 +2493,7 @@ main .news_Area .news_container .row hr {
 
 @media (max-width: 610px) {
   main .news_Area .news_container .row hr {
-    width: calc( 100% - 120px);
+    width: 90%;
   }
 }
 

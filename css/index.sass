@@ -428,7 +428,7 @@ main
             z-index: 4
             @media ( max-width: 1300px )
                 width: 100%
-                top: -480px
+                top: -490px
             @media ( max-width: 820px )
                 top: -62.5vw
                 width: 100%
@@ -495,7 +495,7 @@ main
                 z-index: 0
                 background: $colorOrange
                 @media ( max-width: 1300px )
-                    top: 0px
+                    top: -20px
                 @media ( max-width: 820px )
                     display: none
             .row
@@ -552,7 +552,7 @@ main
                     @media ( max-width: 1300px )
                         padding: 100px 0 0 100px
                     @media ( max-width: 1090px )
-                        padding: 100px 0 0 50px
+                        padding: 130px 0 0 50px
                         flex: 0 0 420px
                     @media ( max-width: 820px )
                         padding: 115px 0
@@ -565,6 +565,8 @@ main
                             margin-bottom: 50px
                             @media ( max-width: 820px )
                                 +FontStyle(18px,#FFF,600,4px)
+                            @media ( max-width: 320px )
+                                +FontStyle(14px,#FFF,600,3px,26px)
                             &::before
                                 +before_after_default(absolute)
                                 height: 109px
@@ -577,6 +579,9 @@ main
                                 @media ( max-width: 1300px )
                                     top: -20px
                                     left: 90px
+                                @media ( max-width: 1090px )
+                                    top: 23px
+                                    left: 43px
                                 @media ( max-width: 820px )
                                     display: none
                         &:nth-child(2)
@@ -584,6 +589,8 @@ main
                             +FontStyle(16px,$colorGrey,400,1px)
                             @media ( max-width: 820px )
                                 +FontStyle(16px,#FFF,400,1px)
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,#FFF,400,1px,23px)
                 .introduction_bot
                     position: absolute
                     bottom: -503px
@@ -631,9 +638,13 @@ main
                                 +FontStyle(18px,#fff,600,4px)
                                 margin-bottom: 50px
                                 text-align: justify
+                                @media ( max-width: 320px )
+                                    +FontStyle(14px,#FFF,600,3px,26px)
                             &:nth-child(2)
                                 text-align: justify
                                 +FontStyle(16px,#fff,400,1px)
+                                @media ( max-width: 320px )
+                                    +FontStyle(12px,#FFF,400,1px,23px)
                     .introduction_bot_right
                         position: relative
                         top: 40px
@@ -759,12 +770,12 @@ main
                             margin: 0 22px 30px
                         &:nth-child(1)
                             +FontStyle(18px,#FFF,600,3px)
-                            @media ( max-width: 1300px )
-                                +FontStyle(18px,#FFF,600,3px)
+                            @media ( max-width: 320px )
+                                +FontStyle(14px,#FFF,600,3px,26px)
                         &:nth-child(2)
                             +FontStyle(16px,#FFF,400,2px)
-                            @media ( max-width: 1300px )
-                                +FontStyle(16px,#FFF,400,2px)
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,#FFF,400,1px,23px)
     .facebook
         .facebook_container
             @media ( max-width: 1240px )
@@ -847,7 +858,7 @@ main
                         @media ( max-width: 820px )
                             padding: 30px 0
                         @media ( max-width: 610px )
-                            padding: 30px 60px
+                            padding: 30px 5%
                         &::after
                             +before_after_default(absolute)
                             background: $colorOrange
@@ -866,11 +877,15 @@ main
                             margin-bottom: 15px
                             @media ( max-width: 1300px )
                                 margin-bottom: unset
+                            @media ( max-width: 320px )
+                                +FontStyle(16px,$colorBlack,900,4px)
                         .post_content_time
                             +FontStyle(16px,$colorGrey,900,2px)
                             margin-bottom: 85px
                             @media ( max-width: 1300px )
                                 margin-bottom: 20px
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,$colorGrey,900,2px)
                         .post_content_text
                             width: 100%
                             +FontStyle(18px,#4d4d4d,600,4px)
@@ -878,6 +893,8 @@ main
                             -webkit-line-clamp: 4
                             -webkit-box-orient: vertical
                             overflow: hidden
+                            @media ( max-width: 320px )
+                                +FontStyle(12px,#4d4d4d,600,4px,23px)
     .news_Area
         margin: 100px 0 110px 
         @media ( max-width: 1300px )
@@ -916,7 +933,7 @@ main
                 @media ( max-width: 820px )
                     padding: 0 
                 @media ( max-width: 610px )
-                    padding: 0 60px
+                    padding: 0 5%
                 .news_header
                     flex: 0 0 400px
                     margin: 0 10px 0 0
@@ -960,7 +977,7 @@ main
                 hr
                     position: absolute
                     width: 910px 
-                    height: 2px
+                    height: 1px
                     bottom: -20px   
                     right: 40px
                     background: #000
@@ -971,7 +988,7 @@ main
                     @media ( max-width: 820px )
                         width: 100%
                     @media ( max-width: 610px )
-                        width: calc( 100% - 120px)
+                        width: 90%
     .bottom_img
         height: 50vw
         overflow: hidden
