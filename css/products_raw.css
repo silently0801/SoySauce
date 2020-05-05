@@ -343,6 +343,7 @@ main .rice .introduction .container .row .introduction_header .header_title {
   position: absolute;
   left: calc( 50% - 7px);
   top: 65px;
+  left: 50%;
   z-index: 2;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -756,7 +757,7 @@ main .producer .container .row .producer_content {
 
 @media (max-width: 767px) {
   main .producer .container .row .producer_content {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 

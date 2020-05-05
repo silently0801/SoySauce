@@ -674,6 +674,7 @@ main .go_shopping .container .row .shopping_btn:hover {
 }
 
 main .producer .container .row {
+  margin: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -800,7 +801,7 @@ main .producer .container .row .producer_content {
 
 @media (max-width: 767px) {
   main .producer .container .row .producer_content {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 
