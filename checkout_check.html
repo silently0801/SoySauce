@@ -256,7 +256,7 @@
         </section>
         <section class="payment">
             <div class="container">
-                <form class="row">
+                <form action="./checkout_fillin.html" class="row">
                     <div class="pay_header">
                         各品項可以混合搭配，但御鼎興同名系列總瓶數需為6的倍數，<br>
                         濁水琥珀系列總瓶數需為3的倍數。
@@ -268,7 +268,7 @@
                                 <div class="method_btn">付款帳號</div>
                             </div>
                             <div class="cod_area radio_btn">
-                                <input class="" type="radio" name="method" id="cod" value="option1">
+                                <input class="" type="radio" name="method" id="cod" value="option1" checked>
                                 <label class="text" for="cod">貨到付款</label>
                             </div>
                             <div class="twpost_area radio_btn">
@@ -278,6 +278,7 @@
                             <div class="atm_area radio_btn">
                                 <input class="" type="radio" name="method" id="atm" value="option3">
                                 <label class="text" for="atm">ATM轉帳</label>
+                                <input class="five" type="text"  placeholder="帳號後五碼" value="">
                             </div>
                         </div>
                     </div>
@@ -315,7 +316,7 @@
                         </div>
                     </div>
                     <div class="submit_btn">
-                        <a href="javascript:history.go(-1)" class="previous">
+                        <a href="./shopping.html" class="previous">
                             <div class="arrow"></div>
                             <span>繼續購買</span>
                         </a>
@@ -340,6 +341,25 @@
                             醬油瓶數2(含)以下，運費為100元<br>
                             醬油瓶數3(含)以上，運費為100元<br>
                             醬油瓶數7(含)以上未滿3,000，運費為140元
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="payment" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="btn close_modal" data-dismiss="modal"></button>
+                        <div class="title">運費規則</div>
+                        <div class="content">
+                            １.貨到付款<br>
+                            ２.郵政劃撥<br>
+                            <span>戶名 | 邱碧惠</span><br>        
+                            <span>帳號 | 22429968</span><br>
+                            <span>聯絡電話 | 05-5868272</span><br>
+                            ３.ATM轉帳<br>
+                            <span>戶名 | 御鼎興柴燒醬業有限公司</span><br>
+                            <span>銀行代號 | 009</span><br>
+                            <span>匯款帳號 | 60510100893200</span><br>
                         </div>
                     </div>
                 </div>
@@ -399,6 +419,9 @@
         $(document).ready(() => {
             $(".shipping .title span").click(function () {
                 $('#shipping').modal('show');
+            });
+            $(".method_btn").click(function () {
+                $('#payment').modal('show');
             });
             /**/
             $(".option").click(function () {

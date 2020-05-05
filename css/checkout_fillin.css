@@ -1334,6 +1334,15 @@ main .profile_area .profile .profile_table .container .row .submit_btn .previous
   }
 }
 
+main .profile_area .profile .profile_table .container .row .submit_btn .previous:hover, main .profile_area .profile .profile_table .container .row .submit_btn .next:hover {
+  color: #fff;
+  background-color: #231714;
+}
+
+main .profile_area .profile .profile_table .container .row .submit_btn .previous:hover .arrow, main .profile_area .profile .profile_table .container .row .submit_btn .next:hover .arrow {
+  background-color: #fff;
+}
+
 main .profile_area .profile .profile_table .container .row .submit_btn .previous .arrow, main .profile_area .profile .profile_table .container .row .submit_btn .next .arrow {
   width: 8px;
   height: 15px;

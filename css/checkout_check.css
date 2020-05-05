@@ -540,7 +540,7 @@ main .products_table .container .row .product .qty .count {
   width: 76px;
   height: 43px;
   border: 1px solid #231714;
-  background-color: unset;
+  background-color: #FFF;
   text-align: center;
   -webkit-user-select: text;
   font-size: 22px;
@@ -783,7 +783,7 @@ main .payment .container .row .pay_content .method .title {
   border-bottom: 1px solid #231714;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 540px) {
   main .payment .container .row .pay_content .method .title {
     border-bottom: unset;
   }
@@ -810,6 +810,7 @@ main .payment .container .row .pay_content .method .title .method_btn {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
+  cursor: pointer;
   border: 1px solid #C0362D;
   font-size: 14px;
   color: #C0362D;
@@ -818,8 +819,11 @@ main .payment .container .row .pay_content .method .title .method_btn {
   line-height: 1;
 }
 
-main .payment .container .row .pay_content .method .radio_btn input {
+main .payment .container .row .pay_content .method .radio_btn input[type="radio"] {
+  height: 18px;
+  width: 18px;
   background-color: #FFF;
+  color: #FFF;
 }
 
 main .payment .container .row .pay_content .method .radio_btn label {
@@ -828,6 +832,24 @@ main .payment .container .row .pay_content .method .radio_btn label {
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 41px;
+}
+
+main .payment .container .row .pay_content .method .atm_area label {
+  margin-right: 20px;
+}
+
+main .payment .container .row .pay_content .method .atm_area .five {
+  border-radius: 5px;
+  border: 1px solid #808080;
+  padding: 0 5px;
+  width: 120px;
+}
+
+main .payment .container .row .pay_content .method .atm_area .five:focus {
+  -webkit-transition: unset;
+  transition: unset;
+  border: 1px solid #C0362D;
+  outline: 2px solid #C0362D;
 }
 
 main .payment .container .row .coupon_content {
@@ -869,7 +891,7 @@ main .payment .container .row .coupon_content .coupon_select .selects {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ebebeb;
+  background-color: #FFF;
   border: 1px solid #4D4D4D;
   font-size: 16px;
   color: #231714;
@@ -942,7 +964,7 @@ main .payment .container .row .coupon_content .coupon_select .option_area .optio
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  background-color: #ebebeb;
+  background-color: #FFF;
   font-size: 16px;
   color: #231714;
   font-weight: 700;
@@ -968,10 +990,10 @@ main .payment .container .row .coupon_content .coupon_select .option_area .optio
 
 main .payment .container .row .coupon_content .coupon_select .option_area .option:hover {
   font-size: 16px;
-  color: #231714;
+  color: #C0362D;
   font-weight: 700;
   letter-spacing: 3px;
-  line-height: 54px;
+  line-height: 42px;
 }
 
 main .payment .container .row .coupon_content .content {
@@ -1163,6 +1185,8 @@ main .payment .container .row .submit_btn .previous, main .payment .container .r
   border: 1px solid #231714;
   width: 200px;
   height: 40px;
+  -webkit-transition: 0s !important;
+  transition: 0s !important;
   font-size: 18px;
   color: #231714;
   font-weight: 700;
@@ -1174,6 +1198,15 @@ main .payment .container .row .submit_btn .previous, main .payment .container .r
   main .payment .container .row .submit_btn .previous, main .payment .container .row .submit_btn .next {
     width: 200px;
   }
+}
+
+main .payment .container .row .submit_btn .previous:hover, main .payment .container .row .submit_btn .next:hover {
+  color: #fff;
+  background-color: #231714;
+}
+
+main .payment .container .row .submit_btn .previous:hover .arrow, main .payment .container .row .submit_btn .next:hover .arrow {
+  background-color: #fff;
 }
 
 main .payment .container .row .submit_btn .previous .arrow, main .payment .container .row .submit_btn .next .arrow {
@@ -1310,6 +1343,10 @@ main .modal_area .modal .modal-dialog .modal-content .content {
   letter-spacing: 4px;
   line-height: 41px;
   text-align: center;
+}
+
+main .modal_area .modal .modal-dialog .modal-content .content span {
+  color: #808080;
 }
 
 @media (max-width: 540px) {
