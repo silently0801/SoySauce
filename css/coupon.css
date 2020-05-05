@@ -349,7 +349,7 @@ main .order .order_table .container .row .order_info {
 
 @media (max-width: 1279px) {
   main .order .order_table .container .row .order_info {
-    padding-top: 25px;
+    padding-top: 23px;
     height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -371,9 +371,9 @@ main .order .order_table .container .row .order_info .order_card {
 @media (max-width: 1279px) {
   main .order .order_table .container .row .order_info .order_card {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: #666666;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 3px;
     line-height: 31px;
   }
@@ -383,7 +383,7 @@ main .order .order_table .container .row .order_info .order_card {
   main .order .order_table .container .row .order_info .order_card {
     font-size: 12px;
     color: #666666;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 3px;
     line-height: 31px;
   }
@@ -442,9 +442,9 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
 
 @media (max-width: 1279px) {
   main .order .order_table .container .row .order_info .order_card span:nth-child(2) {
-    font-size: 18px;
+    font-size: 16px;
     color: #666666;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 3px;
     line-height: 31px;
     -webkit-box-pack: start;
@@ -458,7 +458,7 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
   main .order .order_table .container .row .order_info .order_card span:nth-child(2) {
     font-size: 12px;
     color: #666666;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 3px;
     line-height: 31px;
   }
@@ -530,6 +530,7 @@ main .order .order_table .container .row .order_info .detail {
             flex: unset;
     width: 100%;
     display: block;
+    margin-bottom: 23px;
   }
   main .order .order_table .container .row .order_info .detail span {
     display: inline;
