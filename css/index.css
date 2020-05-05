@@ -1849,13 +1849,12 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p {
 
 @media (max-width: 1300px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area p {
-    width: 720px;
+    width: 540px;
   }
 }
 
 @media (max-width: 820px) {
   main .soysauce .soysauce_container .row .soysauce_text_Area p {
-    width: 540px;
     text-align: unset;
   }
 }
@@ -1871,7 +1870,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
   font-size: 18px;
   color: #FFF;
   font-weight: 600;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   line-height: unset;
 }
 
@@ -1880,7 +1879,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area p:nth-child(1) {
     font-size: 18px;
     color: #FFF;
     font-weight: 600;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     line-height: unset;
   }
 }
