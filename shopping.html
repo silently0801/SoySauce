@@ -859,6 +859,7 @@
             </div>
         </div>
     </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -868,22 +869,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src="./js/menu_btn.js"></script>
     <script src="./js/nav_position.js"></script>
     <script src="./js/widows_scale.js"></script>
     <script src="./js/background.js"></script>
     <script>
         /*下拉選單*/
+        // $(".option").click(function () {
+        //     $(".types_select").text($(this).text())
+        //     $(".types_select").attr("value", $(this).attr("value"))
+        //     $(".products_type").hide();
+        //     if ($(this).attr("value") == "all")
+        //         $(".products_type").show();
+        //     else
+        //         $(`.products_type.${$(this).attr("value")}`).show();
+        //     $('#types_select').collapse('hide')
+        // });
         $(".option").click(function () {
-            $(".types_select").text($(this).text())
-            $(".types_select").attr("value", $(this).attr("value"))
+            let id = $(this).parent().attr('id');
+            $(this).parent().parent().children(".types_select").text($(this).text())
+            $(this).parent().parent().children(".types_select").attr("value", $(this).attr("value"))  
             $(".products_type").hide();
             if ($(this).attr("value") == "all")
                 $(".products_type").show();
             else
                 $(`.products_type.${$(this).attr("value")}`).show();
-            $('#types_select').collapse('hide')
+            $(this).parent().collapse('hide')
+        });
+        $(".option_area").each(function () {
+            $(this).width($(this).parent().children(".selects").width());
         });
 
         /*列表產品加減*/
