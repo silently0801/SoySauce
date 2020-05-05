@@ -125,18 +125,9 @@ main
                         +FontStyle(16px,#FFF,700,3px,33px) 
                         margin-bottom: 45px 
                         @media ( max-width: 767px )
-                            margin-bottom: 52px 
+                            margin-bottom: 29px
                             +FontStyle(14px,#FFF,400,3px,26px) 
                             text-align: center
-                            &::after
-                                content: ""
-                                width: 160px
-                                height: 2px
-                                background-color: #FFF
-                                position: absolute
-                                bottom: 60px
-                                left: 50%
-                                transform: translateX(-50%)
                     .product_btn
                         width: 180px
                         text-align: center
@@ -193,7 +184,7 @@ main
             height: 700px
             margin-bottom: 120px
             @media ( max-width: 767px )
-                height: 540px
+                height: 500px
                 margin-bottom: 5px
             @media ( max-width: 540px )
                 margin-bottom: 35px
@@ -233,17 +224,8 @@ main
                         margin-bottom: 45px 
                         @media ( max-width: 767px )
                             width: 100%
-                            margin-bottom: 75px 
+                            margin-bottom: 32px
                             +FontStyle(14px,$colorBlack,400,3px,26px)
-                            &::after
-                                content: ""
-                                width: 160px
-                                height: 2px
-                                background-color: $colorBlack
-                                position: absolute
-                                bottom: 70px
-                                left: 50%
-                                transform: translateX(-50%)
                     .product_btn
                         width: 180px
                         text-align: center
@@ -280,7 +262,7 @@ main
                 height: auto
                 margin-bottom: 80px
             @media ( max-width: 767px )
-                height: 500px
+                height: 480px
                 margin-bottom: 35px
             @media ( max-width: 540px )
                 margin-bottom: 50px
@@ -322,20 +304,11 @@ main
                         width: 377px
                         margin-bottom: 45px 
                         @media ( max-width: 1279px )
-                            +FontStyle(18px,$colorBlack,400,3px,33px) 
+                            +FontStyle(16px,$colorBlack,700,3px,33px) 
                         @media ( max-width: 767px )
                             width: unset
-                            margin-bottom: 60px 
-                            +FontStyle(14px,$colorBlack,400,3px,26px) 
-                            &::after
-                                content: ""
-                                width: 160px
-                                height: 2px
-                                background-color: $colorBlack
-                                position: absolute
-                                bottom: 65px
-                                left: 50%
-                                transform: translateX(-50%)
+                            margin-bottom: 32px
+                            +FontStyle(14px,$colorBlack,700,3px,26px) 
                     .product_btn
                         width: 180px
                         text-align: center
@@ -405,7 +378,7 @@ main
                 max-width: 100% !important
                 margin-bottom: 25px
                 width: 100%
-                height: 560px
+                height: 510px
                 padding: 0 5%
             @media ( max-width: 540px )
                 margin-bottom: 35px
@@ -451,17 +424,8 @@ main
                             margin-bottom: 40px 
                             width: 100%
                         @media ( max-width: 767px )
-                            margin-bottom: 70px 
+                            margin-bottom: 32px
                             +FontStyle(14px,#FFF,400,3px,23px) 
-                            &::after
-                                content: ""
-                                width: 160px
-                                height: 2px
-                                background-color: #FFF
-                                position: absolute
-                                bottom: 65px
-                                left: 50%
-                                transform: translateX(-50%)
                     .product_btn
                         position: relative
                         width: 180px
@@ -470,11 +434,15 @@ main
                         padding: 14px 24px
                         left: 0
                         +FontStyle(12px,$colorBlack,700,3px,1)   
+                        @media ( max-width: 1279px )
+                            left: 50%
+                            transform: translateX(-50%)
                         @media ( max-width: 767px )
                             border: 1px solid #FFF
                             +FontStyle(12px,#FFF,700,3px,1)   
                             padding: 9px 22px
                             left: 0
+                            transform: unset
     .raw
         position: relative
         .square
@@ -506,7 +474,7 @@ main
             @media ( max-width: 1279px )
                 margin-bottom: 75px
             @media ( max-width: 767px )
-                height: 600px
+                height: 550px
                 margin-bottom: unset
             @media ( max-width: 540px )
                 margin-bottom: 30px
@@ -545,22 +513,9 @@ main
                         background-size: cover
                         margin-bottom: 46px 
                         @media ( max-width: 767px )
-                            margin-bottom: 70px 
+                            width: 157px
+                            margin-bottom: 32px
                             background-image: url(../img/03-1-系列介紹-列表頁面/raw_content_black.png)
-                            &::after
-                                content: ""
-                                width: 160px
-                                height: 2px
-                                background-color: $colorBlack
-                                position: absolute
-                                bottom: 125px
-                                left: 50%
-                                transform: translateX(-50%)
-                        @media ( max-width: 540px )
-                            margin-bottom: 50px 
-                            &::after
-                                bottom: 65px
-
                     .product_btn
                         width: 180px
                         text-align: center

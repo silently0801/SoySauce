@@ -417,24 +417,13 @@ main .classic .container .row .product_content .content {
 
 @media (max-width: 767px) {
   main .classic .container .row .product_content .content {
-    margin-bottom: 52px;
+    margin-bottom: 29px;
     font-size: 14px;
     color: #FFF;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 26px;
     text-align: center;
-  }
-  main .classic .container .row .product_content .content::after {
-    content: "";
-    width: 160px;
-    height: 2px;
-    background-color: #FFF;
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -546,7 +535,7 @@ main .muddy .container {
 
 @media (max-width: 767px) {
   main .muddy .container {
-    height: 540px;
+    height: 500px;
     margin-bottom: 5px;
   }
 }
@@ -636,23 +625,12 @@ main .muddy .container .row .product_content .content {
 @media (max-width: 767px) {
   main .muddy .container .row .product_content .content {
     width: 100%;
-    margin-bottom: 75px;
+    margin-bottom: 32px;
     font-size: 14px;
     color: #231714;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 26px;
-  }
-  main .muddy .container .row .product_content .content::after {
-    content: "";
-    width: 160px;
-    height: 2px;
-    background-color: #231714;
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -728,7 +706,7 @@ main .rice .container {
 
 @media (max-width: 767px) {
   main .rice .container {
-    height: 500px;
+    height: 480px;
     margin-bottom: 35px;
   }
 }
@@ -825,9 +803,9 @@ main .rice .container .row .product_content .content {
 
 @media (max-width: 1279px) {
   main .rice .container .row .product_content .content {
-    font-size: 18px;
+    font-size: 16px;
     color: #231714;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 33px;
   }
@@ -836,23 +814,12 @@ main .rice .container .row .product_content .content {
 @media (max-width: 767px) {
   main .rice .container .row .product_content .content {
     width: unset;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
     font-size: 14px;
     color: #231714;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 26px;
-  }
-  main .rice .container .row .product_content .content::after {
-    content: "";
-    width: 160px;
-    height: 2px;
-    background-color: #231714;
-    position: absolute;
-    bottom: 65px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -986,7 +953,7 @@ main .miso .container {
     max-width: 100% !important;
     margin-bottom: 25px;
     width: 100%;
-    height: 560px;
+    height: 510px;
     padding: 0 5%;
   }
 }
@@ -1094,23 +1061,12 @@ main .miso .container .row .product_content .content {
 
 @media (max-width: 767px) {
   main .miso .container .row .product_content .content {
-    margin-bottom: 70px;
+    margin-bottom: 32px;
     font-size: 14px;
     color: #FFF;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 23px;
-  }
-  main .miso .container .row .product_content .content::after {
-    content: "";
-    width: 160px;
-    height: 2px;
-    background-color: #FFF;
-    position: absolute;
-    bottom: 65px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -1128,6 +1084,14 @@ main .miso .container .row .product_content .product_btn {
   line-height: 1;
 }
 
+@media (max-width: 1279px) {
+  main .miso .container .row .product_content .product_btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 767px) {
   main .miso .container .row .product_content .product_btn {
     border: 1px solid #FFF;
@@ -1138,6 +1102,8 @@ main .miso .container .row .product_content .product_btn {
     line-height: 1;
     padding: 9px 22px;
     left: 0;
+    -webkit-transform: unset;
+            transform: unset;
   }
 }
 
@@ -1201,7 +1167,7 @@ main .raw .container {
 
 @media (max-width: 767px) {
   main .raw .container {
-    height: 600px;
+    height: 550px;
     margin-bottom: unset;
   }
 }
@@ -1283,28 +1249,9 @@ main .raw .container .row .product_content .content {
 
 @media (max-width: 767px) {
   main .raw .container .row .product_content .content {
-    margin-bottom: 70px;
+    width: 157px;
+    margin-bottom: 32px;
     background-image: url(../img/03-1-系列介紹-列表頁面/raw_content_black.png);
-  }
-  main .raw .container .row .product_content .content::after {
-    content: "";
-    width: 160px;
-    height: 2px;
-    background-color: #231714;
-    position: absolute;
-    bottom: 125px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 540px) {
-  main .raw .container .row .product_content .content {
-    margin-bottom: 50px;
-  }
-  main .raw .container .row .product_content .content::after {
-    bottom: 65px;
   }
 }
 
