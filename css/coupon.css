@@ -118,6 +118,12 @@
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
@@ -336,7 +342,7 @@ main .order .order_table .container .row .order_info {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 6%;
-  height: 80px;
+  height: 116px;
   width: 100%;
   border-bottom: 1px solid #231714;
 }
@@ -354,11 +360,19 @@ main .order .order_table .container .row .order_info {
   }
 }
 
+main .order .order_table .container .row .order_info .order_card {
+  font-size: 18px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 34px;
+}
+
 @media (max-width: 1279px) {
   main .order .order_table .container .row .order_info .order_card {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #959595;
+    color: #666666;
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;
@@ -368,7 +382,7 @@ main .order .order_table .container .row .order_info {
 @media (max-width: 320px) {
   main .order .order_table .container .row .order_info .order_card {
     font-size: 12px;
-    color: #959595;
+    color: #666666;
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;
@@ -384,6 +398,7 @@ main .order .order_table .container .row .order_info .order_card span {
 }
 
 main .order .order_table .container .row .order_info .order_card span:nth-child(1) {
+  min-width: 120px;
   display: none;
 }
 
@@ -404,6 +419,7 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
 
 @media (max-width: 320px) {
   main .order .order_table .container .row .order_info .order_card span:nth-child(1) {
+    min-width: unset;
     font-size: 12px;
     color: #231714;
     font-weight: 700;
@@ -427,7 +443,7 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
 @media (max-width: 1279px) {
   main .order .order_table .container .row .order_info .order_card span:nth-child(2) {
     font-size: 18px;
-    color: #959595;
+    color: #666666;
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;
@@ -441,7 +457,7 @@ main .order .order_table .container .row .order_info .order_card span:nth-child(
 @media (max-width: 320px) {
   main .order .order_table .container .row .order_info .order_card span:nth-child(2) {
     font-size: 12px;
-    color: #959595;
+    color: #666666;
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 31px;

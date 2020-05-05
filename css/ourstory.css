@@ -118,6 +118,12 @@
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body * {
   font-family: 'Noto Serif TC';
   -webkit-transition: 0.3s;
@@ -373,7 +379,7 @@ main .start .start_container .row .start_content h2 {
   text-align: left;
   font-size: 63px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 15px;
   line-height: 98px;
 }
@@ -382,7 +388,7 @@ main .start .start_container .row .start_content h2 {
   main .start .start_container .row .start_content h2 {
     font-size: 42px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 15px;
     line-height: 98px;
   }
@@ -392,7 +398,7 @@ main .start .start_container .row .start_content h2 {
   main .start .start_container .row .start_content h2 {
     font-size: 32px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 15px;
     line-height: 1;
   }

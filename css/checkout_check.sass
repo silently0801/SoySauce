@@ -1,5 +1,59 @@
 @import "_function.sass"
-
+@mixin select_style($width)
+    .selects
+        width: $width
+        height: 34px
+        margin-right: 10px
+        display: flex
+        position: relative
+        align-items: center
+        justify-content: center
+        background-color: #ebebeb
+        border: 1px solid #4D4D4D
+        +FontStyle(16px,$colorBlack,700,3px,54px) 
+        @media ( max-width: 540px )
+            width: 100%
+        &::after 
+            content: ""
+            position: absolute
+            top: 25%
+            right: 18px
+            width: 12px
+            height: 12px
+            border-radius: 2px
+            background: linear-gradient(to bottom right, $colorBlack 0%, $colorBlack 49.9%, rgba(#fff, 0) 50%, rgba(#fff, 0) 100%)
+            transform: rotate(225deg)
+    .option_area
+        border: 1px solid #4D4D4D
+        width: $width
+        max-height: 300px
+        overflow-y: scroll
+        position: absolute
+        z-index: 10
+        +scrollbars(5px, $colorBlack, #FFF)
+        @media ( max-width: 540px )
+            width: 100%
+        .option
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            background-color: #ebebeb
+            +FontStyle(16px,$colorBlack,700,3px,42px) 
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 50%
+                width: 55%
+                height: 1px
+                background-color: $colorBlack
+                transform: translateX(-50%)
+            &:last-child
+                &::after
+                    display: none
+            &:hover
+                +FontStyle(16px,$colorBlack,700,3px,54px)    
 body
     @media ( max-width: 1530px )
         background-color: #ebebeb
@@ -278,18 +332,31 @@ main
     .payment
         .container
             .row
-                flex-direction: column
+                flex-wrap: wrap
+                justify-content: space-between
                 .pay_header
+                    width: 100%
                     +FontStyle(18px,$colorOrange,600,3px,41px)
                     margin-bottom: 34px
+                    @media ( max-width: 991px )
+                        br
+                            display: none
                 .pay_content
+                    @media ( max-width: 1399px )
+                        width: 48%
+                    @media ( max-width: 767px )
+                        width: 100%
                     .method
                         margin-bottom: 27px
                         display: flex
                         flex-direction: column
                         .title
                             display: flex
-                            align-items: center
+                            align-items: flex-end
+                            padding-bottom: 14px
+                            border-bottom: 1px solid $colorBlack
+                            @media ( max-width: 767px )
+                                border-bottom: unset
                             .text
                                 margin-right: 24px
                                 +FontStyle(22px,$colorBlack,700,3px,31px)
@@ -303,11 +370,124 @@ main
                                 +FontStyle(14px,$colorOrange,700,3px,1)
                         .radio_btn
                             input
+                                background-color: #FFF
                             label
                                 +FontStyle(18px,$colorBlack,700,3px,41px)
-
-
-  
+                .coupon_content
+                    max-width: 320px
+                    width: 100%
+                    @media ( max-width: 1399px )
+                        max-width: 48%
+                    @media ( max-width: 767px )
+                        max-width: 100%
+                        margin-bottom: 30px
+                    .title
+                        +FontStyle(22px,$colorBlack,700,4px,31px)
+                        margin-bottom: 14px
+                    .coupon_select
+                        +select_style(100%)
+                        margin-bottom: 14px
+                    .content
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        display: -webkit-box
+                        -webkit-box-orient: vertical
+                        -webkit-line-clamp: 3
+                        +FontStyle(14px,$colorOrange,700,4px,28px)
+                .price_content
+                    display: flex 
+                    @media ( max-width: 1399px )
+                        width: 48%
+                        padding-bottom: unset
+                    @media ( max-width: 650px )
+                        width: 100%
+                        justify-content: center
+                        margin-bottom: 30px   
+                    .content
+                        display: flex 
+                        flex-direction: column
+                        justify-content: flex-end
+                        padding-bottom: 50px
+                        @media ( max-width: 1399px )
+                            padding-bottom: unset
+                        div
+                            display: flex
+                            position: relative
+                            &::before
+                                content: ""
+                                width: 100%
+                                height: 1px
+                                background-color: #b2b2b2
+                                position: absolute
+                                bottom: 0px
+                                left: 50%
+                                transform: translateX(-50%)
+                            .title
+                                min-width: 120px
+                                +FontStyle(18px,$colorBlack,700,3px,42px)
+                                span
+                                    &:nth-child(3)
+                                        +FontStyle(18px,$colorOrange,700,3px,42px)
+                            .price
+                                flex: 1
+                                display: flex
+                                justify-content: flex-end
+                                +FontStyle(18px,$colorOrange,700,3px,42px)
+                    .shipping
+                        .title
+                            display: flex
+                            align-items: center
+                            span
+                                &:nth-child(2)      
+                                    width: 19px
+                                    height: 19px
+                                    background-color: #808080
+                                    border-radius: 50%
+                                    margin-left: 3px
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    cursor: pointer
+                                    +FontStyle(17px,#FFF,700,0px,1)  
+                .submit_btn
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    padding-bottom: 120px
+                    @media ( max-width: 1399px )
+                        width: 48%
+                        padding-bottom: unset
+                        justify-content: center
+                    @media ( max-width: 650px )
+                        width: 100%
+                        margin-bottom: 60px
+                    @media ( max-width: 540px )
+                        align-items: center
+                    .previous,.next
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: unset
+                        border: 1px solid $colorBlack
+                        width: 200px
+                        height: 40px
+                        +FontStyle(18px,$colorBlack,700,3px,1) 
+                        @media ( max-width: 991px )
+                            width: 200px  
+                        .arrow
+                            width: 8px
+                            height: 15px
+                            background-color: $colorBlack
+                    .previous
+                        margin-bottom: 27px
+                        .arrow
+                            margin-right: 5px
+                            clip-path: polygon(100% 0, 0 50%, 100% 100%)
+                    .next
+                        .arrow
+                            margin-left: 5px
+                            clip-path: polygon(0 0, 0 100%, 100% 50%)
     .modal_area
         .modal
             .modal-dialog
@@ -318,14 +498,16 @@ main
                     border-radius: unset
                     background-color: #FFF
                     border: 5px solid $colorBlack
-                    width: 680px
-                    height: 113px
+                    min-width: 680px
                     position: relative
                     display: flex
                     justify-content: center
                     align-items: center
+                    padding: 45px 5px
+                    @media ( max-width: 991px )
+                        min-width: 400px
                     @media ( max-width: 540px )
-                        width: 280px
+                        min-width: 280px
                     &::before
                         content: ""
                         position: absolute
@@ -360,7 +542,12 @@ main
                             width: 50px
                             height: 2px
                             background-color: $colorBlack
+                    .title
+                        +FontStyle(22px,$colorBlack,700,4px,41px)
+                        @media ( max-width: 540px )
+                            +FontStyle(18px,$colorBlack,700,4px,31px)
                     .content
                         +FontStyle(18px,$colorBlack,700,4px,41px)
+                        text-align: center
                         @media ( max-width: 540px )
                             +FontStyle(12px,$colorBlack,700,4px,27px)

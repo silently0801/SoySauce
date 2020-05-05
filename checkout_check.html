@@ -201,7 +201,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <input type="number" class="count" value="1"/>
+                            <input type="number" class="count" min="0" max="999999" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -222,7 +222,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <input type="number" class="count" value="1"/>
+                            <input type="number" class="count" min="0" max="999999" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -242,7 +242,7 @@
                             <div class="minus">
                                 <div class="line1"></div>
                             </div>
-                            <input type="number" class="count" value="1"/>
+                            <input type="number" class="count" min="0" max="999999" value="1"/>
                             <div class="plus">
                                 <div class="line1"></div>
                                 <div class="line2"></div>
@@ -268,30 +268,79 @@
                                 <div class="method_btn">付款帳號</div>
                             </div>
                             <div class="cod_area radio_btn">
-                                <input class="" type="radio" name="" id="cod" value="option1">
+                                <input class="" type="radio" name="method" id="cod" value="option1">
                                 <label class="text" for="cod">貨到付款</label>
                             </div>
                             <div class="twpost_area radio_btn">
-                                <input class="" type="radio" name="" id="twpost" value="option2">
+                                <input class="" type="radio" name="method" id="twpost" value="option2">
                                 <label class="text" for="twpost">郵政劃撥</label>
                             </div>
                             <div class="atm_area radio_btn">
-                                <input class="" type="radio" name="" id="atm" value="option3">
+                                <input class="" type="radio" name="method" id="atm" value="option3">
                                 <label class="text" for="atm">ATM轉帳</label>
                             </div>
                         </div>
+                    </div>
+                    <div class="coupon_content">
+                        <div class="title">
+                            <div class="text">折價券</div>
+                        </div>
+                        <div class="coupon_select">
+                            <div class="selects" data-toggle="collapse" href="#coupon_select" value="">1
+                            </div>
+                            <div class="option_area collapse" id="coupon_select">
+                                <div class="option" value="all">1111</div>
+                                <div class="option" value="all">2222</div>
+                                <div class="option" value="all">333</div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            全品項滿NT.2000元免運滿NT.2000元免運滿NT.2000元免運滿NT 2000元免運滿NT.2000元免運滿NT.2000元免運
+                        </div>
+                    </div>
+                    <div class="price_content">
+                        <div class="content">
+                            <div class="product_price">
+                                <div class="title"><span>商品總價</span><span></span><span>　　NT.</span></div>
+                                <div class="price">1400</div>
+                            </div>
+                            <div class="shipping">
+                                <div class="title"><span>運　費</span><span>i</span><span>　　NT.</span></div>
+                                <div class="price">100</div>
+                            </div>
+                            <div class="total">
+                                <div class="title"><span>消費金額</span><span></span><span>　　NT.</span></div>
+                                <div class="price">1500</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit_btn">
+                        <a href="javascript:history.go(-1)" class="previous">
+                            <div class="arrow"></div>
+                            <span>繼續購買</span>
+                        </a>
+                        <button type="submit" class="next btn">
+                            <span>填寫運送資料</span>
+                            <div class="arrow"></div>
+                        </button>
                     </div>
                 </form>
             </div>
         </section>
         <section class="modal_area">
             <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="shipping" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <button type="button" class="btn close_modal" data-dismiss="modal"></button>
-                        <div class="content">請先行註冊或登入</div>
+                        <div class="title">運費規則</div>
+                        <div class="content">
+                            ※加價購及運費不列入計算<br>
+                            醬油金額滿3,000元即免運費<br>
+                            醬油瓶數2(含)以下，運費為100元<br>
+                            醬油瓶數3(含)以上，運費為100元<br>
+                            醬油瓶數7(含)以上未滿3,000，運費為140元
+                        </div>
                     </div>
                 </div>
             </div>
@@ -348,6 +397,19 @@
 
 
         $(document).ready(() => {
+            $(".shipping .title span").click(function () {
+                $('#shipping').modal('show');
+            });
+            /**/
+            $(".option").click(function () {
+                let id = $(this).parent().attr('id');
+                $(this).parent().parent().children(".selects").text($(this).text())
+                $(this).parent().parent().children(".selects").attr("value", $(this).attr("value"))
+                $(this).parent().collapse('hide')
+            });
+            $(".option_area").each(function () {
+                $(this).width($(this).parent().children(".selects").width());
+            });
             /*詳細產品加減*/
             $(".qty .minus").click(function () {
                 let qty = $(this).parent(".qty").children(".count");
