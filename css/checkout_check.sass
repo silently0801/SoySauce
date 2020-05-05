@@ -334,6 +334,8 @@ main
             .row
                 flex-wrap: wrap
                 justify-content: space-between
+                @media ( max-width: 1399px )
+                    margin-bottom: 60px
                 .pay_header
                     width: 100%
                     +FontStyle(18px,$colorOrange,600,3px,41px)
@@ -343,9 +345,7 @@ main
                             display: none
                 .pay_content
                     @media ( max-width: 1399px )
-                        width: 48%
-                    @media ( max-width: 767px )
-                        width: 100%
+                        width: 100%                
                     .method
                         margin-bottom: 27px
                         display: flex
@@ -377,8 +377,6 @@ main
                     max-width: 320px
                     width: 100%
                     @media ( max-width: 1399px )
-                        max-width: 48%
-                    @media ( max-width: 767px )
                         max-width: 100%
                         margin-bottom: 30px
                     .title
@@ -402,7 +400,7 @@ main
                     @media ( max-width: 650px )
                         width: 100%
                         justify-content: center
-                        margin-bottom: 30px   
+                        margin-bottom: 60px   
                     .content
                         display: flex 
                         flex-direction: column
@@ -461,8 +459,6 @@ main
                         justify-content: center
                     @media ( max-width: 650px )
                         width: 100%
-                        margin-bottom: 60px
-                    @media ( max-width: 540px )
                         align-items: center
                     .previous,.next
                         display: flex
