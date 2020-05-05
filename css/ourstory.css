@@ -365,13 +365,7 @@ main .start .start_container .row .start_content {
 
 @media (max-width: 767px) {
   main .start .start_container .row .start_content {
-    padding: 20px 0;
-  }
-}
-
-@media (max-width: 320px) {
-  main .start .start_container .row .start_content {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 }
 
@@ -391,6 +385,12 @@ main .start .start_container .row .start_content h2 {
     font-weight: 700;
     letter-spacing: 8px;
     line-height: 68px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .start .start_container .row .start_content h2 {
+    margin-bottom: 20px;
   }
 }
 
@@ -420,7 +420,7 @@ main .start .start_container .row .start_content h3 {
     color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 42px;
+    line-height: 44px;
   }
 }
 
@@ -430,7 +430,8 @@ main .start .start_container .row .start_content h3 {
     color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 42px;
+    line-height: 44px;
+    margin-bottom: 0px;
   }
 }
 
@@ -440,7 +441,7 @@ main .start .start_container .row .start_content h3 {
     color: #231714;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 1;
+    line-height: 1.5;
   }
 }
 
@@ -486,7 +487,7 @@ main .start .start_container .row .start_content h3 br {
 
 main .start .start_container .row .start_content hr {
   border-top: 1px solid black;
-  margin: 40px 0;
+  margin: 27px 0 40px;
 }
 
 main .start .start_container .row .start_content .tw_content {
@@ -662,17 +663,18 @@ main .grow .grow_container .row .grow_content .grow_header h3 {
   margin-bottom: 25px;
   font-size: 32px;
   color: #231714;
-  font-weight: 600;
-  letter-spacing: 6px;
+  font-weight: 700;
+  letter-spacing: 4px;
   line-height: 1;
 }
 
 @media (max-width: 320px) {
   main .grow .grow_container .row .grow_content .grow_header h3 {
+    margin-bottom: 18px;
     font-size: 18px;
     color: #231714;
-    font-weight: 600;
-    letter-spacing: 6px;
+    font-weight: 700;
+    letter-spacing: 4px;
     line-height: 1;
   }
 }
@@ -681,16 +683,17 @@ main .grow .grow_container .row .grow_content .grow_header h4 {
   text-align: left;
   font-size: 18px;
   color: #231714;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
 }
 
 @media (max-width: 320px) {
   main .grow .grow_container .row .grow_content .grow_header h4 {
+    margin-bottom: 0px;
     font-size: 14px;
     color: #231714;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1px;
     line-height: 1;
   }
@@ -702,7 +705,7 @@ main .grow .grow_container .row .grow_content .tw_content {
 
 @media (max-width: 767px) {
   main .grow .grow_container .row .grow_content .tw_content {
-    margin: 40px 0;
+    margin: 30px 0 40px;
   }
 }
 
@@ -834,8 +837,8 @@ main .continue .continue_container .row .continue_header h3 {
   margin-bottom: 25px;
   font-size: 32px;
   color: #231714;
-  font-weight: 600;
-  letter-spacing: 6px;
+  font-weight: 700;
+  letter-spacing: 4px;
   line-height: 1;
 }
 
@@ -843,8 +846,8 @@ main .continue .continue_container .row .continue_header h3 {
   main .continue .continue_container .row .continue_header h3 {
     font-size: 18px;
     color: #231714;
-    font-weight: 600;
-    letter-spacing: 6px;
+    font-weight: 700;
+    letter-spacing: 4px;
     line-height: 1;
   }
 }
@@ -853,7 +856,7 @@ main .continue .continue_container .row .continue_header h4 {
   text-align: left;
   font-size: 18px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 32px;
 }
@@ -862,7 +865,7 @@ main .continue .continue_container .row .continue_header h4 {
   main .continue .continue_container .row .continue_header h4 {
     font-size: 14px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     line-height: 26px;
   }
@@ -1052,8 +1055,8 @@ main .focus .focus_container .row .foucs_right .focus_header h3 {
   text-align: left;
   font-size: 32px;
   color: #231714;
-  font-weight: 600;
-  letter-spacing: 6px;
+  font-weight: 700;
+  letter-spacing: 4px;
   line-height: 1;
 }
 
@@ -1061,8 +1064,8 @@ main .focus .focus_container .row .foucs_right .focus_header h3 {
   main .focus .focus_container .row .foucs_right .focus_header h3 {
     font-size: 18px;
     color: #231714;
-    font-weight: 600;
-    letter-spacing: 6px;
+    font-weight: 700;
+    letter-spacing: 4px;
     line-height: 1;
   }
 }
@@ -1071,7 +1074,7 @@ main .focus .focus_container .row .foucs_right .focus_header h4 {
   text-align: left;
   font-size: 18px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 32px;
 }
@@ -1080,7 +1083,7 @@ main .focus .focus_container .row .foucs_right .focus_header h4 {
   main .focus .focus_container .row .foucs_right .focus_header h4 {
     font-size: 14px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     line-height: 32px;
   }
