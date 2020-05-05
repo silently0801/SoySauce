@@ -958,7 +958,7 @@ main .carousel .carousel_container .row .carousel_bot {
 
 main .carousel .carousel_container .row .carousel_bot .textArea {
   z-index: 4;
-  top: 120px;
+  top: 69px;
 }
 
 @media (max-width: 1240px) {
@@ -991,6 +991,7 @@ main .carousel .carousel_container .row .carousel_bot .textArea .text_jp {
   font-weight: 600;
   letter-spacing: 7px;
   line-height: unset;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 820px) {
@@ -1004,6 +1005,7 @@ main .carousel .carousel_container .row .carousel_bot .textArea .text_tw {
   color: #231714;
   font-weight: 600;
   line-height: unset;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 610px) {
@@ -1073,12 +1075,12 @@ main .carousel .carousel_container .row .carousel_bot .rectangle {
 main .introduction {
   height: 868px;
   width: 100%;
-  margin: 264px 0 710px;
+  margin: 194px 0 710px;
 }
 
 @media (max-width: 1300px) {
   main .introduction {
-    margin: 340px 0 900px;
+    margin: 270px 0 900px;
     height: auto;
   }
 }
@@ -2077,7 +2079,7 @@ main .facebook .facebook_container .row .facebook_news .post_content {
 @media (max-width: 1300px) {
   main .facebook .facebook_container .row .facebook_news .post_content {
     width: 768px;
-    padding: 30px 0;
+    padding: 25px 0 40px;
   }
 }
 
@@ -2133,6 +2135,12 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
   margin-bottom: 15px;
 }
 
+@media (max-width: 1300px) {
+  main .facebook .facebook_container .row .facebook_news .post_content .post_content_title {
+    margin-bottom: unset;
+  }
+}
+
 main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
   font-size: 16px;
   color: #808080;
@@ -2144,7 +2152,7 @@ main .facebook .facebook_container .row .facebook_news .post_content .post_conte
 
 @media (max-width: 1300px) {
   main .facebook .facebook_container .row .facebook_news .post_content .post_content_time {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2196,15 +2204,13 @@ main .news_Area {
   }
 }
 
-main .news_Area .news_container::before {
-  content: "More";
-  display: block;
-  position: absolute;
+main .news_Area .news_container .more {
   font-size: 18px;
   color: #231714;
   font-weight: 900;
   letter-spacing: 2px;
   line-height: unset;
+  position: absolute;
   right: -5%;
   bottom: 30px;
   border: 1px solid #231714;
@@ -2212,7 +2218,7 @@ main .news_Area .news_container::before {
 }
 
 @media (max-width: 1340px) {
-  main .news_Area .news_container::before {
+  main .news_Area .news_container .more {
     padding: 5px 100px;
     bottom: -80px;
     right: 39px;
@@ -2220,13 +2226,13 @@ main .news_Area .news_container::before {
 }
 
 @media (max-width: 1300px) {
-  main .news_Area .news_container::before {
+  main .news_Area .news_container .more {
     right: 30px;
   }
 }
 
 @media (max-width: 820px) {
-  main .news_Area .news_container::before {
+  main .news_Area .news_container .more {
     right: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
@@ -2307,7 +2313,7 @@ main .news_Area .news_container .row .news_header .news_header_tw {
 main .news_Area .news_container .row .news_header .news_header_en {
   font-size: 95px;
   color: #979797;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0px;
   line-height: unset;
 }
