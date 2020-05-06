@@ -417,10 +417,10 @@ main .rice .introduction .container .row .introduction_type {
 main .rice .introduction .container .row .introduction_type .type_title {
   font-size: 48px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 7px;
   line-height: 74px;
-  margin-bottom: 3px;
+  margin-bottom: 23px;
 }
 
 @media (max-width: 1279px) {
@@ -433,7 +433,7 @@ main .rice .introduction .container .row .introduction_type .type_title {
   main .rice .introduction .container .row .introduction_type .type_title {
     font-size: 36px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 7px;
     line-height: 74px;
   }
@@ -446,7 +446,7 @@ main .rice .introduction .container .row .introduction_type .type_title {
   main .rice .introduction .container .row .introduction_type .type_title {
     font-size: 22px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 7px;
     line-height: 31px;
   }
@@ -455,7 +455,7 @@ main .rice .introduction .container .row .introduction_type .type_title {
 main .rice .introduction .container .row .introduction_type .type_subtitle {
   font-size: 22px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 34px;
   margin-bottom: 45px;
@@ -470,15 +470,11 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
 @media (max-width: 767px) {
   main .rice .introduction .container .row .introduction_type .type_subtitle {
     margin-bottom: 20px;
-    text-align: unset;
     font-size: 22px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 34px;
-  }
-  main .rice .introduction .container .row .introduction_type .type_subtitle br {
-    display: none;
   }
 }
 
@@ -486,7 +482,7 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
   main .rice .introduction .container .row .introduction_type .type_subtitle {
     font-size: 16px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 28px;
   }
@@ -558,13 +554,13 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
     font-size: 18px;
     color: #231714;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     line-height: 49px;
   }
 }
 
 main .rice .introduction .container .row .introduction_type .type_content:nth-child(5), main .rice .introduction .container .row .introduction_type .type_content:nth-child(7), main .rice .introduction .container .row .introduction_type .type_content:nth-child(9), main .rice .introduction .container .row .introduction_type .type_content:nth-child(11) {
-  margin-bottom: 6px;
+  margin-bottom: 27px;
 }
 
 @media (max-width: 767px) {
@@ -582,16 +578,17 @@ main .rice .introduction .container .row .introduction_type .type_content:nth-ch
 main .rice .introduction .container .row .introduction_type .type_content:nth-child(6), main .rice .introduction .container .row .introduction_type .type_content:nth-child(8), main .rice .introduction .container .row .introduction_type .type_content:nth-child(10) {
   font-size: 22px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
   line-height: 34px;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 540px) {
   main .rice .introduction .container .row .introduction_type .type_content:nth-child(6), main .rice .introduction .container .row .introduction_type .type_content:nth-child(8), main .rice .introduction .container .row .introduction_type .type_content:nth-child(10) {
     font-size: 18px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 34px;
   }
@@ -658,6 +655,7 @@ main .go_shopping .container .row .shopping_btn:hover {
 }
 
 main .producer .container .row {
+  margin: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -779,12 +777,12 @@ main .producer .container .row .producer_content {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 170px;
+  margin-bottom: 120px;
 }
 
 @media (max-width: 767px) {
   main .producer .container .row .producer_content {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 
@@ -802,7 +800,7 @@ main .producer .container .row .producer_content .producer_detail {
   width: 25%;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1279px) {
   main .producer .container .row .producer_content .producer_detail {
     width: 50%;
     margin-bottom: 30px;
@@ -855,17 +853,20 @@ main .designer .container {
 main .designer .container .row {
   width: 840px;
   margin: unset;
-  margin-bottom: 160px;
+  margin-bottom: 180px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   main .designer .container .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -882,7 +883,7 @@ main .designer .container .row .designer_img {
   margin-right: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   main .designer .container .row .designer_img {
     margin-right: unset;
     margin-bottom: 18px;
@@ -901,10 +902,11 @@ main .designer .container .row .designer_info .title {
   color: #231714;
   font-weight: 700;
   letter-spacing: 3px;
-  line-height: 49px;
+  line-height: 1;
+  margin-bottom: 18px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 875px) {
   main .designer .container .row .designer_info .title {
     font-size: 20px;
     color: #231714;

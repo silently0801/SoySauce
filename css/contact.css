@@ -458,6 +458,14 @@ main .contact .contact_container .row form .submit_area .submit {
           align-items: center;
 }
 
+main .contact .contact_container .row form .submit_area .submit:hover {
+  background-color: #231714;
+}
+
+main .contact .contact_container .row form .submit_area .submit:hover span {
+  color: #FFF;
+}
+
 main .contact .contact_container .row form .submit_area .submit span {
   font-size: 14px;
   color: #231714;

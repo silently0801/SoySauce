@@ -875,20 +875,10 @@
     <script src="./js/background.js"></script>
     <script>
         /*下拉選單*/
-        // $(".option").click(function () {
-        //     $(".types_select").text($(this).text())
-        //     $(".types_select").attr("value", $(this).attr("value"))
-        //     $(".products_type").hide();
-        //     if ($(this).attr("value") == "all")
-        //         $(".products_type").show();
-        //     else
-        //         $(`.products_type.${$(this).attr("value")}`).show();
-        //     $('#types_select').collapse('hide')
-        // });
         $(".option").click(function () {
             let id = $(this).parent().attr('id');
             $(this).parent().parent().children(".types_select").text($(this).text())
-            $(this).parent().parent().children(".types_select").attr("value", $(this).attr("value"))  
+            $(this).parent().parent().children(".types_select").attr("value", $(this).attr("value"))
             $(".products_type").hide();
             if ($(this).attr("value") == "all")
                 $(".products_type").show();
@@ -898,6 +888,11 @@
         });
         $(".option_area").each(function () {
             $(this).width($(this).parent().children(".selects").width());
+        });
+
+        $(window).click(function (e) {
+            if(e.target.getAttribute("class")!="types_select")
+                $(".option_area").collapse('hide')
         });
 
         /*列表產品加減*/

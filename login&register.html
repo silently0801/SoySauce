@@ -337,6 +337,11 @@
                 $(this).addClass("active")
                 $(".content_area").removeClass("active")
                 $(`.${$(this).attr("data-btn")}`).addClass("active")
+                setTimeout(function () {
+                $(".option_area").each(function () {
+                    $(this).width($(this).parent().children(".selects").width());
+                });
+            }, 100);
             });
 
             $('#exampleModalCenter').modal('show');

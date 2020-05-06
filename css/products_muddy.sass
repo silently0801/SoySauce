@@ -133,29 +133,26 @@ main
                         @media ( max-width: 767px )
                             padding-top: 30px
                         .type_title
-                            +FontStyle(48px,$colorBlack,600,7px,74px) 
-                            margin-bottom: 3px
+                            +FontStyle(48px,$colorBlack,700,7px,74px) 
+                            margin-bottom: 23px
                             @media ( max-width: 1279px )
                                 text-align: center
                             @media ( max-width: 767px )
-                                +FontStyle(36px,$colorBlack,600,7px,74px) 
+                                +FontStyle(36px,$colorBlack,700,7px,74px) 
                                 br
                                     display: none
                             @media ( max-width: 540px )
-                                +FontStyle(22px,$colorBlack,600,7px,31px) 
+                                +FontStyle(22px,$colorBlack,700,7px,31px) 
                         .type_subtitle
-                            +FontStyle(22px,$colorBlack,600,3px,34px)
+                            +FontStyle(22px,$colorBlack,700,3px,34px)
                             margin-bottom: 45px 
                             @media ( max-width: 1279px )
                                 text-align: center
                             @media ( max-width: 767px )
                                 margin-bottom: 20px 
-                                text-align: unset
-                                +FontStyle(22px,$colorBlack,600,3px,34px) 
-                                br
-                                    display: none
+                                +FontStyle(22px,$colorBlack,700,3px,34px) 
                             @media ( max-width: 540px )
-                                +FontStyle(16px,$colorBlack,600,3px,28px) 
+                                +FontStyle(16px,$colorBlack,700,3px,28px) 
                         .type_content
                             +FontStyle(18px,$colorBlack,400,3px,34px)
                             @media ( max-width: 540px )
@@ -176,17 +173,18 @@ main
                                     +FontStyle(22px,$colorBlack,700,3px,49px)
                                 @media ( max-width: 540px )
                                     margin-bottom: 20px
-                                    +FontStyle(18px,$colorBlack,700,3px,49px)
+                                    +FontStyle(18px,$colorBlack,700,1px,49px)
                             &:nth-child(5),&:nth-child(7),&:nth-child(9),&:nth-child(11)
-                                margin-bottom: 6px
+                                margin-bottom: 27px
                                 @media ( max-width: 767px )
                                     margin-bottom: 30px
                                 @media ( max-width: 540px )
                                     margin-bottom: 20px
                             &:nth-child(6),&:nth-child(8),&:nth-child(10)
-                                +FontStyle(22px,$colorBlack,600,3px,34px)
+                                +FontStyle(22px,$colorBlack,700,3px,34px)
+                                margin-bottom: 6px
                                 @media ( max-width: 540px )
-                                    +FontStyle(18px,$colorBlack,600,3px,34px)
+                                    +FontStyle(18px,$colorBlack,700,3px,34px)
                             &:nth-child(11)
                                 white-space: nowrap
                                 @media ( max-width: 767px )
@@ -271,7 +269,7 @@ main
                     display: flex
                     justify-content: center
                     flex-wrap: wrap
-                    margin-bottom: 170px
+                    margin-bottom: 120px
                     @media ( max-width: 767px )
                         margin-bottom: 50px
                     .producer_detail
@@ -279,7 +277,7 @@ main
                         flex-direction: column
                         align-items: center
                         width: 25%
-                        @media ( max-width: 1140px )
+                        @media ( max-width: 1279px )
                             width: 50%
                             margin-bottom: 30px
                         @media ( max-width: 767px )
@@ -303,10 +301,11 @@ main
             .row
                 width: 840px
                 margin: unset
-                margin-bottom: 160px
+                margin-bottom: 180px
                 justify-content: center
-                align-items: center
-                @media ( max-width: 767px )
+                align-items: flex-start
+                @media ( max-width: 875px )
+                    align-items: center
                     flex-direction: column
                     margin-bottom: 60px
                 .designer_img
@@ -315,15 +314,16 @@ main
                     background-position: center
                     background-size: cover 
                     margin-right: 50px
-                    @media ( max-width: 767px )
+                    @media ( max-width: 875px )
                         margin-right: unset
                         margin-bottom: 18px
                 .designer_info
                     flex: 1
                     border-bottom: 1px solid $colorBlack
                     .title
-                        +FontStyle(22px,$colorBlack,700,3px,49px)
-                        @media ( max-width: 767px )
+                        +FontStyle(22px,$colorBlack,700,3px,1)
+                        margin-bottom: 18px
+                        @media ( max-width: 875px )
                             +FontStyle(20px,$colorBlack,700,3px,42px)
                             text-align: center
                             margin-bottom: 5px

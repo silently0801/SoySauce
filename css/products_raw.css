@@ -418,14 +418,30 @@ main .rice .introduction .container .row .introduction_type .type_title {
   position: relative;
   font-size: 48px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 7px;
   line-height: 74px;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media (max-width: 1279px) {
   main .rice .introduction .container .row .introduction_type .type_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
   }
 }
@@ -434,12 +450,9 @@ main .rice .introduction .container .row .introduction_type .type_title {
   main .rice .introduction .container .row .introduction_type .type_title {
     font-size: 36px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 7px;
     line-height: 74px;
-  }
-  main .rice .introduction .container .row .introduction_type .type_title br {
-    display: none;
   }
 }
 
@@ -447,25 +460,35 @@ main .rice .introduction .container .row .introduction_type .type_title {
   main .rice .introduction .container .row .introduction_type .type_title {
     font-size: 22px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 7px;
     line-height: 31px;
+  }
+}
+
+main .rice .introduction .container .row .introduction_type .type_title div:nth-child(1) {
+  margin-right: 23px;
+}
+
+@media (max-width: 1279px) {
+  main .rice .introduction .container .row .introduction_type .type_title div:nth-child(1) {
+    margin-right: unset;
   }
 }
 
 main .rice .introduction .container .row .introduction_type .type_title div:nth-child(2) {
   font-size: 22px;
   color: #231714;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 4px;
-  line-height: 36px;
+  line-height: 49px;
 }
 
 @media (max-width: 767px) {
   main .rice .introduction .container .row .introduction_type .type_title div:nth-child(2) {
     font-size: 18px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 4px;
     line-height: 36px;
   }
@@ -475,7 +498,7 @@ main .rice .introduction .container .row .introduction_type .type_title div:nth-
   main .rice .introduction .container .row .introduction_type .type_title div:nth-child(2) {
     font-size: 16px;
     color: #231714;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 4px;
     line-height: 36px;
   }
@@ -520,7 +543,7 @@ main .rice .introduction .container .row .introduction_type .type_subtitle {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 850px) {
   main .rice .introduction .container .row .introduction_type .type_subtitle {
     margin-bottom: 20px;
     text-align: unset;
@@ -631,6 +654,7 @@ main .go_shopping .container .row .shopping_btn:hover {
 }
 
 main .producer .container .row {
+  margin: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -775,7 +799,7 @@ main .producer .container .row .producer_content .producer_detail {
   width: 25%;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1279px) {
   main .producer .container .row .producer_content .producer_detail {
     width: 50%;
     margin-bottom: 30px;

@@ -134,23 +134,30 @@ main
                             padding-top: 30px
                         .type_title
                             position: relative
-                            +FontStyle(48px,$colorBlack,600,7px,74px) 
+                            +FontStyle(48px,$colorBlack,700,7px,74px) 
                             margin-bottom: 20px
+                            display: flex
+                            align-items: flex-end
                             @media ( max-width: 1279px )
+                                flex-direction: column
+                                align-items: center
+                                justify-content: center
                                 text-align: center
                             @media ( max-width: 767px )
-                                +FontStyle(36px,$colorBlack,600,7px,74px) 
-                                br
-                                    display: none
+                                +FontStyle(36px,$colorBlack,700,7px,74px) 
                             @media ( max-width: 540px )
-                                +FontStyle(22px,$colorBlack,600,7px,31px) 
+                                +FontStyle(22px,$colorBlack,700,7px,31px) 
                             div
+                                &:nth-child(1)
+                                    margin-right: 23px
+                                    @media ( max-width: 1279px )
+                                        margin-right: unset
                                 &:nth-child(2)
-                                    +FontStyle(22px,$colorBlack,600,4px,36px) 
+                                    +FontStyle(22px,$colorBlack,700,4px,49px) 
                                     @media ( max-width: 767px )
-                                        +FontStyle(18px,$colorBlack,600,4px,36px)
+                                        +FontStyle(18px,$colorBlack,700,4px,36px)
                                     @media ( max-width: 767px ) 
-                                        +FontStyle(16px,$colorBlack,600,4px,36px)
+                                        +FontStyle(16px,$colorBlack,700,4px,36px)
                             &::before
                                 content: ""
                                 width: 100px
@@ -170,7 +177,7 @@ main
                             margin-bottom: 40px 
                             @media ( max-width: 1279px )
                                 text-align: center
-                            @media ( max-width: 767px )
+                            @media ( max-width: 850px )
                                 margin-bottom: 20px 
                                 text-align: unset
                                 +FontStyle(22px,$colorBlack,600,3px,34px) 
@@ -282,7 +289,7 @@ main
                         flex-direction: column
                         align-items: center
                         width: 25%
-                        @media ( max-width: 1140px )
+                        @media ( max-width: 1279px )
                             width: 50%
                             margin-bottom: 30px
                         @media ( max-width: 767px )

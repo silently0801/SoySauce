@@ -348,6 +348,14 @@ main section .container .row .content ul li:nth-child(2) .testing_title {
   margin: 0 0 20px;
 }
 
+main section .container .row .content ul li h2 {
+  font-size: 32px;
+  color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 3px;
+}
+
 main section .container .row .content ul li p {
   margin-left: 50px;
 }

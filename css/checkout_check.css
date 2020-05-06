@@ -843,13 +843,18 @@ main .payment .container .row .pay_content .method .atm_area .five {
   border: 1px solid #808080;
   padding: 0 5px;
   width: 120px;
+  font-size: 13px;
+  color: #808080;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
 }
 
 main .payment .container .row .pay_content .method .atm_area .five:focus {
   -webkit-transition: unset;
   transition: unset;
-  border: 1px solid #C0362D;
-  outline: 2px solid #C0362D;
+  border: 2px solid #C0362D;
+  outline: unset;
 }
 
 main .payment .container .row .coupon_content {
