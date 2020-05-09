@@ -124,7 +124,7 @@
                     </div>
                     <div class="carousel_bot position-absolute w-100">
                         <div class="textArea position-absolute w-100">
-                            <p class="text_jp">「一本の醬油、一生分の思い」</p>
+                            <p class="text_jp">「本物の醤油にこだわり、世代に引き継いで行く」</p>
                             <p class="text_tw">「一瓶賀欸醬油，一世人欸情分。」</p>
                             <p class="text_en">“A bottle of soy sauce, a lifelong friendship.”</p>
                         </div>
@@ -278,9 +278,11 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
     <script>
+        var carousel_width = 0;
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             effect: 'fade',
+            slidesPerView: 'auto',
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
@@ -292,15 +294,16 @@
         });
         $(document).ready(() => {
             $(".bg").height($("body").height());
+            carousel_width = $(".swiper-wrapper").width();
             if (window.innerWidth <= 539) {
                 document.querySelector(".carousel_container").classList.remove("container");
             }
             else {
                 document.querySelector(".carousel_container").classList.add("container");
             }
-
         });
         $(window).resize(() => {
+            
             $(".bg").height($("body").height());
             if (window.innerWidth <= 539) {
                 document.querySelector(".carousel_container").classList.remove("container");
