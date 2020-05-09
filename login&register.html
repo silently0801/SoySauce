@@ -301,13 +301,19 @@
     <script src="./js/background.js"></script>
 
     <script>
-
-
         $(document).ready(() => {
             let today = new Date();
             let year_data = "";
             let month_data = "";
             let day_data = "";
+
+            let getUrlString = location.href;
+            let url = new URL(getUrlString);
+            let page = url.searchParams.get('page');
+
+            if (page == "shopping") {
+                $('#exampleModalCenter').modal('show');
+            }
 
             for (let i = parseInt(today.getFullYear()); i > 1911; i--) {
                 year_data += `<div class="option" value="${i}">${i}</div>`;
@@ -344,7 +350,7 @@
             }, 100);
             });
 
-            $('#exampleModalCenter').modal('show');
+            
         });
         $(window).resize(() => {
             setTimeout(function () {
