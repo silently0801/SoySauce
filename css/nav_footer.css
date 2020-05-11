@@ -125,7 +125,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 body * {
-  font-family: 'Noto Serif TC';
+  font-family: 'Noto Serif TC','Noto Serif JP', serif;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -525,20 +525,45 @@ nav .container .row .menu_Area .menu_btn_inner ul li {
           flex: 1;
 }
 
+nav .container .row .menu_Area .menu_btn_inner ul li a {
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 540px) {
+  nav .container .row .menu_Area .menu_btn_inner ul li a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 nav .container .row .menu_Area .menu_btn_inner ul li a::after {
   content: " ";
   display: block;
-  position: relative;
+  position: absolute;
   opacity: 0;
-  width: 120%;
+  width: 100%;
   height: 1px;
   margin-top: 10px;
   background-color: #FFF;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  bottom: -10px;
+  width: 100%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  nav .container .row .menu_Area .menu_btn_inner ul li a::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 nav .container .row .menu_Area .menu_btn_inner ul li a:hover span {
@@ -554,10 +579,12 @@ nav .container .row .menu_Area .menu_btn_inner ul li a:hover::after {
 }
 
 nav .container .row .menu_Area .menu_btn_inner ul li a span:nth-child(1) {
+  position: relative;
+  right: -4px;
   font-size: 18px;
   color: #FFF;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 4px;
   line-height: unset;
 }
 
