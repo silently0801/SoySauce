@@ -83,7 +83,6 @@ nav
                                 margin-left: 10px
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,#000,900,7px,1)
-    
             .nav_btns
                 @media ( max-width: 1279px)
                     display: none
@@ -231,7 +230,24 @@ nav
                                 margin-left: 10px
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,$colorBlack,900,7px,1)
-     
+                .menu_backEnd.active
+                    ul
+                        li
+                            a
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                span
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    +FontStyle(14px,$colorOrange,900,1px,1)
+                                    writing-mode: horizontal-tb
+                                    margin-bottom: 5px
+                        .shoppingCart
+                            margin-right: 2px
+                            a
+                                color: $colorOrange 
                                 
             hr
                 border: 0

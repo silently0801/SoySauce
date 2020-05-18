@@ -148,47 +148,6 @@ body nav {
   }
 }
 
-nav .container .row .menu_Area .menu_backEnd ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .container .row .menu_Area .menu_backEnd ul li a span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  color: #C0362D;
-  font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1;
-  -webkit-writing-mode: horizontal-tb;
-      -ms-writing-mode: lr-tb;
-          writing-mode: horizontal-tb;
-  margin-bottom: 5px;
-}
-
-nav .container .row .menu_Area .menu_backEnd ul .shoppingCart {
-  margin-right: 2px;
-}
-
-nav .container .row .menu_Area .menu_backEnd ul .shoppingCart a {
-  color: #C0362D;
-}
-
 main {
   text-align: justify;
 }
