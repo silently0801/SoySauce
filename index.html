@@ -7,10 +7,13 @@
     <title>御鼎興醬油</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body class="m-0 p-0">
     <div class="bg position-absolute"></div>
     <nav class="m-auto">
@@ -81,8 +84,8 @@
                         <span class="bot_bar bar"></span>
                     </button>
                     <div class="menu_bot_text">
-                        <span class="mr-2">1940</span>
                         <span>YDSIN</span>
+                        <span>1940</span>
                     </div>
                     <div class="swiper-pagination d-flex flex-column position-absolute"></div>
                 </div>
@@ -97,24 +100,15 @@
                     <div class="carousel_top w-100 position-relative">
                         <div class="swiper-container position-relative">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide1.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide3.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide4.png');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide1.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide3.jpg');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide4.png');"></div>
-                                <div class="swiper-slide"
-                                    style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide1.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide3.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide4.png');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide1.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide3.jpg');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide4.png');"></div>
+                                <div class="swiper-slide" style="background-image:url('./img/00-首頁/slide2.jpg');"></div>
                             </div>
                         </div>
                         <div class="swiper-pagination d-flex flex-column position-absolute"></div>
@@ -131,7 +125,7 @@
             </div>
         </section>
         <section class="introduction w-100 position-relative">
-            <section class="mask"></section >
+            <section class="mask"></section>
             <div class="introduction_container container">
                 <div class="row">
                     <div class="introduction_left d-flex">
@@ -173,7 +167,9 @@
             <div class="facebook_container container">
                 <div class="row justify-content-center">
                     <div class="facebook_header">臉書動態 | Facebook</div>
-                    <div class="facebook_btn"><div class="icon" style="background-image: url(./img/00-首頁/fb.png);"></div><span>前往我們的臉書</span></div>
+                    <div class="facebook_btn">
+                        <div class="icon" style="background-image: url(./img/00-首頁/fb.png);"></div><span>前往我們的臉書</span>
+                    </div>
                     <div class="facebook_news d-flex">
                         <div class="post_img">
                             <img src="./img/00-首頁/facebook01.jpg" alt="">
@@ -275,9 +271,11 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
     <script>
-        var carousel_width = 0;
+        var carousel_width = false;
         var swiper = new Swiper('.swiper-container', {
             loop: true,
+            observer: true,
+            updateOnWindowResize: true,
             effect: 'fade',
             slidesPerView: 'auto',
             autoplay: {
@@ -291,23 +289,12 @@
         });
         $(document).ready(() => {
             $(".bg").height($("body").height());
-            carousel_width = $(".swiper-wrapper").width();
-            if (window.innerWidth <= 539) {
-                document.querySelector(".carousel_container").classList.remove("container");
-            }
-            else {
-                document.querySelector(".carousel_container").classList.add("container");
-            }
         });
         $(window).resize(() => {
-            
-            $(".bg").height($("body").height());
-            if (window.innerWidth <= 539) {
-                document.querySelector(".carousel_container").classList.remove("container");
-            }
-            else {
-                document.querySelector(".carousel_container").classList.add("container");
-            }
+             $(".bg").height($("body").height());
+            setTimeout(function () {
+                swiper.update();
+            }, 300);
         });
 
         /*btn_click*/
