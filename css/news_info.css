@@ -124,6 +124,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input {
+  padding-left: 10px;
+}
+
 body * {
   font-family: 'Noto Serif TC','Noto Serif JP', serif;
   -webkit-transition: 0.3s;
@@ -290,18 +294,11 @@ main .news_img .swiper-container {
 }
 
 main .news_img .swiper-container .swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
 }
 
 main .news_img .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -320,11 +317,7 @@ main .news_information .information_container {
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper {
-  width: 100%;
-}
-
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide {
+main .news_information .information_container .news_info {
   width: 100%;
   height: auto;
   background-color: #ebebeb;
@@ -334,7 +327,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide {
+  main .news_information .information_container .news_info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -342,23 +335,23 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date {
+main .news_information .information_container .news_info .news_date {
   width: 205px;
 }
 
 @media (max-width: 1530px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date {
+  main .news_information .information_container .news_info .news_date {
     width: 200px;
   }
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date {
+  main .news_information .information_container .news_info .news_date {
     width: unset;
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
+main .news_information .information_container .news_info .news_date span {
   font-size: 40px;
   color: #231714;
   font-weight: 700;
@@ -367,7 +360,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
+  main .news_information .information_container .news_info .news_date span {
     font-size: 21px;
     color: #C0362D;
     font-weight: 700;
@@ -378,7 +371,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 540px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
+  main .news_information .information_container .news_info .news_date span {
     font-size: 12px;
     color: #C0362D;
     font-weight: 700;
@@ -388,7 +381,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 320px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span {
+  main .news_information .information_container .news_info .news_date span {
     font-size: 12px;
     color: #C0362D;
     font-weight: 700;
@@ -398,7 +391,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span:nth-child(3) {
+main .news_information .information_container .news_info .news_date span:nth-child(3) {
   font-size: 21px;
   color: #231714;
   font-weight: 700;
@@ -406,39 +399,39 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   line-height: 35px;
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span:nth-child(4) {
+main .news_information .information_container .news_info .news_date span:nth-child(4) {
   display: none;
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date span:nth-child(4) {
+  main .news_information .information_container .news_info .news_date span:nth-child(4) {
     display: block;
   }
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_date br {
+  main .news_information .information_container .news_info .news_date br {
     display: none;
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content {
+main .news_information .information_container .news_info .news_content {
   width: 935px;
 }
 
 @media (max-width: 1530px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content {
+  main .news_information .information_container .news_info .news_content {
     width: 800px;
   }
 }
 
 @media (max-width: 767px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content {
+  main .news_information .information_container .news_info .news_content {
     width: 100%;
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content .news_title {
+main .news_information .information_container .news_info .news_content .news_title {
   font-size: 22px;
   color: #231714;
   font-weight: 600;
@@ -448,7 +441,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 540px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content .news_title {
+  main .news_information .information_container .news_info .news_content .news_title {
     margin-bottom: 45px;
     font-size: 14px;
     color: #231714;
@@ -458,7 +451,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
   }
 }
 
-main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content .news_text {
+main .news_information .information_container .news_info .news_content .news_text {
   font-size: 18px;
   color: #231714;
   font-weight: 400;
@@ -467,7 +460,7 @@ main .news_information .information_container .swiper-container .swiper-wrapper 
 }
 
 @media (max-width: 540px) {
-  main .news_information .information_container .swiper-container .swiper-wrapper .swiper-slide .news_content .news_text {
+  main .news_information .information_container .news_info .news_content .news_text {
     font-size: 12px;
     color: #231714;
     font-weight: 400;
@@ -560,7 +553,7 @@ main .news_information .information_container .page_btn .line {
   background-color: #231714;
 }
 
-main .news_information .information_container .page_btn .swiper-button-prev {
+main .news_information .information_container .page_btn .prev {
   position: relative;
   top: unset;
   bottom: unset;
@@ -572,7 +565,7 @@ main .news_information .information_container .page_btn .swiper-button-prev {
   height: 29px;
 }
 
-main .news_information .information_container .page_btn .swiper-button-prev::after {
+main .news_information .information_container .page_btn .prev::after {
   content: "<";
   font-size: 29px;
   color: #231714;
@@ -581,7 +574,7 @@ main .news_information .information_container .page_btn .swiper-button-prev::aft
   line-height: 1;
 }
 
-main .news_information .information_container .page_btn .swiper-button-next {
+main .news_information .information_container .page_btn .next {
   position: relative;
   top: unset;
   bottom: unset;
@@ -593,7 +586,7 @@ main .news_information .information_container .page_btn .swiper-button-next {
   height: 29px;
 }
 
-main .news_information .information_container .page_btn .swiper-button-next::after {
+main .news_information .information_container .page_btn .next::after {
   content: ">";
   font-size: 29px;
   color: #231714;

@@ -124,6 +124,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input {
+  padding-left: 10px;
+}
+
 body * {
   font-family: 'Noto Serif TC','Noto Serif JP', serif;
   -webkit-transition: 0.3s;
@@ -304,6 +308,11 @@ main .login_register_area .container .row .login_area form .input_title input {
   width: 100%;
   margin-bottom: 14px;
   height: 34px;
+  font-size: 14px;
+  color: #231714;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 27px;
 }
 
 main .login_register_area .container .row .login_area form .input_title input:focus {
@@ -618,6 +627,11 @@ main .login_register_area .container .row .register_area form .input_title .titl
 main .login_register_area .container .row .register_area form .input_title input {
   background-color: #4D4D4D;
   border: 1px solid #4D4D4D;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 27px;
   margin-bottom: 14px;
   width: 100%;
   height: 34px;

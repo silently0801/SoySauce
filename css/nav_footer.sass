@@ -231,24 +231,43 @@ nav
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,$colorBlack,900,7px,1)
                 .menu_backEnd.active
-                    ul
-                        li
-                            a
-                                display: flex
-                                justify-content: center
-                                align-items: center
-                                span
-                                    display: flex
-                                    justify-content: center
-                                    align-items: center
-                                    +FontStyle(14px,$colorOrange,900,1px,1)
-                                    writing-mode: horizontal-tb
-                                    margin-bottom: 5px
-                        .shoppingCart
-                            margin-right: 2px
-                            a
-                                color: $colorOrange 
-                                
+                    // ul
+                    //     li
+                    //         a
+                    //             display: flex
+                    //             justify-content: center
+                    //             align-items: center
+                    //             span
+                    //                 display: flex
+                    //                 justify-content: center
+                    //                 align-items: center
+                    //                 +FontStyle(14px,$colorOrange,900,1px,1)
+                    //                 writing-mode: horizontal-tb
+                    //                 margin-bottom: 5px
+                    //     .shoppingCart
+                    //         margin-right: 0px
+                    //         a
+                    //             color: $colorOrange 
+                    //             position: relative
+                    //             &::before
+                    //                 content: ""
+                    //                 height: 105px
+                    //                 width: 1px
+                    //                 background-color: $colorOrange
+                    //                 position: absolute
+                    //                 bottom: 5px
+                    //                 left: -8px
+                    //                 animation: bordermove 2s linear infinite 
+                    //             &::after
+                    //                 content: ""
+                    //                 height: 105px
+                    //                 width: 1px
+                    //                 background-color: $colorOrange
+                    //                 position: absolute
+                    //                 bottom: 5px
+                    //                 right: -5px
+                    //                 animation: bordermove 2s linear infinite
+                    //                 animation-delay: 0.5s 
             hr
                 border: 0
                 height: 1px

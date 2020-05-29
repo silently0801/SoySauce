@@ -164,52 +164,45 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/DSC_7164.jpg);"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/IMG_2239.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/DSC_7164.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/IMG_2239.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/DSC_7164.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./img/05-1-職人手札-列表頁面/IMG_2239.jpg);"></div>
                 </div>
             </div>
         </section>
         <section class="news_information">
             <div class="information_container container position-relative">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="news_date">
-                                <span>2016</span>
-                                <br>
-                                <span>10/05</span>
-                                <span>2016/10/05</span>
-                            </div>
-                            <div class="news_content">
-                                <div class="news_title">御鼎興-萬人感謝回饋活動【謝謝有你】</div>
-                                <div class="news_text">
-                                    御鼎興專頁已成立三年多了，在這之間最大的感觸是”被看見”，這對我們來說是很重要的。<br>
-                                    還記得在2011那年，我們堅持了一甲子的柴燒醬油，仍克服不了高成本的手工付出及長年的工廠搬遷，那時，醬油爸決定技術移轉，在努力過後發現，原來傳統的醬油工法與講求效率的社會期待並不相符，最後老爸說：「也許做醬油這件事，是我們謝家一輩子的事」。<br>
-                                    醬油工藝的美好會由我們第三代繼續傳承。如今專頁人數已達”萬人”，我們想藉由這一次的活動，更加貼近喜愛御鼎興的你們～<br>
-                                    <br>
-                                    活動開始時間：10/12（三）上午九點開始<br>
-                                    活動結束時間：10/21（五）晚上九點結束(超過時間，回饋即結束)<br>
-                                    活動內容：<br>
-                                    1.不分購買方式，全系列醬油一律九折，產量較少的醬油，像原鹽與原汁即售完為止。<br>
-                                    2.來現場送"醬油媽媽私房滷味"(每一家庭最多兩包，當天送完為止)及御鼎興「醬油的美好」明信片。<br>
-                                </div>
-                            </div>
+                <div class="news_info">
+                    <div class="news_date">
+                        <span>2016</span>
+                        <br>
+                        <span>10/05</span>
+                        <span>2016/10/05</span>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_title">御鼎興-萬人感謝回饋活動【謝謝有你】</div>
+                        <div class="news_text">
+                            御鼎興專頁已成立三年多了，在這之間最大的感觸是”被看見”，這對我們來說是很重要的。<br>
+                            還記得在2011那年，我們堅持了一甲子的柴燒醬油，仍克服不了高成本的手工付出及長年的工廠搬遷，那時，醬油爸決定技術移轉，在努力過後發現，原來傳統的醬油工法與講求效率的社會期待並不相符，最後老爸說：「也許做醬油這件事，是我們謝家一輩子的事」。<br>
+                            醬油工藝的美好會由我們第三代繼續傳承。如今專頁人數已達”萬人”，我們想藉由這一次的活動，更加貼近喜愛御鼎興的你們～<br>
+                            <br>
+                            活動開始時間：10/12（三）上午九點開始<br>
+                            活動結束時間：10/21（五）晚上九點結束(超過時間，回饋即結束)<br>
+                            活動內容：<br>
+                            1.不分購買方式，全系列醬油一律九折，產量較少的醬油，像原鹽與原汁即售完為止。<br>
+                            2.來現場送"醬油媽媽私房滷味"(每一家庭最多兩包，當天送完為止)及御鼎興「醬油的美好」明信片。<br>
                         </div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
                     </div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
                 <div class="page_btn">
-                    <div class="swiper-button-prev"></div>
+                    <div class="prev"></div>
                     <div class="line"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="next"></div>
                 </div>
             </div>
         </section>
@@ -262,17 +255,10 @@
     <script src="./js/background.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-
-            effect: 'fade',
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            }
         });
 
     </script>

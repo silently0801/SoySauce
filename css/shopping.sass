@@ -23,7 +23,97 @@
         transform: translate(-50%) rotate(-45deg)
         @media ( max-width: 1530px ) 
             transform: translate(-50%) rotate(-35deg)
-
+@include keyframes(bordermove)
+    0%
+        top: 0
+        height: 0px
+    49%
+        top: 0
+        height: 105px
+    100%
+        top: 105px
+        height: 0px
+nav
+    .container
+        .row
+            .menu_Area
+                .menu_backEnd.active
+                    ul
+                        li
+                            margin-bottom: 9px
+                            a
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                span
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    +FontStyle(14px,$colorOrange,900,1px,1)
+                                    writing-mode: horizontal-tb
+                                    margin-bottom: 5px
+                        .login
+                            margin-right: 2px
+                        .shoppingCart
+                            margin-right: 2px
+                            a
+                                color: $colorOrange 
+                                position: relative
+                                .line_before
+                                    position: absolute
+                                    top: 0
+                                    height: 100%
+                                    left: -8px
+                                    &::before
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: 0.3s 
+                                    &::after
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: 1.9s
+                                .line_after
+                                    position: absolute
+                                    top: 0
+                                    height: 100%
+                                    right: -5px
+                                    &::before
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: 1.3s 
+                                    &::after
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: 2.9s 
+                                
 body
     @media ( max-width: 1530px )
         background-color: #ebebeb
@@ -154,277 +244,323 @@ main
                 border: 1px solid $colorBlack
                 @media ( max-width: 767px )
                     border: unset
-        .collapses
-            .collapsing
-                transition: 0s
-                animation: unset !important
-            .show
-                animation: fadein 0.5s linear 0s 1 alternate forwards
-            .product
-                position: fixed
-                z-index: 999
-                top: 0
-                left: 50%
-                transform: translateX(-50%)
-                height: 100vh
-                width: 1440px
-                background-color: $colorOrange
-                @media ( max-width: 1530px )
-                    width: 1200px
-                @media ( max-width: 1366px )  
-                    width: 100%
-                @media ( max-width: 768px )
-                    overflow-y: scroll
-                    overflow-x: hidden
-                    height: 100vh
-                &::before
-                    content: ""
-                    position: absolute
-                    top: 9px
-                    right: -100px
-                    width: 100px
-                    height: 500px
-                    background-color: #ebebeb
-                .close_collapse
-                    +close_collapse()
-                    border: 1px solid $colorOrange
-                    background-color: #ebebeb
-                    width: 150px
-                    height: 150px
-                    right: -150px
-                    top: 150px
-                    @media ( max-width: 1530px )  
-                        display: none
-                .card
-                    width: 100%
-                    height: 100%
-                    padding: 12vh 68px 0 168px
-                    background-color: unset
-                    flex-direction: row
-                    position: relative
-                    border: unset
-                    overflow: hidden
-                    @media ( max-width: 1530px )
-                        padding: 12vh 0 0 60px
-                    @media ( max-width: 1366px ) 
-                        padding: 0
-                        align-items: center
-                        justify-content: center
-                    @media ( max-width: 768px ) 
-                        height: auto
-                        padding: 120px 0 
-                        flex-direction: column
-                    @media ( max-width: 540px)  
-                        padding: 70px 0 40px
-                    .product_img
-                        width: 570px
-                        height: 760px
-                        min-height: 760px
-                        position: relative
-                        z-index: 2
-                        background-size: cover
-                        background-position: center
-                        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3)
+        .modal_area
+            .modal
+                // display: block!important
+                max-height: none
+                .modal-dialog
+                    transform: none             
+                    @media ( max-width: 768px )
+                        width: 100%
+                        max-width: 100%
+                        margin: 0
+                    .modal-content
+                        position: fixed
+                        z-index: 999
+                        top: 0
+                        left: 50%
+                        transform: translateX(-50%)
+                        height: 100vh
+                        min-height: 100vh
+                        width: 1440px
+                        background-color: $colorOrange
+                        max-height: none
+                        @media ( max-width: 1530px )
+                            width: 1200px
                         @media ( max-width: 1366px )  
-                            width: 375px
-                            height: 500px
-                            min-height: 500px
-                        @media ( max-width: 768px )  
-                            width: 478px
-                            height: 640px
-                            min-height: 640px
-                        @media ( max-width: 540px)  
-                            width: 280px
-                            height: 375px
-                            min-height: 375px
-                        .header_img
-                            width: 285px
-                            height: 752px
-                            position: absolute
-                            background-size: cover
-                            background-position: center
-                            z-index: 3
-                            left: -186px
-                            top: -50px
-                            @media ( max-width: 1530px )
-                                left: -82px
-                                top: -50px
-                            @media ( max-width: 1366px )  
-                                width: 150px
-                                height: 397px
-                                left: -45px
-                                top: -65px
-                            @media ( max-width: 768px )
-                                width: 126px
-                                height: 333px
-                                left: -45px
-                                top: -65px
-                            @media ( max-width: 540px )
-                                width: 93px
-                                height: 247px
-                                left: -21px
-                                top: -69px
-                    .product_detail
-                        padding: 230px 0 0
-                        position: relative
-                        @media ( max-width: 1366px ) 
-                            padding: 45px 0 0
-                            width: 360px
-                            height: 500px
-                            min-height: 500px
-                        @media ( max-width: 768px )  
+                            width: 100%
+                        @media ( max-width: 768px )
+                            position: relative
                             height: auto
-                            min-height: unset
-                            padding: 55px 0 0
-                            width: 478px
-                            display: flex
-                            flex-direction: column
-                        @media ( max-width: 540px)  
-                            width: 280px
-                            padding: 0
-                        .close_collapse
-                            display: none
+                            // overflow-y: scroll
+                            overflow-x: hidden
+                            overflow-y: auto
+                        .close_modal
+                            border: 1px solid $colorOrange
+                            width: 150px
+                            height: 150px
+                            right: -150px
+                            top: 150px
+                            overflow: hidden
+                            position: absolute
+                            z-index: 5
+                            transition: 0s
+                            @media ( max-width: 1530px )  
+                                display: none
+                            .line
+                                position: absolute
+                                top: 47%
+                                left: 50%
+                                width: 300px
+                                height: 1px
+                                z-index: 10
+                                background-color: $colorOrange
+                                @media ( max-width: 1530px ) 
+                                    background-color: #FFF 
+                            .line1
+                                transform: translate(-50%) rotate(45deg)
+                                @media ( max-width: 1530px ) 
+                                    transform: translate(-50%) rotate(35deg)
+                            .line2
+                                transform: translate(-50%) rotate(-45deg)
+                                @media ( max-width: 1530px ) 
+                                    transform: translate(-50%) rotate(-35deg)
+                        .card
+                            width: 100%
+                            height: 100%
+                            padding: 12vh 68px 0 168px
                             background-color: unset
-                            @media ( max-width: 1530px )  
-                                display: block
-                                border: unset 
-                                width: 100px
-                                height: 70px
-                                right: 30px
-                                top: 0
-                            @media ( max-width: 1366px )  
-                                right: 10px
-                                top: -100px
-                            @media ( max-width: 768px )  
-                                width: 60px
-                                height: 40px
-                                right: 0px
-                                top: -710px
-                            @media ( max-width: 540px)  
-                                width: 20px
-                                height: 15px
-                                top: -410px
-                        .product_title
-                            width: 590px
-                            height: 122px
-                            min-height: 122px
-                            padding-left: 100px
-                            background-color: #FFF
-                            display: flex
-                            flex-direction: column
-                            justify-content: center
-                            @media ( max-width: 1530px )   
-                                padding-left: 40px 
-                                width: 515px
-                                height: 118px 
-                                min-height: 118px
-                            @media ( max-width: 1366px )  
-                                width: 350px                
-                            @media ( max-width: 768px ) 
-                                width: unset
-                                padding-left: unset
-                                background-color: unset
-                            @media ( max-width: 540px )
-                                padding: 30px 0 
-                                height: auto
-                                min-height: unset
-                            .product_name
-                                +FontStyle(37px,$colorOrange,700,5px,52px)
-                                @media ( max-width: 1366px )  
-                                    +FontStyle(32px,$colorOrange,700,5px,52px)
-                                @media ( max-width: 768px ) 
-                                    +FontStyle(32px,#FFF,700,5px,52px)
-                                @media ( max-width: 540px) 
-                                    +FontStyle(22px,#FFF,700,5px,1)
-                                    margin: 0 0 10px
-                            .product_price
-                                +FontStyle(27px,$colorOrange,600,5px,52px)
-                                @media ( max-width: 1366px )  
-                                    +FontStyle(20px,$colorOrange,600,5px,52px)
-                                @media ( max-width: 768px ) 
-                                    +FontStyle(20px,#FFF,600,5px,52px)
-                                @media ( max-width: 540px) 
-                                    +FontStyle(18px,#FFF,600,5px,1)  
-                        .product_content
-                            padding: 65px 0 65px 100px
-                            @media ( max-width: 1530px )   
-                                padding: 65px 0 65px 40px
-                            @media ( max-width: 1366px )  
-                                padding: 50px 0 30px 40px
-                            @media ( max-width: 768px )
-                                padding: 30px 0 0
-                                order: 1
-                            div
-                                display: flex
-                                +FontStyle(18px,#FFF,400,3px,41px)
-                                span
-                                    &:nth-child(1)
-                                        width: 110px
-                                        @media ( max-width: 767px) 
-                                            width: 95px
-                                            margin-right: 10px
-                                        @media ( max-width: 540px) 
-                                            width: 80px
-                                    &:nth-child(2)
-                                        flex: 1
-                                @media ( max-width: 768px )
-                                    white-space: nowrap
-                                @media ( max-width: 540px) 
-                                    white-space: unset
-                                    +FontStyle(12px,#FFF,400,3px,23px)
-                        .add_cart
-                            padding-left: 100px
-                            display: flex
-                            @media ( max-width: 1530px )  
-                                padding-left: 40px
-                            @media ( max-width: 768px )
-                                padding-left: unset
-                                order: 0
-                            .qty_btn
-                                display: flex
+                            flex-direction: row
+                            position: relative
+                            border: unset
+                            overflow: hidden
+                            @media ( max-width: 1530px )
+                                padding: 12vh 0 0 60px
+                            @media ( max-width: 1366px ) 
+                                padding: 0
                                 align-items: center
-                                border: 1px solid #fff
-                                padding: 0 10px
-                                @media ( max-width: 1366px )
-                                    padding: 0 5px
+                                justify-content: center
+                            @media ( max-width: 768px ) 
+                                min-height: 100vh
+                                height: auto
+                                padding: 120px 0 
+                                flex-direction: column
+                            @media ( max-width: 540px)  
+                                padding: 70px 0 40px
+                            .product_img
+                                width: 570px
+                                height: 760px
+                                min-height: 760px
+                                position: relative
+                                z-index: 2
+                                background-size: cover
+                                background-position: center
+                                box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3)
+                                @media ( max-width: 1366px )  
+                                    width: 375px
+                                    height: 500px
+                                    min-height: 500px
                                 @media ( max-width: 768px )  
-                                    padding: 0 10px
-                                @media ( max-width: 540px ) 
-                                    padding: 0 5px
-                                .qty
-                                    +FontStyle(22px,#FFF,400,3px,31px)
-                                    padding: 0 80px
-                                    user-select: none
-                                    @media ( max-width: 1366px )
-                                        +FontStyle(18px,#FFF,400,3px,31px)
-                                        padding: 0 10px
+                                    width: 478px
+                                    height: 640px
+                                    min-height: 640px
+                                @media ( max-width: 540px)  
+                                    width: 280px
+                                    height: 375px
+                                    min-height: 375px
+                                .header_img
+                                    width: 285px
+                                    height: 752px
+                                    position: absolute
+                                    background-size: cover
+                                    background-position: center
+                                    z-index: 3
+                                    left: -186px
+                                    top: -50px
+                                    @media ( max-width: 1530px )
+                                        left: -82px
+                                        top: -50px
+                                    @media ( max-width: 1366px )  
+                                        width: 150px
+                                        height: 397px
+                                        left: -45px
+                                        top: -65px
+                                    @media ( max-width: 768px )
+                                        width: 126px
+                                        height: 333px
+                                        left: -45px
+                                        top: -65px
+                                    @media ( max-width: 540px )
+                                        width: 93px
+                                        height: 247px
+                                        left: -21px
+                                        top: -69px
+                            .product_detail
+                                padding: 230px 0 0
+                                position: relative
+                                @media ( max-width: 1366px ) 
+                                    padding: 45px 0 0
+                                    width: 360px
+                                    height: 500px
+                                    min-height: 500px
+                                @media ( max-width: 768px )  
+                                    height: auto
+                                    min-height: unset
+                                    padding: 55px 0 0
+                                    width: 478px
+                                    display: flex
+                                    flex-direction: column
+                                @media ( max-width: 540px)  
+                                    width: 280px
+                                    padding: 0
+                                .close_modal
+                                    display: none
+                                    background-color: unset
+                                    overflow: hidden
+                                    position: absolute
+                                    z-index: 5
+                                    transition: 0s
+                                    @media ( max-width: 1530px )  
+                                        display: block
+                                        border: unset 
+                                        width: 100px
+                                        height: 70px
+                                        right: 30px
+                                        top: 0
+                                    @media ( max-width: 1366px )  
+                                        right: 10px
+                                        top: -100px
                                     @media ( max-width: 768px )  
-                                        padding: 0 70px
-                                    @media ( max-width: 540px) 
-                                        +FontStyle(13px,#FFF,400,3px,18px)
-                                        padding: 0 40px
-                                .minus,.plus
-                                    +FontStyle(22px,#FFF,900,3px,31px)
-                                    cursor: pointer
-                                    user-select: none
-                                    @media ( max-width: 1366px )
-                                        +FontStyle(18px,#FFF,900,3px,31px)
-                                    @media ( max-width: 540px) 
-                                        +FontStyle(15px,#FFF,900,3px,18px)
-                            form
-                                border: 1px solid #fff
-                                border-left: unset
-                                padding: 0 20px
-                                @media ( max-width: 768px ) 
-                                    padding: 0 45px
-                                @media ( max-width: 540px) 
-                                    padding: 0 5px
-                                button
-                                    +FontStyle(22px,#FFF,400,3px,31px)
-                                    @media ( max-width: 1366px )
-                                        +FontStyle(18px,#FFF,400,3px,31px)
-                                    @media ( max-width: 540px) 
-                                        +FontStyle(13px,#FFF,400,3px,18px)
+                                        width: 60px
+                                        height: 40px
+                                        right: 0px
+                                        top: -710px
+                                    @media ( max-width: 540px)  
+                                        width: 20px
+                                        height: 15px
+                                        top: -410px
+                                    .line
+                                        position: absolute
+                                        top: 47%
+                                        left: 50%
+                                        width: 300px
+                                        height: 1px
+                                        z-index: 10
+                                        background-color: $colorOrange
+                                        @media ( max-width: 1530px ) 
+                                            background-color: #FFF 
+                                    .line1
+                                        transform: translate(-50%) rotate(45deg)
+                                        @media ( max-width: 1530px ) 
+                                            transform: translate(-50%) rotate(35deg)
+                                    .line2
+                                        transform: translate(-50%) rotate(-45deg)
+                                        @media ( max-width: 1530px ) 
+                                            transform: translate(-50%) rotate(-35deg)
+                                .product_title
+                                    width: 590px
+                                    height: 122px
+                                    min-height: 122px
+                                    padding-left: 100px
+                                    background-color: #FFF
+                                    display: flex
+                                    flex-direction: column
+                                    justify-content: center
+                                    @media ( max-width: 1530px )   
+                                        padding-left: 40px 
+                                        width: 515px
+                                        height: 118px 
+                                        min-height: 118px
+                                    @media ( max-width: 1366px )  
+                                        width: 350px                
+                                    @media ( max-width: 768px ) 
+                                        width: unset
+                                        padding-left: unset
+                                        background-color: unset
+                                    @media ( max-width: 540px )
+                                        padding: 30px 0 
+                                        height: auto
+                                        min-height: unset
+                                    .product_name
+                                        +FontStyle(37px,$colorOrange,700,5px,52px)
+                                        @media ( max-width: 1366px )  
+                                            +FontStyle(32px,$colorOrange,700,5px,52px)
+                                        @media ( max-width: 768px ) 
+                                            +FontStyle(32px,#FFF,700,5px,52px)
+                                        @media ( max-width: 540px) 
+                                            +FontStyle(22px,#FFF,700,5px,1)
+                                            margin: 0 0 10px
+                                    .product_price
+                                        +FontStyle(27px,$colorOrange,600,5px,52px)
+                                        @media ( max-width: 1366px )  
+                                            +FontStyle(20px,$colorOrange,600,5px,52px)
+                                        @media ( max-width: 768px ) 
+                                            +FontStyle(20px,#FFF,600,5px,52px)
+                                        @media ( max-width: 540px) 
+                                            +FontStyle(18px,#FFF,600,5px,1)  
+                                .product_content
+                                    padding: 65px 0 65px 100px
+                                    @media ( max-width: 1530px )   
+                                        padding: 65px 0 65px 40px
+                                    @media ( max-width: 1366px )  
+                                        padding: 50px 0 30px 40px
+                                    @media ( max-width: 768px )
+                                        padding: 30px 0 0
+                                        order: 1
+                                    div
+                                        display: flex
+                                        +FontStyle(18px,#FFF,400,3px,41px)
+                                        span
+                                            &:nth-child(1)
+                                                width: 110px
+                                                @media ( max-width: 767px) 
+                                                    width: 95px
+                                                    margin-right: 10px
+                                                @media ( max-width: 540px) 
+                                                    width: 80px
+                                            &:nth-child(2)
+                                                flex: 1
+                                        @media ( max-width: 768px )
+                                            white-space: nowrap
+                                        @media ( max-width: 540px) 
+                                            white-space: unset
+                                            +FontStyle(12px,#FFF,400,3px,23px)
+                                .add_cart
+                                    padding-left: 100px
+                                    display: flex
+                                    @media ( max-width: 1530px )  
+                                        padding-left: 40px
+                                    @media ( max-width: 768px )
+                                        padding-left: unset
+                                        order: 0
+                                    .qty_btn
+                                        display: flex
+                                        align-items: center
+                                        border: 1px solid #fff
+                                        padding: 0 10px
+                                        @media ( max-width: 1366px )
+                                            padding: 0 5px
+                                        @media ( max-width: 768px )  
+                                            padding: 0 10px
+                                        @media ( max-width: 540px ) 
+                                            padding: 0 5px
+                                        .qty
+                                            +FontStyle(22px,#FFF,400,3px,31px)
+                                            padding: 0 80px
+                                            user-select: none
+                                            @media ( max-width: 1366px )
+                                                +FontStyle(18px,#FFF,400,3px,31px)
+                                                padding: 0 10px
+                                            @media ( max-width: 768px )  
+                                                padding: 0 70px
+                                            @media ( max-width: 540px) 
+                                                +FontStyle(13px,#FFF,400,3px,18px)
+                                                padding: 0 40px
+                                        .minus,.plus
+                                            +FontStyle(22px,#FFF,900,3px,31px)
+                                            cursor: pointer
+                                            user-select: none
+                                            @media ( max-width: 1366px )
+                                                +FontStyle(18px,#FFF,900,3px,31px)
+                                            @media ( max-width: 540px) 
+                                                +FontStyle(15px,#FFF,900,3px,18px)
+                                    form
+                                        border: 1px solid #fff
+                                        border-left: unset
+                                        padding: 0 20px
+                                        @media ( max-width: 768px ) 
+                                            padding: 0 45px
+                                        @media ( max-width: 540px) 
+                                            padding: 0 5px
+                                        button
+                                            +FontStyle(22px,#FFF,400,3px,31px)
+                                            @media ( max-width: 1366px )
+                                                +FontStyle(18px,#FFF,400,3px,31px)
+                                            @media ( max-width: 540px) 
+                                                +FontStyle(13px,#FFF,400,3px,18px)
+                .modal-dialog.active
+                    @media ( max-width: 768px )
+                        margin-right: -17px !important
         .container     
             .row
                 @media ( max-width: 1279px )

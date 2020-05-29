@@ -124,6 +124,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input {
+  padding-left: 10px;
+}
+
 body * {
   font-family: 'Noto Serif TC','Noto Serif JP', serif;
   -webkit-transition: 0.3s;
@@ -1855,9 +1859,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::before {
   }
 }
 
-main .soysauce .soysauce_container .row .soysauce_text_Area::after {
-  content: "醬油。";
-  display: block;
+main .soysauce .soysauce_container .row .soysauce_text_Area span {
   position: absolute;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -1879,13 +1881,13 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
 }
 
 @media (max-width: 1300px) {
-  main .soysauce .soysauce_container .row .soysauce_text_Area::after {
+  main .soysauce .soysauce_container .row .soysauce_text_Area span {
     top: -300px;
   }
 }
 
 @media (max-width: 1090px) {
-  main .soysauce .soysauce_container .row .soysauce_text_Area::after {
+  main .soysauce .soysauce_container .row .soysauce_text_Area span {
     font-size: 96px;
     color: #fff;
     font-weight: 600;
@@ -1896,13 +1898,13 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
 }
 
 @media (max-width: 820px) {
-  main .soysauce .soysauce_container .row .soysauce_text_Area::after {
+  main .soysauce .soysauce_container .row .soysauce_text_Area span {
     top: -8vw;
   }
 }
 
 @media (max-width: 610px) {
-  main .soysauce .soysauce_container .row .soysauce_text_Area::after {
+  main .soysauce .soysauce_container .row .soysauce_text_Area span {
     font-size: 72px;
     color: #fff;
     font-weight: 600;
@@ -1912,7 +1914,7 @@ main .soysauce .soysauce_container .row .soysauce_text_Area::after {
 }
 
 @media (max-width: 475px) {
-  main .soysauce .soysauce_container .row .soysauce_text_Area::after {
+  main .soysauce .soysauce_container .row .soysauce_text_Area span {
     font-size: 53px;
     color: #fff;
     font-weight: 600;

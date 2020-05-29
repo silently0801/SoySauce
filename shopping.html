@@ -133,7 +133,12 @@
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
                             <li class="login"><a href="./login&register.html">登入</a></li>
                             <li class="signup"><a href="./login&register.html">註冊</a></li>
-                            <li class="shoppingCart"><a href="./checkout_check.html">購物車(<span>9</span>)</a></li>
+                            <li class="shoppingCart">
+                                <a href="./checkout_check.html">購物車(<span>9</span>)
+                                    <div class="line_before"></div>
+                                    <div class="line_after"></div>
+                                </a>
+                            </li>
                             <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
                         </ul>
                     </div>
@@ -167,48 +172,55 @@
                 <div class="backline_rect"></div>
                 <div class="backline_border"></div>
             </div>
-            <div class="collapses">
-                <div class="collapse product" id="product_1">
-                    <!-- close_collapse1 -->
-                    <a data-toggle="collapse" href="#product_1" class="close_collapse">
-                        <div class="line line1"></div>
-                        <div class="line line2"></div>
-                    </a>
-                    <div class="card">
-                        <div class="product_img"
-                            style="background-image: url(./img/04-2-前往購買-內容頁面/product18111220369466.jpg);">
-                            <div class="header_img" style="background-image: url(./img/04-2-前往購買-內容頁面/米粒醬油.png);"></div>
-                        </div>
-                        <div class="product_detail">
-                            <!-- close_collapse2 -->
-                            <a data-toggle="collapse" href="#product_1" class="close_collapse">
+            <div class="modal_area">
+                <!-- 開始 -->
+                <div class="modal fade" id="product_1" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content modal-dialog-scrollable">
+                            <button type="button" class="btn close_modal" data-dismiss="modal">
                                 <div class="line line1"></div>
                                 <div class="line line2"></div>
-                            </a>
-                            <div class="product_title">
-                                <div class="product_name">米粒原燉醬油</div>
-                                <div class="product_price">NT.350/瓶</div>
-                            </div>
-                            <div class="product_content">
-                                <div class="specification"><span>規　　格 | </span><span>420ml</span></div>
-                                <div class="ingredient"><span>成　　分 | </span><span>水、黑豆、海鹽、白米、糖(無任何添加物)</span></div>
-                                <div class="life"><span>保存期限 | </span><span>二年</span></div>
-                                <div class="cooking"><span>烹調方式 | </span><span>沾</span></div>
-                            </div>
-                            <div class="add_cart">
-                                <div class="qty_btn">
-                                    <div class="minus">－</div>
-                                    <div class="qty">1</div>
-                                    <div class="plus">＋</div>
+                            </button>
+                            <div class="card">
+                                <div class="product_img"
+                                    style="background-image: url(./img/04-2-前往購買-內容頁面/product18111220369466.jpg);">
+                                    <div class="header_img"
+                                        style="background-image: url(./img/04-2-前往購買-內容頁面/米粒醬油.png);"></div>
                                 </div>
-                                <form action="">
-                                    <input type="number" value="" hidden>
-                                    <button class="btn" type="submit">加入購物車</button>
-                                </form>
+                                <div class="product_detail">
+                                    <!-- close_collapse2 -->
+                                    <button type="button" class="btn close_modal" data-dismiss="modal">
+                                        <div class="line line1"></div>
+                                        <div class="line line2"></div>
+                                    </button>
+                                    <div class="product_title">
+                                        <div class="product_name">米粒原燉醬油</div>
+                                        <div class="product_price">NT.350/瓶</div>
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="specification"><span>規　　格 | </span><span>420ml</span></div>
+                                        <div class="ingredient"><span>成　　分 | </span><span>水、黑豆、海鹽、白米、糖(無任何添加物)</span>
+                                        </div>
+                                        <div class="life"><span>保存期限 | </span><span>二年</span></div>
+                                        <div class="cooking"><span>烹調方式 | </span><span>沾</span></div>
+                                    </div>
+                                    <div class="add_cart">
+                                        <div class="qty_btn">
+                                            <div class="minus">－</div>
+                                            <div class="qty">1</div>
+                                            <div class="plus">＋</div>
+                                        </div>
+                                        <form action="">
+                                            <input type="number" value="" hidden>
+                                            <button class="btn" type="submit">加入購物車</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- 結束 -->
             </div>
             <div class="container">
                 <div class="row ">
@@ -226,7 +238,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -259,7 +271,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -291,7 +303,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -323,7 +335,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -355,7 +367,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -387,7 +399,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -419,7 +431,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -451,7 +463,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -483,7 +495,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -650,7 +662,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -735,7 +747,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -788,7 +800,7 @@
                                     <div class="product_img"
                                         style="background-image: url(./img/04-1-前往購買-列表頁面/product18111220369466.jpg);">
                                     </div>
-                                    <a data-toggle="collapse" href="#product_1" class="product_hover">
+                                    <a data-toggle="modal" data-target="#product_1" class="product_hover">
                                         <div class="hover_title">米粒原燉醬油</div>
                                         <div class="hover_price">NT.350/瓶</div>
                                         <div class="hover_btn">Click to View</div>
@@ -874,6 +886,13 @@
     <script src="./js/widows_scale.js"></script>
     <script src="./js/background.js"></script>
     <script>
+        $(".product_hover").click(function () {
+            let modal_id = $(this).attr("data-target");
+            setTimeout(function () {
+                $(modal_id).css("padding-right", "0px")
+            }, 100);
+        });
+
         /*下拉選單*/
         $(".option").click(function () {
             let id = $(this).parent().attr('id');
@@ -886,12 +905,13 @@
                 $(`.products_type.${$(this).attr("value")}`).show();
             $(this).parent().collapse('hide')
         });
+
         $(".option_area").each(function () {
             $(this).width($(this).parent().children(".selects").width());
         });
 
         $(window).click(function (e) {
-            if(e.target.getAttribute("class")!="types_select")
+            if (e.target.getAttribute("class") != "types_select")
                 $(".option_area").collapse('hide')
         });
 
@@ -928,6 +948,7 @@
                 $(".cart_qty").removeClass("click")
             }, 550);
         });
+
 
 
         /*詳細產品加減*/

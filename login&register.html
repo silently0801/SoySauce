@@ -169,7 +169,7 @@
                             </div>
                             <div class="password input_title">
                                 <div class="title">密碼</div>
-                                <input type="text" name="" id="">
+                                <input type="password" name="" id="">
                             </div>
                             <div class="form_btn">
                                 <a href="" class="forget">忘記密碼</a>
@@ -193,36 +193,37 @@
                         <div class="content">或使用電子郵件註冊</div>
                         <form action="">
                             <div class="account input_title">
-                                <div class="title">帳號(電子郵件)</div>
+                                <div class="title">帳號(電子郵件)<span></span><span></span></div>
                                 <input type="text" name="" id="">
                             </div>
                             <div class="password input_title">
                                 <div class="title">密碼</div>
-                                <input type="text" name="" id="">
+                                <input type="password" name="" id="password">
                             </div>
                             <div class="password_again input_title">
                                 <div class="title">再次確認密碼</div>
-                                <input type="text" name="" id="">
+                                <input type="password" name="" id="chk_password">
                             </div>
                             <div class="birthday input_title">
                                 <div class="title">生日(年/月/日)</div>
+                                <input type="hidden" name="" id="" value="" >
                                 <div class="input_area" id="birthday_select">
                                     <div class="year_select">
-                                        <div class="selects" data-toggle="collapse" href="#year_select" value="">2020
+                                        <div class="selects" data-toggle="collapse" href="#year_select" value="2020">2020
                                         </div>
                                         <div class="option_area collapse" data-parent="#birthday_select"
                                             id="year_select">
                                         </div>
                                     </div>
                                     <div class="month_select">
-                                        <div class="selects" data-toggle="collapse" href="#month_select" value="">1
+                                        <div class="selects" data-toggle="collapse" href="#month_select" value="1">1
                                         </div>
                                         <div class="option_area collapse" data-parent="#birthday_select"
                                             id="month_select">
                                         </div>
                                     </div>
                                     <div class="day_select">
-                                        <div class="selects" data-toggle="collapse" href="#day_select" value="">1</div>
+                                        <div class="selects" data-toggle="collapse" href="#day_select" value="1">1</div>
                                         <div class="option_area collapse" data-parent="#birthday_select"
                                             id="day_select">
                                         </div>
@@ -301,6 +302,9 @@
     <script src="./js/background.js"></script>
 
     <script>
+        $("#chk_password").blur(function () {
+            
+        });
         $(document).ready(() => {
             let today = new Date();
             let year_data = "";
@@ -333,6 +337,9 @@
                 $(this).parent().parent().children(".selects").text($(this).text())
                 $(this).parent().parent().children(".selects").attr("value", $(this).attr("value"))
                 $(this).parent().collapse('hide')
+                let date = $(".year_select").children(".selects").attr("value")+"."+$(".month_select").children(".selects").attr("value")+"."+$(".day_select").children(".selects").attr("value")
+                $(".birthday").children("input").attr("value",date);
+                
             });
             $(".option_area").each(function () {
                 $(this).width($(this).parent().children(".selects").width());

@@ -63,70 +63,67 @@ main
             @media ( max-width: 540px )
                 height: 172px
             .swiper-wrapper
-                display: flex
-                justify-content: center
-                align-items: center
+                width: 100%
                 .swiper-slide
+                    width: 100%
                     background-size: cover
-                    background-position: center 
+                    background-position: center
+                    
     .news_information
         margin-bottom: 150px
         .information_container
             padding: 0
             @media ( max-width: 767px )
                 padding: 0 5%
-            .swiper-container
-                .swiper-wrapper
-                    width: 100%
-                    .swiper-slide
-                        width: 100%
-                        height: auto
-                        background-color: #ebebeb
-                        display: flex
+            .news_info
+                width: 100%
+                height: auto
+                background-color: #ebebeb
+                display: flex
+                @media ( max-width: 767px )
+                    flex-direction: column
+                .news_date  
+                    width: 205px
+                    @media ( max-width: 1530px )
+                        width: 200px
+                    @media ( max-width: 767px )
+                        width: unset
+                    span
+                        +FontStyle(40px,$colorBlack,700,3px,1)
+                        @media ( max-width: 767px )  
+                            +FontStyle(21px,$colorOrange,700,3px,35px)
+                            display: none
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorOrange,700,3px,68px)
+                        @media ( max-width: 320px )
+                            +FontStyle(12px,$colorOrange,700,3px,1)
+                            margin-bottom: 10px
+                        &:nth-child(3)
+                            +FontStyle(21px,$colorBlack,700,3px,35px) 
+                        &:nth-child(4)
+                            display: none
+                            @media ( max-width: 767px )  
+                                display: block
+                    br
                         @media ( max-width: 767px )
-                            flex-direction: column
-                        .news_date  
-                            width: 205px
-                            @media ( max-width: 1530px )
-                                width: 200px
-                            @media ( max-width: 767px )
-                                width: unset
-                            span
-                                +FontStyle(40px,$colorBlack,700,3px,1)
-                                @media ( max-width: 767px )  
-                                    +FontStyle(21px,$colorOrange,700,3px,35px)
-                                    display: none
-                                @media ( max-width: 540px )
-                                    +FontStyle(12px,$colorOrange,700,3px,68px)
-                                @media ( max-width: 320px )
-                                    +FontStyle(12px,$colorOrange,700,3px,1)
-                                    margin-bottom: 10px
-                                &:nth-child(3)
-                                    +FontStyle(21px,$colorBlack,700,3px,35px) 
-                                &:nth-child(4)
-                                    display: none
-                                    @media ( max-width: 767px )  
-                                        display: block
-                            br
-                                @media ( max-width: 767px )
-                                    display: none
-                                
-                        .news_content
-                            width: 935px
-                            @media ( max-width: 1530px )
-                                width: 800px
-                            @media ( max-width: 767px )
-                                width: 100%
-                            .news_title
-                                +FontStyle(22px,$colorBlack,600,3px,31px)
-                                margin-bottom: 50px
-                                @media ( max-width: 540px )
-                                    margin-bottom: 45px
-                                    +FontStyle(14px,$colorBlack,600,3px,25px)
-                            .news_text
-                                +FontStyle(18px,$colorBlack,400,2px,34px)
-                                @media ( max-width: 540px )
-                                    +FontStyle(12px,$colorBlack,400,2px,23px)
+                            display: none
+                        
+                .news_content
+                    width: 935px
+                    @media ( max-width: 1530px )
+                        width: 800px
+                    @media ( max-width: 767px )
+                        width: 100%
+                    .news_title
+                        +FontStyle(22px,$colorBlack,600,3px,31px)
+                        margin-bottom: 50px
+                        @media ( max-width: 540px )
+                            margin-bottom: 45px
+                            +FontStyle(14px,$colorBlack,600,3px,25px)
+                    .news_text
+                        +FontStyle(18px,$colorBlack,400,2px,34px)
+                        @media ( max-width: 540px )
+                            +FontStyle(12px,$colorBlack,400,2px,23px)
             .swiper-pagination
                 display: flex
                 flex-direction: column
@@ -167,7 +164,7 @@ main
                     height: 29px
                     z-index: 6
                     background-color: $colorBlack
-                .swiper-button-prev
+                .prev
                     position: relative
                     top: unset
                     bottom: unset 
@@ -180,7 +177,7 @@ main
                     &::after
                         content: "<"
                         +FontStyle(29px,$colorBlack,600,3px,1)
-                .swiper-button-next
+                .next
                     position: relative
                     top: unset
                     bottom: unset 
