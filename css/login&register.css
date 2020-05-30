@@ -302,6 +302,26 @@ main .login_register_area .container .row .login_area form .input_title .title {
   line-height: 27px;
 }
 
+main .login_register_area .container .row .login_area form .input_title .title .success {
+  display: none;
+  color: #4E64AD;
+  font-weight: 700;
+}
+
+main .login_register_area .container .row .login_area form .input_title .title .success.active {
+  display: inline;
+}
+
+main .login_register_area .container .row .login_area form .input_title .title .error {
+  display: none;
+  color: #e9546b;
+  font-weight: 700;
+}
+
+main .login_register_area .container .row .login_area form .input_title .title .error.active {
+  display: inline;
+}
+
 main .login_register_area .container .row .login_area form .input_title input {
   border: 1px solid #000;
   background: unset;
@@ -622,6 +642,26 @@ main .login_register_area .container .row .register_area form .input_title .titl
   font-weight: 400;
   letter-spacing: 4px;
   line-height: 27px;
+}
+
+main .login_register_area .container .row .register_area form .input_title .title .success {
+  display: none;
+  color: #4E64AD;
+  font-weight: 700;
+}
+
+main .login_register_area .container .row .register_area form .input_title .title .success.active {
+  display: inline;
+}
+
+main .login_register_area .container .row .register_area form .input_title .title .error {
+  display: none;
+  color: #e9546b;
+  font-weight: 700;
+}
+
+main .login_register_area .container .row .register_area form .input_title .title .error.active {
+  display: inline;
 }
 
 main .login_register_area .container .row .register_area form .input_title input {

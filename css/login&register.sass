@@ -123,6 +123,18 @@ main
                         .input_title
                             .title
                                 +FontStyle(14px,$colorBlack,400,4px,27px) 
+                                .success
+                                    display: none
+                                    color: #4E64AD
+                                    font-weight: 700
+                                .success.active
+                                    display: inline
+                                .error
+                                    display: none
+                                    color: #e9546b
+                                    font-weight: 700
+                                .error.active
+                                    display: inline
                             input
                                 border: 1px solid #000
                                 background: unset
@@ -257,6 +269,7 @@ main
                             &:hover
                                 color: #FFF
                                 background-color: #DD4B39
+                                
                         .facebook
                             +FontStyle(18px,#4E64AD,700,4px,49px)
                             border: 1px solid #4E64AD
@@ -272,6 +285,18 @@ main
                             flex-direction: column
                             .title
                                 +FontStyle(14px,$colorBlack,400,4px,27px) 
+                                .success
+                                    display: none
+                                    color: #4E64AD
+                                    font-weight: 700
+                                .success.active
+                                    display: inline
+                                .error
+                                    display: none
+                                    color: #e9546b
+                                    font-weight: 700
+                                .error.active
+                                    display: inline
                             input
                                 background-color: #4D4D4D
                                 border: 1px solid #4D4D4D

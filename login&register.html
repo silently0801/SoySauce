@@ -164,11 +164,11 @@
                         <div class="content">如果您已經成為會員，那麼只要登入即可快速查看訂單、修改個人帳戶及使用更多功能。</div>
                         <form action="./profile.html">
                             <div class="account input_title">
-                                <div class="title">帳號(電子郵件)</div>
+                                <div class="title">帳號(電子郵件)<span class="error"> 此帳號尚未註冊</span></div>
                                 <input type="text" name="" id="">
                             </div>
                             <div class="password input_title">
-                                <div class="title">密碼</div>
+                                <div class="title">密碼<span class="error"> 密碼錯誤</span></div>
                                 <input type="password" name="" id="">
                             </div>
                             <div class="form_btn">
@@ -193,7 +193,7 @@
                         <div class="content">或使用電子郵件註冊</div>
                         <form action="">
                             <div class="account input_title">
-                                <div class="title">帳號(電子郵件)<span></span><span></span></div>
+                                <div class="title">帳號(電子郵件)<span class="success"> 信箱尚未被註冊</span><span class="error"> 信箱尚已被註冊</span></div>
                                 <input type="text" name="" id="">
                             </div>
                             <div class="password input_title">
@@ -201,7 +201,7 @@
                                 <input type="password" name="" id="password">
                             </div>
                             <div class="password_again input_title">
-                                <div class="title">再次確認密碼</div>
+                                <div class="title">再次確認密碼<span class="success"> 密碼正確</span><span class="error"> 密碼不同</span></div>
                                 <input type="password" name="" id="chk_password">
                             </div>
                             <div class="birthday input_title">
@@ -303,7 +303,14 @@
 
     <script>
         $("#chk_password").blur(function () {
-            
+            if($(this).val() == $("#password").val()){
+                $(this).parent().children(".title").children(".success").addClass("active");
+                $(this).parent().children(".title").children(".error").removeClass("active");
+            }
+            else{
+                $(this).parent().children(".title").children(".success").removeClass("active");
+                $(this).parent().children(".title").children(".error").addClass("active");
+            }
         });
         $(document).ready(() => {
             let today = new Date();
