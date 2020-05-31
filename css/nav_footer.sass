@@ -231,43 +231,81 @@ nav
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,$colorBlack,900,7px,1)
                 .menu_backEnd.active
-                    // ul
-                    //     li
-                    //         a
-                    //             display: flex
-                    //             justify-content: center
-                    //             align-items: center
-                    //             span
-                    //                 display: flex
-                    //                 justify-content: center
-                    //                 align-items: center
-                    //                 +FontStyle(14px,$colorOrange,900,1px,1)
-                    //                 writing-mode: horizontal-tb
-                    //                 margin-bottom: 5px
-                    //     .shoppingCart
-                    //         margin-right: 0px
-                    //         a
-                    //             color: $colorOrange 
-                    //             position: relative
-                    //             &::before
-                    //                 content: ""
-                    //                 height: 105px
-                    //                 width: 1px
-                    //                 background-color: $colorOrange
-                    //                 position: absolute
-                    //                 bottom: 5px
-                    //                 left: -8px
-                    //                 animation: bordermove 2s linear infinite 
-                    //             &::after
-                    //                 content: ""
-                    //                 height: 105px
-                    //                 width: 1px
-                    //                 background-color: $colorOrange
-                    //                 position: absolute
-                    //                 bottom: 5px
-                    //                 right: -5px
-                    //                 animation: bordermove 2s linear infinite
-                    //                 animation-delay: 0.5s 
+                    ul
+                        li
+                            margin-bottom: 9px
+                            a
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                span
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    +FontStyle(14px,$colorOrange,900,1px,1)
+                                    writing-mode: horizontal-tb
+                                    margin-bottom: 5px
+                        .login
+                            margin-right: 2px
+                        .shoppingCart
+                            margin-right: 2px
+                            a
+                                color: $colorOrange 
+                                position: relative
+                                .line_before
+                                    position: absolute
+                                    top: 0
+                                    height: 100%
+                                    left: -8px
+                                    &::before
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: -0.3s 
+                                    &::after
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: -1.9s
+                                .line_after
+                                    position: absolute
+                                    top: 0
+                                    height: 100%
+                                    right: -5px
+                                    &::before
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: -1.3s 
+                                    &::after
+                                        content: ""
+                                        height: 105px
+                                        width: 1px
+                                        background-color: $colorOrange
+                                        position: absolute
+                                        animation-name: bordermove
+                                        animation-duration: 2s
+                                        animation-timing-function: linear
+                                        animation-iteration-count: infinite
+                                        animation-delay: -2.9s 
             hr
                 border: 0
                 height: 1px

@@ -118,6 +118,36 @@
   }
 }
 
+@-webkit-keyframes bordermove {
+  0% {
+    top: 0;
+    height: 0px;
+  }
+  49% {
+    top: 0;
+    height: 105px;
+  }
+  100% {
+    top: 105px;
+    height: 0px;
+  }
+}
+
+@keyframes bordermove {
+  0% {
+    top: 0;
+    height: 0px;
+  }
+  49% {
+    top: 0;
+    height: 105px;
+  }
+  100% {
+    top: 105px;
+    height: 0px;
+  }
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -627,6 +657,142 @@ nav .container .row .menu_Area .menu_backEnd ul li a {
   font-weight: 900;
   letter-spacing: 7px;
   line-height: 1;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul li {
+  margin-bottom: 9px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul li a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: #C0362D;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  margin-bottom: 5px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .login {
+  margin-right: 2px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart {
+  margin-right: 2px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a {
+  color: #C0362D;
+  position: relative;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: -8px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::before {
+  content: "";
+  height: 105px;
+  width: 1px;
+  background-color: #C0362D;
+  position: absolute;
+  -webkit-animation-name: bordermove;
+          animation-name: bordermove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::after {
+  content: "";
+  height: 105px;
+  width: 1px;
+  background-color: #C0362D;
+  position: absolute;
+  -webkit-animation-name: bordermove;
+          animation-name: bordermove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: -1.9s;
+          animation-delay: -1.9s;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: -5px;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::before {
+  content: "";
+  height: 105px;
+  width: 1px;
+  background-color: #C0362D;
+  position: absolute;
+  -webkit-animation-name: bordermove;
+          animation-name: bordermove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: -1.3s;
+          animation-delay: -1.3s;
+}
+
+nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::after {
+  content: "";
+  height: 105px;
+  width: 1px;
+  background-color: #C0362D;
+  position: absolute;
+  -webkit-animation-name: bordermove;
+          animation-name: bordermove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: -2.9s;
+          animation-delay: -2.9s;
 }
 
 nav .container .row hr {

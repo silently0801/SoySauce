@@ -118,6 +118,36 @@
   }
 }
 
+@-webkit-keyframes bordermove {
+  0% {
+    top: 0;
+    height: 0px;
+  }
+  49% {
+    top: 0;
+    height: 105px;
+  }
+  100% {
+    top: 105px;
+    height: 0px;
+  }
+}
+
+@keyframes bordermove {
+  0% {
+    top: 0;
+    height: 0px;
+  }
+  49% {
+    top: 0;
+    height: 105px;
+  }
+  100% {
+    top: 105px;
+    height: 0px;
+  }
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
