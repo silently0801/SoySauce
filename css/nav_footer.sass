@@ -9,9 +9,6 @@
     top: 24px !important
     left: 17px !important
     transform: rotate(45deg) !important    
-.menu_btn_click
-    border: 1px solid #FFF
-    z-index: 9999
 .hidden
     overflow: hidden
     @media ( min-width: 1280px )
@@ -79,6 +76,8 @@ nav
                         li
                             min-width: 24px
                             margin: 0 5px
+                            .logout
+                                display: none
                             a
                                 margin-left: 10px
                                 writing-mode: vertical-lr
@@ -129,8 +128,11 @@ nav
                 .menu_btn
                     width: 60px
                     height: 50px
+                    right: 7px
                     background-color: $colorOrange
                     border-radius: 0 0 0 50%
+                    @media ( max-width: 375px )
+                        right: 0
                     &:focus
                         box-shadow: unset
                     .bar
@@ -148,6 +150,11 @@ nav
                     .bot_bar
                         +absolute(31px ,null,null,17px)
                         transform: rotate(0deg)
+                .menu_btn.menu_btn_click
+                    border: 1px solid #FFF
+                    z-index: 9999
+                    @media ( max-width: 375px )
+                        border: 0px solid #FFF       
                 .menu_btn_inner_bg
                     position: fixed
                     height: 100%
@@ -230,6 +237,8 @@ nav
                                 margin-left: 10px
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,$colorBlack,900,7px,1)
+                        .logout
+                            display: none !important
                 .menu_backEnd.active
                     ul
                         li
@@ -245,13 +254,17 @@ nav
                                     +FontStyle(14px,$colorOrange,900,1px,1)
                                     writing-mode: horizontal-tb
                                     margin-bottom: 5px
+                        
                         .login
                             margin-right: 2px
+                        
                         .shoppingCart
                             margin-right: 2px
                             a
                                 color: $colorOrange 
                                 position: relative
+                                span
+                                    font-size: 12px
                                 .line_before
                                     position: absolute
                                     top: 0
@@ -313,6 +326,38 @@ nav
                 background: $colorBlack
                 @media ( max-width: 1279px )
                     width: 100%
+nav.logined
+    .container
+        .row
+            .logo
+                .menu_backEnd
+                    ul 
+                        .signup
+                            display: none
+                        .login
+                            display: none
+                        .logout
+                            display: flex
+            .menu_Area
+                .menu_backEnd
+                    ul  
+                        .signup
+                            display: none
+                        .login
+                            display: none
+                        .logout
+                            display: flex !important
+                            order: 1
+                            height: 42px
+                        .shoppingCart
+                            margin-right: 6px
+                        .orderSearch
+                            order: 2
+                            position: relative
+                            top: -67px
+main
+    .mask
+        min-height: calc( 100vh - 161px )
 footer
     background: #1A1A1A
     height: auto

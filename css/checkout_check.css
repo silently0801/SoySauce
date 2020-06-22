@@ -891,6 +891,15 @@ main .payment .container .row .pay_content .method .atm_area .five:focus {
   outline: unset;
 }
 
+main .payment .container .row .pay_content .method .atm_area p {
+  font-size: 14px;
+  color: #989898;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 28px;
+  padding-left: 20px;
+}
+
 main .payment .container .row .coupon_content {
   max-width: 320px;
   width: 100%;
@@ -1144,7 +1153,7 @@ main .payment .container .row .price_content .content div .price {
   line-height: 42px;
 }
 
-main .payment .container .row .price_content .shipping .title {
+main .payment .container .row .price_content .content .shipping .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1153,7 +1162,7 @@ main .payment .container .row .price_content .shipping .title {
           align-items: center;
 }
 
-main .payment .container .row .price_content .shipping .title span:nth-child(2) {
+main .payment .container .row .price_content .content .shipping .title span:nth-child(2) {
   width: 19px;
   height: 19px;
   background-color: #808080;

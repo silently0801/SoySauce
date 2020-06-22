@@ -22,12 +22,19 @@
                 <a href="./index.html" class="logo">
                     <img src="./img/99-LOGO/logo-03.png" alt="">
                 </a>
-                <div class="backEnd m-2">
+                <!-- <div class="backEnd m-2">
                     <ul class="list-unstyled d-flex m-0 p-0">
                         <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
                         <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
                         <li class="login"><a href="./login&register.html">登入</a></li>
                         <li class="signup"><a href="./login&register.html">註冊</a></li>
+                    </ul>
+                </div> -->
+                <div class="backEnd m-2">
+                    <ul class="list-unstyled d-flex m-0 p-0">
+                        <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
+                        <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
+                        <li class="logout"><a href="./login&register.html">登出</a></li>
                     </ul>
                 </div>
                 <div class="nav_btns">
@@ -270,7 +277,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
+    
     <script>
         var carousel_width = false;
         var swiper = new Swiper('.swiper-container', {
@@ -292,13 +299,13 @@
             $(".bg").height($("body").height());
         });
         $(window).resize(() => {
-             $(".bg").height($("body").height());
+            $(".bg").height($("body").height());
             setTimeout(function () {
                 swiper.update();
             }, 300);
         });
 
-       
+
         /*btn_click*/
         let html = document.querySelector("html");
         let backEnd = document.querySelector(".backEnd");

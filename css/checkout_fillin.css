@@ -860,7 +860,23 @@ main .price_area .container .row {
 }
 
 main .price_area .container .row .content {
-  min-width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1399px) {
+  main .price_area .container .row .content {
+    padding-bottom: unset;
+  }
 }
 
 main .price_area .container .row .content div {
@@ -883,9 +899,17 @@ main .price_area .container .row .content div::before {
 }
 
 main .price_area .container .row .content div .title {
-  width: 120px;
+  min-width: 120px;
   font-size: 18px;
   color: #231714;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 42px;
+}
+
+main .price_area .container .row .content div .title span:nth-child(3) {
+  font-size: 18px;
+  color: #C0362D;
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 42px;
@@ -908,10 +932,6 @@ main .price_area .container .row .content div .price {
   line-height: 42px;
 }
 
-main .price_area .container .row .content div .price span:nth-child(2) {
-  margin-left: auto;
-}
-
 main .price_area .container .row .content .shipping .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,7 +941,7 @@ main .price_area .container .row .content .shipping .title {
           align-items: center;
 }
 
-main .price_area .container .row .content .shipping .title span {
+main .price_area .container .row .content .shipping .title span:nth-child(2) {
   width: 19px;
   height: 19px;
   background-color: #808080;

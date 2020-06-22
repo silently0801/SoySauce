@@ -390,6 +390,9 @@ main
                                     transition: unset
                                     border: 2px solid $colorOrange 
                                     outline: unset
+                            p
+                                +FontStyle(14px,#989898,700,3px,28px)
+                                padding-left: 20px
 
                 .coupon_content
                     max-width: 320px
@@ -449,22 +452,22 @@ main
                                 display: flex
                                 justify-content: flex-end
                                 +FontStyle(18px,$colorOrange,700,3px,42px)
-                    .shipping
-                        .title
-                            display: flex
-                            align-items: center
-                            span
-                                &:nth-child(2)      
-                                    width: 19px
-                                    height: 19px
-                                    background-color: #808080
-                                    border-radius: 50%
-                                    margin-left: 3px
-                                    display: flex
-                                    justify-content: center
-                                    align-items: center
-                                    cursor: pointer
-                                    +FontStyle(17px,#FFF,700,0px,1)  
+                        .shipping
+                            .title
+                                display: flex
+                                align-items: center
+                                span
+                                    &:nth-child(2)      
+                                        width: 19px
+                                        height: 19px
+                                        background-color: #808080
+                                        border-radius: 50%
+                                        margin-left: 3px
+                                        display: flex
+                                        justify-content: center
+                                        align-items: center
+                                        cursor: pointer
+                                        +FontStyle(17px,#FFF,700,0px,1)  
                 .submit_btn
                     width: 100%
                     display: flex

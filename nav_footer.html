@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="./css/nav_footer.css">
 </head>
 <body>
-    <nav class="m-auto">
+    <nav class="m-auto logined">
         <div class="container ">
             <div class="row d-flex flex-column">
                 <div class="logo">
                     <a href="./index.html" class="logo_icon"></a>
-                    <div class="menu_backEnd">
+                    <div class="menu_backEnd active">
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
                             <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
                             <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
+                            <li class="logout"><a href="./login&register.html">登出</a></li>
                             <li class="login"><a href="./login&register.html">登入</a></li>
                             <li class="signup"><a href="./login&register.html">註冊</a></li>
                         </ul>
@@ -127,11 +128,17 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu_backEnd my-5">
+                    <div class="menu_backEnd active my-5">
                         <ul class="list-unstyled d-flex flex-wrap m-0 p-0 justify-content-end">
+                            <li class="logout"><a href="./login&register.html">登出</a></li>
                             <li class="login"><a href="./login&register.html">登入</a></li>
                             <li class="signup"><a href="./login&register.html">註冊</a></li>
-                            <li class="shoppingCart"><a href="./checkout_check.html">購物車</a></li>
+                            <li class="shoppingCart">
+                                <a href="./checkout_check.html">購物車(<span>19</span>)
+                                    <div class="line_before"></div>
+                                    <div class="line_after"></div>
+                                </a>
+                            </li>
                             <li class="orderSearch"><a href="./order.html">訂單查詢</a></li>
                         </ul>
                     </div>

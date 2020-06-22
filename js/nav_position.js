@@ -11,6 +11,8 @@ $(document).ready(function () {
     else {
         $(".menu_Area")[0].style = "";
     }
+
+    $('main').css("min-height",window.innerHeight-$("footer").height()-$("nav").height()-9);
 });
 $(window).resize(function () {
     let width = $(window).width();
@@ -25,4 +27,8 @@ $(window).resize(function () {
     else {
         $(".menu_Area")[0].style = "";
     }
+    setTimeout(function () {
+        $('main').css("min-height",window.innerHeight-$("footer").height()-$("nav").height()-9);
+    }, 100);
+    
 });

@@ -306,7 +306,12 @@ main
                 @media ( max-width: 540px )
                     align-items: center
                 .content
-                    min-width: 240px
+                    display: flex 
+                    flex-direction: column
+                    justify-content: flex-end
+                    padding-bottom: 50px
+                    @media ( max-width: 1399px )
+                        padding-bottom: unset
                     div
                         display: flex
                         position: relative
@@ -320,31 +325,32 @@ main
                             left: 50%
                             transform: translateX(-50%)
                         .title
-                            width: 120px
+                            min-width: 120px
                             +FontStyle(18px,$colorBlack,700,3px,42px)
+                            span
+                                &:nth-child(3)
+                                    +FontStyle(18px,$colorOrange,700,3px,42px)
                         .price
                             flex: 1
                             display: flex
                             justify-content: flex-end
                             +FontStyle(18px,$colorOrange,700,3px,42px)
-                            span
-                                &:nth-child(2)
-                                    margin-left: auto
                     .shipping
                         .title
                             display: flex
                             align-items: center
                             span
-                                width: 19px
-                                height: 19px
-                                background-color: #808080
-                                border-radius: 50%
-                                margin-left: 3px
-                                display: flex
-                                justify-content: center
-                                align-items: center
-                                cursor: pointer
-                                +FontStyle(17px,#FFF,700,0px,1)
+                                &:nth-child(2)      
+                                    width: 19px
+                                    height: 19px
+                                    background-color: #808080
+                                    border-radius: 50%
+                                    margin-left: 3px
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    cursor: pointer
+                                    +FontStyle(17px,#FFF,700,0px,1) 
     .profile_area
         .profile
             .profile_table

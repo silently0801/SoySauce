@@ -313,7 +313,30 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/menu_btn.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script> -->
+
     <script>
+        // try {
+        //     $(".swiper-slide").ripples({
+        //         resolution: 1080,
+        //         perturbance: 0.01,
+        //         interactive: false
+        //     });
+        // } catch (e) {
+        //     $(".error")
+        //         .show()
+        //         .text(e);
+        // }
+
+        // setInterval(function () {
+        //     var $el = $(".swiper-slide");
+        //     var x = Math.random() * $el.outerWidth();
+        //     var y = Math.random() * $el.outerHeight();
+        //     var dropRadius = 5;
+        //     var strength = 0.04 + Math.random() * 0.04;
+        //     $el.ripples("drop", x, y, dropRadius, strength);
+        // }, 400);
+
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             autoHeight: true, //enable auto height
