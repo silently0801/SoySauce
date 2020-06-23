@@ -136,7 +136,9 @@ nav
                             &:hover::after
                                 display: block    
                                 @media ( max-width: 475px )
-                                    display: none   
+                                    display: none  
+                    .logout
+                        display: none 
             .nav_btns
                 flex: 1 1 auto
                 @media ( max-width: 1090px )
@@ -264,6 +266,21 @@ nav
                     .swiper-pagination-bullet-active 
                         color: $colorOrange
                         background: $colorOrange
+nav.logined
+    .container
+        .row
+            .backEnd
+                ul
+                    li
+                    .logout
+                        display: block
+                    .login,.signup
+                        display: none
+                    .shoppingCart
+                        @media ( min-width: 476px) and (max-width: 610px)
+                            position: relative  
+                            top: -37px
+
 main
     @media ( max-width: 610px )
         overflow: hidden

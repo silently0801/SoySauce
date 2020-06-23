@@ -514,6 +514,10 @@ nav .container .row .backEnd ul li a:hover::after {
   }
 }
 
+nav .container .row .backEnd ul .logout {
+  display: none;
+}
+
 nav .container .row .nav_btns {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -806,6 +810,21 @@ nav .container .row .menu_btn_Area .swiper-pagination .swiper-pagination-bullet 
 nav .container .row .menu_btn_Area .swiper-pagination .swiper-pagination-bullet-active {
   color: #C0362D;
   background: #C0362D;
+}
+
+nav.logined .container .row .backEnd ul .logout {
+  display: block;
+}
+
+nav.logined .container .row .backEnd ul .login, nav.logined .container .row .backEnd ul .signup {
+  display: none;
+}
+
+@media (min-width: 476px) and (max-width: 610px) {
+  nav.logined .container .row .backEnd ul .shoppingCart {
+    position: relative;
+    top: -37px;
+  }
 }
 
 @media (max-width: 610px) {
