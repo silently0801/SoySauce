@@ -680,144 +680,183 @@ nav .container .row .menu_Area .menu_backEnd ul .logout {
   display: none !important;
 }
 
-nav .container .row .menu_Area .menu_backEnd.active ul li {
-  margin-bottom: 9px;
+@media (max-width: 375px) {
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100vw;
+    max-width: 100vw;
+    left: 0;
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul li {
+    width: auto;
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
+    border-right: 1px solid #FFF;
+    padding: 0 2px 2px;
+    line-height: 1;
+    position: static !important;
+    height: auto !important;
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul li a {
+    color: #ffffff;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    line-height: 1;
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul .shoppingCart {
+    border-right: 0px solid #FFF;
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul .orderSearch {
+    -webkit-box-ordinal-group: 1 !important;
+        -ms-flex-order: 0 !important;
+            order: 0 !important;
+  }
+  nav .container .row .menu_Area .menu_backEnd.menu_btn_click ul .logout {
+    display: none !important;
+  }
 }
 
-nav .container .row .menu_Area .menu_backEnd.active ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul li a span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  color: #C0362D;
-  font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1;
-  -webkit-writing-mode: horizontal-tb;
-      -ms-writing-mode: lr-tb;
-          writing-mode: horizontal-tb;
-  margin-bottom: 5px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .login {
-  margin-right: 2px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart {
-  margin-right: 2px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a {
-  color: #C0362D;
-  position: relative;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a span {
-  font-size: 12px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  left: -8px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::before {
-  content: "";
-  height: 105px;
-  width: 1px;
-  background-color: #C0362D;
-  position: absolute;
-  -webkit-animation-name: bordermove;
-          animation-name: bordermove;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::after {
-  content: "";
-  height: 105px;
-  width: 1px;
-  background-color: #C0362D;
-  position: absolute;
-  -webkit-animation-name: bordermove;
-          animation-name: bordermove;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: -1.9s;
-          animation-delay: -1.9s;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  right: -5px;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::before {
-  content: "";
-  height: 105px;
-  width: 1px;
-  background-color: #C0362D;
-  position: absolute;
-  -webkit-animation-name: bordermove;
-          animation-name: bordermove;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: -1.3s;
-          animation-delay: -1.3s;
-}
-
-nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::after {
-  content: "";
-  height: 105px;
-  width: 1px;
-  background-color: #C0362D;
-  position: absolute;
-  -webkit-animation-name: bordermove;
-          animation-name: bordermove;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: -2.9s;
-          animation-delay: -2.9s;
+@media (min-width: 376px) {
+  nav .container .row .menu_Area .menu_backEnd.active ul li {
+    margin-bottom: 9px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul li a span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+    color: #C0362D;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    margin-bottom: 5px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .login {
+    margin-right: 2px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart {
+    margin-right: 2px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a {
+    color: #C0362D;
+    position: relative;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a span {
+    font-size: 12px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: -8px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::before {
+    content: "";
+    height: 105px;
+    width: 1px;
+    background-color: #C0362D;
+    position: absolute;
+    -webkit-animation-name: bordermove;
+            animation-name: bordermove;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_before::after {
+    content: "";
+    height: 105px;
+    width: 1px;
+    background-color: #C0362D;
+    position: absolute;
+    -webkit-animation-name: bordermove;
+            animation-name: bordermove;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -1.9s;
+            animation-delay: -1.9s;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: -5px;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::before {
+    content: "";
+    height: 105px;
+    width: 1px;
+    background-color: #C0362D;
+    position: absolute;
+    -webkit-animation-name: bordermove;
+            animation-name: bordermove;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -1.3s;
+            animation-delay: -1.3s;
+  }
+  nav .container .row .menu_Area .menu_backEnd.active ul .shoppingCart a .line_after::after {
+    content: "";
+    height: 105px;
+    width: 1px;
+    background-color: #C0362D;
+    position: absolute;
+    -webkit-animation-name: bordermove;
+            animation-name: bordermove;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -2.9s;
+            animation-delay: -2.9s;
+  }
 }
 
 nav .container .row hr {
@@ -884,6 +923,12 @@ main .mask {
 footer {
   background: #1A1A1A;
   height: auto;
+}
+
+@media (max-width: 375px) {
+  footer .footer_container {
+    padding: 0 !important;
+  }
 }
 
 footer .footer_container .row {

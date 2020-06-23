@@ -239,86 +239,117 @@ nav
                                 +FontStyle(14px,$colorBlack,900,7px,1)
                         .logout
                             display: none !important
+                .menu_backEnd.menu_btn_click
+                    @media ( max-width: 375px )
+                        display: flex
+                        position: fixed
+                        z-index: 999
+                        bottom: 0
+                        width: 100vw
+                        max-width: 100vw
+                        left: 0
+                        ul
+                            position: relative
+                            left: 50%
+                            transform: translateX(-50%)
+                            li
+                                width: auto
+                                order: 1 !important
+                                border-right: 1px solid #FFF
+                                padding: 0 2px 2px
+                                line-height: 1
+                                position: static !important
+                                height: auto !important
+                                a
+                                    color: #ffffff
+                                    writing-mode: horizontal-tb
+                                    line-height: 1
+                            .shoppingCart
+                                border-right: 0px solid #FFF
+                            .orderSearch
+                                order: 0 !important
+                            .logout
+                                display: none !important
                 .menu_backEnd.active
-                    ul
-                        li
-                            margin-bottom: 9px
-                            a
-                                display: flex
-                                justify-content: center
-                                align-items: center
-                                span
+                    @media ( min-width: 376px )
+                        ul
+                            li
+                                margin-bottom: 9px
+                                a
                                     display: flex
                                     justify-content: center
                                     align-items: center
-                                    +FontStyle(14px,$colorOrange,900,1px,1)
-                                    writing-mode: horizontal-tb
-                                    margin-bottom: 5px
-                        
-                        .login
-                            margin-right: 2px
-                        
-                        .shoppingCart
-                            margin-right: 2px
-                            a
-                                color: $colorOrange 
-                                position: relative
-                                span
-                                    font-size: 12px
-                                .line_before
-                                    position: absolute
-                                    top: 0
-                                    height: 100%
-                                    left: -8px
-                                    &::before
-                                        content: ""
-                                        height: 105px
-                                        width: 1px
-                                        background-color: $colorOrange
+                                    span
+                                        display: flex
+                                        justify-content: center
+                                        align-items: center
+                                        +FontStyle(14px,$colorOrange,900,1px,1)
+                                        writing-mode: horizontal-tb
+                                        margin-bottom: 5px
+                            .login
+                                margin-right: 2px
+                            
+                            .shoppingCart
+                                margin-right: 2px
+                                a
+                                    color: $colorOrange 
+                                    position: relative
+                                    span
+                                        font-size: 12px
+                                    .line_before
                                         position: absolute
-                                        animation-name: bordermove
-                                        animation-duration: 2s
-                                        animation-timing-function: linear
-                                        animation-iteration-count: infinite
-                                        animation-delay: -0.3s 
-                                    &::after
-                                        content: ""
-                                        height: 105px
-                                        width: 1px
-                                        background-color: $colorOrange
+                                        top: 0
+                                        height: 100%
+                                        left: -8px
+                                        &::before
+                                            content: ""
+                                            height: 105px
+                                            width: 1px
+                                            background-color: $colorOrange
+                                            position: absolute
+                                            animation-name: bordermove
+                                            animation-duration: 2s
+                                            animation-timing-function: linear
+                                            animation-iteration-count: infinite
+                                            animation-delay: -0.3s 
+                                        &::after
+                                            content: ""
+                                            height: 105px
+                                            width: 1px
+                                            background-color: $colorOrange
+                                            position: absolute
+                                            animation-name: bordermove
+                                            animation-duration: 2s
+                                            animation-timing-function: linear
+                                            animation-iteration-count: infinite
+                                            animation-delay: -1.9s
+                                    .line_after
                                         position: absolute
-                                        animation-name: bordermove
-                                        animation-duration: 2s
-                                        animation-timing-function: linear
-                                        animation-iteration-count: infinite
-                                        animation-delay: -1.9s
-                                .line_after
-                                    position: absolute
-                                    top: 0
-                                    height: 100%
-                                    right: -5px
-                                    &::before
-                                        content: ""
-                                        height: 105px
-                                        width: 1px
-                                        background-color: $colorOrange
-                                        position: absolute
-                                        animation-name: bordermove
-                                        animation-duration: 2s
-                                        animation-timing-function: linear
-                                        animation-iteration-count: infinite
-                                        animation-delay: -1.3s 
-                                    &::after
-                                        content: ""
-                                        height: 105px
-                                        width: 1px
-                                        background-color: $colorOrange
-                                        position: absolute
-                                        animation-name: bordermove
-                                        animation-duration: 2s
-                                        animation-timing-function: linear
-                                        animation-iteration-count: infinite
-                                        animation-delay: -2.9s 
+                                        top: 0
+                                        height: 100%
+                                        right: -5px
+                                        &::before
+                                            content: ""
+                                            height: 105px
+                                            width: 1px
+                                            background-color: $colorOrange
+                                            position: absolute
+                                            animation-name: bordermove
+                                            animation-duration: 2s
+                                            animation-timing-function: linear
+                                            animation-iteration-count: infinite
+                                            animation-delay: -1.3s 
+                                        &::after
+                                            content: ""
+                                            height: 105px
+                                            width: 1px
+                                            background-color: $colorOrange
+                                            position: absolute
+                                            animation-name: bordermove
+                                            animation-duration: 2s
+                                            animation-timing-function: linear
+                                            animation-iteration-count: infinite
+                                            animation-delay: -2.9s 
             hr
                 border: 0
                 height: 1px
@@ -362,6 +393,8 @@ footer
     background: #1A1A1A
     height: auto
     .footer_container
+        @media ( max-width: 375px )
+            padding: 0 !important
         .row
             justify-content: space-between
             align-items: center
