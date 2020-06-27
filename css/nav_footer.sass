@@ -76,12 +76,18 @@ nav
                         li
                             min-width: 24px
                             margin: 0 5px
-                            .logout
-                                display: none
+                            @media ( max-width: 767px )
+                                &:first-child
+                                    margin-left: 30px
                             a
                                 margin-left: 10px
                                 writing-mode: vertical-lr
                                 +FontStyle(14px,#000,900,7px,1)
+                                @media ( max-width: 767px )
+                                    margin-left: 8px
+                        .logout
+                            display: none
+                            
             .nav_btns
                 @media ( max-width: 1279px)
                     display: none

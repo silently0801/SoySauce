@@ -789,6 +789,16 @@ main .payment .container .row .pay_header {
   }
 }
 
+@media (max-width: 540px) {
+  main .payment .container .row .pay_header {
+    font-size: 14px;
+    color: #C0362D;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 41px;
+  }
+}
+
 @media (max-width: 1399px) {
   main .payment .container .row .pay_content {
     width: 100%;
@@ -858,6 +868,7 @@ main .payment .container .row .pay_content .method .radio_btn input[type="radio"
   width: 18px;
   background-color: #FFF;
   color: #FFF;
+  margin-right: 3px;
 }
 
 main .payment .container .row .pay_content .method .radio_btn label {

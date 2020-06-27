@@ -513,26 +513,26 @@ main section .modal_area .modal .modal-dialog .modal-content .close_modal .line 
 }
 
 main section .modal_area .modal .modal-dialog .modal-content .close_modal .line1 {
-  -webkit-transform: translate(-50%) rotate(45deg);
-          transform: translate(-50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
 }
 
 @media (max-width: 1530px) {
   main section .modal_area .modal .modal-dialog .modal-content .close_modal .line1 {
-    -webkit-transform: translate(-50%) rotate(35deg);
-            transform: translate(-50%) rotate(35deg);
+    -webkit-transform: translate(-50%, -50%) rotate(35deg);
+            transform: translate(-50%, -50%) rotate(35deg);
   }
 }
 
 main section .modal_area .modal .modal-dialog .modal-content .close_modal .line2 {
-  -webkit-transform: translate(-50%) rotate(-45deg);
-          transform: translate(-50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 @media (max-width: 1530px) {
   main section .modal_area .modal .modal-dialog .modal-content .close_modal .line2 {
-    -webkit-transform: translate(-50%) rotate(-35deg);
-            transform: translate(-50%) rotate(-35deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-35deg);
+            transform: translate(-50%, -50%) rotate(-35deg);
   }
 }
 
@@ -766,26 +766,26 @@ main section .modal_area .modal .modal-dialog .modal-content .card .product_deta
 }
 
 main section .modal_area .modal .modal-dialog .modal-content .card .product_detail .close_modal .line1 {
-  -webkit-transform: translate(-50%) rotate(45deg);
-          transform: translate(-50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
 }
 
 @media (max-width: 1530px) {
   main section .modal_area .modal .modal-dialog .modal-content .card .product_detail .close_modal .line1 {
-    -webkit-transform: translate(-50%) rotate(35deg);
-            transform: translate(-50%) rotate(35deg);
+    -webkit-transform: translate(-50%, -50%) rotate(35deg);
+            transform: translate(-50%, -50%) rotate(35deg);
   }
 }
 
 main section .modal_area .modal .modal-dialog .modal-content .card .product_detail .close_modal .line2 {
-  -webkit-transform: translate(-50%) rotate(-45deg);
-          transform: translate(-50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 @media (max-width: 1530px) {
   main section .modal_area .modal .modal-dialog .modal-content .card .product_detail .close_modal .line2 {
-    -webkit-transform: translate(-50%) rotate(-35deg);
-            transform: translate(-50%) rotate(-35deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-35deg);
+            transform: translate(-50%, -50%) rotate(-35deg);
   }
 }
 
@@ -1697,8 +1697,8 @@ main section .container .row .soysauce_product .product_cards .product_card .pro
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn .minus.active {
@@ -1724,8 +1724,8 @@ main section .container .row .soysauce_product .product_cards .product_card .pro
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 main section .container .row .soysauce_product .product_cards .product_card .product_content .product_btn .plus .line2 {
@@ -1735,8 +1735,8 @@ main section .container .row .soysauce_product .product_cards .product_card .pro
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%) rotate(90deg);
-          transform: translate(-50%) rotate(90deg);
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
 }
 
 main section .container .row .soysauce_product .product_cards.single_cards {

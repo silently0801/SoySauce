@@ -346,8 +346,10 @@ nav .container .row .logo .menu_backEnd ul li {
   margin: 0 5px;
 }
 
-nav .container .row .logo .menu_backEnd ul li .logout {
-  display: none;
+@media (max-width: 767px) {
+  nav .container .row .logo .menu_backEnd ul li:first-child {
+    margin-left: 30px;
+  }
 }
 
 nav .container .row .logo .menu_backEnd ul li a {
@@ -360,6 +362,16 @@ nav .container .row .logo .menu_backEnd ul li a {
   font-weight: 900;
   letter-spacing: 7px;
   line-height: 1;
+}
+
+@media (max-width: 767px) {
+  nav .container .row .logo .menu_backEnd ul li a {
+    margin-left: 8px;
+  }
+}
+
+nav .container .row .logo .menu_backEnd ul .logout {
+  display: none;
 }
 
 @media (max-width: 1279px) {
